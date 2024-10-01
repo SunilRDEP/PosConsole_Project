@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-10-01T07:55:00 IST" name="Default suite" finished-at="2024-10-01T07:55:35 IST" duration-ms="34490">
+    <groups>
+    </groups>
+    <test started-at="2024-10-01T07:55:00 IST" name="Default test" finished-at="2024-10-01T07:55:35 IST" duration-ms="34490">
+      <class name="com.proenx.rdep.myproject.pos.TestPractice2">
+        <test-method is-config="true" signature="loadPropfile()[pri:0, instance:com.proenx.rdep.myproject.pos.TestPractice2@2ab4bc72]" started-at="2024-10-01T07:54:59 IST" name="loadPropfile" finished-at="2024-10-01T07:55:00 IST" duration-ms="1196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadPropfile -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.proenx.rdep.myproject.pos.TestPractice2@2ab4bc72]" started-at="2024-10-01T07:55:00 IST" name="launchBrowser" finished-at="2024-10-01T07:55:08 IST" duration-ms="8123" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="SalesReportvaliddata(java.util.Hashtable)[pri:0, instance:com.proenx.rdep.myproject.pos.TestPractice2@2ab4bc72]" started-at="2024-10-01T07:55:08 IST" name="SalesReportvaliddata" data-provider="data_Collection" finished-at="2024-10-01T07:55:28 IST" duration-ms="20057" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{LoginPageText3=Forgot your password?, LoginPageText2=©2024 - All rights reserved by ProenX Pte Ltd., Sales Reprt Bill Id Hyperlink itemdetails=Aer KOW-MAR-R-0100 | White | 44, LoginPageText1=v2.0.0, Password=admin, Wrong Password=1234ad, Sales Report End Date Format=2024-09-27 04:51 pm, UserName=admin, Table Data For Validation=10031110337, Carts Table Data For Validation=ajith.h@proenx.com, SourceName=MPOS, BillID Hyperlink=10031110337, DeliveryStatusName=Packed, Sales Report Start Date Format=2024-05-10 04:51 pm, POP Message For No Data in the Table=Orders List not found, StatusName=VOID, DashBoardText=Dashboard | RDEP, StoreName2=Test82 - 0292, StoreName1=Rdep Meta Limited Pune - 1765, LoginPageText7=Log In, Sales Report Start Date Format for negative scenario=2024-09-28 04:51 pm, LoginPageText6=Sign In, LoginPageText5=Password, LoginPageText4=Username, Wrong UserName=addmi}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SalesReportvaliddata -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.proenx.rdep.myproject.pos.TestPractice2@2ab4bc72]" started-at="2024-10-01T07:55:28 IST" name="teardown" finished-at="2024-10-01T07:55:35 IST" duration-ms="6237" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:com.proenx.rdep.myproject.pos.TestPractice2@2ab4bc72]" started-at="2024-10-01T07:55:35 IST" name="generateReport" finished-at="2024-10-01T07:55:35 IST" duration-ms="440" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateReport -->
+      </class> <!-- com.proenx.rdep.myproject.pos.TestPractice2 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
