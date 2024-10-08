@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
- <listeners>
-    <listener class-name="com.proenx.rdep.myproject.listner.CustomListners" />
-  </listeners>
-  <test thread-count="5" name="Test">
-    <classes>
-      <class name="com.proenx.rdep.myproject.pos.TestPractice2"/>
-    
-      
-    </classes>
-  </test> <!-- Test -->
+	<listeners>
+		<listener
+			class-name="com.proenx.rdep.myproject.listner.CustomListners" />
+	</listeners>
+	<test thread-count="5" name="Test">
+		<classes>
+
+			<class name="com.proenx.rdep.myproject.pos.PromotionTestCase1" />
+			<class name="com.proenx.rdep.myproject.pos.TestPractice2" />
+			<class name="com.proenx.rdep.myproject.pos.TestPractice3" />
+			<class name="com.proenx.rdep.myproject.pos.Create_SimpleLine_Promo_System" />
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

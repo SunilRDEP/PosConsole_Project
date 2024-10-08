@@ -76,8 +76,6 @@ public class SalesReportPage extends TestBase {
 	@FindBy(xpath = "//div[@class='col-12 mt-2']//input[@placeholder='Select Date']")
 	private static WebElement clickedon_end_date_calenderfield;
 
-	@FindBy(xpath = "//div[normalize-space()='10']")
-	private static WebElement Clickonstartdatecalenderday;
 
 	@FindBy(xpath = "//div[normalize-space()='25']")
 	private static WebElement ClickedonPastcalenderday;
@@ -201,12 +199,14 @@ public SalesReportPage verify_total_numberof_items_in_sales_table(Hashtable<Stri
 	CommonMethod.clickonWebElement("outsideclick", "clicked on outside");
 	
 	CommonMethod.clickonWebElement(SalesReportAPPLYButtoninfilter, "Apply Button");
-	test.pass("The date  and store entered to verify the items in the table are '2024-05-10 04:51 pm and Rdep Meta Limited Pune - 1765 and the expected items should be 133 " );
 	
 	String s1=driver.findElement(By.xpath("//span[@class='bh-mr-2']")).getText();
 	System.out.println(s1);
+	
 	int pages=Integer.parseInt(s1.substring(s1.indexOf("of")+3, s1.indexOf("items")-1));
 	System.out.println(pages);
+	test.pass("The date  and store entered to verify the items in the table are '2024-05-10 04:51 pm and Rdep Meta Limited Pune - 1765 and the expected items should be  " + pages );
+	
 	test.pass("The number of items present in the table is " + pages);
 	return this;
 }

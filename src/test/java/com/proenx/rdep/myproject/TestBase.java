@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
+import java.util.Hashtable;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
@@ -35,7 +36,9 @@ public class TestBase { // heart or engine of my framework
 	public static ExtentReports report;
 	public static ExtentTest test;
 	public static ExcelReader excel;
-//	public static String testCaseName;
+	public static String testCaseName;
+	public static Hashtable<String, String> run_mode = new Hashtable<>();
+
 	@BeforeSuite
 
 	public void loadPropfile() throws IOException {
@@ -59,12 +62,12 @@ public class TestBase { // heart or engine of my framework
 		report.attachReporter(spark);
 		excel = new ExcelReader(
 				System.getProperty("user.dir") + "\\src\\test\\resources\\testdata\\Test_Data_Sheet.xlsx");
-	
+		readRunMode();
 	}
 
 	@BeforeMethod
 	public void launchBrowser() {
-		test = report.createTest("Sunil bhatta");
+		test = report.createTest(testCaseName);
 		if (configue.getProperty("Browser").equalsIgnoreCase("Chrome")) {
 			driver = new ChromeDriver();
 			System.out.println("Chrome Driver is launched");
@@ -104,6 +107,21 @@ public class TestBase { // heart or engine of my framework
 		report.flush();
 
 	}
-	
+
+	@DataProvider
+	public Object[][] data_Collection() {
+		DataCollection dc = new DataCollection(excel, "Test Sunil", testCaseName);
+		return dc.dataArray();
+	}
+
+	public void readRunMode() {
+		int rows = excel.getRowCount("Test Cases");
+		for (int i = 2; i <= rows; i++) {
+			String key = excel.getCellData("Test Cases", "Test_Case_Name", i);
+			String value = excel.getCellData("Test Cases", "Run Mode", i);
+			run_mode.put(key, value);
+		}
+		System.out.println("HasTable Run Mode :" + run_mode);
+	}
 
 }

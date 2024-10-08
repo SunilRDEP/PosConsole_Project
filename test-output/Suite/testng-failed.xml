@@ -6,15 +6,16 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.proenx.rdep.myproject.pos.TestPractice2">
+      <class name="com.proenx.rdep.myproject.pos.TestPractice3">
         <methods>
           <include name="teardown"/>
-          <include name="SalesReportvaliddata" invocation-numbers="0"/>
+          <include name="SalesReportvaliddata"/>
+          <include name="getTestCaseName"/>
           <include name="generateReport"/>
           <include name="launchBrowser"/>
           <include name="loadPropfile"/>
         </methods>
-      </class> <!-- com.proenx.rdep.myproject.pos.TestPractice2 -->
+      </class> <!-- com.proenx.rdep.myproject.pos.TestPractice3 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

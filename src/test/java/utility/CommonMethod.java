@@ -104,6 +104,7 @@ public class CommonMethod extends TestBase {
 		Select select = new Select(promotype);
 		select.selectByVisibleText(data);
 	}
+	
 
 	public static void calender(String xpath, String xpath2, String Date) {
 
@@ -164,44 +165,44 @@ public class CommonMethod extends TestBase {
 
 	
 	public static boolean getRowColNumber(String name) {
-		int row = driver.findElements(By.xpath("//div[@class='card p-3']//tbody/tr")).size(); // row count
-		int column = driver.findElements(By.xpath("//div[@class='card p-3']//th")).size(); // column count
-		boolean found = false;
+	    int row = driver.findElements(By.xpath("//div[@class='card p-3']//tbody/tr")).size(); // row count
+	    int column = driver.findElements(By.xpath("//div[@class='card p-3']//th")).size(); // column count
+	    boolean found = false;
 
-		for (int i = 1; i <= row; i++) { // Start from 1 if rows are indexed from 1
-			for (int j = 1; j <= column; j++) {
-				String str1 = driver
-						.findElement(By.xpath("//div[@class='card p-3']//tbody/tr[" + i + "]/td[" + j + "]")).getText();
-				if (str1.equals(name)) {
-					found = true;
-					WebElement cell = driver
-							.findElement(By.xpath("//div[@class='card p-3']//tbody/tr[" + i + "]/td[" + j + "]"));
+	    for (int i = 1; i <= row; i++) { // Start from 1 if rows are indexed from 1
+	        for (int j = 1; j <= column; j++) {
+	            String str1 = driver
+	                    .findElement(By.xpath("//div[@class='card p-3']//tbody/tr[" + i + "]/td[" + j + "]")).getText();
+	            if (str1.equals(name)) {
+	                found = true;
+	                WebElement cell = driver
+	                        .findElement(By.xpath("//div[@class='card p-3']//tbody/tr[" + i + "]/td[" + j + "]"));
 
-					// Check if the element is clicable before clicking
-					if (cell.isDisplayed() && cell.isEnabled()) {
-						//cell.click();
-						String rowdata=driver.findElement(By.xpath("//div[@class='card p-3']//tbody/tr[" + i + "]")).getText();
-						System.out.println(i + ":" + j + " " + str1);
-						System.out.println(name + "is there in the table.");
-						test.pass("The Row Count is " + i + " and the colomn count is" + j
-								+ ". Data is verified and the data which is present in the  table  is: " + str1 + "row data is" +rowdata);
-						takescreenshot();
-					} else {
-						System.out.println("Element is not clickable.");
-					}
-					return true;
-				}
-			}
+	                // Check if the element is clickable before clicking
+	                if (cell.isDisplayed() && cell.isEnabled()) { // Ensure it's visible and enabled
+	                    String rowdata = driver.findElement(By.xpath("//div[@class='card p-3']//tbody/tr[" + i + "]")).getText();
+	                    System.out.println(i + ":" + j + " " + str1);
+	                    System.out.println(name + " is present in the table.");
+	                    test.pass("The Row Count is " + i + " and the Column Count is " + j
+	                            + ". Data is verified and the data present in the table is: " + str1 + " Row data is " + rowdata);
+	                    takescreenshot();
+	                    return true; // Return true here after successful validation
+	                } else {
+	                    System.out.println("Element is not clickable.");
+	                    // Optionally, you can log this or handle it differently
+	                }
+	            }
+	        }
+	    }
 
-		}
-		String errorMessage = name + " is not present in the table.";
-		System.out.println(errorMessage);
-		test.fail(errorMessage);
-		takescreenshot();
-		Assert.fail(errorMessage);
-		return false;
-
+	    String errorMessage = name + " is not present in the table.";
+	    System.out.println(errorMessage);
+	    test.fail(errorMessage);
+	    takescreenshot();
+	    Assert.fail(errorMessage);
+	    return false; // Return false only if the name was not found in any cells
 	}
+
 	public static boolean Hyperlink_Click(String name) {
 		int row = driver.findElements(By.xpath("//div[@class='card p-3']//tbody/tr")).size(); // row count
 		int column = driver.findElements(By.xpath("//div[@class='card p-3']//th")).size(); // column count
