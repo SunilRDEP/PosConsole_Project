@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.Hashtable;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -78,7 +79,7 @@ public class MasterPromotion_Pages extends TestBase {
 		return this;
 
 	}
-	public MasterPromotion_Pages filterOperation(Hashtable<String, String> ht) {
+	public MasterPromotion_Pages filterOperation(Hashtable<String, String> ht) throws InterruptedException {
 		
 		//CommonMethod.clickonWebElement(MasterPromotion_Filter, "filter button");
 		CommonMethod.inputCalenderDate(clickedonstartdatecalenderfield, ht.get("Master Promotion Start Date Format"));
@@ -90,9 +91,16 @@ public class MasterPromotion_Pages extends TestBase {
 		CommonMethod.clickonWebElement("outsideclick", "clicked on outside");
 		CommonMethod.clickonWebElement(Promotion_Apply_Button, "Apply Button");
 		//CommonMethod.getRowColNumber("Buy 1 Top & Bottom get 15% OFF");
-		String s1=driver.findElement(By.xpath("//span[@class='bh-mr-2']")).getText();
+//		String s1=driver.findElement(By.xpath("//span[@class='bh-mr-2']")).getText();
+//		System.out.println(s1);
+		
+		WebElement tableitem =driver.findElement(By.xpath("//span[@class='bh-mr-2']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", tableitem);
+		Thread.sleep(3000);
+		String s1=tableitem.getText();
 		System.out.println(s1);
-		int pages=Integer.parseInt(s1.substring(s1.indexOf("of")+3, s1.indexOf("items")-1));
+		
+		int pages=Integer.parseInt(s1.substring(s1.indexOf("of")+3, s1.indexOf("items")).trim());
 		System.out.println(pages);
 		String promotion=driver.findElement(By.xpath("//tbody/tr[1]")).getText();
 		//int pagescount=pages/10;
@@ -112,7 +120,11 @@ public class MasterPromotion_Pages extends TestBase {
 		System.out.println(pagescount);
 		test.pass("Total Item present in the table is " + pages + "and the latest promotion is  " + promotion );
 		
-		
+//		WebElement scrollup =driver.findElement(By.xpath("//h6[normalize-space()='Master Promotions']"));
+//		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", scrollup);
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@class='d-flex justify-content-end mb-1 mt-3']")));
+//		scrollup.click();
 		return this;
 
 	}
@@ -151,6 +163,21 @@ public class MasterPromotion_Pages extends TestBase {
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.clickonWebElement(Promotion_Create_Button, "create button");
 		return new CreatePromotion_Page();
+		
+	}
+	public CombinationPoolPage   create_Combination_Pool_Promotion(Hashtable<String, String> ht) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
+		CommonMethod.clickonWebElement(Promotion_Create_Button, "create button");
+		return new CombinationPoolPage();
+		
+	}
+	
+	public Package_Quantity_Page   create_Package_Quantity_Promotion(Hashtable<String, String> ht) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
+		CommonMethod.clickonWebElement(Promotion_Create_Button, "create button");
+		return new Package_Quantity_Page();
 		
 	}
 }

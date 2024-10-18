@@ -19,8 +19,8 @@ public class TestPractice2 extends TestBase {
 			if(!run_mode.get(testCaseName).equalsIgnoreCase("Y")) {
 				throw new SkipException("Skipping Test  case as Run mode is set to no");// this is a user created exception
 			}
-		}
-	
+		} 
+	 
 	@Test(dataProvider = "data_Collection")
 	public void SalesReportvaliddata(Hashtable<String, String> ht) throws InterruptedException {
 		SignInPage sp = new SignInPage();

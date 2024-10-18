@@ -54,6 +54,12 @@ public class DashBoardPages extends TestBase {
 	
 	@FindBy(xpath = "//span[normalize-space()='Master Promotions']")
 	private static WebElement MasterPromotion;
+	
+	@FindBy(xpath = "//span[normalize-space()='Inventory']")
+	private static WebElement Inventory;
+	
+	@FindBy(xpath = "//span[normalize-space()='Inventory List']")
+	private static WebElement Inventory_List;
 
 	public DashBoardPages clickOnAllMenunDashBoard() {
 		CommonMethod.clickonWebElement(clickonorderxpath, "Orders Menu");
@@ -109,5 +115,18 @@ public class DashBoardPages extends TestBase {
 		
 		 CommonMethod.clickonWebElement(MasterPromotion, "MasterPromotion Sub Menu");
 		return new MasterPromotion_Pages();
-	}
+	} 
+	public InventoryList_Page inventory_List(Hashtable<String, String> ht) throws InterruptedException {
+//		WebElement Promotion = clickonPromotion;
+//		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Promotion);
+//		Promotion.click();
+
+	
+		Thread.sleep(3000);
+		CommonMethod.clickonWebElement(Inventory, "Inventory Menu");
+		
+		 CommonMethod.clickonWebElement(Inventory_List, "Inventory List Sub Menu");
+		return new InventoryList_Page();
+	} 
+	
 }

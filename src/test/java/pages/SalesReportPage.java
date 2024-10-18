@@ -20,7 +20,7 @@ public class SalesReportPage extends TestBase {
 
 	public SalesReportPage() {
 		PageFactory.initElements(driver, this);
-	}
+	} 
 
 	@FindBy(xpath = "//h6[normalize-space()='Sales Report']")
 	private static WebElement SalesReporttext;
@@ -118,7 +118,7 @@ public class SalesReportPage extends TestBase {
 		CommonMethod.inputCalenderDate(clickedonstartdatecalenderfield, ht.get("Sales Report Start Date Format"));
 		CommonMethod.clickonWebElement("outsideclick", "clicked on outside");
 		// store selection data will come from prop file (please keep in mind )
-		CommonMethod.bootstrapdropdownselection(clickonselectstoreoption, "clickonparticulastore", ht.get("StoreName1"));
+		CommonMethod.bootstrapdropdownselection(clickonselectstoreoption, "clickon_Particular_Sales_Store", ht.get("StoreName1"));
 		CommonMethod.clickonWebElement("outsideclick", "clicked on outside");
 		//CommonMethod.bootstrapdropdownselection(clickonselectstoreoption, "clickonparticulastore", ht.get("StoreName2"));
 		// CommonMethod.scrollAndClick("clickonsourceselection", "source");
@@ -195,15 +195,15 @@ public SalesReportPage verify_total_numberof_items_in_sales_table(Hashtable<Stri
 	CommonMethod.inputCalenderDate(clickedonstartdatecalenderfield, ht.get("Sales Report Start Date Format"));
 	CommonMethod.clickonWebElement("outsideclick", "clicked on outside");
 	// store selection data will come from prop file (please keep in mind )
-	CommonMethod.bootstrapdropdownselection(clickonselectstoreoption, "clickonparticulastore", ht.get("StoreName1"));
+	CommonMethod.bootstrapdropdownselection(clickonselectstoreoption, "clickon_Particular_Sales_Store", ht.get("StoreName1"));
 	CommonMethod.clickonWebElement("outsideclick", "clicked on outside");
 	
 	CommonMethod.clickonWebElement(SalesReportAPPLYButtoninfilter, "Apply Button");
 	
 	String s1=driver.findElement(By.xpath("//span[@class='bh-mr-2']")).getText();
 	System.out.println(s1);
-	
-	int pages=Integer.parseInt(s1.substring(s1.indexOf("of")+3, s1.indexOf("items")-1));
+	test.pass(s1);
+	int pages=Integer.parseInt(s1.substring(s1.indexOf("of")+3, s1.indexOf("items")).trim());
 	System.out.println(pages);
 	test.pass("The date  and store entered to verify the items in the table are '2024-05-10 04:51 pm and Rdep Meta Limited Pune - 1765 and the expected items should be  " + pages );
 	

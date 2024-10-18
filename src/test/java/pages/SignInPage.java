@@ -50,16 +50,16 @@ public class SignInPage extends TestBase {
 	private static WebElement LoginPageText7;
 
 	public DashBoardPages signin(Hashtable<String, String> ht) {
-		CommonMethod.enterdatafromexcel(Usernamexpath, ht.get("UserName"), "USERNAME");
-		CommonMethod.enterdatafromexcel(Passwardxpath, ht.get("Password"),"PASSWORD");
+		CommonMethod.enterdatafromexcel(Usernamexpath,configue.getProperty("username"), "USERNAME");
+		CommonMethod.enterdatafromexcel(Passwardxpath, configue.getProperty("passward"),"PASSWORD");
 		CommonMethod.clickonWebElement(clickbuttonxpath, "login button");
 		return new DashBoardPages();
 
 	}
 
 	public DashBoardPages signinWithviewPasswordicon(Hashtable<String, String> ht) {
-		CommonMethod.enterdatafromexcel(Usernamexpath, ht.get("UserName"),"USERNAME");
-		CommonMethod.enterdatafromexcel(Passwardxpath, ht.get("Password"),"PASSWORD");
+		CommonMethod.enterdatafromexcel(Usernamexpath, configue.getProperty("username"),"USERNAME");
+		CommonMethod.enterdatafromexcel(Passwardxpath,configue.getProperty("passward"),"PASSWORD");
 		CommonMethod.clickonWebElement(viewpassword_icon, "Enable ViewPassword Icon");
 		CommonMethod.clickonWebElement(clickbuttonxpath, "login button");
 		return new DashBoardPages();

@@ -6,16 +6,36 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.proenx.rdep.myproject.pos.TestPractice3">
+      <class name="com.proenx.rdep.myproject.pos.Package_Quantity_Test_Cases">
         <methods>
           <include name="teardown"/>
-          <include name="SalesReportvaliddata"/>
+          <include name="create_promotion"/>
           <include name="getTestCaseName"/>
           <include name="generateReport"/>
           <include name="launchBrowser"/>
           <include name="loadPropfile"/>
         </methods>
-      </class> <!-- com.proenx.rdep.myproject.pos.TestPractice3 -->
+      </class> <!-- com.proenx.rdep.myproject.pos.Package_Quantity_Test_Cases -->
+      <class name="com.proenx.rdep.myproject.pos.PromotionTestCase1">
+        <methods>
+          <include name="teardown"/>
+          <include name="getTestCaseName"/>
+          <include name="generateReport"/>
+          <include name="promotionTC1" invocation-numbers="0"/>
+          <include name="launchBrowser"/>
+          <include name="loadPropfile"/>
+        </methods>
+      </class> <!-- com.proenx.rdep.myproject.pos.PromotionTestCase1 -->
+      <class name="com.proenx.rdep.myproject.pos.Promo_Test_Case_Combination_Pool">
+        <methods>
+          <include name="create_promotion"/>
+          <include name="teardown"/>
+          <include name="generateReport"/>
+          <include name="launchBrowser"/>
+          <include name="loadPropfile"/>
+          <include name="getTestCaseName"/>
+        </methods>
+      </class> <!-- com.proenx.rdep.myproject.pos.Promo_Test_Case_Combination_Pool -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

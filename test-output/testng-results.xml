@@ -2,43 +2,43 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-07T12:52:55 IST" name="Default suite" finished-at="2024-10-07T12:53:42 IST" duration-ms="46740">
+  <suite started-at="2024-10-15T09:25:51 IST" name="Default suite" finished-at="2024-10-15T09:28:08 IST" duration-ms="137010">
     <groups>
     </groups>
-    <test started-at="2024-10-07T12:52:55 IST" name="Default test" finished-at="2024-10-07T12:53:42 IST" duration-ms="46740">
-      <class name="com.proenx.rdep.myproject.pos.Create_SimpleLine_Promo_System">
-        <test-method is-config="true" signature="loadPropfile()[pri:0, instance:com.proenx.rdep.myproject.pos.Create_SimpleLine_Promo_System@740fb309]" started-at="2024-10-07T12:52:54 IST" name="loadPropfile" finished-at="2024-10-07T12:52:55 IST" duration-ms="1486" status="PASS">
+    <test started-at="2024-10-15T09:25:51 IST" name="Default test" finished-at="2024-10-15T09:28:08 IST" duration-ms="137010">
+      <class name="com.proenx.rdep.myproject.pos.Package_Quantity_Test_Cases">
+        <test-method is-config="true" signature="loadPropfile()[pri:0, instance:com.proenx.rdep.myproject.pos.Package_Quantity_Test_Cases@34bde49d]" started-at="2024-10-15T09:25:49 IST" name="loadPropfile" finished-at="2024-10-15T09:25:51 IST" duration-ms="1299" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadPropfile -->
-        <test-method is-config="true" signature="getTestCaseName()[pri:0, instance:com.proenx.rdep.myproject.pos.Create_SimpleLine_Promo_System@740fb309]" started-at="2024-10-07T12:52:55 IST" name="getTestCaseName" finished-at="2024-10-07T12:52:55 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="getTestCaseName()[pri:0, instance:com.proenx.rdep.myproject.pos.Package_Quantity_Test_Cases@34bde49d]" started-at="2024-10-15T09:25:51 IST" name="getTestCaseName" finished-at="2024-10-15T09:25:51 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getTestCaseName -->
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.proenx.rdep.myproject.pos.Create_SimpleLine_Promo_System@740fb309]" started-at="2024-10-07T12:52:55 IST" name="launchBrowser" finished-at="2024-10-07T12:53:04 IST" duration-ms="8956" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.proenx.rdep.myproject.pos.Package_Quantity_Test_Cases@34bde49d]" started-at="2024-10-15T09:25:51 IST" name="launchBrowser" finished-at="2024-10-15T09:26:12 IST" duration-ms="21570" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="create_promotion(java.util.Hashtable)[pri:0, instance:com.proenx.rdep.myproject.pos.Create_SimpleLine_Promo_System@740fb309]" started-at="2024-10-07T12:53:04 IST" name="create_promotion" data-provider="data_Collection" finished-at="2024-10-07T12:53:36 IST" duration-ms="31336" status="PASS">
+        <test-method signature="create_promotion(java.util.Hashtable)[pri:0, instance:com.proenx.rdep.myproject.pos.Package_Quantity_Test_Cases@34bde49d]" started-at="2024-10-15T09:26:12 IST" name="create_promotion" data-provider="data_Collection" finished-at="2024-10-15T09:28:02 IST" duration-ms="109987" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Promotion Type6=, Promotion Type5=, Promotion Type4=, Promotion Type3=, Password=admin, Promotion Details Error PopUp=Please Select Promotion Type, Promotion Type2=, Promotion Type1=Simple Line, Master Promotion End Date Format=2024-10-07 04:51 pm, Discount Value=10, Master Promotion Start Date Format=2024-10-05 04:51 pm, Promotion successful Message=Promotion configured successfully, UserName=admin, Promotion Name=Flat 10% OFF, Promotion Code=F10%, Promotion Sub type1=Percentage, Description=Simple Line Promotion, Coupon Field=T20WC, Promotion Type7=}]]>
+                <![CDATA[{Password=ajskak, Package Quantity Promotion Name=Pakage TEST, Package Quantity Promotion Code=PACKAGE12%, Package Quantity Type7=, Package Quatity Trigger Quantiy=2, Package Quantity Type6=, Package Quantity Type5=, Package Quantity Type4=, Package Quantity Type3=, Package Quantity Type2=, Package Quantity Type1=Package Quantity, Package Quantity Promotion Sub type1=Percentage, UserName=asgs, Package Quantity Description=Package Qauantity Pool Promotion, Package Quantity Discount Value=12, Package Quantity StoreName2=Test82 - 0292, Package Quantity End Date Format=2024-10-07 04:51 pm, Package Quantity StoreName1=Rdep Meta Limited Pune - 1765, Package Quantity Promotion Details Error PopUp=Please Select Promotion Type, Package Quantity  Promotion successful Message=Promotion configured successfully, Package Quantity Start Date Format=2024-10-05 04:51 pm, Package Quantity Pool Coupon Field=T20WC}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- create_promotion -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.proenx.rdep.myproject.pos.Create_SimpleLine_Promo_System@740fb309]" started-at="2024-10-07T12:53:36 IST" name="teardown" finished-at="2024-10-07T12:53:42 IST" duration-ms="6380" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.proenx.rdep.myproject.pos.Package_Quantity_Test_Cases@34bde49d]" started-at="2024-10-15T09:28:02 IST" name="teardown" finished-at="2024-10-15T09:28:08 IST" duration-ms="5385" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="generateReport()[pri:0, instance:com.proenx.rdep.myproject.pos.Create_SimpleLine_Promo_System@740fb309]" started-at="2024-10-07T12:53:42 IST" name="generateReport" finished-at="2024-10-07T12:53:43 IST" duration-ms="533" status="PASS">
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:com.proenx.rdep.myproject.pos.Package_Quantity_Test_Cases@34bde49d]" started-at="2024-10-15T09:28:08 IST" name="generateReport" finished-at="2024-10-15T09:28:08 IST" duration-ms="556" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateReport -->
-      </class> <!-- com.proenx.rdep.myproject.pos.Create_SimpleLine_Promo_System -->
+      </class> <!-- com.proenx.rdep.myproject.pos.Package_Quantity_Test_Cases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

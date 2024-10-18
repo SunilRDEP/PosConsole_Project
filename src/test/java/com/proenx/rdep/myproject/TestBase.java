@@ -39,7 +39,7 @@ public class TestBase { // heart or engine of my framework
 	public static String testCaseName;
 	public static Hashtable<String, String> run_mode = new Hashtable<>();
 
-	@BeforeSuite
+	@BeforeSuite 
 
 	public void loadPropfile() throws IOException {
 		System.out.println("Reading Configue file ");
