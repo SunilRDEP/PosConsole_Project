@@ -17,7 +17,7 @@ import com.proenx.rdep.myproject.TestBase;
 
 public class CustomListners extends TestBase implements ITestListener {
 
-
+ 
 	@Override
 	public void onTestStart(ITestResult result) {
 	
@@ -25,6 +25,7 @@ public class CustomListners extends TestBase implements ITestListener {
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
+		
 		test.pass("Admin UI Automation Test Script has passed");
 	}
 	

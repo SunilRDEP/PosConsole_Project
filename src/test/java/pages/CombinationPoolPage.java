@@ -133,18 +133,14 @@ public class CombinationPoolPage extends TestBase {
 		CommonMethod.entertextintoinputbox(Promotion_Name, ht.get("Combination Pool Promotion Name"));
 		WebElement promo_Subtype = driver.findElement(By.xpath("//select[@id='subType']"));
 		Select select2 = new Select(promo_Subtype);
-		select2.selectByVisibleText(ht.get("Combination Pool Promotion Sub type1"));
+		select2.selectByVisibleText(ht.get("Combination Pool Promotion Sub type1")); 
 		CommonMethod.entertextintoinputbox(Promotion_Code, ht.get("Combination Pool Promotion Code"));
 		CommonMethod.entertextintoinputbox(Promotion_Description, ht.get("Combination Pool Description"));
 		CommonMethod.entertextintoinputbox(Promotion_Discount_value, ht.get("Combination Pool Discount Value"));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,400);");  // Scroll down by 250 pixels (adjust as needed)
-		WebElement nextButton1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@type='button']//button[@aria-label='Next']")));
+		WebElement element = driver.findElement(By.xpath("//span[@type='button']//span[@class='p-button-label'][normalize-space()='Next']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 
 		
-		// Now try clicking the element
-	
-		nextButton1.click();
 		WebElement coupon = driver.findElement(By.xpath("//input[@id='coupon']"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", coupon);
 		Thread.sleep(3000);
@@ -167,7 +163,7 @@ public class CombinationPoolPage extends TestBase {
 		WebElement toastMessage = wait2
 				.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[3]/div/p")));
 
-		if (toastMessage.isDisplayed()) {
+		if (toastMessage.isDisplayed()) { 
 			String Actual_Pagetitle = toastMessage.getText();
 
 			Assert.assertEquals(Actual_Pagetitle, ht.get("Combination Pool Promotion successful Message"));
@@ -175,7 +171,7 @@ public class CombinationPoolPage extends TestBase {
 			test.pass("The Pop-UP successful messge is verified and the Pup-UP Message   is: " + Actual_Pagetitle);
 			CommonMethod.takescreenshot();
 		} else {
-			System.out.println("Toast message is not visible.");
+			System.out.println("Toast message is not visible."); 
 		}
 		Thread.sleep(3000);
 		String rowdata = driver.findElement(By.xpath("//tbody/tr[1]")).getText();
@@ -200,14 +196,9 @@ public class CombinationPoolPage extends TestBase {
 		CommonMethod.entertextintoinputbox(Promotion_Code, ht.get("Combination Pool Promotion Code"));
 		CommonMethod.entertextintoinputbox(Promotion_Description, ht.get("Combination Pool Description"));
 		CommonMethod.entertextintoinputbox(Promotion_Discount_value, ht.get("Combination Pool Discount Value"));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,400);");  // Scroll down by 250 pixels (adjust as needed)
-		WebElement nextButton1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@type='button']//button[@aria-label='Next']")));
+		WebElement element = driver.findElement(By.xpath("//span[@type='button']//span[@class='p-button-label'][normalize-space()='Next']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 
-		
-		// Now try clicking the element
-	
-		nextButton1.click();
 		WebElement coupon = driver.findElement(By.xpath("//input[@id='coupon']"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", coupon);
 		Thread.sleep(3000);
@@ -266,14 +257,9 @@ public class CombinationPoolPage extends TestBase {
 		CommonMethod.entertextintoinputbox(Promotion_Code, ht.get("Combination Pool Promotion Code"));
 		CommonMethod.entertextintoinputbox(Promotion_Description, ht.get("Combination Pool Description"));
 		CommonMethod.entertextintoinputbox(Promotion_Discount_value, ht.get("Combination Pool Discount Value"));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,400);");  // Scroll down by 250 pixels (adjust as needed)
-		WebElement nextButton1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@type='button']//button[@aria-label='Next']")));
+		WebElement element = driver.findElement(By.xpath("//span[@type='button']//span[@class='p-button-label'][normalize-space()='Next']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 
-		
-		// Now try clicking the element
-	
-		nextButton1.click();
 		WebElement coupon = driver.findElement(By.xpath("//input[@id='coupon']"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", coupon);
 		Thread.sleep(3000);
@@ -334,14 +320,9 @@ public class CombinationPoolPage extends TestBase {
 		CommonMethod.entertextintoinputbox(Promotion_Code, ht.get("Combination Pool Promotion Code"));
 		CommonMethod.entertextintoinputbox(Promotion_Description, ht.get("Combination Pool Description"));
 		CommonMethod.entertextintoinputbox(Promotion_Discount_value, ht.get("Combination Pool Discount Value"));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,400);");  // Scroll down by 250 pixels (adjust as needed)
-		WebElement nextButton1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@type='button']//button[@aria-label='Next']")));
+		WebElement element = driver.findElement(By.xpath("//span[@type='button']//span[@class='p-button-label'][normalize-space()='Next']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 
-		
-		// Now try clicking the element
-	
-		nextButton1.click();
 		WebElement coupon = driver.findElement(By.xpath("//input[@id='coupon']"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", coupon);
 		Thread.sleep(3000);
@@ -401,14 +382,9 @@ public class CombinationPoolPage extends TestBase {
 		CommonMethod.entertextintoinputbox(Promotion_Code, ht.get("Combination Pool Promotion Code"));
 		CommonMethod.entertextintoinputbox(Promotion_Description, ht.get("Combination Pool Description"));
 		CommonMethod.entertextintoinputbox(Promotion_Discount_value, ht.get("Combination Pool Discount Value"));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,400);");  // Scroll down by 250 pixels (adjust as needed)
-		WebElement nextButton1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@type='button']//button[@aria-label='Next']")));
+		WebElement element = driver.findElement(By.xpath("//span[@type='button']//span[@class='p-button-label'][normalize-space()='Next']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 
-		
-		// Now try clicking the element
-	
-		nextButton1.click();
 		WebElement coupon = driver.findElement(By.xpath("//input[@id='coupon']"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", coupon);
 		Thread.sleep(3000);
@@ -477,14 +453,9 @@ public class CombinationPoolPage extends TestBase {
 		CommonMethod.entertextintoinputbox(Promotion_Code, ht.get("Combination Pool Promotion Code"));
 		CommonMethod.entertextintoinputbox(Promotion_Description, ht.get("Combination Pool Description"));
 		CommonMethod.entertextintoinputbox(Promotion_Discount_value, ht.get("Combination Pool Discount Value"));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,400);");  // Scroll down by 250 pixels (adjust as needed)
-		WebElement nextButton1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@type='button']//button[@aria-label='Next']")));
+		WebElement element = driver.findElement(By.xpath("//span[@type='button']//span[@class='p-button-label'][normalize-space()='Next']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 
-		
-		// Now try clicking the element
-	
-		nextButton1.click();
 		WebElement coupon = driver.findElement(By.xpath("//input[@id='coupon']"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", coupon);
 		Thread.sleep(3000);

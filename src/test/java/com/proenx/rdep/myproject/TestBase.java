@@ -35,7 +35,7 @@ public class TestBase { // heart or engine of my framework
 	public static ExtentSparkReporter spark;
 	public static ExtentReports report;
 	public static ExtentTest test;
-	public static ExcelReader excel;
+	public static ExcelReader excel; 
 	public static String testCaseName;
 	public static Hashtable<String, String> run_mode = new Hashtable<>();
 
@@ -60,6 +60,8 @@ public class TestBase { // heart or engine of my framework
 		spark = new ExtentSparkReporter("C:\\Users\\sunil\\eclipse-workspace\\Regression_Pos_project\\"
 				+ "src\\test\\resources\\executionReports\\inventory Feature _" + timestamp + ".html");
 		report.attachReporter(spark);
+		
+		
 		excel = new ExcelReader(
 				System.getProperty("user.dir") + "\\src\\test\\resources\\testdata\\Test_Data_Sheet.xlsx");
 		readRunMode();

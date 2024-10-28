@@ -22,7 +22,7 @@ public class CreatePromotion_Page extends TestBase {
 	public CreatePromotion_Page() {
 		PageFactory.initElements(driver, this);
 	}
-
+  
 	@FindBy(xpath = "(//input[@name='date'])[1]")
 	private static WebElement Promotion_Start_Date;
 
@@ -117,16 +117,9 @@ public class CreatePromotion_Page extends TestBase {
 		CommonMethod.entertextintoinputbox(Promotion_Code, ht.get("Promotion Code"));
 		CommonMethod.entertextintoinputbox(Promotion_Description, ht.get("Description"));
 		CommonMethod.entertextintoinputbox(Promotion_Discount_value, ht.get("Discount Value"));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,400);");  // Scroll down by 250 pixels (adjust as needed)
-		WebElement nextButton1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@type='button']//button[@aria-label='Next']")));
+		WebElement element = driver.findElement(By.xpath("//span[@type='button']//span[@class='p-button-label'][normalize-space()='Next']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 
-		
-		// Now try clicking the element
-	
-		nextButton1.click();
-		// CommonMethod.clickonWebElement(Promotion_Next_Button, "Next");
-		// CommonMethod.clickonWebElement(Promotion_Create_Button, "Next");
 		WebElement nextButton = driver
 				.findElement(By.xpath("//li[@class='next float-end list-inline-item']//button[@aria-label='Next']"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", nextButton);
@@ -170,14 +163,8 @@ public class CreatePromotion_Page extends TestBase {
 		CommonMethod.entertextintoinputbox(Promotion_Code, ht.get("Promotion Code"));
 		CommonMethod.entertextintoinputbox(Promotion_Description, ht.get("Description"));
 		CommonMethod.entertextintoinputbox(Promotion_Discount_value, ht.get("Discount Value"));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,400);");  // Scroll down by 250 pixels (adjust as needed)
-		WebElement nextButton1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@type='button']//button[@aria-label='Next']")));
-
-		
-		// Now try clicking the element
-	
-		nextButton1.click();
+		WebElement element = driver.findElement(By.xpath("//span[@type='button']//span[@class='p-button-label'][normalize-space()='Next']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 
 		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(20));
 		WebElement toastMessage = wait2
@@ -223,14 +210,9 @@ public class CreatePromotion_Page extends TestBase {
 		CommonMethod.entertextintoinputbox(Promotion_Code, ht.get("Promotion Code"));
 		CommonMethod.entertextintoinputbox(Promotion_Description, ht.get("Description"));
 		CommonMethod.entertextintoinputbox(Promotion_Discount_value, ht.get("Discount Value"));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,400);");  // Scroll down by 250 pixels (adjust as needed)
-		WebElement nextButton1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@type='button']//button[@aria-label='Next']")));
+		WebElement element = driver.findElement(By.xpath("//span[@type='button']//span[@class='p-button-label'][normalize-space()='Next']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 
-		
-		// Now try clicking the element
-	
-		nextButton1.click();
 		WebElement coupon = driver.findElement(By.xpath("//input[@id='coupon']"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", coupon);
 		Thread.sleep(3000);
@@ -281,14 +263,9 @@ public class CreatePromotion_Page extends TestBase {
 		CommonMethod.entertextintoinputbox(Promotion_Code, ht.get("Promotion Code"));
 		CommonMethod.entertextintoinputbox(Promotion_Description, ht.get("Description"));
 		CommonMethod.entertextintoinputbox(Promotion_Discount_value, ht.get("Discount Value"));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,400);");  // Scroll down by 250 pixels (adjust as needed)
-		WebElement nextButton1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@type='button']//button[@aria-label='Next']")));
+		WebElement element = driver.findElement(By.xpath("//span[@type='button']//span[@class='p-button-label'][normalize-space()='Next']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 
-		
-		// Now try clicking the element
-	
-		nextButton1.click();
 		WebElement coupon = driver.findElement(By.xpath("//input[@id='coupon']"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", coupon);
 		Thread.sleep(3000);
@@ -345,11 +322,9 @@ public class CreatePromotion_Page extends TestBase {
 		CommonMethod.entertextintoinputbox(Promotion_Code, ht.get("Promotion Code"));
 		CommonMethod.entertextintoinputbox(Promotion_Description, ht.get("Description"));
 		CommonMethod.entertextintoinputbox(Promotion_Discount_value, ht.get("Discount Value"));
-		// CommonMethod.clickonWebElement(Promotion_Next_Button, "Next");
-		WebElement nextButton1 = Promotion_Next_Button;
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", nextButton1);
-		Thread.sleep(3000);
-		nextButton1.click();
+		WebElement element = driver.findElement(By.xpath("//span[@type='button']//span[@class='p-button-label'][normalize-space()='Next']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+
 
 		WebElement coupon = driver.findElement(By.xpath("//input[@id='coupon']"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", coupon);

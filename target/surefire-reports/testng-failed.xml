@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="com.proenx.rdep.myproject.listner.CustomListners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)" verbose="0">
+    <classes>
+      <class name="com.proenx.rdep.myproject.pos.TestPractice2">
+        <methods>
+          <include name="teardown"/>
+          <include name="SalesReportvaliddata"/>
+          <include name="generateReport"/>
+          <include name="launchBrowser"/>
+          <include name="loadPropfile"/>
+          <include name="getTestCaseName"/>
+        </methods>
+      </class> <!-- com.proenx.rdep.myproject.pos.TestPractice2 -->
+      <class name="com.proenx.rdep.myproject.pos.Inventory_TestCases">
+        <methods>
+          <include name="Inventory_List_Reset"/>
+          <include name="teardown"/>
+          <include name="getTestCaseName"/>
+          <include name="generateReport"/>
+          <include name="loadPropfile"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- com.proenx.rdep.myproject.pos.Inventory_TestCases -->
+      <class name="com.proenx.rdep.myproject.pos.Promo_Test_Case_Combination_Pool">
+        <methods>
+          <include name="create_promotion"/>
+          <include name="teardown"/>
+          <include name="generateReport"/>
+          <include name="launchBrowser"/>
+          <include name="loadPropfile"/>
+          <include name="getTestCaseName"/>
+        </methods>
+      </class> <!-- com.proenx.rdep.myproject.pos.Promo_Test_Case_Combination_Pool -->
+      <class name="com.proenx.rdep.myproject.pos.Package_Quantity_Test_Cases">
+        <methods>
+          <include name="teardown"/>
+          <include name="create_promotion"/>
+          <include name="getTestCaseName"/>
+          <include name="generateReport"/>
+          <include name="launchBrowser"/>
+          <include name="loadPropfile"/>
+        </methods>
+      </class> <!-- com.proenx.rdep.myproject.pos.Package_Quantity_Test_Cases -->
+      <class name="com.proenx.rdep.myproject.pos.PromotionTestCase1">
+        <methods>
+          <include name="teardown"/>
+          <include name="getTestCaseName"/>
+          <include name="generateReport"/>
+          <include name="promotionTC1"/>
+          <include name="loadPropfile"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- com.proenx.rdep.myproject.pos.PromotionTestCase1 -->
+      <class name="com.proenx.rdep.myproject.pos.Create_SimpleLine_Promo_System">
+        <methods>
+          <include name="create_promotion"/>
+          <include name="getTestCaseName"/>
+          <include name="teardown"/>
+          <include name="generateReport"/>
+          <include name="launchBrowser"/>
+          <include name="loadPropfile"/>
+        </methods>
+      </class> <!-- com.proenx.rdep.myproject.pos.Create_SimpleLine_Promo_System -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

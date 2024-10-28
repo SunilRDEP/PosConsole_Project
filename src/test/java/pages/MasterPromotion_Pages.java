@@ -19,7 +19,7 @@ public class MasterPromotion_Pages extends TestBase {
 
 	public MasterPromotion_Pages() {
 		PageFactory.initElements(driver, this);
-	} 
+	}  
 	
 	@FindBy(xpath = "//span[@class='p-button-icon ri-download-2-fill ri-xl']")
 	private static WebElement MasterPromotion_Download;

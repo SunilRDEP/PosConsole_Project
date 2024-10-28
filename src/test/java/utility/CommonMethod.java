@@ -18,6 +18,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.google.common.io.Files;
 import com.proenx.rdep.myproject.TestBase;
 
@@ -35,8 +36,8 @@ public class CommonMethod extends TestBase {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-	}
+test.pass(MediaEntityBuilder.createScreenCaptureFromPath(dest.toString()).build());
+	} 
 
 	public static void clickonWebElement(String xpath, String ElementName) {
 		driver.findElement(By.xpath(PROP.getProperty(xpath))).click();
@@ -98,11 +99,11 @@ public class CommonMethod extends TestBase {
 		test.pass("My expected color is " + "blue");
 		takescreenshot();
 	}
-
+ 
 	public static void SelectDropdown(String xapth, String data) {
 		WebElement promotype = driver.findElement(By.xpath(PROP.getProperty(xapth)));
 		Select select = new Select(promotype);
-		select.selectByVisibleText(data);
+		select.selectByVisibleText(data); 
 	}
 	
 

@@ -60,6 +60,12 @@ public class DashBoardPages extends TestBase {
 	
 	@FindBy(xpath = "//span[normalize-space()='Inventory List']")
 	private static WebElement Inventory_List;
+	
+	@FindBy(xpath = "//div[@class='text-white']//span[@class='nav__label'][normalize-space()='Products']")
+	private static WebElement Product;
+	
+	@FindBy(xpath = "//a[@class='submenu__link text-align-center']//span[@class='nav__label'][normalize-space()='Products']")
+	private static WebElement Product_Products;
 
 	public DashBoardPages clickOnAllMenunDashBoard() {
 		CommonMethod.clickonWebElement(clickonorderxpath, "Orders Menu");
@@ -129,4 +135,11 @@ public class DashBoardPages extends TestBase {
 		return new InventoryList_Page();
 	} 
 	
+	public Products_Page Products_SubMenu(Hashtable<String, String> ht) throws InterruptedException {	
+		Thread.sleep(3000);
+		CommonMethod.clickonWebElement(Product, "Product Menu");
+		
+		 CommonMethod.clickonWebElement(Product_Products, "Products Sub Menu");
+		return new Products_Page();
+	} 
 }

@@ -28,7 +28,7 @@ public void getTestCaseName() {
 	public void promotionTC1(Hashtable<String, String> ht) throws InterruptedException {
 		SignInPage sp = new SignInPage();
 
-	sp.signin(ht).MasterPromotion(ht).clickOnDownload_Filter(ht).filterOperation(ht);
+	sp.signin(ht).MasterPromotion(ht);
 	
 	}
 	

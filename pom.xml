@@ -6,17 +6,28 @@
 	<artifactId>Regression_Pos_project</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<build>
-
 		<plugins>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.5.0</version>
+				<configuration>
+					<testFailureIgnore>false</testFailureIgnore>
+					<suiteXmlFiles>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.1</version>
+				<version>3.13.0</version>
 				<configuration>
 					<fork>true</fork>
 					<source>17</source>
 					<target>17</target>
 				</configuration>
 			</plugin>
+
 
 		</plugins>
 	</build>
@@ -36,6 +47,14 @@
 			<version>7.10.2</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.30</version>
+    <scope>provided</scope>
+</dependency>
+
 		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
 		<dependency>
 			<groupId>com.aventstack</groupId>
@@ -82,8 +101,6 @@
 			<version>4.1.2</version> <!-- Replace with a compatible version -->
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.dom4j/dom4j -->
-
-	
 
 
 	</dependencies>

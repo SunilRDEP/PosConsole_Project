@@ -26,7 +26,7 @@ public class TestPractice2 extends TestBase {
 		SignInPage sp = new SignInPage();
 
 	sp.signin(ht).clickOnSalesReportSubMenu(ht).Sales_Filter_with_validdata(ht).verify_total_numberof_items_in_sales_table(ht);
-	
+	 
 	
 	}
 	

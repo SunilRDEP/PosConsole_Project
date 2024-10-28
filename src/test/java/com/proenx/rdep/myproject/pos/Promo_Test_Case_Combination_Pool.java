@@ -13,7 +13,7 @@ import pages.SignInPage;
 public class Promo_Test_Case_Combination_Pool  extends TestBase{
 	
 	@BeforeClass
-public void getTestCaseName() {
+public void getTestCaseName() { 
 		testCaseName = this.getClass().getSimpleName();
 	if(!run_mode.get(testCaseName).equalsIgnoreCase("Y")) {
 		throw new SkipException("Skipping Test  case as Run mode is set to no");// this is a user created exception
@@ -24,6 +24,6 @@ public void getTestCaseName() {
 	public void create_promotion(Hashtable<String, String> ht) throws InterruptedException {
 		SignInPage sp = new SignInPage();
 
-	sp.signin(ht).MasterPromotion(ht).create_Combination_Pool_Promotion(ht).create_CombinationPool_promo_couponbased_Custom_Store(ht);
+	sp.signin(ht).MasterPromotion(ht).create_Combination_Pool_Promotion(ht).create_CombinationPool_promo_systembased(ht);
 	}
 	}
