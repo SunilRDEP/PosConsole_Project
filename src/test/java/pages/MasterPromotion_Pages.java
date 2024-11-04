@@ -18,9 +18,9 @@ import utility.CommonMethod;
 public class MasterPromotion_Pages extends TestBase {
 
 	public MasterPromotion_Pages() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this); 
 	}  
-	
+	 
 	@FindBy(xpath = "//span[@class='p-button-icon ri-download-2-fill ri-xl']")
 	private static WebElement MasterPromotion_Download;
 	
@@ -159,7 +159,7 @@ public class MasterPromotion_Pages extends TestBase {
 	}
 	
 	public CreatePromotion_Page   create_Promotion(Hashtable<String, String> ht) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.clickonWebElement(Promotion_Create_Button, "create button");
 		return new CreatePromotion_Page();

@@ -22,7 +22,7 @@ public class CreatePromotion_Page extends TestBase {
 	public CreatePromotion_Page() {
 		PageFactory.initElements(driver, this);
 	}
-  
+
 	@FindBy(xpath = "(//input[@name='date'])[1]")
 	private static WebElement Promotion_Start_Date;
 
@@ -100,6 +100,34 @@ public class CreatePromotion_Page extends TestBase {
 
 	@FindBy(xpath = "//button[@aria-label='OK']")
 	private static WebElement Simpleline_Custom_Products_import_OK_Button;
+//======================================================================================================================
+
+	@FindBy(xpath = "//span[contains(text(),'Filter')]")
+	private static WebElement Products_Filter;
+
+	@FindBy(xpath = "//input[@placeholder='Search']")
+	private static WebElement Products_Filter_Search_Box;
+
+	@FindBy(xpath = "//span[contains(text(),'Select Store')]")
+	private static WebElement Products_Filter_Select_STore;
+
+	@FindBy(xpath = "//span[contains(text(),'Apply')]")
+	private static WebElement Products_Filter_Apply;
+
+	@FindBy(xpath = "//span[@class='p-button-icon p-button-icon-left ri-restart-line ri-xl me-1']")
+	private static WebElement Products_Filter_Reset;
+
+	@FindBy(xpath = "//h4[@id='offcanvasRightLabel']")
+	private static WebElement Products_Filter_Outside;
+
+	@FindBy(xpath = "//span[contains(text(),'Close')]")
+	private static WebElement ProductsFilter_Close;
+	
+	@FindBy(xpath = "//div[@class='px-1 py-2']//div[@class='col-12']//input[@placeholder='Select Date']")
+	private static WebElement clickedonstartdatecalenderfield;
+	
+	
+//=======================================================================================================================
 
 	public MasterPromotion_Pages create_Simpleline_promo_systembased(Hashtable<String, String> ht)
 			throws InterruptedException {
@@ -117,7 +145,8 @@ public class CreatePromotion_Page extends TestBase {
 		CommonMethod.entertextintoinputbox(Promotion_Code, ht.get("Promotion Code"));
 		CommonMethod.entertextintoinputbox(Promotion_Description, ht.get("Description"));
 		CommonMethod.entertextintoinputbox(Promotion_Discount_value, ht.get("Discount Value"));
-		WebElement element = driver.findElement(By.xpath("//span[@type='button']//span[@class='p-button-label'][normalize-space()='Next']"));
+		WebElement element = driver.findElement(
+				By.xpath("//span[@type='button']//span[@class='p-button-label'][normalize-space()='Next']"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 
 		WebElement nextButton = driver
@@ -143,11 +172,38 @@ public class CreatePromotion_Page extends TestBase {
 		Thread.sleep(3000);
 		String rowdata = driver.findElement(By.xpath("//tbody/tr[1]")).getText();
 		test.pass("TThe Latest Created Promotion details are " + rowdata);
+		CommonMethod.clickonWebElement(Products_Filter, "filter of Products Screen");
+		Thread.sleep(3000);
+
+		CommonMethod.entertextintoinputbox(Products_Filter_Search_Box,
+				ht.get("Promotion Data for Master Promotion FilterSearch"));
+		CommonMethod.inputCalenderDate(clickedonstartdatecalenderfield, ht.get("Master Promotion Start Date Format"));
+		CommonMethod.clickonWebElement("outsideclick", "Outside to avoid element overlaping");
+		
+		CommonMethod.clickonWebElement(Products_Filter_Apply, " Products Filter Apply Button");
+
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("//table[@class='bh-table-compact']//tbody/tr")));
+
+		test.pass("@@@@@PLEASE CROSS CHECH BELOW DATA WITH MPOS AND DEBEAVER @@@@" );
+		String Promotion_Name = driver.findElement(By.xpath("//tbody//tr[1]//td[1]")).getText();
+		String Start_Date = driver.findElement(By.xpath("//tbody//tr[1]//td[2]")).getText();
+		String Promo_type = driver.findElement(By.xpath("//tbody//tr[1]//td[4]")).getText();
+		String Promo_Code = driver.findElement(By.xpath("//tbody//tr[1]//td[4]")).getText();
+	
+		test.pass("PLEASE CHECK WHETHER My latest created Promotion Name in DBeaver and Mpos is -->> " + Promotion_Name + " <<-- OR NOT ");
+		test.pass("PLEASE CHECK WHETHER My latest created Promotion Start Date in DBeaver and Mpos is  -->> " + Start_Date + " <<--  OR NOT ");
+		test.pass("PLEASE CHECK WHETHER My latest created Promotion Type in DBeaver and Mpos is  -->> " +  Promo_type  +  " <<--  OR NOT ");
+		test.pass("PLEASE CHECK WHETHER My latest created Promotion Type in DBeaver and Mpos is  -->>" +  Promo_Code  +  " <<--  OR NOT ");
+		
+		Thread.sleep(3000);
 
 		return new MasterPromotion_Pages();
 	}
-
-	public CreatePromotion_Page promotion_Details_error_Message_Validtion(Hashtable<String, String> ht)
+//======================================================================================================================
+	
+	public CreatePromotion_Page promotion_Details_error_Message_Validation(Hashtable<String, String> ht)
 			throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
@@ -163,7 +219,8 @@ public class CreatePromotion_Page extends TestBase {
 		CommonMethod.entertextintoinputbox(Promotion_Code, ht.get("Promotion Code"));
 		CommonMethod.entertextintoinputbox(Promotion_Description, ht.get("Description"));
 		CommonMethod.entertextintoinputbox(Promotion_Discount_value, ht.get("Discount Value"));
-		WebElement element = driver.findElement(By.xpath("//span[@type='button']//span[@class='p-button-label'][normalize-space()='Next']"));
+		WebElement element = driver.findElement(
+				By.xpath("//span[@type='button']//span[@class='p-button-label'][normalize-space()='Next']"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 
 		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -180,24 +237,28 @@ public class CreatePromotion_Page extends TestBase {
 		} else {
 			System.out.println("Toast message is not visible.");
 		}
+		
 		return this;
 
 	}
-
+//======================================================================================================================
+	
 	public MasterPromotion_Pages clickon_MasterPromotion_Bredcrunch_Create() {
 		CommonMethod.clickonWebElement(Master_Promotion_Bredcrunch, "Master Promotion BredCrunch");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 
-		CommonMethod.clickonWebElement(Master_Promotion_Create, "Master Promotion Create");
+		
 		return new MasterPromotion_Pages();
 	}
-
+//=======================================================================================================================
+	
 	public MasterPromotion_Pages simpleLine_with_coupon_Based_All_Store(Hashtable<String, String> ht)
 			throws InterruptedException {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-w"
+				+ "rapper")));
 		CommonMethod.inputCalenderDate(Promotion_Start_Date, ht.get("Master Promotion Start Date Format"));
 		CommonMethod.inputCalenderDate(Promotion_End_Date, ht.get("Master Promotion End Date Format"));
 		WebElement promotype = driver.findElement(By.xpath("//select[@placeholder='select']"));
@@ -210,7 +271,8 @@ public class CreatePromotion_Page extends TestBase {
 		CommonMethod.entertextintoinputbox(Promotion_Code, ht.get("Promotion Code"));
 		CommonMethod.entertextintoinputbox(Promotion_Description, ht.get("Description"));
 		CommonMethod.entertextintoinputbox(Promotion_Discount_value, ht.get("Discount Value"));
-		WebElement element = driver.findElement(By.xpath("//span[@type='button']//span[@class='p-button-label'][normalize-space()='Next']"));
+		WebElement element = driver.findElement(
+				By.xpath("//span[@type='button']//span[@class='p-button-label'][normalize-space()='Next']"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 
 		WebElement coupon = driver.findElement(By.xpath("//input[@id='coupon']"));
@@ -224,7 +286,7 @@ public class CreatePromotion_Page extends TestBase {
 		Thread.sleep(3000);
 		nextButton.click();
 		CommonMethod.clickonWebElement(Promotion_Create_Button, "Create Button");
-		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(20));
+		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(60));
 		WebElement toastMessage = wait2
 				.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[3]/div/p")));
 
@@ -241,11 +303,39 @@ public class CreatePromotion_Page extends TestBase {
 		Thread.sleep(3000);
 		String rowdata = driver.findElement(By.xpath("//tbody/tr[1]")).getText();
 		test.pass("TThe Latest Created Promotion details are " + rowdata);
+		CommonMethod.clickonWebElement(Products_Filter, "filter of Products Screen");
+		Thread.sleep(3000);
 
+		CommonMethod.entertextintoinputbox(Products_Filter_Search_Box,
+				ht.get("Promotion Data for Master Promotion FilterSearch"));
+		CommonMethod.inputCalenderDate(clickedonstartdatecalenderfield, ht.get("Master Promotion Start Date Format"));
+		CommonMethod.clickonWebElement("outsideclick", "Outside to avoid element overlaping");
+		
+		CommonMethod.clickonWebElement(Products_Filter_Apply, " Products Filter Apply Button");
+
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("//table[@class='bh-table-compact']//tbody/tr")));
+
+		test.pass("@@@@@PLEASE CROSS CHECH BELOW DATA WITH MPOS AND DEBEAVER @@@@" );
+		String Promotion_Name = driver.findElement(By.xpath("//tbody//tr[1]//td[1]")).getText();
+		String Start_Date = driver.findElement(By.xpath("//tbody//tr[1]//td[2]")).getText();
+		String Promo_type = driver.findElement(By.xpath("//tbody//tr[1]//td[4]")).getText();
+		String Promo_Code = driver.findElement(By.xpath("//tbody//tr[1]//td[4]")).getText();
+	
+		test.pass("PLEASE CHECK WHETHER My latest created Promotion Name in DBeaver and Mpos is -->> " + Promotion_Name + " <<-- OR NOT ");
+		test.pass("PLEASE CHECK WHETHER My latest created Promotion Start Date in DBeaver and Mpos is  -->> " + Start_Date + " <<--  OR NOT ");
+		test.pass("PLEASE CHECK WHETHER My latest created Promotion Type in DBeaver and Mpos is  -->> " +  Promo_type  +  " <<--  OR NOT ");
+		test.pass("PLEASE CHECK WHETHER My latest created Promotion Type in DBeaver and Mpos is  -->>" +  Promo_Code  +  " <<--  OR NOT ");
+		
+		Thread.sleep(3000);
 		return new MasterPromotion_Pages();
 
 	}
+//====================================================================================================================
 
+	//Test Case Name= simpleLine_with_coupon_Based_Custom_Store
+	
 	public MasterPromotion_Pages simpleLine_with_coupon_Based_Custom_Store(Hashtable<String, String> ht)
 			throws InterruptedException {
 
@@ -263,7 +353,8 @@ public class CreatePromotion_Page extends TestBase {
 		CommonMethod.entertextintoinputbox(Promotion_Code, ht.get("Promotion Code"));
 		CommonMethod.entertextintoinputbox(Promotion_Description, ht.get("Description"));
 		CommonMethod.entertextintoinputbox(Promotion_Discount_value, ht.get("Discount Value"));
-		WebElement element = driver.findElement(By.xpath("//span[@type='button']//span[@class='p-button-label'][normalize-space()='Next']"));
+		WebElement element = driver.findElement(
+				By.xpath("//span[@type='button']//span[@class='p-button-label'][normalize-space()='Next']"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 
 		WebElement coupon = driver.findElement(By.xpath("//input[@id='coupon']"));
@@ -284,7 +375,7 @@ public class CreatePromotion_Page extends TestBase {
 				ht.get("StoreName2"));
 		CommonMethod.clickonWebElement(clicko_on_outside, "clicked on outside");
 		CommonMethod.clickonWebElement(Promotion_Create_Button, "Create Button");
-		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(20));
+		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(60));
 		WebElement toastMessage = wait2
 				.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[3]/div/p")));
 
@@ -301,7 +392,34 @@ public class CreatePromotion_Page extends TestBase {
 		Thread.sleep(3000);
 		String rowdata = driver.findElement(By.xpath("//tbody/tr[1]")).getText();
 		test.pass("TThe Latest Created Promotion details are " + rowdata);
+		
+		test.pass("@@@@@PLEASE CROSS CHECH BELOW DATA WITH MPOS AND DEBEAVER @@@@" );
+		
+		CommonMethod.clickonWebElement(Products_Filter, "filter of Products Screen");
+		Thread.sleep(3000);
 
+		CommonMethod.entertextintoinputbox(Products_Filter_Search_Box,
+				ht.get("Promotion Data for Master Promotion FilterSearch"));
+		CommonMethod.inputCalenderDate(clickedonstartdatecalenderfield, ht.get("Master Promotion Start Date Format"));
+		CommonMethod.clickonWebElement("outsideclick", "Outside to avoid element overlaping");
+		
+		CommonMethod.clickonWebElement(Products_Filter_Apply, " Products Filter Apply Button");
+
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("//table[@class='bh-table-compact']//tbody/tr")));
+
+		String Promotion_Name = driver.findElement(By.xpath("//tbody//tr[1]//td[1]")).getText();
+		String Start_Date = driver.findElement(By.xpath("//tbody//tr[1]//td[2]")).getText();
+		String Promo_type = driver.findElement(By.xpath("//tbody//tr[1]//td[4]")).getText();
+		String Promo_Code = driver.findElement(By.xpath("//tbody//tr[1]//td[4]")).getText();
+	
+		test.pass("PLEASE CHECK WHETHER My latest created Promotion Name in DBeaver and Mpos is " + Promotion_Name + " OR NOT ");
+		test.pass("PLEASE CHECK WHETHER My latest created Promotion Start Date in DBeaver and Mpos is" + Start_Date + " OR NOT ");
+		test.pass("PLEASE CHECK WHETHER My latest created Promotion Type in DBeaver and Mpos is  -->> " +  Promo_type  +  " <<--  OR NOT ");
+		test.pass("PLEASE CHECK WHETHER My latest created Promotion Type in DBeaver and Mpos is  -->>" +  Promo_Code  +  " <<--  OR NOT ");
+		
+		Thread.sleep(3000);
 		return new MasterPromotion_Pages();
 	}
 
@@ -322,9 +440,9 @@ public class CreatePromotion_Page extends TestBase {
 		CommonMethod.entertextintoinputbox(Promotion_Code, ht.get("Promotion Code"));
 		CommonMethod.entertextintoinputbox(Promotion_Description, ht.get("Description"));
 		CommonMethod.entertextintoinputbox(Promotion_Discount_value, ht.get("Discount Value"));
-		WebElement element = driver.findElement(By.xpath("//span[@type='button']//span[@class='p-button-label'][normalize-space()='Next']"));
+		WebElement element = driver.findElement(
+				By.xpath("//span[@type='button']//span[@class='p-button-label'][normalize-space()='Next']"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
-
 
 		WebElement coupon = driver.findElement(By.xpath("//input[@id='coupon']"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", coupon);
@@ -372,6 +490,33 @@ public class CreatePromotion_Page extends TestBase {
 		Thread.sleep(3000);
 		String rowdata = driver.findElement(By.xpath("//tbody/tr[1]")).getText();
 		test.pass("TThe Latest Created Promotion details are " + rowdata);
+		
+		CommonMethod.clickonWebElement(Products_Filter, "filter of Products Screen");
+		Thread.sleep(3000);
+
+		CommonMethod.entertextintoinputbox(Products_Filter_Search_Box,
+				ht.get("Promotion Data for Master Promotion FilterSearch"));
+		CommonMethod.inputCalenderDate(clickedonstartdatecalenderfield, ht.get("Master Promotion Start Date Format"));
+		CommonMethod.clickonWebElement("outsideclick", "Outside to avoid element overlaping");
+		
+		CommonMethod.clickonWebElement(Products_Filter_Apply, " Products Filter Apply Button");
+
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("//table[@class='bh-table-compact']//tbody/tr")));
+
+		test.pass("@@@@@PLEASE CROSS CHECH BELOW DATA WITH MPOS AND DEBEAVER @@@@" );
+		String Promotion_Name = driver.findElement(By.xpath("//tbody//tr[1]//td[1]")).getText();
+		String Start_Date = driver.findElement(By.xpath("//tbody//tr[1]//td[2]")).getText();
+		String Promo_type = driver.findElement(By.xpath("//tbody//tr[1]//td[4]")).getText();
+		String Promo_Code = driver.findElement(By.xpath("//tbody//tr[1]//td[4]")).getText();
+	
+		test.pass("PLEASE CHECK WHETHER My latest created Promotion Name in DBeaver and Mpos is -->> " + Promotion_Name + " <<-- OR NOT ");
+		test.pass("PLEASE CHECK WHETHER My latest created Promotion Start Date in DBeaver and Mpos is  -->> " + Start_Date + " <<--  OR NOT ");
+		test.pass("PLEASE CHECK WHETHER My latest created Promotion Type in DBeaver and Mpos is  -->> " +  Promo_type  +  " <<--  OR NOT ");
+		test.pass("PLEASE CHECK WHETHER My latest created Promotion Type in DBeaver and Mpos is  -->>" +  Promo_Code  +  " <<--  OR NOT ");
+		
+		Thread.sleep(3000);
 
 		return new MasterPromotion_Pages();
 	}

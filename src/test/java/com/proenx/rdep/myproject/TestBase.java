@@ -21,6 +21,7 @@ import org.testng.annotations.DataProvider;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import utility.DataCollection;
@@ -38,8 +39,8 @@ public class TestBase { // heart or engine of my framework
 	public static ExcelReader excel; 
 	public static String testCaseName;
 	public static Hashtable<String, String> run_mode = new Hashtable<>();
-
-	@BeforeSuite 
+ 
+	@BeforeSuite  
 
 	public void loadPropfile() throws IOException {
 		System.out.println("Reading Configue file ");
@@ -60,8 +61,6 @@ public class TestBase { // heart or engine of my framework
 		spark = new ExtentSparkReporter("C:\\Users\\sunil\\eclipse-workspace\\Regression_Pos_project\\"
 				+ "src\\test\\resources\\executionReports\\inventory Feature _" + timestamp + ".html");
 		report.attachReporter(spark);
-		
-		
 		excel = new ExcelReader(
 				System.getProperty("user.dir") + "\\src\\test\\resources\\testdata\\Test_Data_Sheet.xlsx");
 		readRunMode();
@@ -70,6 +69,7 @@ public class TestBase { // heart or engine of my framework
 	@BeforeMethod
 	public void launchBrowser() {
 		test = report.createTest(testCaseName);
+		
 		if (configue.getProperty("Browser").equalsIgnoreCase("Chrome")) {
 			driver = new ChromeDriver();
 			System.out.println("Chrome Driver is launched");
@@ -101,12 +101,14 @@ public class TestBase { // heart or engine of my framework
 	@AfterMethod(alwaysRun = true)
 	public void teardown() throws InterruptedException {
 		Thread.sleep(5000);
+		if(driver!=null)
 		driver.quit();
 	}
 
 	@AfterSuite
 	public void generateReport() {
 		report.flush();
+		
 
 	}
 

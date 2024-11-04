@@ -18,7 +18,7 @@ import com.proenx.rdep.myproject.TestBase;
 import utility.CommonMethod;
 
 public class InventoryList_Page extends TestBase {
-	public InventoryList_Page() {
+ 	public InventoryList_Page() {
 		PageFactory.initElements(driver, this);
 	}
 
@@ -118,7 +118,7 @@ public class InventoryList_Page extends TestBase {
 
 		return this;
 	}
-
+//=========================================================================================================================
 	public InventoryList_Page inventoryList_Adjustment_with_InValid_Inputs(Hashtable<String, String> ht)
 			throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
@@ -156,7 +156,8 @@ public class InventoryList_Page extends TestBase {
 
 		return this;
 	}
-
+//========================================================================================================================
+	
 	public InventoryList_Page inventoryList_Adjustment_Error_Message_Without_Store(Hashtable<String, String> ht)
 			throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
@@ -187,7 +188,8 @@ public class InventoryList_Page extends TestBase {
 
 		return this;
 	}
-
+//========================================================================================================================
+	
 	public InventoryList_Page inventoryList_Adjustment_Error_Message_Without_File(Hashtable<String, String> ht)
 			throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
@@ -229,10 +231,10 @@ public class InventoryList_Page extends TestBase {
 
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		String SKU = driver
-				.findElement(By.xpath("//*[@id=\"view\"]/div[2]/div/div[3]/div[1]/div[1]/table/tbody/tr[1]/td[2]"))
+				.findElement(By.xpath("//tbody/tr[1]/td[2]"))
 				.getText();
 		String Available_On_Hand = driver
-				.findElement(By.xpath("//*[@id=\"view\"]/div[2]/div/div[3]/div[1]/div[1]/table/tbody/tr[1]/td[6]"))
+				.findElement(By.xpath("//tbody/tr[1]/td[6]"))
 				.getText();
 		CommonMethod.clickonWebElement(Inventory_Import, "Import Button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
@@ -271,11 +273,16 @@ public class InventoryList_Page extends TestBase {
 				"Inventory_List_Filter_Select_STore", ht.get("Inventory List Filter Select Store1"));
 		CommonMethod.clickonWebElement(Inventory_List_Filter_Outside, "Outside to avoid element overlaping");
 		CommonMethod.clickonWebElement(Inventory_List_Filter_Apply, "Inventory List Filter Apply Button");
+		
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("//table[@class='bh-table-compact']//tbody/tr")));
+		
 		String SKU1 = driver
-				.findElement(By.xpath("//*[@id=\"view\"]/div[2]/div/div[3]/div[1]/div[1]/table/tbody/tr[1]/td[2]"))
+				.findElement(By.xpath("//tbody/tr[1]/td[2]"))
 				.getText();
 		String Available_On_Hand1 = driver
-				.findElement(By.xpath("//*[@id=\"view\"]/div[2]/div/div[3]/div[1]/div[1]/table/tbody/tr[1]/td[6]"))
+				.findElement(By.xpath("//tbody/tr[1]/td[6]"))
 				.getText();
 		System.out.println(SKU1);
 		test.pass("Entered SKU for before import through update is " + SKU
@@ -597,7 +604,7 @@ public class InventoryList_Page extends TestBase {
 		CommonMethod.clickonWebElement(Inventory_List_Filter_Apply, "Inventory List Filter Apply Button");
 
 		return this;
-	}
+	} 
 // ==================================================================================================================
 // FILE RESET TEST CASE-2
 

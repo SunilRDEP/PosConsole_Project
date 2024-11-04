@@ -140,6 +140,14 @@ public class DashBoardPages extends TestBase {
 		CommonMethod.clickonWebElement(Product, "Product Menu");
 		
 		 CommonMethod.clickonWebElement(Product_Products, "Products Sub Menu");
-		return new Products_Page();
+		return new Products_Page(); 
+	} 
+	
+	public Products_With_Other_Feature_Page Products_SubMenu_for_Other_Feature(Hashtable<String, String> ht) throws InterruptedException {	
+		Thread.sleep(3000);
+		CommonMethod.clickonWebElement(Product, "Product Menu");
+		
+		 CommonMethod.clickonWebElement(Product_Products, "Products Sub Menu");
+		return new Products_With_Other_Feature_Page(); 
 	} 
 }

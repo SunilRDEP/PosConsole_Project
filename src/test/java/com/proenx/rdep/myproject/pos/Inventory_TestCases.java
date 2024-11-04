@@ -19,7 +19,7 @@ public class Inventory_TestCases extends TestBase {
 		if (!run_mode.get(testCaseName).equalsIgnoreCase("Y")) {
 			throw new SkipException("Skipping Test  case as Run mode is set to no");// this is a user created exception
 		}
-	}
+	} 
 
 	@Test(dataProvider = "data_Collection", enabled = false, priority = 2)
 	public void Inventory_List1(Hashtable<String, String> ht) throws InterruptedException {
@@ -71,7 +71,7 @@ public class Inventory_TestCases extends TestBase {
 	public void Inventory_List_Reset(Hashtable<String, String> ht) throws InterruptedException {
 		SignInPage sp = new SignInPage();
 
-		sp.signin(ht).inventory_List(ht).inventoryList_Import_File_Reset_with_Three_Valid_SKU_(ht);
+		sp.signin(ht).inventory_List(ht).inventoryList_Adjustment_Error_Message_Without_File(ht);
 		}
 
 }

@@ -20,7 +20,7 @@ public void getTestCaseName() {
 	if(!run_mode.get(testCaseName).equalsIgnoreCase("Y")) {
 		throw new SkipException("Skipping Test  case as Run mode is set to no");// this is a user created exception
 	}
-	}
+	} 
 	 
 	
 	
@@ -28,7 +28,7 @@ public void getTestCaseName() {
 	public void promotionTC1(Hashtable<String, String> ht) throws InterruptedException {
 		SignInPage sp = new SignInPage();
 
-	sp.signin(ht).MasterPromotion(ht);
+	sp.signin(ht).MasterPromotion(ht).create_Promotion(ht).create_Simpleline_promo_systembased(ht);
 	
 	}
 	

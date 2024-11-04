@@ -20,7 +20,7 @@ public class SalesReportPage extends TestBase {
 
 	public SalesReportPage() {
 		PageFactory.initElements(driver, this);
-	} 
+	}  
 
 	@FindBy(xpath = "//h6[normalize-space()='Sales Report']")
 	private static WebElement SalesReporttext;
