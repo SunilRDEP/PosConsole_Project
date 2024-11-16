@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Nov 04 15:27:05 IST 2024</td>
+<td>Started on:</td><td>Sat Nov 16 09:27:29 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>5 seconds (5159 ms)</td>
+<tr><td>Total time:</td><td>54 seconds (54728 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,7 +68,7 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,17 +76,26 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.proenx.rdep.myproject.pos.Inventory_TestCases.getTestCaseName()'><b>getTestCaseName</b><br>Test class: com.proenx.rdep.myproject.pos.Inventory_TestCases</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
-	at com.proenx.rdep.myproject.pos.Inventory_TestCases.getTestCaseName(Inventory_TestCases.java:19)
+<td title='com.proenx.rdep.myproject.pos.Single_Product_TestCases.single_Product3()'><b>single_Product3</b><br>Test class: com.proenx.rdep.myproject.pos.Single_Product_TestCases<br>Parameters: {Attribute display Name  for adding a new attribute=Size, Stock for adding new Product=5, Select Store for adding new Product=Rdep Meta Limited Pune - 1765, Attribute Display Value1  for adding a new attribute=, Error Message for  Product Catagory  Mandatory Field=Please Select Category., Attribute Identifier1  for adding a new attribute=, Error Message for  Product SKU Mandatory Field=Please Enter Product SKU., Product Sku=212221, Error Message for   Entering Category Name  Mandatory Field=Please Enter Category Name, Attribute Type1=Color, Attribute Display Value3  for adding a new attribute=, Product Description=Pure Crystal Glass Boltle withEnv Friendlt Material, Attribute Identifier3  for adding a new attribute=, Error Message for  Product HSN Code  Mandatory Field=Please Enter HSN Code., Error Message for  Product Name Mandatory Field=Please Enter Product Name, Error Message for  Select Store Mandatory Field=Please Select Store., Single Product Name Field Maximum Character Testing =Paste here maximum  character to check the name field capacity, Attribute Display Value2  for adding a new attribute=, Least Price for adding new Product=399, Select Category for adding new Product=Accessories, Catagory Description inside Add Catagory Screen=Pure Cotton with HandMade Craft, Unit Price for adding new Product=399, Attribute Identifier2  for adding a new attribute=, Adding Single Product Successful Message=Inventory imported successfully., Catagory Name inside Add Catagory Screen=Cotton Section1, no data for this cell=no data for this cell, Select Store for adding new Catagory=Rdep Meta Limited Pune - 1765, Error Message for   Entering Description  Mandatory Field=Please Enter Category Description, Attribute Value1=Bella Blue, Attribute Identifier Name  for adding a new attribute=N, Product Name=202325_Glass_Bottle, Product HSN Code=1991}</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Cannot locate option with text: Bella Blue
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.1&apos;, revision: &apos;656257d8e9&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:153)
+	at utility.CommonMethod.SelectDropdown(CommonMethod.java:106)
+	at pages.Products_Page.add_Single_Product_with_Valid_Data(Products_Page.java:244)
+	at com.proenx.rdep.myproject.pos.Single_Product_TestCases.single_Product3(Single_Product_TestCases.java:32)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 	at org.testng.TestRunner.privateRun(TestRunner.java:739)
 	at org.testng.TestRunner.run(TestRunner.java:614)
@@ -103,17 +112,26 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace288797801", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace288797801'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
-	at com.proenx.rdep.myproject.pos.Inventory_TestCases.getTestCaseName(Inventory_TestCases.java:19)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1647509467", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1647509467'><pre>org.openqa.selenium.NoSuchElementException: Cannot locate option with text: Bella Blue
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.1&apos;, revision: &apos;656257d8e9&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:153)
+	at utility.CommonMethod.SelectDropdown(CommonMethod.java:106)
+	at pages.Products_Page.add_Single_Product_with_Valid_Data(Products_Page.java:244)
+	at com.proenx.rdep.myproject.pos.Single_Product_TestCases.single_Product3(Single_Product_TestCases.java:32)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 	at org.testng.TestRunner.privateRun(TestRunner.java:739)
 	at org.testng.TestRunner.run(TestRunner.java:614)
@@ -131,89 +149,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>0</td>
-<td>com.proenx.rdep.myproject.pos.Inventory_TestCases@6f204a1a</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.proenx.rdep.myproject.pos.Inventory_TestCases.launchBrowser()'><b>launchBrowser</b><br>Test class: com.proenx.rdep.myproject.pos.Inventory_TestCases</td>
-<td></td>
-<td>0</td>
-<td>com.proenx.rdep.myproject.pos.Inventory_TestCases@6f204a1a</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.proenx.rdep.myproject.pos.Inventory_TestCases.Inventory_List_Reset()'><b>Inventory_List_Reset</b><br>Test class: com.proenx.rdep.myproject.pos.Inventory_TestCases<br>Parameters: {Inventory List Store Name3=sky, Inventory List Filter Select Store1=Rdep Meta Limited Pune - 1765, Inventory List Store Name2=wwe, Inventory List Store Name1=Blissclub HSR - 0265, Inventory Import Successful Message=Inventory imported successfully., Inventory Import Error Message for not selecting Store=Please Select Store, Inventory List Search Data for File Reset with Single SKU file=70002400, Inventory Import Store=Blissclub HSR - 0265, Inventory Adjustment Successful Message=Inventory adjusted successfully., Inventory Adjustment Error Message for not selecting Store=Please Select Store, Inventory List Search Data for File Reset for three sku3=8904389900550, Inventory List Search Data for File Reset for three sku2=8904389900567, Inventory List Search Data for File Reset for three sku1=40002100, Inventory List Search Data for Update for three sku3=80002500, Inventory List Search Data for Update for three sku2=50002200, Inventory List Search Data for Update for three sku1=8904389909669, Inventory Adjustment Unsuccessful Message=Error updating inventory., Inventory Import Unsuccessful Message=Required data not found. Please upload the correct file., Inventory Adjustment Error Message for not selecting file=Please Select File, Inventory Import Error Message for not selecting file=Please Select File, Inventory List Search Data forUpdate with Single SKU file=60002300}</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
-	at com.proenx.rdep.myproject.pos.Inventory_TestCases.getTestCaseName(Inventory_TestCases.java:19)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1327539680", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1327539680'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
-	at com.proenx.rdep.myproject.pos.Inventory_TestCases.getTestCaseName(Inventory_TestCases.java:19)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>com.proenx.rdep.myproject.pos.Inventory_TestCases@6f204a1a</td></tr>
+<td>45</td>
+<td>com.proenx.rdep.myproject.pos.Single_Product_TestCases@740fb309</td></tr>
 </table><p>
 </body>
 </html>

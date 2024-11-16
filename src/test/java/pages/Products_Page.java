@@ -19,6 +19,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.proenx.rdep.myproject.TestBase;
@@ -30,6 +31,8 @@ public class Products_Page extends TestBase {
 		PageFactory.initElements(driver, this);
 	} 
 
+	 
+	
 	@FindBy(xpath = "//span[contains(text(),'Add')]")
 	private static WebElement Products_Add_Single_Products_Add_Button;
 
@@ -121,7 +124,64 @@ public class Products_Page extends TestBase {
 	
 	@FindBy(xpath = "//input[@placeholder='Enter HSN Code']")
 	private static WebElement Add_Products_HSN_Code;
-
+	
+	@FindBy(xpath = "//div[@class='container-fluid mt-1']//li[5]//a[1]//span[1]")
+	private static WebElement Add_Products_Breadcrumbs;
+	
+//===========================================================================================================================
+	
+//Add New Attrinute Xpaths
+	
+	@FindBy(xpath = "//button[normalize-space()='Add New Attribute']")
+	private static WebElement Products_Add_New_Attribute_Button;
+	
+	@FindBy(xpath = "//body/div[@id='app']/div[@class='main_app']/div[@id='view']/div[@class='container-fluid mt-1']/div[@class='content-wrapper']/div/form/div[@class='row my-1']/div[@class='col-lg-6 px-1 pt-2']/div[@class='card mt-2 card-shadow']/div[@class='card-body']/div[@role='dialog']/div[@class='modal-dialog modal-lg']/div[@class='modal-content']/div[@class='modal-body']/div/form[@class='row p-1']/div[@class='row']/div[1]/input[1]")
+	private static WebElement Products_Add_New_Attribute_Attribute_Display ;
+	
+	@FindBy(xpath = "//button[normalize-space()='Add New Attribute']")
+	private static WebElement Products_Add_New_Attribute_Identifier;
+	
+	@FindBy(xpath = "//input[@placeholder='Enter Attribute Display Value']")
+	private static WebElement Products_Add_New_Attribute_Attribute_Display_Value1;
+	
+	@FindBy(xpath = "//button[normalize-space()='Add New Attribute']")
+	private static WebElement Products_Add_New_Attribute_Attribute_Identifier1;
+	
+	@FindBy(xpath = "//div[@class='card mt-2 card-shadow']//div[@class='modal-body']//div[2]//div[1]//input[1]")
+	private static WebElement Products_Add_New_Attribute_Attribute_Display_Value2;
+	
+	@FindBy(xpath = "//div[@class='card mt-2 card-shadow']//div[@class='modal-body']//div[2]//div[2]//input[1]")
+	private static WebElement Products_Add_New_Attribute_Attribute_Identifier2;
+	
+	@FindBy(xpath = "//div[@class='col-12 mx-4 my-3']//div[3]//div[1]//input[1]")
+	private static WebElement Products_Add_New_Attribute_Attribute_Display_Value3;
+	
+	@FindBy(xpath = "//div[contains(@class,'col-12 mx-4 my-3')]//div[3]//div[2]//input[1]")
+	private static WebElement Products_Add_New_Attribute_Attribute_Identifier3;
+	
+	@FindBy(xpath = "//div[contains(@role,'dialog')]//div[contains(@class,'row')]//div[1]//div[4]//button[1]")
+	private static WebElement Products_Add_New_Attribute_Attribute_Add_More1;
+	
+	@FindBy(xpath = "//div[contains(@class,'modal-body')]//div[2]//div[4]//button[1]")
+	private static WebElement Products_Add_New_Attribute_Attribute_Add_More2;
+	
+	@FindBy(xpath = "//div[contains(@class,'col-12 mx-4 my-3')]//div[3]//div[4]//button[1]")
+	private static WebElement Products_Add_New_Attribute_Attribute_Add_More3;
+	
+	@FindBy(xpath = "//div[contains(@class,'row my-1')]//div[contains(@class,'row')]//div[1]//div[3]//span[1]//i[1]")
+	private static WebElement Products_Add_New_Attribute_Attribute_Delete_Attribute_Details1;
+	
+	@FindBy(xpath = "//div[contains(@class,'modal-body')]//div[2]//div[3]//span[1]//i[1]")
+	private static WebElement Products_Add_New_Attribute_Attribute_Delete_Attribute_Details2;
+	
+	@FindBy(xpath = "//div[contains(@class,'col-12 mx-4 my-3')]//div[3]//div[3]//span[1]//i[1]")
+	private static WebElement Products_Add_New_Attribute_Attribute_Delete_Attribute_Details3;
+	
+	@FindBy(xpath = "//div[@role='dialog']//div[@class='modal-dialog modal-lg']//div[@class='modal-content']//div[@class='modal-body']//div//span[@class='p-button-label'][normalize-space()='Add']")
+	private static WebElement Products_Add_New_Attribute_Attribute_Add_Button;
+	
+	@FindBy(xpath = "//div[@role='dialog']//div[@class='modal-dialog modal-lg']//div[@class='modal-content']//div[@class='modal-body']//div//span[@class='p-button-label'][normalize-space()='Close']")
+	private static WebElement Products_Add_New_Attribute_Close_Button;
 	
 	//==================================================================================================================
 	//Filter Xpaths
@@ -147,7 +207,7 @@ public class Products_Page extends TestBase {
 	@FindBy(xpath = "//span[contains(text(),'Close')]")
 	private static WebElement ProductsFilter_Close;
 	
-
+SoftAssert softassert= new SoftAssert();
 	
 	public Products_Page add_Single_Product_with_Valid_Data(Hashtable<String, String> ht) throws InterruptedException, AWTException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
@@ -391,7 +451,7 @@ public class Products_Page extends TestBase {
 		if (toastMessage.isDisplayed()) {
 			String Actual_Pagetitle = toastMessage.getText();
 
-			Assert.assertEquals(Actual_Pagetitle, ht.get("Error Message for  Product SKU Mandatory Field"));
+			softassert.assertEquals(Actual_Pagetitle, ht.get("Error Message for  Product SKU Mandatory Field"));
 			System.out.println("Page title is verified and Title is: " + Actual_Pagetitle);
 			test.pass("The Pop-UP Error messge is verified and the Pup-UP Message   is: " + Actual_Pagetitle);
 			CommonMethod.takescreenshot();
@@ -421,7 +481,7 @@ public class Products_Page extends TestBase {
 		    String Actual_Pagetitle1 = toastMessage1.getText();
 
 		    // Perform assertion
-		    Assert.assertEquals(Actual_Pagetitle1, ht.get("Error Message for  Product Name Mandatory Field"));
+		    softassert.assertEquals(Actual_Pagetitle1, ht.get("Error Message for  Product Name Mandatory Field"));
 		    System.out.println("Page title is verified and Title is: " + Actual_Pagetitle1);
 		    test.pass("The Pop-UP Error Message for product name is verified and the Pop-UP Error Message is: " + Actual_Pagetitle1);
 
@@ -434,13 +494,13 @@ public class Products_Page extends TestBase {
 		Thread.sleep(3000);
 		CommonMethod.entertextintoinputbox(Products_Add_Product_Name, ht.get("Product Name"));
 		
-		driver.findElement(By.xpath("//h6[normalize-space()='Attribute Details']")).click();
-		Thread.sleep(3000);
-		WebElement add_product12 = driver
-				.findElement(By.xpath("//button[@class='btn add-product-btn']"));
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", add_product12);
-		Thread.sleep(3000);
-		add_product12.click();
+		//driver.findElement(By.xpath("//h6[normalize-space()='Attribute Details']")).click();
+//		Thread.sleep(3000);
+//		WebElement add_product12 = driver
+//				.findElement(By.xpath("//button[@class='btn add-product-btn']"));
+//		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", add_product12);
+//		Thread.sleep(3000);
+//		add_product12.click();
 		
 		
 		CommonMethod.entertextintoinputbox(Products_Add_Product_Description, ht.get("Product Description"));
@@ -461,7 +521,7 @@ public class Products_Page extends TestBase {
 		    String Actual_Pagetitle13 = toastMessage13.getText();
 
 		    // Perform assertion
-		    Assert.assertEquals(Actual_Pagetitle13, ht.get("Error Message for  Product HSN Code  Mandatory Field"));
+		    softassert.assertEquals(Actual_Pagetitle13, ht.get("Error Message for  Product HSN Code  Mandatory Field"));
 		    System.out.println("Page title is verified and Title is: " + Actual_Pagetitle13);
 		    test.pass("The Pop-UP Error Message for product name is verified and the Pop-UP Error Message is: " + Actual_Pagetitle13);
 
@@ -494,7 +554,7 @@ public class Products_Page extends TestBase {
 		    String Actual_Pagetitle3 = toastMessage3.getText();
 
 		    // Perform assertion
-		    Assert.assertEquals(Actual_Pagetitle3, ht.get("Error Message for  Product Catagory  Mandatory Field"));
+		    softassert.assertEquals(Actual_Pagetitle3, ht.get("Error Message for  Product Catagory  Mandatory Field"));
 		    System.out.println("Page title is verified and Title is: " + Actual_Pagetitle3);
 		    test.pass("The Pop-UP Error message for  Product Catagory  Mandatory Field is verified and the Pop-UP Error Message is: " + Actual_Pagetitle3);
 
@@ -536,7 +596,7 @@ public class Products_Page extends TestBase {
 		    String Actual_Pagetitle4 = toastMessage4.getText();
 
 		    // Perform assertion
-		    Assert.assertEquals(Actual_Pagetitle4, ht.get("Error Message for   Entering Category Name  Mandatory Field"));
+		    softassert.assertEquals(Actual_Pagetitle4, ht.get("Error Message for   Entering Category Name  Mandatory Field"));
 		    System.out.println("Page title is verified and Title is: " + Actual_Pagetitle4);
 		    test.pass("The Pop-UP Error Message for   Entering Category Name  Mandatory Field is verified and the Pop-UP Error Message is: " + Actual_Pagetitle4);
 
@@ -549,45 +609,6 @@ public class Products_Page extends TestBase {
 		Thread.sleep(3000);
 		
 		CommonMethod.entertextintoinputbox(Products_Add_Catagory_Name, ht.get("Catagory Name inside Add Catagory Screen"));
-		/*CommonMethod.clickonWebElement(Products_Add_Catagory_Add_Button, "add button inside add catagory");
-		
-		
-
-		int attempts = 0;
-		while (attempts < 3) {
-		    try {
-		        WebDriverWait wait4 = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-		        // Wait for the toast message to appear
-		        WebElement toastMessage5 = wait
-		                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[3]/div/p")));
-
-		        if (toastMessage5.isDisplayed()) {
-		            String Actual_Pagetitle5 = toastMessage3.getText();
-
-		            // Perform assertion
-		            Assert.assertEquals(Actual_Pagetitle5, ht.get("Error Message for Product Name Mandatory Field"));
-		            System.out.println("Page title is verified and Title is: " + Actual_Pagetitle5);
-		            test.pass("The Pop-UP successful message is verified and the Pop-UP Message is: " + Actual_Pagetitle5);
-
-		            // Take screenshot
-		            CommonMethod.takescreenshot();
-		        } else {
-		            System.out.println("Toast message is not visible.");
-		        }
-
-		        break; // Exit loop if no exception
-		    } catch (StaleElementReferenceException e) {
-		        // Retry finding the element
-		        attempts++;
-		    }
-		}
-
-		Thread.sleep(3000);*/
-		
-//		CommonMethod.entertextintoinputbox(Products_Add_Catagory_Description, ht.get("Catagory Description inside Add Catagory Screen"));
-//		CommonMethod.bootstrapdropdownselection(Products_Add_Catagory_SelectStore, "Products_Add_Catagory_SelectStore",ht.get("Select Store for adding new Catagory") );
-//		CommonMethod.clickonWebElement(Products_Add_Catagory_Add_Button, "add button inside add catagory");
 		
 		CommonMethod.clickonWebElement(Products_Add_Catagory_Close_Button, "add button inside add catagory");
 		
@@ -599,6 +620,7 @@ public class Products_Page extends TestBase {
 		CommonMethod.entertextintoinputbox(Products_Add_Least_Price	, ht.get("Least Price for adding new Product"));
 		CommonMethod.entertextintoinputbox(Products_Add_Unit_Price	, ht.get("Unit Price for adding new Product"));
 		
+		softassert.assertAll();
 	
 	return this;
 	}
@@ -865,6 +887,8 @@ if(Products_Add_Catagory_Store_Catalog_CheckBox.isSelected()||Products_Add_Produ
 		Thread.sleep(3000);
 		return this;
 	}
+//======================================================================================================================
+	
 	public Products_Page add_Single_Product_Check_ForMaximum_Character_For_Name_Field(Hashtable<String, String> ht) throws InterruptedException, AWTException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
@@ -966,7 +990,7 @@ if(Products_Add_Catagory_Store_Catalog_CheckBox.isSelected()||Products_Add_Produ
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.clickonWebElement(Products_Add_Single_Products_Add_Button, "Add Button");
-		//List<WebElement> Mandatory1=driver.findElements(By.xpath("//*[@id=\"view\"]/div[2]/div/div/form/div[1]/div[1]/div[1]/div/div//label"));
+		//List<WebElement> ory1=driver.findElements(By.xpath("//*[@id=\"view\"]/div[2]/div/div/form/div[1]/div[1]/div[1]/div/div//label"));
 	
 		//List<WebElement> Mandatory2=driver.findElements(By.xpath("//*[@id=\"view\"]/div[2]/div/div/form/div[1]/div[1]/div[2]/div//label"));
 		//List<WebElement>Mandatory=driver.findElements(By.xpath("//*[@id=\"view\"]/div[2]/div/div/form/div[1]/div[1]/div[2]/div/div[3]/div[3]/div/div/div[2]/div/form/div[2]//label"));
@@ -993,8 +1017,9 @@ if(Products_Add_Catagory_Store_Catalog_CheckBox.isSelected()||Products_Add_Produ
 	public Products_Page add_Single_Product_Check_With_Duplicate_SKU(Hashtable<String, String> ht) throws InterruptedException, AWTException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
+		Thread.sleep(3000);
 		CommonMethod.clickonWebElement(Products_Add_Single_Products_Add_Button, "Add Button");
-		CommonMethod.entertextintoinputbox(Products_Add_Product_SKU, ht.get("Product Sku"));
+		CommonMethod.entertextintoinputbox(Products_Add_Product_SKU, ht.get("Duplicate Product Sku to verify"));
 		CommonMethod.entertextintoinputbox(Products_Add_Product_Name, ht.get("Single Product Name Field Maximum Character Testing "));
 		
 		CommonMethod.entertextintoinputbox(Products_Add_Product_Description, ht.get("Product Description"));
@@ -1088,7 +1113,7 @@ if(Products_Add_Catagory_Store_Catalog_CheckBox.isSelected()||Products_Add_Produ
 }
 	
 	public Products_Page Adding_Single_Product_Validate_catagory_details_with_Debeaver_and_SKU_for_Default_Catalogue(Hashtable<String, String> ht) throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.clickonWebElement(Products_Add_Single_Products_Add_Button, "Add Button");
 		CommonMethod.entertextintoinputbox(Products_Add_Product_SKU, ht.get("Product Sku"));
@@ -1108,12 +1133,29 @@ if(Products_Add_Catagory_Store_Catalog_CheckBox.isSelected()||Products_Add_Produ
 		CommonMethod.clickonWebElement(Products_Add_Select_Outside, "Outside");
 		CommonMethod.clickonWebElement(Products_Add_Add_Catagory, "Add Catagory Button");
 		Thread.sleep(3000);
-		CommonMethod.clickonWebElement(Products_Add_Catagory_Store_Catalog_CheckBox, "store Catalog Check Box");
+		
 		
 		CommonMethod.entertextintoinputbox(Products_Add_Catagory_Name, ht.get("Catagory Name inside Add Catagory Screen"));
 		CommonMethod.entertextintoinputbox(Products_Add_Catagory_Description, ht.get("Catagory Description inside Add Catagory Screen"));
 		CommonMethod.bootstrapdropdownselection(Products_Add_Catagory_SelectStore, "Products_Add_Catagory_SelectStore",ht.get("Select Store for adding new Catagory") );
 		CommonMethod.clickonWebElement(Products_Add_Catagory_Add_Button, "add button inside add catagory");
+		WebElement toastMessage = wait
+				.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//p[@class='v-toast__text']")));
+
+		if (toastMessage.isDisplayed()) {
+			String Actual_Pagetitle = toastMessage.getText();
+
+			Assert.assertEquals(Actual_Pagetitle, ht.get("Successful PopUp Message for adding a new category"));
+			System.out.println("Page title is verified and Title is: " + Actual_Pagetitle);
+			test.pass(
+					"The Pop-UP successful messge for adding a new catagory is verified and the Pup-UP Message   is: "
+							+ Actual_Pagetitle);
+			CommonMethod.takescreenshot();
+		} else {
+			System.out.println("Toast message is not visible.");
+		}
+		
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.bootstrapdropdownselection(Products_Add_Select_Catagory, "Add_Product_SelectCatagory",
 				ht.get("Select Category for adding new Product"));
 		CommonMethod.bootstrapdropdownselection(Products_Add_Select_Catagory, "Add_Product_SelectCatagory",
@@ -1122,6 +1164,127 @@ if(Products_Add_Catagory_Store_Catalog_CheckBox.isSelected()||Products_Add_Produ
 		
 		return this;
 	}
+//==================================================================================================================
 	
+	public Products_Page add_Single_Product_with_Valid_Data_with_adding_New_Attribute(Hashtable<String, String> ht) throws InterruptedException, AWTException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
+		CommonMethod.clickonWebElement(Products_Add_Single_Products_Add_Button, "Add Button");
+		CommonMethod.entertextintoinputbox(Products_Add_Product_SKU, ht.get("Product Sku"));
+		CommonMethod.entertextintoinputbox(Products_Add_Product_Name, ht.get("Product Name"));
+		CommonMethod.entertextintoinputbox(Products_Add_Product_Description, ht.get("Product Description"));
+		CommonMethod.entertextintoinputbox(Add_Products_HSN_Code, ht.get("Product HSN Code"));
+		
+		WebElement nextButton = driver
+				.findElement(By.xpath("//h6[normalize-space()='Attribute Details']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", nextButton);
+		Thread.sleep(3000);
+	
+		
+		CommonMethod.clickonWebElement(Products_Add_Default_Catalog, "Defaul Catalog Check Box");
+		CommonMethod.bootstrapdropdownselection(Products_Add_Product_Select_Store, "Products_Add_Product_Select_Store",
+				ht.get("Select Store for adding new Product"));
+		CommonMethod.clickonWebElement(Products_Add_Select_Outside, "Outside");
+		
+		if(Products_Add_Store_Catalog.isSelected()||Products_Add_Default_Catalog.isSelected()) {
+			test.pass("one of the checkbox has selected which is validating the  expected result");
+			
+		}else {
+			test.pass("Both the check box has not selected that means it is a issue  so please contact Developer");
+			
+		}
+		
+		
+		CommonMethod.bootstrapdropdownselection(Products_Add_Select_Catagory, "Add_Product_SelectCatagory",
+				ht.get("Select Category for adding new Product"));
+		CommonMethod.clickonWebElement(Products_Add_New_Attribute_Button, "Add new Attribute Button");
+		CommonMethod.entertextintoinputbox(Products_Add_New_Attribute_Attribute_Display	, ht.get("Attribute display Name  for adding a new attribute"));
+		
+		// wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[normalize-space()='Add New Attribute']")));
+		
+		CommonMethod.entertextintoinputbox(Products_Add_New_Attribute_Attribute_Display_Value1, ht.get("Attribute Display Value1  for adding a new attribute"));
+		//CommonMethod.entertextintoinputbox(Products_Add_New_Attribute_Attribute_Identifier1, ht.get("Attribute Identifier1  for adding a new attribute"));
+		CommonMethod.clickonWebElement(Products_Add_New_Attribute_Attribute_Add_More1, "Add more to add one more  attribute display Value");
+		CommonMethod.entertextintoinputbox(Products_Add_New_Attribute_Attribute_Display_Value2, ht.get("Attribute Display Value2  for adding a new attribute"));
+		CommonMethod.clickonWebElement(Products_Add_New_Attribute_Attribute_Add_More2, "Add one more value to add one more  attribute display Value");
+		CommonMethod.entertextintoinputbox(Products_Add_New_Attribute_Attribute_Display_Value3, ht.get("Attribute Display Value3  for adding a new attribute"));
+		CommonMethod.clickonWebElement(Products_Add_New_Attribute_Attribute_Add_More3, "Add one more value to add one more  attribute display Value");
+		CommonMethod.clickonWebElement(Products_Add_New_Attribute_Attribute_Delete_Attribute_Details1, "delete button to delete 1st value");
+		CommonMethod.clickonWebElement(Products_Add_New_Attribute_Attribute_Add_Button, "add button to add one new atribute");
+		
+		
+		return this;
 	}
+	public Products_Page add_Single_Product_Breadcrumbs(Hashtable<String, String> ht) throws InterruptedException, AWTException {
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
+		
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Add_Products_Breadcrumbs);
+		Thread.sleep(3000);
+		CommonMethod.clickonWebElement(Add_Products_Breadcrumbs, "Add Button");
+		return this;
+	}
+	public Products_Page add_Single_Product_Validation_For_Not_Allowing_Duplicate_Attribute(Hashtable<String, String> ht) throws InterruptedException, AWTException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
+		CommonMethod.clickonWebElement(Products_Add_Single_Products_Add_Button, "Add Button");
+		CommonMethod.entertextintoinputbox(Products_Add_Product_SKU, ht.get("Product Sku"));
+		CommonMethod.entertextintoinputbox(Products_Add_Product_Name, ht.get("Product Name"));
+		CommonMethod.entertextintoinputbox(Products_Add_Product_Description, ht.get("Product Description"));
+		CommonMethod.entertextintoinputbox(Add_Products_HSN_Code, ht.get("Product HSN Code"));
+		
+		WebElement nextButton = driver
+				.findElement(By.xpath("//h6[normalize-space()='Attribute Details']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", nextButton);
+		Thread.sleep(3000);
 	
+		
+		CommonMethod.clickonWebElement(Products_Add_Default_Catalog, "Defaul Catalog Check Box");
+		CommonMethod.bootstrapdropdownselection(Products_Add_Product_Select_Store, "Products_Add_Product_Select_Store",
+				ht.get("Select Store for adding new Product"));
+		CommonMethod.clickonWebElement(Products_Add_Select_Outside, "Outside");
+		
+		if(Products_Add_Store_Catalog.isSelected()||Products_Add_Default_Catalog.isSelected()) {
+			test.pass("one of the checkbox has selected which is validating the  expected result");
+			
+		}else {
+			test.pass("Both the check box has not selected that means it is a issue  so please contact Developer");
+			
+		}
+		
+		
+		CommonMethod.bootstrapdropdownselection(Products_Add_Select_Catagory, "Add_Product_SelectCatagory",
+				ht.get("Select Category for adding new Product"));
+		CommonMethod.clickonWebElement(Products_Add_New_Attribute_Button, "Add new Attribute Button");
+		CommonMethod.entertextintoinputbox(Products_Add_New_Attribute_Attribute_Display	, ht.get("Attribute display Name  for adding a new attribute"));
+		
+		// wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[normalize-space()='Add New Attribute']")));
+		
+		CommonMethod.entertextintoinputbox(Products_Add_New_Attribute_Attribute_Display_Value1, ht.get("Attribute Display Value1  for adding a new attribute"));
+		//CommonMethod.entertextintoinputbox(Products_Add_New_Attribute_Attribute_Identifier1, ht.get("Attribute Identifier1  for adding a new attribute"));
+		CommonMethod.clickonWebElement(Products_Add_New_Attribute_Attribute_Add_More1, "Add more to add one more  attribute display Value");
+		CommonMethod.entertextintoinputbox(Products_Add_New_Attribute_Attribute_Display_Value2, ht.get("Attribute Display Value2  for adding a new attribute"));
+		CommonMethod.clickonWebElement(Products_Add_New_Attribute_Attribute_Add_More2, "Add one more value to add one more  attribute display Value");
+		CommonMethod.entertextintoinputbox(Products_Add_New_Attribute_Attribute_Display_Value3, ht.get("Attribute Display Value3  for adding a new attribute"));
+		CommonMethod.clickonWebElement(Products_Add_New_Attribute_Attribute_Add_More3, "Add one more value to add one more  attribute display Value");
+		CommonMethod.clickonWebElement(Products_Add_New_Attribute_Attribute_Delete_Attribute_Details1, "delete button to delete 1st value");
+		CommonMethod.clickonWebElement(Products_Add_New_Attribute_Attribute_Add_Button, "add button to add one new atribute");
+		WebElement toastMessage = wait
+				.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//p[@class='v-toast__text']")));
+
+		if (toastMessage.isDisplayed()) {
+			String Actual_Pagetitle = toastMessage.getText();
+
+			Assert.assertEquals(Actual_Pagetitle, ht.get("Error Message For Duplicate Attribute"));
+			System.out.println("Page title is verified and Title is: " + Actual_Pagetitle);
+			test.pass(
+					"The Pop-UP Error  messge for adding a Duplicate Attribute is verified and the Pup-UP Message   is: "
+							+ Actual_Pagetitle);
+			CommonMethod.takescreenshot();
+		} else {
+			System.out.println("Toast message is not Visible.");
+		}
+		return this;
+	}
+}

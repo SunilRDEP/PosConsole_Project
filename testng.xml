@@ -8,13 +8,12 @@
 	<test thread-count="5" name="Test">
 
 		<classes>
-			
 
 			<class
 				name="com.proenx.rdep.myproject.pos.Single_Product_TestCases" />
-				<class name="com.proenx.rdep.myproject.pos.PromotionTestCase1" />
-			<class
-				name="com.proenx.rdep.myproject.pos.Single_Product_With_Inventory_Test_Case" />
+
+			
+			
 
 		</classes>
 	</test> <!-- Test -->

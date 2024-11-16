@@ -21,12 +21,12 @@ public void getTestCaseName() {
 		throw new SkipException("Skipping Test  case as Run mode is set to no");// this is a user created exception
 	} 
 	} 
-	
+	 
 	@Test(dataProvider = "data_Collection")
 	public void create_promotion(Hashtable<String, String> ht) throws InterruptedException {
 		SignInPage sp = new SignInPage();
 
-	sp.signin(ht).MasterPromotion(ht).create_Promotion(ht).simpleLine_with_coupon_Based_Custom_Store_custom_Product(ht);
+	sp.signin(ht).MasterPromotion(ht).create_Promotion(ht).create_Simpleline_promo_systembased(ht);
 	 
 	
 	}

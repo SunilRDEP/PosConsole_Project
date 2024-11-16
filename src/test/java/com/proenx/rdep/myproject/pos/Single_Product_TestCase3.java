@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 import com.proenx.rdep.myproject.TestBase;
 
 import pages.SignInPage;
+import utility.RetryAnalyser;
 
 public class Single_Product_TestCase3 extends TestBase {
 	@BeforeClass
@@ -24,7 +25,13 @@ public class Single_Product_TestCase3 extends TestBase {
 		public void single_Product1(Hashtable<String, String> ht) throws InterruptedException, AWTException {
 			SignInPage sp = new SignInPage();
 
-		sp.signin(ht).Products_SubMenu(ht).add_Single_Product_with_Valid_Data_Cross_Check_With_DBEAVER(ht);
+		 sp.signin(ht)
+		.Products_SubMenu(ht)
+		.add_Single_Product_ErrorMessage_Checking_for_Mandatory_Field(ht);
+	
+		
+		
+		
 		} 
 
 }

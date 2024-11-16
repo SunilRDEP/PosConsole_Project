@@ -34,13 +34,13 @@ public class TestBase { // heart or engine of my framework
 	public static Properties PROP;
 	// global variable declaration for extent report declaration
 	public static ExtentSparkReporter spark;
-	public static ExtentReports report;
+	public static ExtentReports report; 
 	public static ExtentTest test;
 	public static ExcelReader excel; 
 	public static String testCaseName;
 	public static Hashtable<String, String> run_mode = new Hashtable<>();
  
-	@BeforeSuite  
+	@BeforeSuite    
 
 	public void loadPropfile() throws IOException {
 		System.out.println("Reading Configue file ");

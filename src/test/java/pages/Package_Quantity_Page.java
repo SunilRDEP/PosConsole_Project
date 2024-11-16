@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 import com.proenx.rdep.myproject.TestBase;
 
@@ -103,16 +104,20 @@ public class Package_Quantity_Page extends TestBase {
 	
 	@FindBy(xpath = "//div[@class='input-grid']//input[@id='triggerQuantity']")
 	private static WebElement Qualified_Quantity_Trigger_Quantity;
+//======================================================================================================================
+	
+	SoftAssert softassert=new SoftAssert();
 	
 	public MasterPromotion_Pages create_Package_Quantity_promo_systembased(Hashtable<String, String> ht)
 			throws InterruptedException {
+		test.pass("TC-038 is loading");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.inputCalenderDate(Promotion_Start_Date, ht.get("Package Quantity Start Date Format"));
 		CommonMethod.inputCalenderDate(Promotion_End_Date, ht.get("Package Quantity End Date Format"));
 		WebElement promotype = driver.findElement(By.xpath("//select[@placeholder='select']"));
 		Select select1 = new Select(promotype);
-		select1.selectByVisibleText(ht.get("Package Quantity Type1"));
+		select1.selectByVisibleText(ht.get("Package Quantity Type1")); 
 		CommonMethod.entertextintoinputbox(Promotion_Name, ht.get("Package Quantity Promotion Name"));
 		WebElement promo_Subtype = driver.findElement(By.xpath("//select[@id='subType']"));
 		Select select2 = new Select(promo_Subtype);
@@ -120,14 +125,10 @@ public class Package_Quantity_Page extends TestBase {
 		CommonMethod.entertextintoinputbox(Promotion_Code, ht.get("Package Quantity Promotion Code"));
 		CommonMethod.entertextintoinputbox(Promotion_Description, ht.get("Package Quantity Description"));
 		CommonMethod.entertextintoinputbox(Promotion_Discount_value, ht.get("Package Quantity Discount Value"));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,400);");  // Scroll down by 250 pixels (adjust as needed)
-		WebElement nextButton1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@type='button']//button[@aria-label='Next']")));
+		WebElement element = driver.findElement(
+				By.xpath("//span[@type='button']//span[@class='p-button-label'][normalize-space()='Next']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 
-		
-		// Now try clicking the element
-	
-		nextButton1.click();
 		CommonMethod.entertextintoinputbox(Qualified_Quantity_Trigger_Quantity, ht.get("Package Quatity Trigger Quantiy"));
 		//CommonMethod.clickonWebElement(Qualified_Quantity_Trigger_Quantity, "Trigger Quantity");
 //		WebElement coupon = driver.findElement(By.xpath("//input[@id='coupon']"));
@@ -148,7 +149,7 @@ public class Package_Quantity_Page extends TestBase {
 		if (toastMessage.isDisplayed()) {
 			String Actual_Pagetitle = toastMessage.getText();
 
-			Assert.assertEquals(Actual_Pagetitle, ht.get("Package Quantity  Promotion successful Message"));
+			softassert.assertEquals(Actual_Pagetitle, ht.get("Package Quantity  Promotion successful Message"));
 			System.out.println("Page title is verified and Title is: " + Actual_Pagetitle);
 			test.pass("The Pop-UP successful messge is verified and the Pup-UP Message   is: " + Actual_Pagetitle);
 			CommonMethod.takescreenshot();
@@ -158,11 +159,14 @@ public class Package_Quantity_Page extends TestBase {
 		Thread.sleep(3000);
 		String rowdata = driver.findElement(By.xpath("//tbody/tr[1]")).getText();
 		test.pass("The Latest Created Promotion details are " + rowdata);
-
+		softassert.assertAll();
 		return new MasterPromotion_Pages();
 	}
+//==================================================================================================================
+	
 	public MasterPromotion_Pages create_Package_Quantity_promo_couponbased(Hashtable<String, String> ht)
 			throws InterruptedException {
+		test.pass("TC-041 is loading");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.inputCalenderDate(Promotion_Start_Date, ht.get("Package Quantity Start Date Format"));
@@ -177,14 +181,9 @@ public class Package_Quantity_Page extends TestBase {
 		CommonMethod.entertextintoinputbox(Promotion_Code, ht.get("Package Quantity Promotion Code"));
 		CommonMethod.entertextintoinputbox(Promotion_Description, ht.get("Package Quantity Description"));
 		CommonMethod.entertextintoinputbox(Promotion_Discount_value, ht.get("Package Quantity Discount Value"));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,400);");  // Scroll down by 400 pixels (adjust as needed)
-		WebElement nextButton1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@type='button']//button[@aria-label='Next']")));
-
-		
-		// Now try clicking the element
-	
-		nextButton1.click();
+		WebElement element = driver.findElement(
+				By.xpath("//span[@type='button']//span[@class='p-button-label'][normalize-space()='Next']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 		CommonMethod.entertextintoinputbox(Qualified_Quantity_Trigger_Quantity, ht.get("Package Quatity Trigger Quantiy"));
 		WebElement coupon = driver.findElement(By.xpath("//input[@id='coupon']"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", coupon);
@@ -211,7 +210,7 @@ public class Package_Quantity_Page extends TestBase {
 		if (toastMessage.isDisplayed()) {
 			String Actual_Pagetitle = toastMessage.getText();
 
-			Assert.assertEquals(Actual_Pagetitle, ht.get("Package Quantity  Promotion successful Message"));
+			softassert.assertEquals(Actual_Pagetitle, ht.get("Package Quantity  Promotion successful Message"));
 			System.out.println("Page title is verified and Title is: " + Actual_Pagetitle);
 			test.pass("The Pop-UP successful messge is verified and the Pup-UP Message   is: " + Actual_Pagetitle);
 			CommonMethod.takescreenshot();
@@ -222,10 +221,14 @@ public class Package_Quantity_Page extends TestBase {
 		String rowdata = driver.findElement(By.xpath("//tbody/tr[1]")).getText();
 		test.pass("The Latest Created Promotion details are " + rowdata);
 		test.pass("Coupon based Package Quantity Promotion Created successfully  " );
+		softassert.assertAll();
 		return new MasterPromotion_Pages();
 	}
+//========================================================================================================================
+	
 	public MasterPromotion_Pages create_Package_Quantity_promo_systembased_Custom_Store(Hashtable<String, String> ht)
 			throws InterruptedException {
+		test.pass("TC-044 is loading");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.inputCalenderDate(Promotion_Start_Date, ht.get("Package Quantity Start Date Format"));
@@ -240,14 +243,13 @@ public class Package_Quantity_Page extends TestBase {
 		CommonMethod.entertextintoinputbox(Promotion_Code, ht.get("Package Quantity Promotion Code"));
 		CommonMethod.entertextintoinputbox(Promotion_Description, ht.get("Package Quantity Description"));
 		CommonMethod.entertextintoinputbox(Promotion_Discount_value, ht.get("Package Quantity Discount Value"));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,400);");  // Scroll down by 250 pixels (adjust as needed)
-		WebElement nextButton1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@type='button']//button[@aria-label='Next']")));
-
+		WebElement element = driver.findElement(
+				By.xpath("//span[@type='button']//span[@class='p-button-label'][normalize-space()='Next']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 		
 		// Now try clicking the element
 	
-		nextButton1.click();
+		
 		CommonMethod.entertextintoinputbox(Qualified_Quantity_Trigger_Quantity, ht.get("Package Quatity Trigger Quantiy"));
 		//CommonMethod.clickonWebElement(Qualified_Quantity_Trigger_Quantity, "Trigger Quantity");
 //		WebElement coupon = driver.findElement(By.xpath("//input[@id='coupon']"));
@@ -274,7 +276,7 @@ public class Package_Quantity_Page extends TestBase {
 		if (toastMessage.isDisplayed()) {
 			String Actual_Pagetitle = toastMessage.getText();
 
-			Assert.assertEquals(Actual_Pagetitle, ht.get("Package Quantity  Promotion successful Message"));
+			softassert.assertEquals(Actual_Pagetitle, ht.get("Package Quantity  Promotion successful Message"));
 			System.out.println("Page title is verified and Title is: " + Actual_Pagetitle);
 			test.pass("The Pop-UP successful messge is verified and the Pup-UP Message   is: " + Actual_Pagetitle);
 			CommonMethod.takescreenshot();
@@ -284,11 +286,14 @@ public class Package_Quantity_Page extends TestBase {
 		Thread.sleep(3000);
 		String rowdata = driver.findElement(By.xpath("//tbody/tr[1]")).getText();
 		test.pass("The Latest Created Promotion details are " + rowdata);
-
+		softassert.assertAll();
 		return new MasterPromotion_Pages();
 	}
+//====================================================================================================================
+	
 	public MasterPromotion_Pages create_Package_Quantity_promo_systembased_Custom_Store_Custom_Products(Hashtable<String, String> ht)
-			throws InterruptedException {
+			throws InterruptedException { 
+		test.pass("TC-040 is loading ");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.inputCalenderDate(Promotion_Start_Date, ht.get("Package Quantity Start Date Format"));
@@ -303,14 +308,11 @@ public class Package_Quantity_Page extends TestBase {
 		CommonMethod.entertextintoinputbox(Promotion_Code, ht.get("Package Quantity Promotion Code"));
 		CommonMethod.entertextintoinputbox(Promotion_Description, ht.get("Package Quantity Description"));
 		CommonMethod.entertextintoinputbox(Promotion_Discount_value, ht.get("Package Quantity Discount Value"));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,400);");  // Scroll down by 250 pixels (adjust as needed)
-		WebElement nextButton1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@type='button']//button[@aria-label='Next']")));
-
 		
-		// Now try clicking the element
-	
-		nextButton1.click();
+		WebElement element = driver.findElement(
+				By.xpath("//span[@type='button']//span[@class='p-button-label'][normalize-space()='Next']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+		
 		CommonMethod.entertextintoinputbox(Qualified_Quantity_Trigger_Quantity, ht.get("Package Quatity Trigger Quantiy"));
 		//CommonMethod.clickonWebElement(Qualified_Quantity_Trigger_Quantity, "Trigger Quantity");
 //		WebElement coupon = driver.findElement(By.xpath("//input[@id='coupon']"));
@@ -335,7 +337,7 @@ public class Package_Quantity_Page extends TestBase {
 		// driver.findElement(By.xpath("//div[@id='customSaleSetModal']//input[@id='fileProduct']")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//div[@id='customSaleSetModal']//input[@id='fileProduct']"))
-				.sendKeys("C:\\Users\\sunil\\Downloads\\suniltest.csv");
+				.sendKeys("C:\\Users\\sunil\\Test File Format\\Package_Quantity_System_Based_Product_File.csv");
 		// CommonMethod.entertextintoinputbox(Simpleline_Custom_Products_Select_File,
 		// ht.get("Product file Path"));
 		CommonMethod.clickonWebElement(Simpleline_Custom_Products_import, "import ");
@@ -351,7 +353,7 @@ public class Package_Quantity_Page extends TestBase {
 		if (toastMessage.isDisplayed()) {
 			String Actual_Pagetitle = toastMessage.getText();
 
-			Assert.assertEquals(Actual_Pagetitle, ht.get("Package Quantity  Promotion successful Message"));
+			softassert.assertEquals(Actual_Pagetitle, ht.get("Package Quantity  Promotion successful Message"));
 			System.out.println("Page title is verified and Title is: " + Actual_Pagetitle);
 			test.pass("The Pop-UP successful messge is verified and the Pup-UP Message   is: " + Actual_Pagetitle);
 			CommonMethod.takescreenshot();
@@ -361,11 +363,14 @@ public class Package_Quantity_Page extends TestBase {
 		Thread.sleep(3000);
 		String rowdata = driver.findElement(By.xpath("//tbody/tr[1]")).getText();
 		test.pass("The Latest Created Promotion details are " + rowdata);
-
+		softassert.assertAll();
 		return new MasterPromotion_Pages();
 	}
+//=======================================================================================================================
+	
 	public MasterPromotion_Pages create_Package_Quantity_promo_systembased_All_Store_Custom_Products(Hashtable<String, String> ht)
 			throws InterruptedException {
+		test.pass("TC-039 is loading ");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.inputCalenderDate(Promotion_Start_Date, ht.get("Package Quantity Start Date Format"));
@@ -380,14 +385,10 @@ public class Package_Quantity_Page extends TestBase {
 		CommonMethod.entertextintoinputbox(Promotion_Code, ht.get("Package Quantity Promotion Code"));
 		CommonMethod.entertextintoinputbox(Promotion_Description, ht.get("Package Quantity Description"));
 		CommonMethod.entertextintoinputbox(Promotion_Discount_value, ht.get("Package Quantity Discount Value"));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,400);");  // Scroll down by 250 pixels (adjust as needed)
-		WebElement nextButton1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@type='button']//button[@aria-label='Next']")));
-
+		WebElement element = driver.findElement(
+				By.xpath("//span[@type='button']//span[@class='p-button-label'][normalize-space()='Next']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 		
-		// Now try clicking the element
-	
-		nextButton1.click();
 		CommonMethod.entertextintoinputbox(Qualified_Quantity_Trigger_Quantity, ht.get("Package Quatity Trigger Quantiy"));
 		//CommonMethod.clickonWebElement(Qualified_Quantity_Trigger_Quantity, "Trigger Quantity");
 //		WebElement coupon = driver.findElement(By.xpath("//input[@id='coupon']"));
@@ -405,7 +406,7 @@ public class Package_Quantity_Page extends TestBase {
 		// driver.findElement(By.xpath("//div[@id='customSaleSetModal']//input[@id='fileProduct']")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//div[@id='customSaleSetModal']//input[@id='fileProduct']"))
-				.sendKeys("C:\\Users\\sunil\\Downloads\\suniltest.csv");
+				.sendKeys("C:\\Users\\sunil\\Test File Format\\Package_Quantity_System_Based_Product_File.csv");
 		// CommonMethod.entertextintoinputbox(Simpleline_Custom_Products_Select_File,
 		// ht.get("Product file Path"));
 		CommonMethod.clickonWebElement(Simpleline_Custom_Products_import, "import ");
@@ -421,7 +422,7 @@ public class Package_Quantity_Page extends TestBase {
 		if (toastMessage.isDisplayed()) {
 			String Actual_Pagetitle = toastMessage.getText();
 
-			Assert.assertEquals(Actual_Pagetitle, ht.get("Package Quantity  Promotion successful Message"));
+			softassert.assertEquals(Actual_Pagetitle, ht.get("Package Quantity  Promotion successful Message"));
 			System.out.println("Page title is verified and Title is: " + Actual_Pagetitle);
 			test.pass("The Pop-UP successful messge is verified and the Pup-UP Message   is: " + Actual_Pagetitle);
 			CommonMethod.takescreenshot();
@@ -431,11 +432,14 @@ public class Package_Quantity_Page extends TestBase {
 		Thread.sleep(3000);
 		String rowdata = driver.findElement(By.xpath("//tbody/tr[1]")).getText();
 		test.pass("The Latest Created Promotion details are " + rowdata);
-
+		softassert.assertAll();
 		return new MasterPromotion_Pages();
 	}
+//=======================================================================================================================
+	
 	public MasterPromotion_Pages create_Package_Quantity_promo_couponbased_Custom_Store(Hashtable<String, String> ht)
 			throws InterruptedException {
+		test.pass("TC-042 is loading");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.inputCalenderDate(Promotion_Start_Date, ht.get("Package Quantity Start Date Format"));
@@ -450,14 +454,10 @@ public class Package_Quantity_Page extends TestBase {
 		CommonMethod.entertextintoinputbox(Promotion_Code, ht.get("Package Quantity Promotion Code"));
 		CommonMethod.entertextintoinputbox(Promotion_Description, ht.get("Package Quantity Description"));
 		CommonMethod.entertextintoinputbox(Promotion_Discount_value, ht.get("Package Quantity Discount Value"));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,400);");  // Scroll down by 250 pixels (adjust as needed)
-		WebElement nextButton1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@type='button']//button[@aria-label='Next']")));
-
+		WebElement element = driver.findElement(
+				By.xpath("//span[@type='button']//span[@class='p-button-label'][normalize-space()='Next']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 		
-		// Now try clicking the element
-	
-		nextButton1.click();
 		CommonMethod.entertextintoinputbox(Qualified_Quantity_Trigger_Quantity, ht.get("Package Quatity Trigger Quantiy"));
 		WebElement coupon = driver.findElement(By.xpath("//input[@id='coupon']"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", coupon);
@@ -492,7 +492,7 @@ public class Package_Quantity_Page extends TestBase {
 		if (toastMessage.isDisplayed()) {
 			String Actual_Pagetitle = toastMessage.getText();
 
-			Assert.assertEquals(Actual_Pagetitle, ht.get("Package Quantity  Promotion successful Message"));
+			softassert.assertEquals(Actual_Pagetitle, ht.get("Package Quantity  Promotion successful Message"));
 			System.out.println("Page title is verified and Title is: " + Actual_Pagetitle);
 			test.pass("The Pop-UP successful messge is verified and the Pup-UP Message   is: " + Actual_Pagetitle);
 			CommonMethod.takescreenshot();
@@ -503,11 +503,14 @@ public class Package_Quantity_Page extends TestBase {
 		String rowdata = driver.findElement(By.xpath("//tbody/tr[1]")).getText();
 		test.pass("The Latest Created Promotion details are " + rowdata);
 		test.pass("Coupon based Package Quantity Promotion Created successfully  " );
+		softassert.assertAll();
 		return new MasterPromotion_Pages();
 	}
+//========================================================================================================================
 	
 	public MasterPromotion_Pages create_Package_Quantity_promo_couponbased_Custom_Store_Custom_Product(Hashtable<String, String> ht)
 			throws InterruptedException {
+		test.pass("TC-043 is loading");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.inputCalenderDate(Promotion_Start_Date, ht.get("Package Quantity Start Date Format"));
@@ -526,14 +529,9 @@ public class Package_Quantity_Page extends TestBase {
 		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		//WebElement nextButton1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@type='button']//button[@aria-label='Next']")));
 
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,400);");  // Scroll down by 250 pixels (adjust as needed)
-		WebElement nextButton1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@type='button']//button[@aria-label='Next']")));
-
-		
-		// Now try clicking the element
-	
-		nextButton1.click();
+		WebElement element = driver.findElement(
+				By.xpath("//span[@type='button']//span[@class='p-button-label'][normalize-space()='Next']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 
 		Thread.sleep(3000);
 		
@@ -568,7 +566,7 @@ public class Package_Quantity_Page extends TestBase {
 		// driver.findElement(By.xpath("//div[@id='customSaleSetModal']//input[@id='fileProduct']")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//div[@id='customSaleSetModal']//input[@id='fileProduct']"))
-				.sendKeys("C:\\Users\\sunil\\Downloads\\suniltest.csv");
+				.sendKeys("C:\\Users\\sunil\\Test File Format\\Package_Quantity_Coupon_Based_Product_File.csv");
 		// CommonMethod.entertextintoinputbox(Simpleline_Custom_Products_Select_File,
 		// ht.get("Product file Path"));
 		CommonMethod.clickonWebElement(Simpleline_Custom_Products_import, "import ");
@@ -585,7 +583,7 @@ public class Package_Quantity_Page extends TestBase {
 		if (toastMessage.isDisplayed()) {
 			String Actual_Pagetitle = toastMessage.getText();
 
-			Assert.assertEquals(Actual_Pagetitle, ht.get("Package Quantity  Promotion successful Message"));
+			softassert.assertEquals(Actual_Pagetitle, ht.get("Package Quantity  Promotion successful Message"));
 			System.out.println("Page title is verified and Title is: " + Actual_Pagetitle);
 			test.pass("The Pop-UP successful messge is verified and the Pup-UP Message   is: " + Actual_Pagetitle);
 			CommonMethod.takescreenshot();
@@ -596,6 +594,7 @@ public class Package_Quantity_Page extends TestBase {
 		String rowdata = driver.findElement(By.xpath("//tbody/tr[1]")).getText();
 		test.pass("The Latest Created Promotion details are " + rowdata);
 		test.pass("Coupon based Package Quantity Promotion Created successfully  " );
+		softassert.assertAll();
 		return new MasterPromotion_Pages();
 	}
 }

@@ -21,7 +21,7 @@ public class Inventory_TestCases extends TestBase {
 		}
 	} 
 
-	@Test(dataProvider = "data_Collection", enabled = false, priority = 2)
+	@Test(dataProvider = "data_Collection", enabled = true, priority = 2)
 	public void Inventory_List1(Hashtable<String, String> ht) throws InterruptedException {
 		SignInPage sp = new SignInPage();
 
@@ -34,44 +34,23 @@ public class Inventory_TestCases extends TestBase {
 		SignInPage sp = new SignInPage();
 
 		sp.signin(ht).inventory_List(ht).inventoryList_Import_FileReset_ErrorMessage_Without_File(ht);
-
+ 
 	}
 
 	@Test(dataProvider = "data_Collection", enabled = false, priority = 1)
 	public void Inventory_List_Edit(Hashtable<String, String> ht) throws InterruptedException {
 		SignInPage sp = new SignInPage();
 
-		sp.signin(ht).inventory_List(ht).inventoryList_Import_Update_with_One_Valid_SKU_(ht)
-				.inventoryList_Import_Update_ErrorMessage_with_Without_Store(ht)
-				.inventoryList_Import_Update_ErrorMessage_with_Without_File(ht)
-				.inventoryList_Import_Update_with_InValid_Data_(ht);
+		sp.signin(ht).inventory_List(ht).inventoryList_Import_Update_with_One_Valid_SKU_(ht);
 	}
 
 	@Test(dataProvider = "data_Collection", enabled = false, priority = 1)
 	public void Inventory_List_table(Hashtable<String, String> ht) throws InterruptedException {
 		SignInPage sp = new SignInPage();
 
-		sp.signin(ht).inventory_List(ht).inventoryList_Adjustment_Error_Message_Without_File(ht)
-				.inventoryList_Adjustment_Error_Message_Without_Store(ht)
-				.inventoryList_Adjustment_with_InValid_Inputs(ht).inventoryList_Adjustment_with_Valid_Inputs(ht);
+		sp.signin(ht).MasterPromotion(ht);
 
 	}
 
-	// ==================================================================================================================
-	@Test(dataProvider = "data_Collection", enabled = false, priority = 1)
-	public void Inventory_List_3(Hashtable<String, String> ht) throws InterruptedException {
-		SignInPage sp = new SignInPage();
-
-		sp.signin(ht).inventory_List(ht).inventoryList_Import_Update_ErrorMessage_with_Without_File(ht)
-				.inventoryList_Import_Update_ErrorMessage_with_Without_Store(ht)
-				.inventoryList_Import_Update_with_InValid_Data_(ht).inventoryList_Import_Update_with_One_Valid_SKU_(ht);
-	}
-//=========================================================================================================================
-	@Test(dataProvider = "data_Collection", enabled = true, priority = 1 )
-	public void Inventory_List_Reset(Hashtable<String, String> ht) throws InterruptedException {
-		SignInPage sp = new SignInPage();
-
-		sp.signin(ht).inventory_List(ht).inventoryList_Adjustment_Error_Message_Without_File(ht);
-		}
-
+	
 }

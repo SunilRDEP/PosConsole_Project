@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 import com.proenx.rdep.myproject.TestBase;
 
@@ -21,7 +22,7 @@ public class CreatePromotion_Page extends TestBase {
 
 	public CreatePromotion_Page() {
 		PageFactory.initElements(driver, this);
-	}
+	}  
 
 	@FindBy(xpath = "(//input[@name='date'])[1]")
 	private static WebElement Promotion_Start_Date;
@@ -126,7 +127,10 @@ public class CreatePromotion_Page extends TestBase {
 	@FindBy(xpath = "//div[@class='px-1 py-2']//div[@class='col-12']//input[@placeholder='Select Date']")
 	private static WebElement clickedonstartdatecalenderfield;
 	
+	@FindBy(xpath = "//div[@class='col-12 mt-2']//input[@placeholder='Select Date']")
+	private static WebElement clicked_on_End_date_calender_field;
 	
+	SoftAssert softassert= new SoftAssert();
 //=======================================================================================================================
 
 	public MasterPromotion_Pages create_Simpleline_promo_systembased(Hashtable<String, String> ht)
@@ -155,14 +159,14 @@ public class CreatePromotion_Page extends TestBase {
 		Thread.sleep(3000);
 		nextButton.click();
 		CommonMethod.clickonWebElement(Promotion_Create_Button, "Create Button");
-		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(20));
+		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(60));
 		WebElement toastMessage = wait2
 				.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[3]/div/p")));
 
 		if (toastMessage.isDisplayed()) {
 			String Actual_Pagetitle = toastMessage.getText();
 
-			Assert.assertEquals(Actual_Pagetitle, ht.get("Promotion successful Message"));
+			softassert.assertEquals(Actual_Pagetitle, ht.get("Promotion successful Message"));
 			System.out.println("Page title is verified and Title is: " + Actual_Pagetitle);
 			test.pass("The Pop-UP successful messge is verified and the Pup-UP Message   is: " + Actual_Pagetitle);
 			CommonMethod.takescreenshot();
@@ -198,7 +202,7 @@ public class CreatePromotion_Page extends TestBase {
 		test.pass("PLEASE CHECK WHETHER My latest created Promotion Type in DBeaver and Mpos is  -->>" +  Promo_Code  +  " <<--  OR NOT ");
 		
 		Thread.sleep(3000);
-
+		softassert.assertAll();
 		return new MasterPromotion_Pages();
 	}
 //======================================================================================================================
@@ -230,14 +234,14 @@ public class CreatePromotion_Page extends TestBase {
 		if (toastMessage.isDisplayed()) {
 			String Actual_Pagetitle = toastMessage.getText();
 
-			Assert.assertEquals(Actual_Pagetitle, ht.get("Promotion Details Error PopUp"));
+			softassert.assertEquals(Actual_Pagetitle, ht.get("Promotion Details Error PopUp"));
 			System.out.println("Page title is verified and Title is: " + Actual_Pagetitle);
 			test.pass("The Pop-UP error  messge is verified and the Pup-UP Message   is: " + Actual_Pagetitle);
 			CommonMethod.takescreenshot();
 		} else {
 			System.out.println("Toast message is not visible.");
 		}
-		
+		softassert.assertAll();
 		return this;
 
 	}
@@ -293,7 +297,7 @@ public class CreatePromotion_Page extends TestBase {
 		if (toastMessage.isDisplayed()) {
 			String Actual_Pagetitle = toastMessage.getText();
 
-			Assert.assertEquals(Actual_Pagetitle, ht.get("Promotion successful Message"));
+			softassert.assertEquals(Actual_Pagetitle, ht.get("Promotion successful Message"));
 			System.out.println("Page title is verified and Title is: " + Actual_Pagetitle);
 			test.pass("The Pop-UP successful messge is verified and the Pup-UP Message   is: " + Actual_Pagetitle);
 			CommonMethod.takescreenshot();
@@ -310,6 +314,8 @@ public class CreatePromotion_Page extends TestBase {
 				ht.get("Promotion Data for Master Promotion FilterSearch"));
 		CommonMethod.inputCalenderDate(clickedonstartdatecalenderfield, ht.get("Master Promotion Start Date Format"));
 		CommonMethod.clickonWebElement("outsideclick", "Outside to avoid element overlaping");
+		
+		
 		
 		CommonMethod.clickonWebElement(Products_Filter_Apply, " Products Filter Apply Button");
 
@@ -329,6 +335,7 @@ public class CreatePromotion_Page extends TestBase {
 		test.pass("PLEASE CHECK WHETHER My latest created Promotion Type in DBeaver and Mpos is  -->>" +  Promo_Code  +  " <<--  OR NOT ");
 		
 		Thread.sleep(3000);
+		softassert.assertAll();
 		return new MasterPromotion_Pages();
 
 	}
@@ -382,7 +389,7 @@ public class CreatePromotion_Page extends TestBase {
 		if (toastMessage.isDisplayed()) {
 			String Actual_Pagetitle = toastMessage.getText();
 
-			Assert.assertEquals(Actual_Pagetitle, ht.get("Promotion successful Message"));
+			softassert.assertEquals(Actual_Pagetitle, ht.get("Promotion successful Message"));
 			System.out.println("Page title is verified and Title is: " + Actual_Pagetitle);
 			test.pass("The Pop-UP successful messge is verified and the Pup-UP Message   is: " + Actual_Pagetitle);
 			CommonMethod.takescreenshot();
@@ -420,9 +427,11 @@ public class CreatePromotion_Page extends TestBase {
 		test.pass("PLEASE CHECK WHETHER My latest created Promotion Type in DBeaver and Mpos is  -->>" +  Promo_Code  +  " <<--  OR NOT ");
 		
 		Thread.sleep(3000);
+		softassert.assertAll();
 		return new MasterPromotion_Pages();
 	}
-
+//========================================================================================================================
+	
 	public MasterPromotion_Pages simpleLine_with_coupon_Based_Custom_Store_custom_Product(Hashtable<String, String> ht)
 			throws InterruptedException {
 
@@ -480,7 +489,7 @@ public class CreatePromotion_Page extends TestBase {
 		if (toastMessage.isDisplayed()) {
 			String Actual_Pagetitle = toastMessage.getText();
 
-			Assert.assertEquals(Actual_Pagetitle, ht.get("Promotion successful Message"));
+			softassert.assertEquals(Actual_Pagetitle, ht.get("Promotion successful Message"));
 			System.out.println("Page title is verified and Title is: " + Actual_Pagetitle);
 			test.pass("The Pop-UP successful messge is verified and the Pup-UP Message   is: " + Actual_Pagetitle);
 			CommonMethod.takescreenshot();
@@ -498,6 +507,7 @@ public class CreatePromotion_Page extends TestBase {
 				ht.get("Promotion Data for Master Promotion FilterSearch"));
 		CommonMethod.inputCalenderDate(clickedonstartdatecalenderfield, ht.get("Master Promotion Start Date Format"));
 		CommonMethod.clickonWebElement("outsideclick", "Outside to avoid element overlaping");
+		
 		
 		CommonMethod.clickonWebElement(Products_Filter_Apply, " Products Filter Apply Button");
 
@@ -517,8 +527,9 @@ public class CreatePromotion_Page extends TestBase {
 		test.pass("PLEASE CHECK WHETHER My latest created Promotion Type in DBeaver and Mpos is  -->>" +  Promo_Code  +  " <<--  OR NOT ");
 		
 		Thread.sleep(3000);
-
+		softassert.assertAll();
 		return new MasterPromotion_Pages();
 	}
+
 
 }

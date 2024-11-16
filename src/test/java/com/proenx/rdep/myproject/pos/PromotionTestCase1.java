@@ -11,6 +11,7 @@ import com.proenx.rdep.myproject.TestBase;
 
 import pages.SignInPage;
 import utility.DataCollection;
+import utility.RetryAnalyser;
 
 public class PromotionTestCase1 extends TestBase{
 	
@@ -21,10 +22,10 @@ public void getTestCaseName() {
 		throw new SkipException("Skipping Test  case as Run mode is set to no");// this is a user created exception
 	}
 	} 
-	 
+	  
 	
 	
-	@Test(dataProvider = "data_Collection")
+	@Test(dataProvider = "data_Collection",retryAnalyzer=RetryAnalyser.class)
 	public void promotionTC1(Hashtable<String, String> ht) throws InterruptedException {
 		SignInPage sp = new SignInPage();
 

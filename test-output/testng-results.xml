@@ -1,81 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-04T15:27:05 IST" name="Default suite" finished-at="2024-11-04T15:27:10 IST" duration-ms="5159">
+  <suite started-at="2024-11-16T09:27:29 IST" name="Default suite" finished-at="2024-11-16T09:28:23 IST" duration-ms="54728">
     <groups>
     </groups>
-    <test started-at="2024-11-04T15:27:05 IST" name="Default test" finished-at="2024-11-04T15:27:10 IST" duration-ms="5159">
-      <class name="com.proenx.rdep.myproject.pos.Inventory_TestCases">
-        <test-method is-config="true" signature="loadPropfile()[pri:0, instance:com.proenx.rdep.myproject.pos.Inventory_TestCases@6f204a1a]" started-at="2024-11-04T15:27:03 IST" name="loadPropfile" finished-at="2024-11-04T15:27:05 IST" duration-ms="1906" status="PASS">
+    <test started-at="2024-11-16T09:27:29 IST" name="Default test" finished-at="2024-11-16T09:28:23 IST" duration-ms="54728">
+      <class name="com.proenx.rdep.myproject.pos.Single_Product_TestCases">
+        <test-method is-config="true" signature="loadPropfile()[pri:0, instance:com.proenx.rdep.myproject.pos.Single_Product_TestCases@740fb309]" started-at="2024-11-16T09:27:27 IST" name="loadPropfile" finished-at="2024-11-16T09:27:29 IST" duration-ms="1526" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadPropfile -->
-        <test-method is-config="true" signature="getTestCaseName()[pri:0, instance:com.proenx.rdep.myproject.pos.Inventory_TestCases@6f204a1a]" started-at="2024-11-04T15:27:05 IST" name="getTestCaseName" finished-at="2024-11-04T15:27:05 IST" duration-ms="3" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "java.util.Hashtable.get(Object)" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "java.util.Hashtable.get(Object)" is null
-at com.proenx.rdep.myproject.pos.Inventory_TestCases.getTestCaseName(Inventory_TestCases.java:19)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method is-config="true" signature="getTestCaseName()[pri:0, instance:com.proenx.rdep.myproject.pos.Single_Product_TestCases@740fb309]" started-at="2024-11-16T09:27:29 IST" name="getTestCaseName" finished-at="2024-11-16T09:27:29 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getTestCaseName -->
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.proenx.rdep.myproject.pos.Inventory_TestCases@6f204a1a]" started-at="2024-11-04T15:27:05 IST" name="launchBrowser" finished-at="2024-11-04T15:27:05 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.proenx.rdep.myproject.pos.Single_Product_TestCases@740fb309]" started-at="2024-11-16T09:27:29 IST" name="launchBrowser" finished-at="2024-11-16T09:27:33 IST" duration-ms="3864" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="Inventory_List_Reset(java.util.Hashtable)[pri:1, instance:com.proenx.rdep.myproject.pos.Inventory_TestCases@6f204a1a]" started-at="2024-11-04T15:27:05 IST" name="Inventory_List_Reset" data-provider="data_Collection" finished-at="2024-11-04T15:27:05 IST" duration-ms="0" status="SKIP">
+        <test-method signature="single_Product3(java.util.Hashtable)[pri:4, instance:com.proenx.rdep.myproject.pos.Single_Product_TestCases@740fb309]" started-at="2024-11-16T09:27:33 IST" name="single_Product3" data-provider="data_Collection" finished-at="2024-11-16T09:28:18 IST" duration-ms="45373" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Inventory List Store Name3=sky, Inventory List Filter Select Store1=Rdep Meta Limited Pune - 1765, Inventory List Store Name2=wwe, Inventory List Store Name1=Blissclub HSR - 0265, Inventory Import Successful Message=Inventory imported successfully., Inventory Import Error Message for not selecting Store=Please Select Store, Inventory List Search Data for File Reset with Single SKU file=70002400, Inventory Import Store=Blissclub HSR - 0265, Inventory Adjustment Successful Message=Inventory adjusted successfully., Inventory Adjustment Error Message for not selecting Store=Please Select Store, Inventory List Search Data for File Reset for three sku3=8904389900550, Inventory List Search Data for File Reset for three sku2=8904389900567, Inventory List Search Data for File Reset for three sku1=40002100, Inventory List Search Data for Update for three sku3=80002500, Inventory List Search Data for Update for three sku2=50002200, Inventory List Search Data for Update for three sku1=8904389909669, Inventory Adjustment Unsuccessful Message=Error updating inventory., Inventory Import Unsuccessful Message=Required data not found. Please upload the correct file., Inventory Adjustment Error Message for not selecting file=Please Select File, Inventory Import Error Message for not selecting file=Please Select File, Inventory List Search Data forUpdate with Single SKU file=60002300}]]>
+                <![CDATA[{Attribute display Name  for adding a new attribute=Size, Stock for adding new Product=5, Select Store for adding new Product=Rdep Meta Limited Pune - 1765, Attribute Display Value1  for adding a new attribute=, Error Message for  Product Catagory  Mandatory Field=Please Select Category., Attribute Identifier1  for adding a new attribute=, Error Message for  Product SKU Mandatory Field=Please Enter Product SKU., Product Sku=212221, Error Message for   Entering Category Name  Mandatory Field=Please Enter Category Name, Attribute Type1=Color, Attribute Display Value3  for adding a new attribute=, Product Description=Pure Crystal Glass Boltle withEnv Friendlt Material, Attribute Identifier3  for adding a new attribute=, Error Message for  Product HSN Code  Mandatory Field=Please Enter HSN Code., Error Message for  Product Name Mandatory Field=Please Enter Product Name, Error Message for  Select Store Mandatory Field=Please Select Store., Single Product Name Field Maximum Character Testing =Paste here maximum  character to check the name field capacity, Attribute Display Value2  for adding a new attribute=, Least Price for adding new Product=399, Select Category for adding new Product=Accessories, Catagory Description inside Add Catagory Screen=Pure Cotton with HandMade Craft, Unit Price for adding new Product=399, Attribute Identifier2  for adding a new attribute=, Adding Single Product Successful Message=Inventory imported successfully., Catagory Name inside Add Catagory Screen=Cotton Section1, no data for this cell=no data for this cell, Select Store for adding new Catagory=Rdep Meta Limited Pune - 1765, Error Message for   Entering Description  Mandatory Field=Please Enter Category Description, Attribute Value1=Bella Blue, Attribute Identifier Name  for adding a new attribute=N, Product Name=202325_Glass_Bottle, Product HSN Code=1991}]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "java.util.Hashtable.get(Object)" is null]]>
+              <![CDATA[Cannot locate option with text: Bella Blue
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.1', revision: '656257d8e9'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: driver.version: unknown]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "java.util.Hashtable.get(Object)" is null
-at com.proenx.rdep.myproject.pos.Inventory_TestCases.getTestCaseName(Inventory_TestCases.java:19)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate option with text: Bella Blue
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.1', revision: '656257d8e9'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: driver.version: unknown
+at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:153)
+at utility.CommonMethod.SelectDropdown(CommonMethod.java:106)
+at pages.Products_Page.add_Single_Product_with_Valid_Data(Products_Page.java:244)
+at com.proenx.rdep.myproject.pos.Single_Product_TestCases.single_Product3(Single_Product_TestCases.java:32)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 at org.testng.TestRunner.privateRun(TestRunner.java:739)
 at org.testng.TestRunner.run(TestRunner.java:614)
@@ -94,19 +73,19 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Inventory_List_Reset -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.proenx.rdep.myproject.pos.Inventory_TestCases@6f204a1a]" started-at="2024-11-04T15:27:05 IST" name="teardown" finished-at="2024-11-04T15:27:10 IST" duration-ms="5002" status="PASS">
+        </test-method> <!-- single_Product3 -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.proenx.rdep.myproject.pos.Single_Product_TestCases@740fb309]" started-at="2024-11-16T09:28:18 IST" name="teardown" finished-at="2024-11-16T09:28:23 IST" duration-ms="5393" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="generateReport()[pri:0, instance:com.proenx.rdep.myproject.pos.Inventory_TestCases@6f204a1a]" started-at="2024-11-04T15:27:10 IST" name="generateReport" finished-at="2024-11-04T15:27:10 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:com.proenx.rdep.myproject.pos.Single_Product_TestCases@740fb309]" started-at="2024-11-16T09:28:23 IST" name="generateReport" finished-at="2024-11-16T09:28:24 IST" duration-ms="497" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateReport -->
-      </class> <!-- com.proenx.rdep.myproject.pos.Inventory_TestCases -->
+      </class> <!-- com.proenx.rdep.myproject.pos.Single_Product_TestCases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

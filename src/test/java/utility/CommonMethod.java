@@ -73,7 +73,7 @@ test.pass(MediaEntityBuilder.createScreenCaptureFromPath(dest.toString()).build(
 		driver.findElement(By.xpath(PROP.getProperty(xpath))).sendKeys(data);
 		// System.out.println("User entered "+data +" and it's value is: " +data);
 		test.pass("User entered +data and it's value is: " + data);
-		takescreenshot();
+		takescreenshot(); 
 	}
 
 	public static void enterdatafromexcel(WebElement xpath, String data, String Element) {

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener
+			class-name="com.proenx.rdep.myproject.listner.CustomListners" />
+	</listeners>
+	<test thread-count="5" name="Test">
+
+		<classes>
+		
+		<class
+				name="com.proenx.rdep.promotion.listner.Create_Package_Quantity_Coupon_Based" />
+		
+		<class
+				name="com.proenx.rdep.promotion.listner.Create_Package_Quantity_System_Based" />
+				
+			<class
+				name="com.proenx.rdep.promotion.listner.Create_CombinationPool_System_Based" />
+				
+				
+			<class
+				name="com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based" />
+				
+
+			<class
+				name="com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_Coupon_Based" />
+
+
+
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

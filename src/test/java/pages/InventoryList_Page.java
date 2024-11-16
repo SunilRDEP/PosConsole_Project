@@ -82,7 +82,8 @@ public class InventoryList_Page extends TestBase {
 
 	@FindBy(xpath = "//button[@aria-label='Yes']")
 	private static WebElement Inventory_List_Import_OK_Button;
-
+//=======================================================================================================================
+	
 	public InventoryList_Page inventoryList_Adjustment_with_Valid_Inputs(Hashtable<String, String> ht)
 			throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
@@ -299,7 +300,7 @@ public class InventoryList_Page extends TestBase {
 //======================================================================================================================
 	// UPDATE TEST CASE-2
 
-	public InventoryList_Page inventoryList_Import_Update_ErrorMessage_with_Without_Store(Hashtable<String, String> ht)
+	public InventoryList_Page inventoryList_Import_Update_ErrorMessage_Without_Store(Hashtable<String, String> ht)
 			throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));

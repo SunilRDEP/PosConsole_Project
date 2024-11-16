@@ -24,7 +24,7 @@ public class MasterPromotion_Pages extends TestBase {
 	@FindBy(xpath = "//span[@class='p-button-icon ri-download-2-fill ri-xl']")
 	private static WebElement MasterPromotion_Download;
 	
-	@FindBy(xpath = "//span[contains(text(),'Create')]")
+	@FindBy(xpath = "//span[contains(text(),'Create')]") 
 	private static WebElement MasterPromotion_Create;
 	
 	@FindBy(xpath = "//span[contains(text(),'Filter')]")
@@ -76,7 +76,7 @@ public class MasterPromotion_Pages extends TestBase {
 	
 		CommonMethod.clickonWebElement(MasterPromotion_Filter, "filter button");
 				
-		return this;
+		return this; 
 
 	}
 	public MasterPromotion_Pages filterOperation(Hashtable<String, String> ht) throws InterruptedException {
@@ -174,6 +174,7 @@ public class MasterPromotion_Pages extends TestBase {
 	}
 	
 	public Package_Quantity_Page   create_Package_Quantity_Promotion(Hashtable<String, String> ht) {
+		test.pass("TC-037 is loading");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.clickonWebElement(Promotion_Create_Button, "create button");
