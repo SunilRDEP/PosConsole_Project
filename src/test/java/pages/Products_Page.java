@@ -246,7 +246,7 @@ SoftAssert softassert= new SoftAssert();
 		CommonMethod.entertextintoinputbox(Products_Add_Unit_Price	, ht.get("Unit Price for adding new Product"));
 		
 		driver.findElement(By.xpath("//label[@for='fileProduct']")).click();
-		StringSelection filepathSelection= new StringSelection("C:\\Users\\sunil\\Test File Format\\screenshot.png");
+		StringSelection filepathSelection= new StringSelection("C:\\Users\\sunil\\Test File Format\\screenshot");
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filepathSelection, null);
 		//using Robot class
 		Thread.sleep(3000);
@@ -263,7 +263,7 @@ SoftAssert softassert= new SoftAssert();
 		test.pass("Image1 Uploaded Successfully");
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//label[@for='fileProduct']")).click();
-		StringSelection filepathSelection2= new StringSelection("C:\\Users\\sunil\\Test File Format\\screenshot2.png");
+		StringSelection filepathSelection2= new StringSelection("C:\\Users\\sunil\\Test File Format\\screenshot2");
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filepathSelection2, null);
 		//using Robot class
 		Thread.sleep(3000);
