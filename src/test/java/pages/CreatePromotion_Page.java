@@ -22,7 +22,7 @@ public class CreatePromotion_Page extends TestBase {
 
 	public CreatePromotion_Page() {
 		PageFactory.initElements(driver, this);
-	}  
+	}   
 
 	@FindBy(xpath = "(//input[@name='date'])[1]")
 	private static WebElement Promotion_Start_Date;
@@ -134,7 +134,7 @@ public class CreatePromotion_Page extends TestBase {
 //=======================================================================================================================
 
 	public MasterPromotion_Pages create_Simpleline_promo_systembased(Hashtable<String, String> ht)
-			throws InterruptedException {
+			throws InterruptedException { 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.inputCalenderDate(Promotion_Start_Date, ht.get("Master Promotion Start Date Format"));
@@ -362,7 +362,7 @@ public class CreatePromotion_Page extends TestBase {
 		CommonMethod.entertextintoinputbox(Promotion_Discount_value, ht.get("Discount Value"));
 		WebElement element = driver.findElement(
 				By.xpath("//span[@type='button']//span[@class='p-button-label'][normalize-space()='Next']"));
-		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element); 
 
 		WebElement coupon = driver.findElement(By.xpath("//input[@id='coupon']"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", coupon);

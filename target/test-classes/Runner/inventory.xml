@@ -9,10 +9,10 @@
 
 		<classes>
 
-			<class name="com.proenx.rdep.myproject.pos.PromotionTestCase1" />
+			
 			<class name="com.proenx.rdep.myproject.pos.Inventory_TestCases" />
 			<class
-				name="com.proenx.rdep.myproject.pos.Single_Product_TestCase3" />
+				name="com.proenx.rdep.myproject.pos.Stock_Request_Inward" />
 
 		</classes>
 	</test> <!-- Test -->

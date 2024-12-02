@@ -22,7 +22,7 @@ public class Package_Quantity_Page extends TestBase {
 
 	public Package_Quantity_Page() {
 		PageFactory.initElements(driver, this); 
-	}
+	} 
 	 
 	@FindBy(xpath = "(//input[@name='date'])[1]")
 	private static WebElement Promotion_Start_Date;
@@ -134,7 +134,7 @@ public class Package_Quantity_Page extends TestBase {
 //		WebElement coupon = driver.findElement(By.xpath("//input[@id='coupon']"));
 //		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", coupon);
 		Thread.sleep(3000);
-		WebElement nextButton = driver
+		WebElement nextButton = driver 
 				.findElement(By.xpath("//li[@class='next float-end list-inline-item']//button[@aria-label='Next']"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", nextButton);
 		Thread.sleep(3000);

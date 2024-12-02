@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.proenx.rdep.myproject.listner.CustomListners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.proenx.rdep.myproject.pos.Single_Product_TestCases">
+      <class name="com.proenx.rdep.myproject.pos.Stock_Request_Inward">
         <methods>
+          <include name="Inventory_List1" invocation-numbers="0"/>
           <include name="teardown"/>
-          <include name="single_Product3" invocation-numbers="0"/>
           <include name="getTestCaseName"/>
           <include name="generateReport"/>
           <include name="launchBrowser"/>
           <include name="loadPropfile"/>
         </methods>
-      </class> <!-- com.proenx.rdep.myproject.pos.Single_Product_TestCases -->
+      </class> <!-- com.proenx.rdep.myproject.pos.Stock_Request_Inward -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

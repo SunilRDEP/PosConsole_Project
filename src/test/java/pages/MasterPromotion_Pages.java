@@ -25,7 +25,7 @@ public class MasterPromotion_Pages extends TestBase {
 	private static WebElement MasterPromotion_Download;
 	
 	@FindBy(xpath = "//span[contains(text(),'Create')]") 
-	private static WebElement MasterPromotion_Create;
+	private static WebElement MasterPromotion_Create; 
 	
 	@FindBy(xpath = "//span[contains(text(),'Filter')]")
 	private static WebElement MasterPromotion_Filter;
@@ -68,7 +68,7 @@ public class MasterPromotion_Pages extends TestBase {
 	
 	
 	public MasterPromotion_Pages clickOnDownload_Filter(Hashtable<String, String> ht) throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 
 
@@ -130,7 +130,7 @@ public class MasterPromotion_Pages extends TestBase {
 	}
 	public MasterPromotion_Pages MasterPromo_filter_all_button(Hashtable<String, String> ht) {
 		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 
 
@@ -166,7 +166,7 @@ public class MasterPromotion_Pages extends TestBase {
 		
 	}
 	public CombinationPoolPage   create_Combination_Pool_Promotion(Hashtable<String, String> ht) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.clickonWebElement(Promotion_Create_Button, "create button");
 		return new CombinationPoolPage();
@@ -175,10 +175,19 @@ public class MasterPromotion_Pages extends TestBase {
 	
 	public Package_Quantity_Page   create_Package_Quantity_Promotion(Hashtable<String, String> ht) {
 		test.pass("TC-037 is loading");
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.clickonWebElement(Promotion_Create_Button, "create button");
 		return new Package_Quantity_Page();
+		
+	}
+	
+	public Simple_Total_Page   create_Simple_Total_Promotion(Hashtable<String, String> ht) {
+		test.pass("TC- is loading");
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
+		CommonMethod.clickonWebElement(Promotion_Create_Button, "create button");
+		return new Simple_Total_Page();
 		
 	}
 }

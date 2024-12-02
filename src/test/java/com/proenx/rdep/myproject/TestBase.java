@@ -26,23 +26,27 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import utility.DataCollection;
 import utility.ExcelReader;
-
-public class TestBase { // heart or engine of my framework
+ 
+public class TestBase { // heart or engine of my framework 
 	// global variable declaration for property file declaration
 	public static WebDriver driver;
 	public static Properties configue;
 	public static Properties PROP;
-	// global variable declaration for extent report declaration
+//=======================================================================================================================
+	
+	// global variable declaration for extent report declaration, test case nma e, hash table declaration
 	public static ExtentSparkReporter spark;
 	public static ExtentReports report; 
 	public static ExtentTest test;
-	public static ExcelReader excel; 
+	public static ExcelReader excel;  
 	public static String testCaseName;
 	public static Hashtable<String, String> run_mode = new Hashtable<>();
  
 	@BeforeSuite    
 
 	public void loadPropfile() throws IOException {
+//property file setup and it will be available for execution before every suite
+		
 		System.out.println("Reading Configue file ");
 		FileInputStream fis = new FileInputStream("C:\\Users\\sunil\\eclipse-workspace\\Regression_Pos_project\\"
 				+ "src\\test\\resources\\Properties\\Configue.properties");
@@ -56,16 +60,20 @@ public class TestBase { // heart or engine of my framework
 		PROP.load(fis1);
 		System.out.println("PROP file is loaded ");
 		System.out.println("Reading PROP file ");
+//======================================================================================================================
+//this setup is for creating and getting execution report  for every test cases 
 		String timestamp = new SimpleDateFormat("YYYY_MM_dd_hh_ss").format(new Date());
 		report = new ExtentReports();
 		spark = new ExtentSparkReporter("C:\\Users\\sunil\\eclipse-workspace\\Regression_Pos_project\\"
-				+ "src\\test\\resources\\executionReports\\inventory Feature _" + timestamp + ".html");
+				+ "src\\test\\resources\\executionReports\\RDEP_TEST_EXECUTION_REPORT _" + timestamp + ".html");
 		report.attachReporter(spark);
+//=======================================================================================================================
+//This will read the excel sheet by using the path of the excel sheet 
 		excel = new ExcelReader(
 				System.getProperty("user.dir") + "\\src\\test\\resources\\testdata\\Test_Data_Sheet.xlsx");
 		readRunMode();
 	}
-
+// This code is for 1. cross browser testing 2. The test case name for the report 3. page size wait 4. environment setup (Qa/UAT/Production)
 	@BeforeMethod
 	public void launchBrowser() {
 		test = report.createTest(testCaseName);
@@ -97,7 +105,7 @@ public class TestBase { // heart or engine of my framework
 		}
 
 	}
-
+//this code will close the browser once after the test case execution completed  
 	@AfterMethod(alwaysRun = true)
 	public void teardown() throws InterruptedException {
 		Thread.sleep(5000);
@@ -111,13 +119,14 @@ public class TestBase { // heart or engine of my framework
 		
 
 	}
-
+// this will decide the excel sheet name, test case name from which the data will provide to the test case 
 	@DataProvider
 	public Object[][] data_Collection() {
 		DataCollection dc = new DataCollection(excel, "Test Sunil", testCaseName);
 		return dc.dataArray();
 	}
-
+// this will read the the data from particular cell of particular row from the excel sheet 
+	
 	public void readRunMode() {
 		int rows = excel.getRowCount("Test Cases");
 		for (int i = 2; i <= rows; i++) {

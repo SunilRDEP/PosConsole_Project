@@ -23,13 +23,14 @@ public class Single_Product_TestCases extends TestBase {
 		//===================================================================================================
 
 		
-		@Test(dataProvider = "data_Collection", enabled = true,priority=4)
+		@Test(dataProvider = "data_Collection", enabled = true,priority=1)
 		public void single_Product3(Hashtable<String, String> ht) throws InterruptedException, AWTException {
 			SignInPage sp = new SignInPage();
 
 		sp.signin(ht)
 		.Products_SubMenu(ht)
-		.add_Single_Product_with_Valid_Data(ht);
+		.Adding_Single_Product_Validate_catagory_details_with_Debeaver_and_SKU_for_Default_Catalogue(ht);
+		
 		
 		}
 		

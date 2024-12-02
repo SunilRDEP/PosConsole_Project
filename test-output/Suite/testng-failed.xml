@@ -6,46 +6,16 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_Coupon_Based">
+      <class name="com.proenx.rdep.myproject.pos.Stock_Request_Inward">
         <methods>
-          <include name="getTestCaseName"/>
-          <include name="teardown"/>
-          <include name="create_promotion"/>
-          <include name="generateReport"/>
-          <include name="launchBrowser"/>
-          <include name="loadPropfile"/>
-        </methods>
-      </class> <!-- com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_Coupon_Based -->
-      <class name="com.proenx.rdep.promotion.listner.Create_CombinationPool_System_Based">
-        <methods>
-          <include name="getTestCaseName"/>
-          <include name="create_promotion"/>
-          <include name="teardown"/>
-          <include name="generateReport"/>
-          <include name="launchBrowser"/>
-          <include name="loadPropfile"/>
-        </methods>
-      </class> <!-- com.proenx.rdep.promotion.listner.Create_CombinationPool_System_Based -->
-      <class name="com.proenx.rdep.promotion.listner.Create_Package_Quantity_System_Based">
-        <methods>
-          <include name="teardown"/>
-          <include name="getTestCaseName"/>
-          <include name="create_promotion"/>
-          <include name="generateReport"/>
-          <include name="launchBrowser"/>
-          <include name="loadPropfile"/>
-        </methods>
-      </class> <!-- com.proenx.rdep.promotion.listner.Create_Package_Quantity_System_Based -->
-      <class name="com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based">
-        <methods>
-          <include name="create_promotion"/>
+          <include name="Inventory_List1" invocation-numbers="0"/>
           <include name="teardown"/>
           <include name="getTestCaseName"/>
           <include name="generateReport"/>
           <include name="launchBrowser"/>
           <include name="loadPropfile"/>
         </methods>
-      </class> <!-- com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based -->
+      </class> <!-- com.proenx.rdep.myproject.pos.Stock_Request_Inward -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

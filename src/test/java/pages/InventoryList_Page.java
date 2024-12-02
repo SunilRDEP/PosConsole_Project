@@ -20,7 +20,7 @@ import utility.CommonMethod;
 public class InventoryList_Page extends TestBase {
  	public InventoryList_Page() {
 		PageFactory.initElements(driver, this);
-	}
+	} 
 
 	@FindBy(xpath = "//span[@class='p-button-icon ri-sound-module-line ri-xl']")
 	private static WebElement Inventory_List_Adjustment;
@@ -164,7 +164,8 @@ public class InventoryList_Page extends TestBase {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.clickonWebElement(Inventory_List_Adjustment, "Adjustment Button");
-		Thread.sleep(3000);
+		Thread.sleep(5000);
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.clickonWebElement(Inventory_List_Adjustment_Upload_Button, "upload button");
 		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(20));
 		WebElement toastMessage = wait2
@@ -268,6 +269,7 @@ public class InventoryList_Page extends TestBase {
 
 		Thread.sleep(3000);
 		CommonMethod.clickonWebElement(Inventory_List_Filter, "inventory List Filter");
+		CommonMethod.clickonWebElement(Inventory_List_Filter_Reset, "inventory List Filter reset button");
 		CommonMethod.entertextintoinputbox(Inventory_List_Filter_Search_Box,
 				ht.get("Inventory List Search Data forUpdate with Single SKU file"));
 		CommonMethod.bootstrapdropdownselection(Inventory_List_Filter_Select_STore,
@@ -305,6 +307,7 @@ public class InventoryList_Page extends TestBase {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.clickonWebElement(Inventory_Import, "Import Button");
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.clickonWebElement(Inventory_Import_update, "Import Update Button");
 		Thread.sleep(3000);
 
@@ -426,10 +429,10 @@ public class InventoryList_Page extends TestBase {
 
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		String SKU = driver
-				.findElement(By.xpath("//*[@id=\"view\"]/div[2]/div/div[3]/div[1]/div[1]/table/tbody/tr[1]/td[2]"))
+				.findElement(By.xpath("//tbody/tr[1]/td[2]"))
 				.getText();
 		String Available_On_Hand = driver
-				.findElement(By.xpath("//*[@id=\"view\"]/div[2]/div/div[3]/div[1]/div[1]/table/tbody/tr[1]/td[6]"))
+				.findElement(By.xpath("//tbody/tr[1]/td[6]"))
 				.getText();
 		CommonMethod.clickonWebElement(Inventory_Import, "Import Button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
@@ -471,10 +474,10 @@ public class InventoryList_Page extends TestBase {
 		CommonMethod.clickonWebElement(Inventory_List_Filter_Outside, "Outside to avoid element overlaping");
 		CommonMethod.clickonWebElement(Inventory_List_Filter_Apply, "Inventory List Filter Apply Button");
 		String SKU1 = driver
-				.findElement(By.xpath("//*[@id=\"view\"]/div[2]/div/div[3]/div[1]/div[1]/table/tbody/tr[1]/td[2]"))
+				.findElement(By.xpath("//tbody/tr[1]/td[2]"))
 				.getText();
 		String Available_On_Hand1 = driver
-				.findElement(By.xpath("//*[@id=\"view\"]/div[2]/div/div[3]/div[1]/div[1]/table/tbody/tr[1]/td[6]"))
+				.findElement(By.xpath("//tbody/tr[1]/td[6]"))
 				.getText();
 		System.out.println(SKU1);
 		test.pass("Entered SKU for before import through update is " + SKU
@@ -487,6 +490,7 @@ public class InventoryList_Page extends TestBase {
 		test.pass("PLEASE CHECK WHETHER AVAILABLE ON HAND QUANTITY IN DBEAVER IS " + Available_On_Hand1 + " OR NOT ");
 		Thread.sleep(3000);
 		CommonMethod.clickonWebElement(Inventory_List_Filter, "inventory List Filter");
+		Thread.sleep(3000);
 		CommonMethod.clickonWebElement(Inventory_List_Filter_Reset, "reset button");
 
 		Thread.sleep(3000);
@@ -509,7 +513,9 @@ public class InventoryList_Page extends TestBase {
 				+ "  and Available on Hand quantity for this SKU after update is " + Available_On_Hand2);
 		test.pass("PLEASE CHECK WHETHER AVAILABLE ON HAND QUANTITY IN DBEAVER IS " + Available_On_Hand2 + " OR NOT ");
 		Thread.sleep(3000);
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.clickonWebElement(Inventory_List_Filter, "inventory List Filter");
+		Thread.sleep(3000);
 		CommonMethod.clickonWebElement(Inventory_List_Filter_Reset, "reset button");
 
 		Thread.sleep(3000);
@@ -613,7 +619,9 @@ public class InventoryList_Page extends TestBase {
 			throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
+		
 		CommonMethod.clickonWebElement(Inventory_Import, "Import Button");
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.clickonWebElement(Inventory_Import_fileReset, "Import Update Button");
 		Thread.sleep(3000);
 
@@ -653,6 +661,7 @@ public class InventoryList_Page extends TestBase {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.clickonWebElement(Inventory_Import, "Import Button");
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.clickonWebElement(Inventory_Import_fileReset, "Import Update Button");
 		CommonMethod.bootstrapdropdownselection(Inventory_Import_Select_Store, "inventory_Import_SelectStore",
 				ht.get("Inventory Import Store"));
@@ -692,6 +701,8 @@ public class InventoryList_Page extends TestBase {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.clickonWebElement(Inventory_Import, "Import Button");
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
+		Thread.sleep(3000);
 		CommonMethod.clickonWebElement(Inventory_Import_fileReset, "Import reset Button");
 
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
@@ -781,10 +792,10 @@ public class InventoryList_Page extends TestBase {
 				.visibilityOfElementLocated(By.xpath("//table[@class='bh-table-compact']//tbody/tr")));
 		
 		String SKU1 = driver
-				.findElement(By.xpath("//*[@id=\"view\"]/div[2]/div/div[3]/div[1]/div[1]/table/tbody/tr[1]/td[2]"))
+				.findElement(By.xpath("//tbody/tr[1]/td[2]"))
 				.getText();
 		String Available_On_Hand1 = driver
-				.findElement(By.xpath("//*[@id=\"view\"]/div[2]/div/div[3]/div[1]/div[1]/table/tbody/tr[1]/td[6]"))
+				.findElement(By.xpath("//tbody/tr[1]/td[6]"))
 				.getText();
 		System.out.println(SKU1);
 		
@@ -809,10 +820,10 @@ public class InventoryList_Page extends TestBase {
 				.visibilityOfElementLocated(By.xpath("//table[@class='bh-table-compact']//tbody/tr")));
 		
 		String SKU2 = driver
-				.findElement(By.xpath("//*[@id=\"view\"]/div[2]/div/div[3]/div[1]/div[1]/table/tbody/tr[1]/td[2]"))
+				.findElement(By.xpath("//tbody/tr[1]/td[2]"))
 				.getText();
 		String Available_On_Hand2 = driver
-				.findElement(By.xpath("//*[@id=\"view\"]/div[2]/div/div[3]/div[1]/div[1]/table/tbody/tr[1]/td[6]"))
+				.findElement(By.xpath("//tbody/tr[1]/td[6]"))
 				.getText();
 		System.out.println(SKU2);
 		
@@ -835,10 +846,10 @@ public class InventoryList_Page extends TestBase {
 				.visibilityOfElementLocated(By.xpath("//table[@class='bh-table-compact']//tbody/tr")));
 		
 		String SKU3 = driver
-				.findElement(By.xpath("//*[@id=\"view\"]/div[2]/div/div[3]/div[1]/div[1]/table/tbody/tr[1]/td[2]"))
+				.findElement(By.xpath("//tbody/tr[1]/td[2]"))
 				.getText();
 		String Available_On_Hand3 = driver
-				.findElement(By.xpath("//*[@id=\"view\"]/div[2]/div/div[3]/div[1]/div[1]/table/tbody/tr[1]/td[6]"))
+				.findElement(By.xpath("//tbody/tr[1]/td[6]"))
 				.getText();
 		
 		
@@ -911,13 +922,15 @@ public class InventoryList_Page extends TestBase {
 				"Inventory_List_Filter_Select_STore", ht.get("Inventory List Filter Select Store1"));
 		CommonMethod.clickonWebElement(Inventory_List_Filter_Outside, "Outside to avoid element overlaping");
 		CommonMethod.clickonWebElement(Inventory_List_Filter_Apply, "Inventory List Filter Apply Button");
-
+Thread.sleep(3000);
 		CommonMethod.clickonWebElement(Inventory_List_Edit, "Edit");
 		driver.findElement(By.xpath("//input[@id='reorderThresold']")).sendKeys(Keys.BACK_SPACE);
 		driver.findElement(By.xpath("//input[@id='reorderThresold']")).sendKeys(Keys.BACK_SPACE);
 		CommonMethod.entertextintoinputbox(Inventory_List_reorderThresold,
 				ht.get("Edit Inventory Reorder Threshold Value"));
 		CommonMethod.entertextintoinputbox(Inventory_List_message, ht.get("Edit Inventory Inventory Update Reason"));
+		CommonMethod.entertextintoinputbox(Inventory_List_message, ht.get("Edit Inventory Inventory Update Reason"));
+		
 		CommonMethod.clickonWebElement(Inventory_List_Update, "Update");
 		return this;
 	}
@@ -925,7 +938,9 @@ public class InventoryList_Page extends TestBase {
 	public InventoryList_Page inventoryList_filter_Operation(Hashtable<String, String> ht) throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
+		
 		CommonMethod.clickonWebElement(Inventory_List_Filter, "inventory List Filter");
+		CommonMethod.clickonWebElement(Inventory_List_Filter_Reset, "inventory List Filter reset button");
 		CommonMethod.entertextintoinputbox(Inventory_List_Filter_Search_Box,
 				ht.get("Inventory List Search SKU for Edit Inventory"));
 		CommonMethod.bootstrapdropdownselection(Inventory_List_Filter_Select_STore,

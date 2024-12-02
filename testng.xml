@@ -5,16 +5,17 @@
 		<listener
 			class-name="com.proenx.rdep.myproject.listner.CustomListners" />
 	</listeners>
-	<test thread-count="5" name="Test">
+	<test thread-count="2" name="Test">
 
 		<classes>
 
 			<class
-				name="com.proenx.rdep.myproject.pos.Single_Product_TestCases" />
+				name="com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based" />
 
 			
-			
+		
 
 		</classes>
 	</test> <!-- Test -->
+	
 </suite> <!-- Suite -->

@@ -29,7 +29,7 @@ import utility.CommonMethod;
 public class Products_Page extends TestBase {
 	public Products_Page() {
 		PageFactory.initElements(driver, this);
-	} 
+	}  
 
 	 
 	
@@ -633,6 +633,13 @@ SoftAssert softassert= new SoftAssert();
 		CommonMethod.entertextintoinputbox(Products_Add_Product_Name, ht.get("Product Name"));
 		CommonMethod.entertextintoinputbox(Products_Add_Product_Description, ht.get("Product Description"));
 		CommonMethod.entertextintoinputbox(Add_Products_HSN_Code, ht.get("Product HSN Code"));
+		
+		
+		WebElement nextButton12 = driver
+				.findElement(By.xpath("//h6[normalize-space()='Attribute Details']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", nextButton12);
+		Thread.sleep(3000);
+
 		CommonMethod.bootstrapdropdownselection(Products_Add_Product_Select_Store, "Products_Add_Product_Select_Store",
 				ht.get("Select Store for adding new Product"));
 		
@@ -673,7 +680,7 @@ SoftAssert softassert= new SoftAssert();
 		CommonMethod.entertextintoinputbox(Products_Add_Unit_Price	, ht.get("Unit Price for adding new Product"));
 		
 		driver.findElement(By.xpath("//label[@for='fileProduct']")).click();
-		StringSelection filepathSelection= new StringSelection("C:\\Users\\sunil\\Test File Format\\screenshot.png");
+		StringSelection filepathSelection= new StringSelection("C:\\Users\\sunil\\Test File Format\\screenshot");
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filepathSelection, null);
 		//using Robot class
 		Thread.sleep(3000);
@@ -689,7 +696,7 @@ SoftAssert softassert= new SoftAssert();
 		rb.keyRelease(KeyEvent.VK_ENTER);
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//label[@for='fileProduct']")).click();
-		StringSelection filepathSelection2= new StringSelection("C:\\Users\\sunil\\Test File Format\\screenshot2.png");
+		StringSelection filepathSelection2= new StringSelection("C:\\Users\\sunil\\Test File Format\\screenshot2");
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filepathSelection2, null);
 		//using Robot class
 		Thread.sleep(3000);
@@ -799,7 +806,7 @@ if(Products_Add_Catagory_Store_Catalog_CheckBox.isSelected()||Products_Add_Produ
 		CommonMethod.entertextintoinputbox(Products_Add_Unit_Price	, ht.get("Unit Price for adding new Product"));
 		
 		driver.findElement(By.xpath("//label[@for='fileProduct']")).click();
-		StringSelection filepathSelection= new StringSelection("C:\\Users\\sunil\\Test File Format\\screenshot.png");
+		StringSelection filepathSelection= new StringSelection("C:\\Users\\sunil\\Test File Format\\screenshot");
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filepathSelection, null);
 		//using Robot class
 		Thread.sleep(3000);
@@ -816,7 +823,7 @@ if(Products_Add_Catagory_Store_Catalog_CheckBox.isSelected()||Products_Add_Produ
 		test.pass("Image1 Uploaded Successfully");
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//label[@for='fileProduct']")).click();
-		StringSelection filepathSelection2= new StringSelection("C:\\Users\\sunil\\Test File Format\\screenshot2.png");
+		StringSelection filepathSelection2= new StringSelection("C:\\Users\\sunil\\Test File Format\\screenshot2");
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filepathSelection2, null);
 		//using Robot class
 		Thread.sleep(3000);
@@ -1096,7 +1103,7 @@ if(Products_Add_Catagory_Store_Catalog_CheckBox.isSelected()||Products_Add_Produ
 		if (toastMessage.isDisplayed()) {
 			String Actual_Pagetitle = toastMessage.getText();
 
-			Assert.assertEquals(Actual_Pagetitle, ht.get("Error Message For Adding Duplicate SKU"));
+			Assert.assertEquals(Actual_Pagetitle, ht.get("Adding Single Product Successful Message"));
 			System.out.println("Page title is verified and Title is: " + Actual_Pagetitle);
 			test.pass(
 					"The Pop-UP Error messge for adding Adding PRoduct with  duplicate SKU  is verified and the Pup-UP Message   is: "

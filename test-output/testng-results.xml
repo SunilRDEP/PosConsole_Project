@@ -1,44 +1,186 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-16T10:02:04 IST" name="Default suite" finished-at="2024-11-16T10:02:42 IST" duration-ms="37934">
+  <suite started-at="2024-12-02T18:42:39 IST" name="Suite" finished-at="2024-12-02T18:49:54 IST" duration-ms="435809">
     <groups>
     </groups>
-    <test started-at="2024-11-16T10:02:04 IST" name="Default test" finished-at="2024-11-16T10:02:42 IST" duration-ms="37934">
-      <class name="com.proenx.rdep.myproject.pos.Single_Product_TestCases">
-        <test-method is-config="true" signature="loadPropfile()[pri:0, instance:com.proenx.rdep.myproject.pos.Single_Product_TestCases@740fb309]" started-at="2024-11-16T10:02:03 IST" name="loadPropfile" finished-at="2024-11-16T10:02:04 IST" duration-ms="1468" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loadPropfile -->
-        <test-method is-config="true" signature="getTestCaseName()[pri:0, instance:com.proenx.rdep.myproject.pos.Single_Product_TestCases@740fb309]" started-at="2024-11-16T10:02:04 IST" name="getTestCaseName" finished-at="2024-11-16T10:02:04 IST" duration-ms="2" status="PASS">
+    <test started-at="2024-12-02T18:42:39 IST" name="Test" finished-at="2024-12-02T18:49:54 IST" duration-ms="435809">
+      <class name="com.proenx.rdep.myproject.pos.Stock_Request_Inward">
+        <test-method is-config="true" signature="getTestCaseName()[pri:0, instance:com.proenx.rdep.myproject.pos.Stock_Request_Inward@3cce5371]" started-at="2024-12-02T18:48:41 IST" name="getTestCaseName" finished-at="2024-12-02T18:48:41 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getTestCaseName -->
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.proenx.rdep.myproject.pos.Single_Product_TestCases@740fb309]" started-at="2024-11-16T10:02:04 IST" name="launchBrowser" finished-at="2024-11-16T10:02:09 IST" duration-ms="4732" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.proenx.rdep.myproject.pos.Stock_Request_Inward@3cce5371]" started-at="2024-12-02T18:48:41 IST" name="launchBrowser" finished-at="2024-12-02T18:48:48 IST" duration-ms="6547" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="single_Product3(java.util.Hashtable)[pri:4, instance:com.proenx.rdep.myproject.pos.Single_Product_TestCases@740fb309]" started-at="2024-11-16T10:02:09 IST" name="single_Product3" data-provider="data_Collection" finished-at="2024-11-16T10:02:37 IST" duration-ms="27718" status="PASS">
+        <test-method signature="Inventory_List1(java.util.Hashtable)[pri:1, instance:com.proenx.rdep.myproject.pos.Stock_Request_Inward@3cce5371]" started-at="2024-12-02T18:48:48 IST" name="Inventory_List1" data-provider="data_Collection" finished-at="2024-12-02T18:49:49 IST" duration-ms="61124" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Stock for adding new Product=5, Select Store for adding new Product=Rdep Meta Limited Pune - 1765, Error Message for  Product Catagory  Mandatory Field=Please Select Category., Error Message for  Product SKU Mandatory Field=Please Enter Product SKU., Product Sku=212223, Error Message for   Entering Category Name  Mandatory Field=Please Enter Category Name, Attribute Type1=Color, Product Description=Pure Crystal Glass Boltle withEnv Friendlt Material, Error Message for  Product HSN Code  Mandatory Field=Please Enter HSN Code., Error Message for  Product Name Mandatory Field=Please Enter Product Name, Error Message for  Select Store Mandatory Field=Please Select Store., Single Product Name Field Maximum Character Testing =Paste here maximum  character to check the name field capacity, Least Price for adding new Product=399, Select Category for adding new Product=Accessories, Catagory Description inside Add Catagory Screen=Pure Cotton with HandMade Craft, Unit Price for adding new Product=399, Adding Single Product Successful Message=Inventory imported successfully., Catagory Name inside Add Catagory Screen=Cotton Section1, no data for this cell=no data for this cell, Select Store for adding new Catagory=Rdep Meta Limited Pune - 1765, Error Message for   Entering Description  Mandatory Field=Please Enter Category Description, Attribute Value1=blue, Product Name=202325_Glass_Bottle, Product HSN Code=1991Test}]]>
+                <![CDATA[{Inward Delivery Date=05-12-2024, Inventory Inward  Delivery To Store=Metawear Limited Banglore - 1765, Inventory inward Search Data for File Reset with Single SKU file=1727764211532, Inventory inward Filter Select Store1=Rdep Meta Limited Pune - 1765, Inward Request Date=01-12-2024}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//i[@class='ri-edit-2-fill view-icon']"}
+  (Session info: chrome=129.0.6668.101)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.1', revision: '656257d8e9'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2af24ff0ec0588022786ab5030427eed, findElement {using=xpath, value=//i[@class='ri-edit-2-fill view-icon']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.101, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\sunil\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60628}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60628/devtoo..., se:cdpVersion: 129.0.6668.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2af24ff0ec0588022786ab5030427eed]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//i[@class='ri-edit-2-fill view-icon']"}
+  (Session info: chrome=129.0.6668.101)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.1', revision: '656257d8e9'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2af24ff0ec0588022786ab5030427eed, findElement {using=xpath, value=//i[@class='ri-edit-2-fill view-icon']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.101, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\sunil\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60628}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60628/devtoo..., se:cdpVersion: 129.0.6668.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2af24ff0ec0588022786ab5030427eed
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy18.getWrappedElement(Unknown Source)
+at org.openqa.selenium.remote.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:48)
+at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212)
+at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:556)
+at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:546)
+at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
+at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:702)
+at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:474)
+at pages.StockRequest_Inward_Page.stock_request_Create_Valid_Inward(StockRequest_Inward_Page.java:144)
+at com.proenx.rdep.myproject.pos.Stock_Request_Inward.Inventory_List1(Stock_Request_Inward.java:30)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Inventory_List1 -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.proenx.rdep.myproject.pos.Stock_Request_Inward@3cce5371]" started-at="2024-12-02T18:49:49 IST" name="teardown" finished-at="2024-12-02T18:49:54 IST" duration-ms="5403" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.proenx.rdep.myproject.pos.Stock_Request_Inward -->
+      <class name="com.proenx.rdep.myproject.pos.Inventory_TestCases">
+        <test-method is-config="true" signature="loadPropfile()[pri:0, instance:com.proenx.rdep.myproject.pos.Inventory_TestCases@2a8448fa]" started-at="2024-12-02T18:42:37 IST" name="loadPropfile" finished-at="2024-12-02T18:42:39 IST" duration-ms="1486" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadPropfile -->
+        <test-method is-config="true" signature="getTestCaseName()[pri:0, instance:com.proenx.rdep.myproject.pos.Inventory_TestCases@2a8448fa]" started-at="2024-12-02T18:42:39 IST" name="getTestCaseName" finished-at="2024-12-02T18:42:39 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestCaseName -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.proenx.rdep.myproject.pos.Inventory_TestCases@2a8448fa]" started-at="2024-12-02T18:42:39 IST" name="launchBrowser" finished-at="2024-12-02T18:42:43 IST" duration-ms="4247" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="Inventory_List1(java.util.Hashtable)[pri:2, instance:com.proenx.rdep.myproject.pos.Inventory_TestCases@2a8448fa]" started-at="2024-12-02T18:42:43 IST" name="Inventory_List1" data-provider="data_Collection" finished-at="2024-12-02T18:44:37 IST" duration-ms="113897" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Inventory List Store Name3=NA, Inventory List Filter Select Store1=Rdep Meta Limited Pune - 1765, Inventory List Store Name2=NA, Inventory List Store Name1=Rdep Meta Limited Pune - 1765, Inventory List Search Data for Update1=8904389909669, Inventory Import Successful Message=Inventory imported successfully., Inventory Import Error Message for not selecting Store=Please Select Store, Edit Inventory Successful Message =Inventory updated., Inventory List Search Data for File Reset with Single SKU file=60002300, Inventory Import Store=Rdep Meta Limited Pune - 1765, Inventory Adjustment Successful Message=Inventory adjusted successfully., Inventory Adjustment Error Message for not selecting Store=Please Select Store, Edit Inventory Reorder Threshold Value=5, Inventory List Search Data for File Reset for three sku3=60002300, Inventory List Search Data for File Reset for three sku2=60002300, Inventory List Search Data for Update for three sku3=60002300, Inventory List Search Data for File Reset for three sku1=60002300, Inventory List Search Data for Update for three sku2=60002300, Edit Inventory Inventory Update Reason=Testing Purpose, Inventory List Search Data for Update for three sku1=60002300, Inventory Adjustment Unsuccessful Message=Error updating inventory., Inventory List Search SKU for Edit Inventory=60002300, Inventory Import Unsuccessful Message=Required data not found. Please upload the correct file., Inventory Adjustment Error Message for not selecting file=Please Select File, Inventory Import Error Message for not selecting file=Please Select File, Inventory List Search Data forUpdate with Single SKU file=60002300}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- single_Product3 -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.proenx.rdep.myproject.pos.Single_Product_TestCases@740fb309]" started-at="2024-11-16T10:02:37 IST" name="teardown" finished-at="2024-11-16T10:02:42 IST" duration-ms="5393" status="PASS">
+        </test-method> <!-- Inventory_List1 -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.proenx.rdep.myproject.pos.Inventory_TestCases@2a8448fa]" started-at="2024-12-02T18:44:37 IST" name="teardown" finished-at="2024-12-02T18:44:42 IST" duration-ms="5429" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="generateReport()[pri:0, instance:com.proenx.rdep.myproject.pos.Single_Product_TestCases@740fb309]" started-at="2024-11-16T10:02:42 IST" name="generateReport" finished-at="2024-11-16T10:02:43 IST" duration-ms="505" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.proenx.rdep.myproject.pos.Inventory_TestCases@2a8448fa]" started-at="2024-12-02T18:44:42 IST" name="launchBrowser" finished-at="2024-12-02T18:44:47 IST" duration-ms="4616" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="Inventory_List2(java.util.Hashtable)[pri:2, instance:com.proenx.rdep.myproject.pos.Inventory_TestCases@2a8448fa]" started-at="2024-12-02T18:44:47 IST" name="Inventory_List2" data-provider="data_Collection" finished-at="2024-12-02T18:45:58 IST" duration-ms="71548" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Inventory List Store Name3=NA, Inventory List Filter Select Store1=Rdep Meta Limited Pune - 1765, Inventory List Store Name2=NA, Inventory List Store Name1=Rdep Meta Limited Pune - 1765, Inventory List Search Data for Update1=8904389909669, Inventory Import Successful Message=Inventory imported successfully., Inventory Import Error Message for not selecting Store=Please Select Store, Edit Inventory Successful Message =Inventory updated., Inventory List Search Data for File Reset with Single SKU file=60002300, Inventory Import Store=Rdep Meta Limited Pune - 1765, Inventory Adjustment Successful Message=Inventory adjusted successfully., Inventory Adjustment Error Message for not selecting Store=Please Select Store, Edit Inventory Reorder Threshold Value=5, Inventory List Search Data for File Reset for three sku3=60002300, Inventory List Search Data for File Reset for three sku2=60002300, Inventory List Search Data for Update for three sku3=60002300, Inventory List Search Data for File Reset for three sku1=60002300, Inventory List Search Data for Update for three sku2=60002300, Edit Inventory Inventory Update Reason=Testing Purpose, Inventory List Search Data for Update for three sku1=60002300, Inventory Adjustment Unsuccessful Message=Error updating inventory., Inventory List Search SKU for Edit Inventory=60002300, Inventory Import Unsuccessful Message=Required data not found. Please upload the correct file., Inventory Adjustment Error Message for not selecting file=Please Select File, Inventory Import Error Message for not selecting file=Please Select File, Inventory List Search Data forUpdate with Single SKU file=60002300}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Inventory_List2 -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.proenx.rdep.myproject.pos.Inventory_TestCases@2a8448fa]" started-at="2024-12-02T18:45:58 IST" name="teardown" finished-at="2024-12-02T18:46:04 IST" duration-ms="5373" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.proenx.rdep.myproject.pos.Inventory_TestCases@2a8448fa]" started-at="2024-12-02T18:46:04 IST" name="launchBrowser" finished-at="2024-12-02T18:46:09 IST" duration-ms="5694" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="Inventory_List3(java.util.Hashtable)[pri:2, instance:com.proenx.rdep.myproject.pos.Inventory_TestCases@2a8448fa]" started-at="2024-12-02T18:46:09 IST" name="Inventory_List3" data-provider="data_Collection" finished-at="2024-12-02T18:48:36 IST" duration-ms="146230" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Inventory List Store Name3=NA, Inventory List Filter Select Store1=Rdep Meta Limited Pune - 1765, Inventory List Store Name2=NA, Inventory List Store Name1=Rdep Meta Limited Pune - 1765, Inventory List Search Data for Update1=8904389909669, Inventory Import Successful Message=Inventory imported successfully., Inventory Import Error Message for not selecting Store=Please Select Store, Edit Inventory Successful Message =Inventory updated., Inventory List Search Data for File Reset with Single SKU file=60002300, Inventory Import Store=Rdep Meta Limited Pune - 1765, Inventory Adjustment Successful Message=Inventory adjusted successfully., Inventory Adjustment Error Message for not selecting Store=Please Select Store, Edit Inventory Reorder Threshold Value=5, Inventory List Search Data for File Reset for three sku3=60002300, Inventory List Search Data for File Reset for three sku2=60002300, Inventory List Search Data for Update for three sku3=60002300, Inventory List Search Data for File Reset for three sku1=60002300, Inventory List Search Data for Update for three sku2=60002300, Edit Inventory Inventory Update Reason=Testing Purpose, Inventory List Search Data for Update for three sku1=60002300, Inventory Adjustment Unsuccessful Message=Error updating inventory., Inventory List Search SKU for Edit Inventory=60002300, Inventory Import Unsuccessful Message=Required data not found. Please upload the correct file., Inventory Adjustment Error Message for not selecting file=Please Select File, Inventory Import Error Message for not selecting file=Please Select File, Inventory List Search Data forUpdate with Single SKU file=60002300}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Inventory_List3 -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.proenx.rdep.myproject.pos.Inventory_TestCases@2a8448fa]" started-at="2024-12-02T18:48:36 IST" name="teardown" finished-at="2024-12-02T18:48:41 IST" duration-ms="5398" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:com.proenx.rdep.myproject.pos.Inventory_TestCases@2a8448fa]" started-at="2024-12-02T18:49:54 IST" name="generateReport" finished-at="2024-12-02T18:49:55 IST" duration-ms="537" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateReport -->
-      </class> <!-- com.proenx.rdep.myproject.pos.Single_Product_TestCases -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.proenx.rdep.myproject.pos.Inventory_TestCases -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

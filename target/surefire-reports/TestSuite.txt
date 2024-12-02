@@ -1,4 +1,25 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
--------------------------------------------------------------------------------
+------------------------------------------------------------------------------
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 52.44 s -- in TestSuite
+
+
+
+Simple_Total_SystemBased_Promotion_With_All_Store_All_Product
+
+Simple_Total_SystemBased_Promotion_With_Custom_Store_All_Product
+
+Simple_Total_SystemBased_Promotion_With_Custom_Store_Custom_Product
+
+Simple_Total_System_Based_Promotion_Checking_Mandatory_Field_Error_Message
+
+
+new sku +new HSN= Added Successfully
+new SKu + Old HSN= Added Successfully
+Old SKU+ New HSN=  Not adding 
+old SKU +New SKU +New HSn=  adding both old and new sku one more time successfully
+old sku+ old SKU+ old HSN = not adding 
+old sku+old SKu+New SKU+ old HSN+new HSN=added successfully
+
+
+

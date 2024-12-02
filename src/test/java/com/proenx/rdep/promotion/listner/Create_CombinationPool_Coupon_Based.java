@@ -22,17 +22,12 @@ public void getTestCaseName() {
 	} 
 	} 
 	 
-	@Test(dataProvider = "data_Collection")
+	@Test(dataProvider = "data_Collection" )
 	public void create_promotion(Hashtable<String, String> ht) throws InterruptedException {
 		SignInPage sp = new SignInPage();
 
 	sp.signin(ht).MasterPromotion(ht).create_Combination_Pool_Promotion(ht)
-	.create_CombinationPool_promo_couponbased(ht)
-	.create_Combination_Pool_Promotion(ht)
-	.create_CombinationPool_promo_couponbased_Custom_Store(ht)
-	.create_Combination_Pool_Promotion(ht)
-	.create_CombinationPool_promo_couponbased_Custom_Store_Twoset_Productfile(ht);
-	
+	.create_CombinationPool_promo_systembased(ht);
 	 
 	
 	}

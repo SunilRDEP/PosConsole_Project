@@ -66,6 +66,9 @@ public class DashBoardPages extends TestBase {
 	
 	@FindBy(xpath = "//a[@class='submenu__link text-align-center']//span[@class='nav__label'][normalize-space()='Products']")
 	private static WebElement Product_Products;
+	
+	@FindBy(xpath = "//span[normalize-space()='Stock Request(Inward)']")
+	private static WebElement Inventory_Stock_Request_Inward_Submenu;
 
 	public DashBoardPages clickOnAllMenunDashBoard() {
 		CommonMethod.clickonWebElement(clickonorderxpath, "Orders Menu");
@@ -123,9 +126,6 @@ public class DashBoardPages extends TestBase {
 		return new MasterPromotion_Pages();
 	} 
 	public InventoryList_Page inventory_List(Hashtable<String, String> ht) throws InterruptedException {
-//		WebElement Promotion = clickonPromotion;
-//		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Promotion);
-//		Promotion.click();
 
 	
 		Thread.sleep(3000);
@@ -134,6 +134,16 @@ public class DashBoardPages extends TestBase {
 		 CommonMethod.clickonWebElement(Inventory_List, "Inventory List Sub Menu");
 		return new InventoryList_Page();
 	} 
+	
+	public StockRequest_Inward_Page Stock_request_Inward_SubMenu(Hashtable<String, String> ht) throws InterruptedException {
+
+		
+		Thread.sleep(3000);
+		CommonMethod.clickonWebElement(Inventory, "Inventory Menu");
+		
+		 CommonMethod.clickonWebElement(Inventory_Stock_Request_Inward_Submenu, "Stock Request Inward Sub Menu");
+		return new StockRequest_Inward_Page();
+	}
 	
 	public Products_Page Products_SubMenu(Hashtable<String, String> ht) throws InterruptedException {	
 		Thread.sleep(3000);

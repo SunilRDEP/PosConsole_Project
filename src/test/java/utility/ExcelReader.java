@@ -22,13 +22,13 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelReader {
 	
-	public  String path;
+	public  String path; 
 	public  FileInputStream fis = null;
 	public  FileOutputStream fileOut =null;
 	private XSSFWorkbook workbook = null;
 	private XSSFSheet sheet = null;
 	private XSSFRow row   =null;
-	private XSSFCell cell = null;
+	private XSSFCell cell = null; 
 	
 	public ExcelReader(String path) {
 		

@@ -21,7 +21,7 @@ public class CombinationPoolPage extends TestBase {
 	public CombinationPoolPage() {
 		PageFactory.initElements(driver, this);
 	}
-
+  
 	@FindBy(xpath = "(//input[@name='date'])[1]")
 	private static WebElement Promotion_Start_Date;
 
@@ -124,7 +124,7 @@ public class CombinationPoolPage extends TestBase {
 
 	public MasterPromotion_Pages create_CombinationPool_promo_systembased(Hashtable<String, String> ht)
 			throws InterruptedException {
-		test.pass("TC-031 is loading");
+		test.pass("TC-031 is loading"); 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.inputCalenderDate(Promotion_Start_Date, ht.get("CombinationPool Start Date Format"));
@@ -184,7 +184,7 @@ public class CombinationPoolPage extends TestBase {
 //========================================================================================================================
 
 	public MasterPromotion_Pages create_CombinationPool_promo_couponbased(Hashtable<String, String> ht)
-			throws InterruptedException {
+			throws InterruptedException { 
 		test.pass("TC-032 is loading");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));

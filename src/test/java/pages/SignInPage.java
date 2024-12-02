@@ -83,7 +83,7 @@ public class SignInPage extends TestBase {
 		CommonMethod.verifyTextOnThePage(LoginPageText7, ht.get("LoginPageText7"));
 		return this;
 		
-		
+		 
 	}
 
 }
