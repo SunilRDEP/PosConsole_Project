@@ -1295,3 +1295,4 @@ if(Products_Add_Catagory_Store_Catalog_CheckBox.isSelected()||Products_Add_Produ
 		return this;
 	}
 }
+

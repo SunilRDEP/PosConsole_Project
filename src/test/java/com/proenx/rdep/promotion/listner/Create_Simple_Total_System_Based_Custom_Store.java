@@ -13,7 +13,7 @@ import pages.SignInPage;
 import utility.DataCollection;
 
 public class Create_Simple_Total_System_Based_Custom_Store extends TestBase {
-
+ 
 	@BeforeClass
 	public void getTestCaseName() {
 		testCaseName = this.getClass().getSimpleName();
@@ -29,7 +29,11 @@ public class Create_Simple_Total_System_Based_Custom_Store extends TestBase {
 	sp.signin(ht)
 	.MasterPromotion(ht)
 	.create_Simple_Total_Promotion(ht)
-	.Simple_Total_SystemBased_Promotion_With_Custom_Store_All_Product(ht);
+	.Simple_Total_SystemBased_Promotion_With_Custom_Store_All_Product(ht)
+	.create_Simple_Total_Promotion(ht)
+	.Simple_Total_SystemBased_Promotion_With_Custom_Store_Custom_Product(ht)
+	.create_Simple_Total_Promotion(ht)
+	.Simple_Total_SystemBased_Promotion_With_All_Store_All_Product(ht);
 	 
 	
 	}

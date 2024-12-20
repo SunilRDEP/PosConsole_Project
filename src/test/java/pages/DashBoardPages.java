@@ -51,24 +51,40 @@ public class DashBoardPages extends TestBase {
 	private static WebElement carts;
 	@FindBy(xpath = "//span[normalize-space()='All Carts']")
 	private static WebElement AllCarts;
-	
+
 	@FindBy(xpath = "//span[normalize-space()='Master Promotions']")
 	private static WebElement MasterPromotion;
-	
+
 	@FindBy(xpath = "//span[normalize-space()='Inventory']")
 	private static WebElement Inventory;
-	
+
 	@FindBy(xpath = "//span[normalize-space()='Inventory List']")
 	private static WebElement Inventory_List;
-	
+
 	@FindBy(xpath = "//div[@class='text-white']//span[@class='nav__label'][normalize-space()='Products']")
 	private static WebElement Product;
-	
+
 	@FindBy(xpath = "//a[@class='submenu__link text-align-center']//span[@class='nav__label'][normalize-space()='Products']")
 	private static WebElement Product_Products;
-	
+
 	@FindBy(xpath = "//span[normalize-space()='Stock Request(Inward)']")
 	private static WebElement Inventory_Stock_Request_Inward_Submenu;
+
+	@FindBy(xpath = "//span[normalize-space()='Stock Transfer(Outward)']")
+	private static WebElement Inventory_Stock_Request_Outward_Submenu;
+
+	@FindBy(xpath = "//div[@class='submenu__container show-submenu']//li[4]")
+	private static WebElement Inventory_Inward_Request_Submenu;
+	
+	@FindBy(xpath = "//a[@class='user-menu-link d-flex align-items-center gap-3 mx-3 h-100 px-4']")
+	private static WebElement TENANT_Menu;
+	
+	@FindBy(xpath = "//a[@href='/rdep-receipt/dashboard']")
+	private static WebElement E_Receipt;
+	
+	
+	
+	
 
 	public DashBoardPages clickOnAllMenunDashBoard() {
 		CommonMethod.clickonWebElement(clickonorderxpath, "Orders Menu");
@@ -110,54 +126,81 @@ public class DashBoardPages extends TestBase {
 
 	public CartsPage clickonAllcarts() {
 		CommonMethod.clickonWebElement(carts, "carts Menu");
-		 CommonMethod.clickonWebElement(AllCarts, "Allcarts Sub Menu");
+		CommonMethod.clickonWebElement(AllCarts, "Allcarts Sub Menu");
 		return new CartsPage();
 	}
+
 	public MasterPromotion_Pages MasterPromotion(Hashtable<String, String> ht) throws InterruptedException {
 //		WebElement Promotion = clickonPromotion;
 //		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Promotion);
 //		Promotion.click();
 
-	
 		Thread.sleep(3000);
 		CommonMethod.clickonWebElement(clickonPromotion, "Promotion Menu");
-		
-		 CommonMethod.clickonWebElement(MasterPromotion, "MasterPromotion Sub Menu");
+
+		CommonMethod.clickonWebElement(MasterPromotion, "MasterPromotion Sub Menu");
 		return new MasterPromotion_Pages();
-	} 
+	}
+
 	public InventoryList_Page inventory_List(Hashtable<String, String> ht) throws InterruptedException {
 
-	
 		Thread.sleep(3000);
 		CommonMethod.clickonWebElement(Inventory, "Inventory Menu");
-		
-		 CommonMethod.clickonWebElement(Inventory_List, "Inventory List Sub Menu");
-		return new InventoryList_Page();
-	} 
-	
-	public StockRequest_Inward_Page Stock_request_Inward_SubMenu(Hashtable<String, String> ht) throws InterruptedException {
 
-		
+		CommonMethod.clickonWebElement(Inventory_List, "Inventory List Sub Menu");
+		return new InventoryList_Page();
+	}
+
+	public StockRequest_Inward_Page Stock_request_Inward_SubMenu(Hashtable<String, String> ht)
+			throws InterruptedException {
+
 		Thread.sleep(3000);
 		CommonMethod.clickonWebElement(Inventory, "Inventory Menu");
-		
-		 CommonMethod.clickonWebElement(Inventory_Stock_Request_Inward_Submenu, "Stock Request Inward Sub Menu");
+
+		CommonMethod.clickonWebElement(Inventory_Stock_Request_Inward_Submenu, "Stock Request Inward Sub Menu");
 		return new StockRequest_Inward_Page();
 	}
-	
-	public Products_Page Products_SubMenu(Hashtable<String, String> ht) throws InterruptedException {	
+
+	public StockRequest_Outward_Page Stock_request_Outward_SubMenu(Hashtable<String, String> ht)
+			throws InterruptedException {
+
+		Thread.sleep(3000);
+		CommonMethod.clickonWebElement(Inventory, "Inventory Menu");
+
+		CommonMethod.clickonWebElement(Inventory_Stock_Request_Outward_Submenu, "Stock Request Inward Sub Menu");
+		return new StockRequest_Outward_Page();
+	}
+
+	public Products_Page Products_SubMenu(Hashtable<String, String> ht) throws InterruptedException {
 		Thread.sleep(3000);
 		CommonMethod.clickonWebElement(Product, "Product Menu");
-		
-		 CommonMethod.clickonWebElement(Product_Products, "Products Sub Menu");
-		return new Products_Page(); 
-	} 
-	
-	public Products_With_Other_Feature_Page Products_SubMenu_for_Other_Feature(Hashtable<String, String> ht) throws InterruptedException {	
+
+		CommonMethod.clickonWebElement(Product_Products, "Products Sub Menu");
+		return new Products_Page();
+	}
+
+	public Products_With_Other_Feature_Page Products_SubMenu_for_Other_Feature(Hashtable<String, String> ht)
+			throws InterruptedException {
 		Thread.sleep(3000);
 		CommonMethod.clickonWebElement(Product, "Product Menu");
-		
-		 CommonMethod.clickonWebElement(Product_Products, "Products Sub Menu");
-		return new Products_With_Other_Feature_Page(); 
-	} 
+
+		CommonMethod.clickonWebElement(Product_Products, "Products Sub Menu");
+		return new Products_With_Other_Feature_Page();
+	}
+
+	public Inward_History_Page Inward_History_SubMenu(Hashtable<String, String> ht) throws InterruptedException {
+		Thread.sleep(3000);
+		CommonMethod.clickonWebElement(Inventory, "Inventory Menu");
+
+		CommonMethod.clickonWebElement(Inventory_Inward_Request_Submenu, "Inward History Sub Menu");
+		return new Inward_History_Page();
+	}
+	
+	public E_Receipt_Page E_Receipt(Hashtable<String, String> ht) throws InterruptedException {
+		Thread.sleep(3000);
+		CommonMethod.clickonWebElement(TENANT_Menu, "TENANT Menu");
+
+		CommonMethod.clickonWebElement(E_Receipt, "E-Receiot option ");
+		return new E_Receipt_Page();
+	}
 }

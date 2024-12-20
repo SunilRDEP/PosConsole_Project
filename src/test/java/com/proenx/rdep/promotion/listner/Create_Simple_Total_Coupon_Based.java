@@ -20,7 +20,7 @@ public class Create_Simple_Total_Coupon_Based extends TestBase {
 		if (!run_mode.get(testCaseName).equalsIgnoreCase("Y")) {
 			throw new SkipException("Skipping Test  case as Run mode is set to no");// this is a user created exception
 		}
-	}
+	} 
 
 	@Test(dataProvider = "data_Collection" )
 	public void create_promotion(Hashtable<String, String> ht) throws InterruptedException {

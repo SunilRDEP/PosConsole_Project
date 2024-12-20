@@ -21,7 +21,7 @@ public class Simple_Total_Page extends TestBase {
 	public Simple_Total_Page() {
 		PageFactory.initElements(driver, this);
 	}
-
+  
 	@FindBy(xpath = "(//input[@name='date'])[1]")
 	private static WebElement Promotion_Start_Date;
 

@@ -22,7 +22,7 @@ public void getTestCaseName() {
 	} 
 	} 
 	 
-	@Test(dataProvider = "data_Collection")
+	@Test(dataProvider = "data_Collection",enabled = true)
 	public void create_promotion(Hashtable<String, String> ht) throws InterruptedException {
 		SignInPage sp = new SignInPage();
 
@@ -34,7 +34,7 @@ public void getTestCaseName() {
 	.create_Package_Quantity_promo_couponbased_Custom_Store(ht)
 	.create_Package_Quantity_Promotion(ht)
 	.create_Package_Quantity_promo_couponbased_Custom_Store_Custom_Product(ht);
-	
+	 
 	 
 	
 	}

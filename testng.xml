@@ -9,10 +9,8 @@
 
 		<classes>
 
-			<class
-				name="com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based" />
+			<class name="com.proenx.rdep.myproject.pos.E_Receipt_TestCases" />
 
-			
 		
 
 		</classes>

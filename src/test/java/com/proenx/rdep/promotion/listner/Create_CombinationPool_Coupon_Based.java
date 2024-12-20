@@ -22,16 +22,31 @@ public void getTestCaseName() {
 	} 
 	} 
 	 
-	@Test(dataProvider = "data_Collection" )
+	@Test(dataProvider = "data_Collection" ,enabled = false )
 	public void create_promotion(Hashtable<String, String> ht) throws InterruptedException {
 		SignInPage sp = new SignInPage();
 
-	sp.signin(ht).MasterPromotion(ht).create_Combination_Pool_Promotion(ht)
-	.create_CombinationPool_promo_systembased(ht);
+	sp.signin(ht) 
+	.MasterPromotion(ht)
+	.create_Combination_Pool_Promotion(ht)
+	.create_CombinationPool_promo_systembased_Custom_Store(ht)
+	.create_Combination_Pool_Promotion(ht)
+	.create_CombinationPool_promo_systembased(ht)
+	.create_Combination_Pool_Promotion(ht)
+	.create_CombinationPool_promo_systembased_Custom_Store_Twoset_Productfile(ht);
+
 	 
-	
 	}
 	
+	@Test(dataProvider = "data_Collection" ,enabled = true)
+	public void create_promotion2(Hashtable<String, String> ht) throws InterruptedException {
+		SignInPage sp = new SignInPage();
+
+	sp.signin(ht) 
+	.MasterPromotion(ht);
+	
+	 
+	}
 	
 
 }

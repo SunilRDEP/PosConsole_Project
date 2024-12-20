@@ -36,8 +36,8 @@ public class CommonMethod extends TestBase {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-test.pass(MediaEntityBuilder.createScreenCaptureFromPath(dest.toString()).build());
-	} 
+		test.pass(MediaEntityBuilder.createScreenCaptureFromPath(dest.toString()).build());
+	}
 
 	public static void clickonWebElement(String xpath, String ElementName) {
 		driver.findElement(By.xpath(PROP.getProperty(xpath))).click();
@@ -73,7 +73,7 @@ test.pass(MediaEntityBuilder.createScreenCaptureFromPath(dest.toString()).build(
 		driver.findElement(By.xpath(PROP.getProperty(xpath))).sendKeys(data);
 		// System.out.println("User entered "+data +" and it's value is: " +data);
 		test.pass("User entered +data and it's value is: " + data);
-		takescreenshot(); 
+		takescreenshot();
 	}
 
 	public static void enterdatafromexcel(WebElement xpath, String data, String Element) {
@@ -99,13 +99,12 @@ test.pass(MediaEntityBuilder.createScreenCaptureFromPath(dest.toString()).build(
 		test.pass("My expected color is " + "blue");
 		takescreenshot();
 	}
- 
+
 	public static void SelectDropdown(String xapth, String data) {
 		WebElement promotype = driver.findElement(By.xpath(PROP.getProperty(xapth)));
 		Select select = new Select(promotype);
-		select.selectByVisibleText(data); 
+		select.selectByVisibleText(data);
 	}
-	
 
 	public static void calender(String xpath, String xpath2, String Date) {
 
@@ -144,8 +143,6 @@ test.pass(MediaEntityBuilder.createScreenCaptureFromPath(dest.toString()).build(
 		takescreenshot();
 	}
 
-	
-	
 	public static void scrollAndClick(String xpath, String Element) {
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
@@ -164,44 +161,45 @@ test.pass(MediaEntityBuilder.createScreenCaptureFromPath(dest.toString()).build(
 		takescreenshot();
 	}
 
-	
 	public static boolean getRowColNumber(String name) {
-	    int row = driver.findElements(By.xpath("//div[@class='card p-3']//tbody/tr")).size(); // row count
-	    int column = driver.findElements(By.xpath("//div[@class='card p-3']//th")).size(); // column count
-	    boolean found = false;
+		int row = driver.findElements(By.xpath("//div[@class='card p-3']//tbody/tr")).size(); // row count
+		int column = driver.findElements(By.xpath("//div[@class='card p-3']//th")).size(); // column count
+		boolean found = false;
 
-	    for (int i = 1; i <= row; i++) { // Start from 1 if rows are indexed from 1
-	        for (int j = 1; j <= column; j++) {
-	            String str1 = driver
-	                    .findElement(By.xpath("//div[@class='card p-3']//tbody/tr[" + i + "]/td[" + j + "]")).getText();
-	            if (str1.equals(name)) {
-	                found = true;
-	                WebElement cell = driver
-	                        .findElement(By.xpath("//div[@class='card p-3']//tbody/tr[" + i + "]/td[" + j + "]"));
+		for (int i = 1; i <= row; i++) { // Start from 1 if rows are indexed from 1
+			for (int j = 1; j <= column; j++) {
+				String str1 = driver
+						.findElement(By.xpath("//div[@class='card p-3']//tbody/tr[" + i + "]/td[" + j + "]")).getText();
+				if (str1.equals(name)) {
+					found = true;
+					WebElement cell = driver
+							.findElement(By.xpath("//div[@class='card p-3']//tbody/tr[" + i + "]/td[" + j + "]"));
 
-	                // Check if the element is clickable before clicking
-	                if (cell.isDisplayed() && cell.isEnabled()) { // Ensure it's visible and enabled
-	                    String rowdata = driver.findElement(By.xpath("//div[@class='card p-3']//tbody/tr[" + i + "]")).getText();
-	                    System.out.println(i + ":" + j + " " + str1);
-	                    System.out.println(name + " is present in the table.");
-	                    test.pass("The Row Count is " + i + " and the Column Count is " + j
-	                            + ". Data is verified and the data present in the table is: " + str1 + " Row data is " + rowdata);
-	                    takescreenshot();
-	                    return true; // Return true here after successful validation
-	                } else {
-	                    System.out.println("Element is not clickable.");
-	                    // Optionally, you can log this or handle it differently
-	                }
-	            }
-	        }
-	    }
+					// Check if the element is clickable before clicking
+					if (cell.isDisplayed() && cell.isEnabled()) { // Ensure it's visible and enabled
+						String rowdata = driver.findElement(By.xpath("//div[@class='card p-3']//tbody/tr[" + i + "]"))
+								.getText();
+						System.out.println(i + ":" + j + " " + str1);
+						System.out.println(name + " is present in the table.");
+						test.pass("The Row Count is " + i + " and the Column Count is " + j
+								+ ". Data is verified and the data present in the table is: " + str1 + " Row data is "
+								+ rowdata);
+						takescreenshot();
+						return true; // Return true here after successful validation
+					} else {
+						System.out.println("Element is not clickable.");
+						// Optionally, you can log this or handle it differently
+					}
+				}
+			}
+		}
 
-	    String errorMessage = name + " is not present in the table.";
-	    System.out.println(errorMessage);
-	    test.fail(errorMessage);
-	    takescreenshot();
-	    Assert.fail(errorMessage);
-	    return false; // Return false only if the name was not found in any cells
+		String errorMessage = name + " is not present in the table.";
+		System.out.println(errorMessage);
+		test.fail(errorMessage);
+		takescreenshot();
+		Assert.fail(errorMessage);
+		return false; // Return false only if the name was not found in any cells
 	}
 
 	public static boolean Hyperlink_Click(String name) {
@@ -243,7 +241,7 @@ test.pass(MediaEntityBuilder.createScreenCaptureFromPath(dest.toString()).build(
 
 	}
 
-	public static void inputCalenderDate(String xpath,String data) {
+	public static void inputCalenderDate(String xpath, String data) {
 		driver.findElement(By.xpath(PROP.getProperty(xpath))).click();
 		for (int i = 0; i < 20; i++) {
 			driver.findElement(By.xpath(PROP.getProperty(xpath))).sendKeys(Keys.BACK_SPACE);
@@ -253,6 +251,16 @@ test.pass(MediaEntityBuilder.createScreenCaptureFromPath(dest.toString()).build(
 	}
 
 	public static void inputCalenderDate(WebElement xpath, String data) {
+		xpath.click();
+		for (int i = 0; i < 25; i++) {
+			xpath.sendKeys(Keys.BACK_SPACE);
+
+		}
+		xpath.sendKeys(data);
+
+	}
+
+	public static void inputDate(WebElement xpath, String data) {
 		xpath.click();
 		for (int i = 0; i < 20; i++) {
 			xpath.sendKeys(Keys.BACK_SPACE);
@@ -292,6 +300,7 @@ test.pass(MediaEntityBuilder.createScreenCaptureFromPath(dest.toString()).build(
 		}
 
 	}
+
 	public static void bootstrapdropdownselection(WebElement xpath1, String PROPxpath2, String data) {
 
 		xpath1.click();
@@ -304,14 +313,12 @@ test.pass(MediaEntityBuilder.createScreenCaptureFromPath(dest.toString()).build(
 		for (int i = 0; i < bootstrap.size(); i++) {
 			System.out.println(bootstrap.get(i).getText());
 			if (bootstrap.get(i).getText().contains(data)) {
-			
+
 				WebElement option = bootstrap.get(i);
 				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", option);
 				option.click();
-				
-				
-				
-			//	bootstrap.get(i).click();
+
+				// bootstrap.get(i).click();
 				System.out.println(data + " has been selected.");
 				test.pass("The selected Item is " + data);
 				takescreenshot();

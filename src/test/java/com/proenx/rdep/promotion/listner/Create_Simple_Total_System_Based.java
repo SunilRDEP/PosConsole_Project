@@ -20,7 +20,7 @@ public class Create_Simple_Total_System_Based extends TestBase {
 		if (!run_mode.get(testCaseName).equalsIgnoreCase("Y")) {
 			throw new SkipException("Skipping Test  case as Run mode is set to no");// this is a user created exception
 		}
-	}
+	} 
 
 	@Test(dataProvider = "data_Collection" )
 	public void create_promotion(Hashtable<String, String> ht) throws InterruptedException {
@@ -29,11 +29,12 @@ public class Create_Simple_Total_System_Based extends TestBase {
 	sp.signin(ht)
 	.MasterPromotion(ht)
 	.create_Simple_Total_Promotion(ht)
-	.Simple_Total_error_Message_Validation(ht)
-	.clickon_MasterPromotion_Bredcrunch_Create()
+	.Simple_Total_SystemBased_Promotion_With_Custom_Store_All_Product(ht)
 	.create_Simple_Total_Promotion(ht)
-	.Simple_Total_SystemBased_Promotion_With_Custom_Store_All_Product(ht);
-	
+	.Simple_Total_SystemBased_Promotion_With_Custom_Store_Custom_Product(ht)
+	.create_Simple_Total_Promotion(ht)
+	.Simple_Total_SystemBased_Promotion_With_All_Store_All_Product(ht);
+	 
 	}
 
 }

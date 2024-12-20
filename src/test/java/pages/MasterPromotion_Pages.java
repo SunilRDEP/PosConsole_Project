@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.proenx.rdep.myproject.TestBase;
@@ -19,7 +20,7 @@ public class MasterPromotion_Pages extends TestBase {
 
 	public MasterPromotion_Pages() {
 		PageFactory.initElements(driver, this); 
-	}  
+	}   
 	 
 	@FindBy(xpath = "//span[@class='p-button-icon ri-download-2-fill ri-xl']")
 	private static WebElement MasterPromotion_Download;
@@ -66,7 +67,91 @@ public class MasterPromotion_Pages extends TestBase {
 	@FindBy(xpath = "//span[text()='Create']")
 	private static WebElement Promotion_Create_Button;
 	
+	@FindBy(xpath = "//tbody/tr[1]/td[13]/i[1]")
+	private static WebElement Edit_Promotion;
 	
+	@FindBy(xpath = "//select[@id='active']")
+	private static WebElement Edit_Promotion_Active_Status;
+	
+	@FindBy(xpath = "//select[@id='overrideSystemPromotion']")
+	private static WebElement Edit_Promotion_Promotion_Override;
+	
+	@FindBy(xpath = "//select[@id='overrideSystemPromotion']")
+	private static WebElement Edit_Promotion_Select_Store;
+	
+	@FindBy(xpath = "//input[@id='customProduct']")
+	private static WebElement Edit_Promotion_Product_File_Upload_Checkbox;
+	
+	@FindBy(xpath = "//button[@class='p-button p-component p-button-secondary p-button-raised p-button-medium']")
+	private static WebElement Edit_Promotion_Product_File_Import;
+
+	@FindBy(xpath = "//input[@id='fileProduct']")
+	private static WebElement Edit_Promotion_Select_File;
+	
+	@FindBy(xpath = "//button[@class='p-button p-component p-button-primary p-button-raised p-button-medium']//span[@class='p-button-label'][normalize-space()='Import']")
+	private static WebElement Edit_Promotion_Select_File_Import;
+	
+	@FindBy(xpath = "//div[@class='d-flex justify-content-end col-6 pt-1 align-self-center text-right']//span[@class='p-button-label'][normalize-space()='Close']")
+	private static WebElement Edit_Promotion_Select_File_Close;
+	
+	@FindBy(xpath = "//span[normalize-space()='Click here for File format']")
+	private static WebElement Edit_Promotion_Download_File_Format;
+	
+	
+	@FindBy(xpath = "//button[@aria-label='OK']")
+	private static WebElement Edit_Promotion_File_Import_OK;
+	
+	@FindBy(xpath = "//div[@class='d-flex']//button[@aria-label='Close']")
+	private static WebElement Edit_Promotion_File_Import_Close;
+	
+	@FindBy(xpath = "//button[@aria-label='Update']")
+	private static WebElement Edit_Promotion_Update;
+	
+	@FindBy(xpath = "//button[@data-bs-dismiss='modal']")
+	private static WebElement Edit_Promotion_Cancel;
+	
+	@FindBy(xpath = "//span[contains(text(),'Yes')]")
+	private static WebElement Edit_Promotion_Update_Yes;
+	
+	@FindBy(xpath = "//span[contains(text(),'Cancel')]")
+	private static WebElement Edit_Promotion_Update_Cancel;
+	
+	
+	
+	
+	public MasterPromotion_Pages edit_Promotion_from_Promotion_Table(Hashtable<String, String> ht) throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
+
+	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Edit_Promotion);
+		Thread.sleep(3000);
+		Edit_Promotion.click();
+		
+		
+	
+		WebElement active_status = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//select[@id='active']")));
+
+		
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", active_status);
+
+		
+		if (active_status.isDisplayed() && active_status.isEnabled()) {
+		   
+		    Select select2 = new Select(active_status);
+		    select2.selectByValue(ht.get("Active status through Edit Promotion"));
+		    test.pass("Active status selected successfully");
+		} else {
+			test.pass("Active status dropdown is not interactable.");
+		}
+		
+	
+		 
+		
+
+		
+		return this; 
+
+	}
 	public MasterPromotion_Pages clickOnDownload_Filter(Hashtable<String, String> ht) throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));

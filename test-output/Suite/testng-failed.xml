@@ -6,16 +6,16 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.proenx.rdep.myproject.pos.Stock_Request_Inward">
+      <class name="com.proenx.rdep.promotion.listner.Create_Simple_Total_System_Based">
         <methods>
-          <include name="Inventory_List1" invocation-numbers="0"/>
-          <include name="teardown"/>
           <include name="getTestCaseName"/>
+          <include name="create_promotion" invocation-numbers="0"/>
+          <include name="teardown"/>
           <include name="generateReport"/>
           <include name="launchBrowser"/>
           <include name="loadPropfile"/>
         </methods>
-      </class> <!-- com.proenx.rdep.myproject.pos.Stock_Request_Inward -->
+      </class> <!-- com.proenx.rdep.promotion.listner.Create_Simple_Total_System_Based -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
