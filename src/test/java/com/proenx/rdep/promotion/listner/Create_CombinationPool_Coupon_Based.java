@@ -21,8 +21,8 @@ public void getTestCaseName() {
 		throw new SkipException("Skipping Test  case as Run mode is set to no");// this is a user created exception
 	} 
 	} 
-	 
-	@Test(dataProvider = "data_Collection" ,enabled = false )
+	  
+	@Test(dataProvider = "data_Collection" ,enabled = true )
 	public void create_promotion(Hashtable<String, String> ht) throws InterruptedException {
 		SignInPage sp = new SignInPage();
 
@@ -33,20 +33,14 @@ public void getTestCaseName() {
 	.create_Combination_Pool_Promotion(ht)
 	.create_CombinationPool_promo_systembased(ht)
 	.create_Combination_Pool_Promotion(ht)
-	.create_CombinationPool_promo_systembased_Custom_Store_Twoset_Productfile(ht);
+	.create_CombinationPool_promo_systembased_Custom_Store_Twoset_Productfile(ht)
+	.create_Combination_Pool_Promotion(ht)
+	.error_message_validation(ht);
 
 	 
 	}
 	
-	@Test(dataProvider = "data_Collection" ,enabled = true)
-	public void create_promotion2(Hashtable<String, String> ht) throws InterruptedException {
-		SignInPage sp = new SignInPage();
 
-	sp.signin(ht) 
-	.MasterPromotion(ht);
-	
-	 
-	}
 	
 
 }

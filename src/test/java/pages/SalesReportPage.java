@@ -122,7 +122,7 @@ public class SalesReportPage extends TestBase {
 		CommonMethod.clickonWebElement("outsideclick", "clicked on outside");
 		//CommonMethod.bootstrapdropdownselection(clickonselectstoreoption, "clickonparticulastore", ht.get("StoreName2"));
 		// CommonMethod.scrollAndClick("clickonsourceselection", "source");
-		//Thread.sleep(3000);
+		//Thread.sleep(3000); 
 		//CommonMethod.clickonWebElement("outsideclick", "clicked on outside");
 		CommonMethod.bootstrapdropdownselection(clickonselectstatus, "Selectstatus", ht.get("StatusName"));
 		CommonMethod.clickonWebElement("outsideclick", "clicked on outside");

@@ -20,7 +20,7 @@ import utility.CommonMethod;
 public class InventoryList_Page extends TestBase {
  	public InventoryList_Page() {
 		PageFactory.initElements(driver, this);
-	} 
+	}  
 
 	@FindBy(xpath = "//span[@class='p-button-icon ri-sound-module-line ri-xl']")
 	private static WebElement Inventory_List_Adjustment;

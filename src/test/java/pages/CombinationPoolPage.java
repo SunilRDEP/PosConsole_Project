@@ -171,7 +171,8 @@ public class CombinationPoolPage extends TestBase {
 		nextButton.click();
 
 		driver.findElement(By.xpath("//input[@id='uploadFile']"))
-				.sendKeys("C:\\Users\\sunil\\Downloads\\SunilCombination.csv");
+				.sendKeys("C:\\Users\\sunil\\Test File Format\\Combination_Pool_Cord_Set1.csv");
+				
 		Thread.sleep(3000);
 		CommonMethod.entertextintoinputbox(Combination_Pool_Qualified_Quantity,
 				ht.get("Combination Pool Qualified Quantiy"));
@@ -233,7 +234,7 @@ public class CombinationPoolPage extends TestBase {
 		Thread.sleep(3000);
 		nextButton.click();
 		driver.findElement(By.xpath("//input[@id='uploadFile']"))
-				.sendKeys("C:\\Users\\sunil\\Test File Format\\Combination File Set.csv");
+				.sendKeys("C:\\Users\\sunil\\Test File Format\\Combination_Pool_Cord_Set1.csv");
 		CommonMethod.entertextintoinputbox(Combination_Pool_Qualified_Quantity,
 				ht.get("Combination Pool Qualified Quantiy"));
 		CommonMethod.clickonWebElement(Combination_Pool_Qualified_Product_Upload, "Upload");
@@ -430,7 +431,7 @@ public class CombinationPoolPage extends TestBase {
 				ht.get("Combination Pool StoreName1"));
 
 		driver.findElement(By.xpath("//input[@id='uploadFile']"))
-				.sendKeys("C:\\Users\\sunil\\Test File Format\\Combination File Set.csv");
+				.sendKeys("C:\\Users\\sunil\\Test File Format\\Combination_Pool_Cord_Set1.csv");
 		Thread.sleep(3000);
 		CommonMethod.entertextintoinputbox(Combination_Pool_Qualified_Quantity,
 				ht.get("Combination Pool Qualified Quantiy"));
@@ -438,7 +439,7 @@ public class CombinationPoolPage extends TestBase {
 		CommonMethod.clickonWebElement(CombinationPool_Products_import_OK_Button, "OK");
 		CommonMethod.clickonWebElement(CombinationPool_Products_Add_More, "Add More ");
 		driver.findElement(By.xpath("//tbody/tr[2]/td[1]/input[1]"))
-				.sendKeys("C:\\Users\\sunil\\Test File Format\\Combination File Set.csv");
+				.sendKeys("C:\\Users\\sunil\\Test File Format\\Combination_Pool_Cord_Set2.csv");
 		Thread.sleep(3000);
 		CommonMethod.entertextintoinputbox(Combination_Pool_Qualified_Quantity2,
 				ht.get("Combination Pool Qualified Quantiy"));
@@ -505,7 +506,7 @@ public class CombinationPoolPage extends TestBase {
 		CommonMethod.bootstrapdropdownselection(clickonselectstoreoption, "combination_clickonparticulastore",
 				ht.get("Combination Pool StoreName1"));
 		driver.findElement(By.xpath("//input[@id='uploadFile']"))
-				.sendKeys("C:\\Users\\sunil\\Test File Format\\Combination File Set.csv");
+				.sendKeys("C:\\Users\\sunil\\Test File Format\\Combination_Pool_Cord_Set1.csv");
 		CommonMethod.entertextintoinputbox(Combination_Pool_Qualified_Quantity,
 				ht.get("Combination Pool Qualified Quantiy"));
 		CommonMethod.clickonWebElement(Combination_Pool_Qualified_Product_Upload, "Upload");
@@ -514,7 +515,7 @@ public class CombinationPoolPage extends TestBase {
 		CommonMethod.clickonWebElement(CombinationPool_Products_Add_More, "Add More ");
 
 		driver.findElement(By.xpath("//tbody/tr[2]/td[1]/input[1]"))
-				.sendKeys("C:\\Users\\sunil\\Test File Format\\Combination File Set.csv");
+				.sendKeys("C:\\Users\\sunil\\Test File Format\\Combination_Pool_Cord_Set2.csv");
 
 		Thread.sleep(3000);
 		CommonMethod.entertextintoinputbox(Combination_Pool_Qualified_Quantity2,

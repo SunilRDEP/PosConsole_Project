@@ -23,7 +23,7 @@ public class Stock_Request_Outward_TestCase extends TestBase {
 		}
 	} 
 
-	@Test(dataProvider = "data_Collection", enabled = false, priority = 1)
+	@Test(dataProvider = "data_Collection", enabled = true, priority = 1)
 	public void Inventory_List1(Hashtable<String, String> ht) throws InterruptedException, AWTException {
 		SignInPage sp = new SignInPage();
 
@@ -36,7 +36,7 @@ public class Stock_Request_Outward_TestCase extends TestBase {
 		
 	}
 	
-	@Test(dataProvider = "data_Collection", enabled = false, priority = 2,retryAnalyzer = RetryAnalyser.class)
+	@Test(dataProvider = "data_Collection", enabled = true, priority = 2,retryAnalyzer = RetryAnalyser.class)
 	public void Inventory_List2(Hashtable<String, String> ht) throws InterruptedException, AWTException {
 		SignInPage sp = new SignInPage();
 

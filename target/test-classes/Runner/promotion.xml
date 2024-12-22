@@ -33,6 +33,9 @@
 			<class
 				name="com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_Coupon_Based" />
 
+<class
+				name="com.proenx.rdep.promotion.listner.MasterPromotion_TestCases" />
+
 
 
 
