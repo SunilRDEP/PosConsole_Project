@@ -1,44 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-22T09:25:10 IST" name="Default suite" finished-at="2024-12-22T09:28:23 IST" duration-ms="192527">
+  <suite started-at="2025-01-17T00:57:03 IST" name="Default suite" finished-at="2025-01-17T00:57:08 IST" duration-ms="5157">
     <groups>
     </groups>
-    <test started-at="2024-12-22T09:25:10 IST" name="Default test" finished-at="2024-12-22T09:28:23 IST" duration-ms="192527">
-      <class name="com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based">
-        <test-method is-config="true" signature="loadPropfile()[pri:0, instance:com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based@740fb309]" started-at="2024-12-22T09:25:09 IST" name="loadPropfile" finished-at="2024-12-22T09:25:10 IST" duration-ms="1551" status="PASS">
+    <test started-at="2025-01-17T00:57:03 IST" name="Default test" finished-at="2025-01-17T00:57:08 IST" duration-ms="5157">
+      <class name="com.proenx.rdep.inventory.Inventory_TestCases">
+        <test-method is-config="true" signature="loadPropfile()[pri:0, instance:com.proenx.rdep.inventory.Inventory_TestCases@43f02ef2]" started-at="2025-01-17T00:57:01 IST" name="loadPropfile" finished-at="2025-01-17T00:57:03 IST" duration-ms="1912" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadPropfile -->
-        <test-method is-config="true" signature="getTestCaseName()[pri:0, instance:com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based@740fb309]" started-at="2024-12-22T09:25:10 IST" name="getTestCaseName" finished-at="2024-12-22T09:25:10 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="getTestCaseName()[pri:0, instance:com.proenx.rdep.inventory.Inventory_TestCases@43f02ef2]" started-at="2025-01-17T00:57:03 IST" name="getTestCaseName" finished-at="2025-01-17T00:57:03 IST" duration-ms="2" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "java.util.Hashtable.get(Object)" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "java.util.Hashtable.get(Object)" is null
+at com.proenx.rdep.inventory.Inventory_TestCases.getTestCaseName(Inventory_TestCases.java:19)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getTestCaseName -->
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based@740fb309]" started-at="2024-12-22T09:25:10 IST" name="launchBrowser" finished-at="2024-12-22T09:25:15 IST" duration-ms="4777" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.proenx.rdep.inventory.Inventory_TestCases@43f02ef2]" started-at="2025-01-17T00:57:03 IST" name="launchBrowser" finished-at="2025-01-17T00:57:03 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="create_promotion(java.util.Hashtable)[pri:0, instance:com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based@740fb309]" started-at="2024-12-22T09:25:15 IST" name="create_promotion" data-provider="data_Collection" finished-at="2024-12-22T09:28:18 IST" duration-ms="182377" status="PASS">
+        <test-method signature="Inventory_List3(java.util.Hashtable)[pri:3, instance:com.proenx.rdep.inventory.Inventory_TestCases@43f02ef2]" started-at="2025-01-17T00:57:03 IST" name="Inventory_List3" data-provider="data_Collection" finished-at="2025-01-17T00:57:03 IST" duration-ms="2" status="SKIP">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Error Message for Select Promotion Sub Type Mandatory Field=Please Select Promotion Sub Type, Combination Pool Discount Value=15, Error Message for Select Promotion Discount Value Mandatory Field=Discount value should be greater than 0, CombinationPool Start Date Format=2024-11-14 04:51 pm, Error Message for Select Promotion Promocode Mandatory Field=Please Provide Promotion Promocode, Promotion Type2=Combination Pool, Combination Pool Coupon Field=T20WC, Combination Pool StoreName2=Test82 - 0292, Combination Pool StoreName1=Rdep Meta Limited Pune - 1765, Error Message for creating promo without Product File Set =Combination Promotion cannot be created without promosets, Error Message for creating promo without promocode=Please Enter Qualifier Code, Promotion successful Message=Promotion configured successfully, Combination Pool Qualified Quantiy=2, Combination Pool Promotion Name=Percentage Combination Coupon, Combination Pool Promotion Code=COM15%, Error Message for Select Promotion Name Mandatory Field=Please Provide Promotion Name, Combination Pool Promotion successful Message=Promotion configured successfully, Promotion Name=Flat 10% OFF, Combination Pool Promotion Sub type1=Percentage, CombinationPool End Date Format=2024-12-20 04:51 pm, Combination Pool Promotion Details Error PopUp=Please Select Promotion Type, combination Pool Type1=Combination Pool, Promotion Sub type1=Percentage, Error Message for Select Promotion Type Mandatory Field=Please Select Promotion Type, Combination Pool Description=Combination Pool Promotion}]]>
+                <![CDATA[{Inventory List Store Name3=NA, Inventory List Filter Select Store1=Rdep Meta Limited Pune - 1765, Inventory List Store Name2=NA, Inventory List Store Name1=Rdep Meta Limited Pune - 1765, Inventory List Search Data for Update1=8904389909669, Inventory Import Successful Message=Inventory imported successfully., Inventory Import Error Message for not selecting Store=Please Select Store, Edit Inventory Successful Message =Inventory updated., Inventory List Search Data for File Reset with Single SKU file=25001200, Inventory Import Store=Rdep Meta Limited Pune - 1765, Inventory Adjustment Successful Message=Inventory adjusted successfully., Inventory List Search Data for Adjustment=3456712002, Inventory Adjustment Error Message for not selecting Store=Please Select Store, Edit Inventory Reorder Threshold Value=5, Inventory List Search Data for File Reset for three sku3=8904389900543, Inventory List Search Data for File Reset for three sku2=8904389900628, Inventory List Search Data for Update for three sku3=80002500, Inventory List Search Data for File Reset for three sku1=8904389900611, Inventory List Search Data for Update for three sku2=50002200, Edit Inventory Inventory Update Reason=Testing Purpose, Inventory List Search Data for Update for three sku1=8904389909669, Inventory Adjustment Unsuccessful Message=Error updating inventory., Inventory List Search SKU for Edit Inventory=60002300, Inventory Import Unsuccessful Message=Required data not found. Please upload the correct file., Inventory Adjustment Error Message for not selecting file=Please Select File, Inventory Import Error Message for not selecting file=Please Select File, Inventory List Search Data forUpdate with Single SKU file=40002100}]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "java.util.Hashtable.get(Object)" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "java.util.Hashtable.get(Object)" is null
+at com.proenx.rdep.inventory.Inventory_TestCases.getTestCaseName(Inventory_TestCases.java:19)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- create_promotion -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based@740fb309]" started-at="2024-12-22T09:28:18 IST" name="teardown" finished-at="2024-12-22T09:28:23 IST" duration-ms="5267" status="PASS">
+        </test-method> <!-- Inventory_List3 -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.proenx.rdep.inventory.Inventory_TestCases@43f02ef2]" started-at="2025-01-17T00:57:03 IST" name="teardown" finished-at="2025-01-17T00:57:08 IST" duration-ms="5013" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="generateReport()[pri:0, instance:com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based@740fb309]" started-at="2024-12-22T09:28:23 IST" name="generateReport" finished-at="2024-12-22T09:28:23 IST" duration-ms="367" status="PASS">
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:com.proenx.rdep.inventory.Inventory_TestCases@43f02ef2]" started-at="2025-01-17T00:57:08 IST" name="generateReport" finished-at="2025-01-17T00:57:08 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateReport -->
-      </class> <!-- com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based -->
+      </class> <!-- com.proenx.rdep.inventory.Inventory_TestCases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

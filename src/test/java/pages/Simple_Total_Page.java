@@ -21,7 +21,7 @@ public class Simple_Total_Page extends TestBase {
 	public Simple_Total_Page() {
 		PageFactory.initElements(driver, this);
 	}
-  
+   
 	@FindBy(xpath = "(//input[@name='date'])[1]")
 	private static WebElement Promotion_Start_Date;
 
@@ -141,6 +141,10 @@ public class Simple_Total_Page extends TestBase {
 	@FindBy(xpath = "//input[@id='customStore']")
 	private static WebElement SimpleTotal_Custom_Stores_Check_Box;
 
+	@FindBy(xpath = "//label[normalize-space()='Start Date']")
+	private static WebElement clicko_on_outside_of_Calender;
+	
+	
 	SoftAssert softassert = new SoftAssert();
 
 //=======================================================================================================================
@@ -198,13 +202,18 @@ public class Simple_Total_Page extends TestBase {
 
 		CommonMethod.entertextintoinputbox(Products_Filter_Search_Box,
 				ht.get("Promo code  for all store and all product type to Search  in Master Promotion Filter"));
-
+		CommonMethod.inputCalenderDate(clickedonstartdatecalenderfield, ht.get("start date in filter"));
+		CommonMethod.clickonWebElement(clicko_on_outside_of_Calender, "outside to Overlapping");
+		
+		CommonMethod.inputCalenderDate(clicked_on_End_date_calender_field, ht.get("end date in filter"));
+		CommonMethod.clickonWebElement(clicko_on_outside_of_Calender, " Products Filter Apply Button");
+		
 		CommonMethod.clickonWebElement(Products_Filter_Apply, " Products Filter Apply Button");
 
 		Thread.sleep(3000);
 		wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//table[@class='bh-table-compact']//tbody/tr")));
-
+ 
 		test.pass("@@@@@PLEASE CROSS CHECH BELOW DATA WITH MPOS AND DEBEAVER @@@@");
 		String Promotion_Name = driver.findElement(By.xpath("//tbody//tr[1]//td[1]")).getText();
 		String Start_Date = driver.findElement(By.xpath("//tbody//tr[1]//td[2]")).getText();
@@ -227,7 +236,7 @@ public class Simple_Total_Page extends TestBase {
 
 	}
 //============================================================================================================
-
+ 
 	public MasterPromotion_Pages Simple_Total_SystemBased_Promotion_With_Custom_Store_All_Product(
 			Hashtable<String, String> ht) throws InterruptedException {
 		test.pass("TC- is loading");
@@ -294,7 +303,7 @@ public class Simple_Total_Page extends TestBase {
 
 		CommonMethod.clickonWebElement(Products_Filter_Apply, " Products Filter Apply Button");
 
-		Thread.sleep(3000);
+		Thread.sleep(3000); 
 		wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//table[@class='bh-table-compact']//tbody/tr")));
 
@@ -620,6 +629,12 @@ public class Simple_Total_Page extends TestBase {
 
 		CommonMethod.entertextintoinputbox(Products_Filter_Search_Box,
 				ht.get("Promo code  for all store and all product type to Search  in Master Promotion Filter"));
+		CommonMethod.inputCalenderDate(clickedonstartdatecalenderfield, ht.get("start date in filter"));
+		CommonMethod.clickonWebElement(clicko_on_outside_of_Calender, "outside to Overlapping");
+		
+		CommonMethod.inputCalenderDate(clicked_on_End_date_calender_field, ht.get("end date in filter"));
+		CommonMethod.clickonWebElement(clicko_on_outside_of_Calender, " Masterpromotion  Filter Apply Button");
+		
 
 		CommonMethod.clickonWebElement(Products_Filter_Apply, " Products Filter Apply Button");
 
@@ -718,8 +733,13 @@ public class Simple_Total_Page extends TestBase {
 
 		CommonMethod.entertextintoinputbox(Products_Filter_Search_Box,
 				ht.get("Promo code  for custom store and all product type to Search  in Master Promotion Filter"));
-		CommonMethod.inputCalenderDate(clickedonstartdatecalenderfield, ht.get("Master Promotion Start Date Format"));
-		CommonMethod.clickonWebElement("outsideclick", "Outside to avoid element overlaping");
+		CommonMethod.inputCalenderDate(clickedonstartdatecalenderfield, ht.get("start date in filter"));
+		CommonMethod.clickonWebElement(clicko_on_outside_of_Calender, "outside to Overlapping");
+		
+		CommonMethod.inputCalenderDate(clicked_on_End_date_calender_field, ht.get("end date in filter"));
+		CommonMethod.clickonWebElement(clicko_on_outside_of_Calender, " Masterpromotion  Filter Apply Button");
+		
+
 
 		CommonMethod.clickonWebElement(Products_Filter_Apply, " Products Filter Apply Button");
 

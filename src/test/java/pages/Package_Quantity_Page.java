@@ -22,7 +22,7 @@ public class Package_Quantity_Page extends TestBase {
 
 	public Package_Quantity_Page() {
 		PageFactory.initElements(driver, this); 
-	} 
+	}  
 	 
 	@FindBy(xpath = "(//input[@name='date'])[1]")
 	private static WebElement Promotion_Start_Date;

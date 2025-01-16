@@ -74,7 +74,7 @@ public class TestBase { // heart or engine of my framework
 				System.getProperty("user.dir") + "\\src\\test\\resources\\testdata\\Test_Data_Sheet.xlsx");
 		readRunMode();
 	}
-
+ 
 // This code is for 1. cross browser testing 2. The test case name for the report 3. page size wait 4. environment setup (Qa/UAT/Production)
 	@BeforeMethod
 	public void launchBrowser() {
@@ -97,10 +97,10 @@ public class TestBase { // heart or engine of my framework
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		if (configue.getProperty("Environment").equalsIgnoreCase("QA")) {
 			driver.get(configue.getProperty("qaurl"));
-			test.pass("User navigate to required QA url");
+			test.pass("User navigate to required QA url:https://px.qa.rdep.io/login");
 		} else if (configue.getProperty("Environment").equalsIgnoreCase("uat")) {
 			driver.get(configue.getProperty("UATurl"));
-			test.pass("User navigate to required UAT url");
+			test.pass("User navigate to required UAT url://px.uat.rdep.io");
 		} else {
 			driver.get(configue.getProperty("ProductionURL"));
 			test.pass("User navigate to required production url");

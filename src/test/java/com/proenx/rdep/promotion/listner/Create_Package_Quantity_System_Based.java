@@ -15,12 +15,12 @@ import utility.DataCollection;
 public class Create_Package_Quantity_System_Based extends TestBase{
 	
 	@BeforeClass
-public void getTestCaseName() {
+public void getTestCaseName() { 
 		testCaseName = this.getClass().getSimpleName(); 
 	if(!run_mode.get(testCaseName).equalsIgnoreCase("Y")) {
 		throw new SkipException("Skipping Test  case as Run mode is set to no");// this is a user created exception
 	} 
-	}  
+	}   
 	 
 	@Test(dataProvider = "data_Collection")
 	public void create_promotion(Hashtable<String, String> ht) throws InterruptedException {

@@ -10,31 +10,36 @@
 		<classes>
 
 			<class
+				name="com.proenx.rdep.promotion.listner.MasterPromotion_TestCases" />
+
+			<class
 				name="com.proenx.rdep.promotion.listner.Create_Simple_Total_System_Based" />
-				
-				
-				<class
+
+
+			<class
 				name="com.proenx.rdep.promotion.listner.Create_Simple_Total_Coupon_Based" />
 
 			<class
 				name="com.proenx.rdep.promotion.listner.Create_Package_Quantity_Coupon_Based" />
 			<class
 				name="com.proenx.rdep.promotion.listner.Create_Package_Quantity_System_Based" />
-			
+
 			<class
 				name="com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based" />
-				<class
+			<class
 				name="com.proenx.rdep.promotion.listner.Create_CombinationPool_System_Based" />
-				
-				
-			<class
-				name="com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_Coupon_Based" />
+
 
 			<class
 				name="com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_Coupon_Based" />
 
-<class
-				name="com.proenx.rdep.promotion.listner.MasterPromotion_TestCases" />
+
+
+			<class
+				name="com.proenx.rdep.promotion.listner.Create_Simple_Total_Reward_System_Based" />
+
+			<class
+				name="com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_System" />
 
 
 

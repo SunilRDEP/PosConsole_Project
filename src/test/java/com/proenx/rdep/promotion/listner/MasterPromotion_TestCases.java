@@ -38,5 +38,17 @@ public void getTestCaseName() {
 	 
 	}
 	
+	@Test(dataProvider = "data_Collection" ,enabled = true)
+	public void create_promotion(Hashtable<String, String> ht) throws InterruptedException {
+		SignInPage sp = new SignInPage();
+
+	sp.signin(ht) 
+	.MasterPromotion(ht)
+	.edit_Promotion_from_Promotion_Table_with_invalid_File_Format(ht);
+	
+	 
+	}
+	
+	
 
 }

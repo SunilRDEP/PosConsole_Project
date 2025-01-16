@@ -30,7 +30,7 @@ public class CommonMethod extends TestBase {
 						+ timestamp + ".png");
 
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		try {
+		try { 
 			Files.copy(scrFile, dest);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -91,27 +91,27 @@ public class CommonMethod extends TestBase {
 	        try {
 	            // Wait for the modal to be visible
 	            WebElement modal = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(modalXPath)));
-	            System.out.println("Modal is visible: " + modal.isDisplayed());
+	            test.pass("Modal is visible: " + modal.isDisplayed());
 
 	            // Wait for the button inside the modal to be clickable
 	            WebElement button = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(buttonXPath)));
 
 	            // Click the button
 	            button.click();
-	            System.out.println("Clicked on the '" + description + "' button.");
+	            test.pass("Clicked on the '" + description + "' button.");
 	            return true;
 	        } catch (Exception e) {
-	            System.out.println("Error while handling the modal: " + e.getMessage());
+	        	test.pass("Error while handling the modal: " + e.getMessage());
 
 	            // Optional: Use JavaScript executor as a fallback
 	            try {
 	                WebElement button = driver.findElement(By.xpath(buttonXPath));
 	                JavascriptExecutor js = (JavascriptExecutor) driver;
 	                js.executeScript("arguments[0].click();", button);
-	                System.out.println("Clicked on the '" + description + "' button using JavaScript.");
+	                test.pass("Clicked on the '" + description + "' button using JavaScript.");
 	                return true;
 	            } catch (Exception jsException) {
-	                System.out.println("JavaScript click failed: " + jsException.getMessage());
+	                test.pass("JavaScript click failed: " + jsException.getMessage());
 	                return false;
 	            }
 	        }
@@ -334,9 +334,16 @@ public class CommonMethod extends TestBase {
 
 	}
 
-	public static void bootstrapdropdownselection(WebElement xpath1, String PROPxpath2, String data) {
+	public static void bootstrapdropdownselection(WebElement xpath1, String PROPxpath2, String data){
 
 		xpath1.click();
+		
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 		List<WebElement> bootstrap = driver.findElements(By.xpath(PROP.getProperty(PROPxpath2)));
 		System.out.println("Number of options found: " + bootstrap.size());

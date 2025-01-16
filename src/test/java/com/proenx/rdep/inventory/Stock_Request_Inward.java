@@ -19,10 +19,10 @@ public class Stock_Request_Inward extends TestBase {
 		testCaseName = this.getClass().getSimpleName();
 		if (!run_mode.get(testCaseName).equalsIgnoreCase("Y")) {
 			throw new SkipException("Skipping Test  case as Run mode is set to no");// this is a user created exception
-		}
-	} 
+		} 
+	}  
 
-	@Test(dataProvider = "data_Collection", enabled = false, priority = 1, retryAnalyzer = RetryAnalyser.class)
+	@Test(dataProvider = "data_Collection", enabled = true, priority = 1)
 	public void Inventory_List1(Hashtable<String, String> ht) throws InterruptedException, AWTException {
 		SignInPage sp = new SignInPage();
 
@@ -35,7 +35,7 @@ public class Stock_Request_Inward extends TestBase {
 
 	}
 
-	@Test(dataProvider = "data_Collection", enabled = false, priority = 2,retryAnalyzer = RetryAnalyser.class)
+	@Test(dataProvider = "data_Collection", enabled = true, priority = 2)
 	public void Inventory_List2(Hashtable<String, String> ht) throws InterruptedException, AWTException {
 		SignInPage sp = new SignInPage();
 
@@ -44,18 +44,11 @@ public class Stock_Request_Inward extends TestBase {
 		.SKU_Verification_For_InVentory_Inward_Request_with_Manual_SKU_Entry(ht)
 		.Return_to_Dashboard_Page(ht)
 		.Stock_request_Inward_SubMenu(ht)
-		.stock_request_Create_Valid_Inward_With_Manual_entry_of_SKU(ht);
+		.stock_request_Create_Valid_Inward_With_Manual_entry_of_SKU(ht)
+		.Return_to_Dashboard_Page(ht)
+		.Stock_request_Inward_SubMenu(ht)
+		.stock_request_Inward_Error_Message_Validation(ht);
 
 	}
 	
-	@Test(dataProvider = "data_Collection", enabled = true, priority = 3)
-	public void Inventory_List3(Hashtable<String, String> ht) throws InterruptedException, AWTException {
-		SignInPage sp = new SignInPage();
-
-		sp.signin(ht)
-		
-		.Stock_request_Inward_SubMenu(ht)
-		.Breadcrump(ht);
-	}
-
 }

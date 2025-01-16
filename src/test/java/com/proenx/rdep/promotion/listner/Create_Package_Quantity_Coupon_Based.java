@@ -13,7 +13,7 @@ import pages.SignInPage;
 import utility.DataCollection;
 
 public class Create_Package_Quantity_Coupon_Based extends TestBase{
-	
+	 
 	@BeforeClass
 public void getTestCaseName() {
 		testCaseName = this.getClass().getSimpleName(); 

@@ -25,7 +25,7 @@ public class CreatePromotion_Page extends TestBase {
 	}   
 
 	@FindBy(xpath = "(//input[@name='date'])[1]")
-	private static WebElement Promotion_Start_Date;
+	private static WebElement Promotion_Start_Date; 
 
 	@FindBy(xpath = "(//input[@name='date'])[2]")
 	private static WebElement Promotion_End_Date;
@@ -130,6 +130,9 @@ public class CreatePromotion_Page extends TestBase {
 	@FindBy(xpath = "//div[@class='col-12 mt-2']//input[@placeholder='Select Date']")
 	private static WebElement clicked_on_End_date_calender_field;
 	
+	@FindBy(xpath = "//label[normalize-space()='Start Date']")
+	private static WebElement clicko_on_outside_of_Calender;
+	
 	SoftAssert softassert= new SoftAssert();
 //=======================================================================================================================
 
@@ -181,8 +184,12 @@ public class CreatePromotion_Page extends TestBase {
 
 		CommonMethod.entertextintoinputbox(Products_Filter_Search_Box,
 				ht.get("Promotion Data for Master Promotion FilterSearch"));
-		CommonMethod.inputCalenderDate(clickedonstartdatecalenderfield, ht.get("Master Promotion Start Date Format"));
-		CommonMethod.clickonWebElement("outsideclick", "Outside to avoid element overlaping");
+		CommonMethod.inputCalenderDate(clickedonstartdatecalenderfield, ht.get("start date in filter"));
+		CommonMethod.clickonWebElement(clicko_on_outside_of_Calender, "outside to Overlapping");
+		
+		CommonMethod.inputCalenderDate(clicked_on_End_date_calender_field, ht.get("end date in filter"));
+		CommonMethod.clickonWebElement(clicko_on_outside_of_Calender, " Masterpromotion  Filter Apply Button");
+		
 		
 		CommonMethod.clickonWebElement(Products_Filter_Apply, " Products Filter Apply Button");
 
@@ -313,12 +320,14 @@ public class CreatePromotion_Page extends TestBase {
 		CommonMethod.entertextintoinputbox(Products_Filter_Search_Box,
 				ht.get("Promotion Data for Master Promotion FilterSearch"));
 		CommonMethod.inputCalenderDate(clickedonstartdatecalenderfield, ht.get("Master Promotion Start Date Format"));
-		CommonMethod.clickonWebElement("outsideclick", "Outside to avoid element overlaping");
+		CommonMethod.inputCalenderDate(clickedonstartdatecalenderfield, ht.get("start date in filter"));
+		CommonMethod.clickonWebElement(clicko_on_outside_of_Calender, "outside to Overlapping");
 		
+		CommonMethod.inputCalenderDate(clicked_on_End_date_calender_field, ht.get("end date in filter"));
+		CommonMethod.clickonWebElement(clicko_on_outside_of_Calender, " Masterpromotion  Filter Apply Button");
 		
 		
 		CommonMethod.clickonWebElement(Products_Filter_Apply, " Products Filter Apply Button");
-
 		Thread.sleep(3000);
 		wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//table[@class='bh-table-compact']//tbody/tr")));

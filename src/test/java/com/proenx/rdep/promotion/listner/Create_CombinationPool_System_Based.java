@@ -19,7 +19,7 @@ public void getTestCaseName() {
 		testCaseName = this.getClass().getSimpleName(); 
 	if(!run_mode.get(testCaseName).equalsIgnoreCase("Y")) {
 		throw new SkipException("Skipping Test  case as Run mode is set to no");// this is a user created exception
-	} 
+	}   
 	}  
 	 
 	@Test(dataProvider = "data_Collection")
@@ -27,7 +27,8 @@ public void getTestCaseName() {
 		SignInPage sp = new SignInPage();
 
 	sp.signin(ht).MasterPromotion(ht).create_Combination_Pool_Promotion(ht)
-	.create_CombinationPool_promo_systembased(ht).create_Combination_Pool_Promotion(ht)
+	.create_CombinationPool_promo_systembased(ht)
+	.create_Combination_Pool_Promotion(ht)
 	.create_CombinationPool_promo_systembased_Custom_Store(ht)
 	.create_Combination_Pool_Promotion(ht)
 	.create_CombinationPool_promo_systembased_Custom_Store_Twoset_Productfile(ht);

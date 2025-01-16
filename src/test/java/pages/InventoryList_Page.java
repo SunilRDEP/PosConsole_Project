@@ -20,7 +20,7 @@ import utility.CommonMethod;
 public class InventoryList_Page extends TestBase {
  	public InventoryList_Page() {
 		PageFactory.initElements(driver, this);
-	}  
+	}   
 
 	@FindBy(xpath = "//span[@class='p-button-icon ri-sound-module-line ri-xl']")
 	private static WebElement Inventory_List_Adjustment;
@@ -116,6 +116,33 @@ public class InventoryList_Page extends TestBase {
 		}
 
 		Thread.sleep(3000);
+		Thread.sleep(3000);
+		CommonMethod.clickonWebElement(Inventory_List_Filter, "inventory List Filter");
+		CommonMethod.clickonWebElement(Inventory_List_Filter_Reset, "inventory List Filter reset button");
+		CommonMethod.entertextintoinputbox(Inventory_List_Filter_Search_Box,
+				ht.get("Inventory List Search Data for Adjustment"));
+		CommonMethod.bootstrapdropdownselection(Inventory_List_Filter_Select_STore,
+				"Inventory_List_Filter_Select_STore", ht.get("Inventory List Filter Select Store1"));
+		CommonMethod.clickonWebElement(Inventory_List_Filter_Outside, "Outside to avoid element overlaping");
+		CommonMethod.clickonWebElement(Inventory_List_Filter_Apply, "Inventory List Filter Apply Button");
+		
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("//table[@class='bh-table-compact']//tbody/tr")));
+		
+		String SKU1 = driver
+				.findElement(By.xpath("//tbody/tr[1]/td[2]"))
+				.getText();
+		String Available_On_Hand1 = driver
+				.findElement(By.xpath("//tbody/tr[1]/td[6]"))
+				.getText();
+		System.out.println(SKU1);
+	
+
+		test.pass("Entered SKU for import through adjustment is " + SKU1
+				+ "  and Available on Hand quantity for this SKU after Adjustment is " + Available_On_Hand1);
+		test.pass("PLEASE CHECK WHETHER AVAILABLE ON HAND QUANTITY IN DBEAVER IS " + Available_On_Hand1 + " OR NOT ");
+
 
 		return this;
 	}
@@ -384,7 +411,9 @@ public class InventoryList_Page extends TestBase {
 			throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
+		
 		CommonMethod.clickonWebElement(Inventory_Import, "Import Button");
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.clickonWebElement(Inventory_Import_update, "Import Update Button");
 
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
@@ -428,12 +457,7 @@ public class InventoryList_Page extends TestBase {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
-		String SKU = driver
-				.findElement(By.xpath("//tbody/tr[1]/td[2]"))
-				.getText();
-		String Available_On_Hand = driver
-				.findElement(By.xpath("//tbody/tr[1]/td[6]"))
-				.getText();
+		
 		CommonMethod.clickonWebElement(Inventory_Import, "Import Button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.clickonWebElement(Inventory_Import_update, "Import Update Button");
@@ -473,6 +497,11 @@ public class InventoryList_Page extends TestBase {
 				"Inventory_List_Filter_Select_STore", ht.get("Inventory List Filter Select Store1"));
 		CommonMethod.clickonWebElement(Inventory_List_Filter_Outside, "Outside to avoid element overlaping");
 		CommonMethod.clickonWebElement(Inventory_List_Filter_Apply, "Inventory List Filter Apply Button");
+		
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("//table[@class='bh-table-compact']//tbody/tr")));
+		
 		String SKU1 = driver
 				.findElement(By.xpath("//tbody/tr[1]/td[2]"))
 				.getText();
@@ -480,11 +509,7 @@ public class InventoryList_Page extends TestBase {
 				.findElement(By.xpath("//tbody/tr[1]/td[6]"))
 				.getText();
 		System.out.println(SKU1);
-		test.pass("Entered SKU for before import through update is " + SKU
-				+ "  and Available on Hand quantity for this SKU before update is " + Available_On_Hand);
-		test.pass("PLEASE CHECK WHETHER AVAILABLE ON HAND QUANTITY IN DBEAVER BEFORE IMPORT THROUGH SKU IS "
-				+ Available_On_Hand + " OR NOT ");
-
+		
 		test.pass("Entered SKU for import through update is " + SKU1
 				+ "  and Available on Hand quantity for this SKU after update is " + Available_On_Hand1);
 		test.pass("PLEASE CHECK WHETHER AVAILABLE ON HAND QUANTITY IN DBEAVER IS " + Available_On_Hand1 + " OR NOT ");
@@ -801,7 +826,7 @@ public class InventoryList_Page extends TestBase {
 		
 
 		test.pass("Entered SKU for import through update is " + SKU1
-				+ "  and Available on Hand quantity for this SKU after update is " + Available_On_Hand1);
+				+ "  and Available on Hand quantity for this SKU after reset is " + Available_On_Hand1);
 		test.pass("PLEASE CHECK WHETHER AVAILABLE ON HAND QUANTITY IN DBEAVER IS " + Available_On_Hand1 + " OR NOT ");
 		
 		CommonMethod.clickonWebElement(Inventory_List_Filter, "inventory List Filter");
@@ -829,7 +854,7 @@ public class InventoryList_Page extends TestBase {
 		
 
 		test.pass("Entered SKU for import through update is " + SKU2
-				+ "  and Available on Hand quantity for this SKU after update is " + Available_On_Hand2);
+				+ "  and Available on Hand quantity for this SKU after reset is " + Available_On_Hand2);
 		test.pass("PLEASE CHECK WHETHER AVAILABLE ON HAND QUANTITY IN DBEAVER IS " + Available_On_Hand2 + " OR NOT ");
 		CommonMethod.clickonWebElement(Inventory_List_Filter, "inventory List Filter");
 		Thread.sleep(3000);
@@ -855,7 +880,7 @@ public class InventoryList_Page extends TestBase {
 		
 
 		test.pass("Entered SKU for import through update is " + SKU3
-				+ "  and Available on Hand quantity for this SKU after update is " + Available_On_Hand3);
+				+ "  and Available on Hand quantity for this SKU after reset is " + Available_On_Hand3);
 		test.pass("PLEASE CHECK WHETHER AVAILABLE ON HAND QUANTITY IN DBEAVER IS " + Available_On_Hand3 + " OR NOT ");
 	
 		return this;

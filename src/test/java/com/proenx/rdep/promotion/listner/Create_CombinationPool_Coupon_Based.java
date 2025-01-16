@@ -11,9 +11,10 @@ import com.proenx.rdep.myproject.TestBase;
 
 import pages.SignInPage;
 import utility.DataCollection;
+import utility.RetryAnalyser;
 
 public class Create_CombinationPool_Coupon_Based extends TestBase{
-	
+	 
 	@BeforeClass
 public void getTestCaseName() {
 		testCaseName = this.getClass().getSimpleName(); 
@@ -22,23 +23,24 @@ public void getTestCaseName() {
 	} 
 	} 
 	  
-	@Test(dataProvider = "data_Collection" ,enabled = true )
+	@Test(dataProvider = "data_Collection" ,enabled = true,retryAnalyzer = RetryAnalyser.class)
 	public void create_promotion(Hashtable<String, String> ht) throws InterruptedException {
 		SignInPage sp = new SignInPage();
 
 	sp.signin(ht) 
 	.MasterPromotion(ht)
 	.create_Combination_Pool_Promotion(ht)
-	.create_CombinationPool_promo_systembased_Custom_Store(ht)
+	.error_message_validation(ht) 
+	.masterpromotion_breadcrump(ht)
 	.create_Combination_Pool_Promotion(ht)
-	.create_CombinationPool_promo_systembased(ht)
+	.create_CombinationPool_promo_couponbased(ht)
 	.create_Combination_Pool_Promotion(ht)
-	.create_CombinationPool_promo_systembased_Custom_Store_Twoset_Productfile(ht)
+	.create_CombinationPool_promo_couponbased_Custom_Store(ht)
 	.create_Combination_Pool_Promotion(ht)
-	.error_message_validation(ht);
-
+	.create_CombinationPool_promo_couponbased_Custom_Store_Twoset_Productfile(ht);
 	 
 	}
+	
 	
 
 	

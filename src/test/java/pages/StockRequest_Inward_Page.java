@@ -22,7 +22,7 @@ public class StockRequest_Inward_Page extends TestBase {
 	public StockRequest_Inward_Page() {
 		PageFactory.initElements(driver, this);
 	}
-
+ 
 	@FindBy(xpath = "//button[@class='p-button p-component p-button-icon-only p-button-primary p-button-raised p-button-text custom-border-primary custom-rounded bg-white p-button-small']")
 	private static WebElement Inventory_Stock_Request_Inward_CSV_Download;
 
@@ -276,8 +276,8 @@ public class StockRequest_Inward_Page extends TestBase {
 		System.out.println(SKU2_ItemDetails_Table);
 		
 
-		test.pass("Outward Request successfully created for " + SKU1_ItemDetails_Table);
-		test.pass("Outward Request successfully created for " + SKU2_ItemDetails_Table);
+		test.pass("Inward Request successfully created for " + SKU1_ItemDetails_Table);
+		test.pass("Inward Request successfully created for " + SKU2_ItemDetails_Table);
 
 		
 		
@@ -372,8 +372,8 @@ public class StockRequest_Inward_Page extends TestBase {
 	System.out.println(SKU2_ItemDetails_Table);
 	
 
-	test.pass("Outward Request successfully created for " + SKU1_ItemDetails_Table);
-	test.pass("Outward Request successfully created for " + SKU2_ItemDetails_Table);
+	test.pass("Inward Request successfully created for " + SKU1_ItemDetails_Table);
+	test.pass("Inward Request successfully created for " + SKU2_ItemDetails_Table);
 
 	
 	
@@ -486,67 +486,7 @@ public class StockRequest_Inward_Page extends TestBase {
 		
 		//CommonMethod.clickonWebElement(Inventory_Inward_Delete1, "delete button1");
 	
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Inventory_Inward_Approve);
-		Thread.sleep(3000);
-		CommonMethod.clickonWebElement(Inventory_Inward_Approve, "Inventory_Inward_Approve Button");
 		
-		
-		
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
-
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Inventory_Inward_Action_Edit);
-		Thread.sleep(3000);
-		
-		CommonMethod.clickonWebElement(Inventory_Inward_Action_Edit, "Inventory_Inward_Action_Edit Button");
-		
-//			((JavascriptExecutor) driver).executeScript("arguments[0].click();", Inventory_Inward_Action_Edit);
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Inventory_Inward_Fulfilment);
-		Thread.sleep(3000);
-		
-		CommonMethod.clickonWebElement(Inventory_Inward_Fulfilment, "Inventory_Inward_Fulfilment Button");
-		
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Inventory_Inward_Action);
-		Thread.sleep(3000);
-		
-		CommonMethod.clickonWebElement(Inventory_Inward_Action, "Inventory_Inward_Action Button");
-		
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Inventory_Inward_Mark_As_Received);
-		Thread.sleep(3000);
-		
-		CommonMethod.clickonWebElement(Inventory_Inward_Mark_As_Received, "Inventory_Inward_Mark_As_Received Button");
-		
-//		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Inventory_Inward_Stock_Request_Bredcrump);
-//		Thread.sleep(3000);
-//		Inventory_Inward_Stock_Request_Bredcrump.click();
-		
-		
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Inventory_Inward_Table);
-		Thread.sleep(3000);
-		
-		CommonMethod.clickonWebElement(Inventory_Inward_Table, "Inventory_Inward SubMenu Button");
-		
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
-
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
-				Inventory_Inward_ItemDetails);
-		Thread.sleep(3000);
-		
-		CommonMethod.clickonWebElement(Inventory_Inward_ItemDetails, "Inventory_Inward_ItemDetails Button");
-
-		Thread.sleep(3000);
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
-				Inventory_Inward_SKU1_from_Item_Details_Table);
-		CommonMethod.clickonWebElement(Inventory_Inward_SKU1_from_Item_Details_Table, "Inventory_Inward_SKU1_from_Item_Details_Table Button");
-		String SKU1_ItemDetails_Table = Inventory_Inward_SKU1_from_Item_Details_Table.getText();
-		System.out.println(SKU1_ItemDetails_Table);
-		Thread.sleep(3000);
-		String SKU2_ItemDetails_Table = Inventory_Inward_SKU2_from_Item_Details_Table.getText();
-		System.out.println(SKU2_ItemDetails_Table);
-		
-
-		test.pass("Outward Request successfully created for " + SKU1_ItemDetails_Table);
-		test.pass("Outward Request successfully created for " + SKU2_ItemDetails_Table);
-
 		
 		
 			return this;
@@ -555,6 +495,8 @@ public class StockRequest_Inward_Page extends TestBase {
 	public DashBoardPages Return_to_Dashboard_Page(Hashtable<String, String> ht) throws InterruptedException, AWTException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Return_to_DashBoard);
+		Thread.sleep(3000);
 	CommonMethod.clickonWebElement(Return_to_DashBoard, "DashBoard to return homepage");
 		return new DashBoardPages();
 		

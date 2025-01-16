@@ -82,8 +82,11 @@ public class DashBoardPages extends TestBase {
 	@FindBy(xpath = "//a[@href='/rdep-receipt/dashboard']")
 	private static WebElement E_Receipt;
 	
+	@FindBy(xpath = "//span[@class='nav__label'][normalize-space()='Customers']")
+	private static WebElement Customer_Menu;
 	
-	
+	@FindBy(xpath = "//span[normalize-space()='All Customers List']")
+	private static WebElement Customer_SubMenu;
 	
 
 	public DashBoardPages clickOnAllMenunDashBoard() {
@@ -202,5 +205,13 @@ public class DashBoardPages extends TestBase {
 
 		CommonMethod.clickonWebElement(E_Receipt, "E-Receiot option ");
 		return new E_Receipt_Page();
+	}
+	
+	public Customers_Page customer_List_SubMenu(Hashtable<String, String> ht) throws InterruptedException {
+		Thread.sleep(3000);
+		CommonMethod.clickonWebElement(Customer_Menu, "Customer Menu");
+
+		CommonMethod.clickonWebElement(Customer_SubMenu, "Customer Sub Menu  ");
+		return new Customers_Page();
 	}
 }

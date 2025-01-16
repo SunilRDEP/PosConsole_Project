@@ -53,7 +53,7 @@ public class SignInPage extends TestBase {
 		CommonMethod.enterdatafromexcel(Usernamexpath,configue.getProperty("username"), "USERNAME");
 		CommonMethod.enterdatafromexcel(Passwardxpath, configue.getProperty("passward"),"PASSWORD");
 		CommonMethod.clickonWebElement(clickbuttonxpath, "login button");
-		return new DashBoardPages();
+		return new DashBoardPages(); 
 
 	}
 

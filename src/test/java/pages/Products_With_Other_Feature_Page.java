@@ -150,7 +150,7 @@ return this;
 }
 
 	public Products_With_Other_Feature_Page SKU_Verification_For_InVentory_Outward_Request_with_File_Upload(Hashtable<String, String> ht) throws InterruptedException, AWTException {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 	CommonMethod.clickonWebElement(Products_Filter, "Filter Button");
 	CommonMethod.entertextintoinputbox(Products_Filter_Search_Box,

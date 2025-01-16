@@ -15,6 +15,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import com.proenx.rdep.myproject.TestBase;
 
@@ -184,6 +185,89 @@ public class MasterPromotion_Pages extends TestBase {
 
 	@FindBy(xpath = "//div[@class='d-flex justify-content-end col-6 pt-1 align-self-center text-right']//span[@class='p-button-label'][normalize-space()='Close']")
 	private static WebElement Edit_Promotion_Add_Custom_Products_SelectFile_Close;
+	
+	
+	
+	
+	public MasterPromotion_Pages edit_Promotion_from_Promotion_Table_with_invalid_File_Format(Hashtable<String, String> ht)
+			throws InterruptedException {
+		test.pass("Master-005 test case is loading ");
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
+
+		String Promotion_Type = driver.findElement(By.xpath("//tbody/tr[1]/td[4]")).getText();
+
+		if (Promotion_Type.equalsIgnoreCase("Combination Pool")) {
+
+			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Edit_Promotion);
+			Thread.sleep(3000);
+			Edit_Promotion.click(); 
+
+			WebElement active_status = wait
+					.until(ExpectedConditions.elementToBeClickable(By.xpath("//select[@id='active']")));
+
+			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", active_status);
+
+			if (active_status.isDisplayed() && active_status.isEnabled()) {
+
+				Select select2 = new Select(active_status);
+				select2.selectByValue(ht.get("Active status through Edit Promotion"));
+				test.pass("Active status selected successfully");
+			} else {
+				test.pass("Active status dropdown is not interactable.");
+			}
+
+			CommonMethod.bootstrapdropdownselection(Edit_Promotion_Edit_Store, "Edit_Promotion_Edit_Store",
+					ht.get("Store Selection for Edit store"));
+			CommonMethod.clickonWebElement(Edit_Promotion_Edit_Click_OutSide, "Outside to avoide overlapping");
+			Edit_Promotion_Combination_Pool_Choosse_File_1
+					.sendKeys("C:\\Users\\sunil\\Test File Format\\Combination Invalid File Set.csv");
+			test.pass("invalid file uploaded");
+			Edit_Promotion_Combination_Pool_Choosse_File_2
+					.sendKeys("C:\\Users\\sunil\\Test File Format\\Combination Invalid File Set.csv");
+			test.pass("invalid file uploaded");
+			CommonMethod.clickonWebElement(Edit_Promotion_Combination_Pool_Upload_File_1, "Upload Button for file-1");
+			CommonMethod.takescreenshot();
+			Thread.sleep(3000);
+			test.fail("This test case should fail due to invalid file Upload");
+
+					}
+		
+		else {
+
+			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Edit_Promotion);
+			Thread.sleep(3000);
+			Edit_Promotion.click();
+
+			WebElement active_status = wait
+					.until(ExpectedConditions.elementToBeClickable(By.xpath("//select[@id='active']")));
+
+			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", active_status);
+
+			if (active_status.isDisplayed() && active_status.isEnabled()) {
+
+				Select select2 = new Select(active_status);
+				select2.selectByValue(ht.get("Active status through Edit Promotion"));
+				test.pass("Active status selected successfully");
+			} else {
+				test.pass("Active status dropdown is not interactable.");
+			}
+
+			CommonMethod.bootstrapdropdownselection(Edit_Promotion_Edit_Store, "Edit_Promotion_Edit_Store",
+					ht.get("Store Selection for Edit store all type of promotion apart from combination pool"));
+			CommonMethod.clickonWebElement(Edit_Promotion_Add_Custom_Products_Checkbox, "Add Custom Product CheckBox");
+			CommonMethod.clickonWebElement(Edit_Promotion_Add_Custom_Products_Import, "Import button to upload a new file");
+			Edit_Promotion_Add_Custom_Products_SelectFile.sendKeys("C:\\Users\\sunil\\Test File Format\\Combination Invalid File Set.csv");
+			CommonMethod.clickonWebElement(Edit_Promotion_Add_Custom_Products_SelectFile_Import, "import buuton");
+			CommonMethod.takescreenshot();
+			test.fail("This test case should fail due to invalid file Upload");
+			
+		}
+	
+		return this;
+
+	}
+
 
 //===============================================================================================================
 
@@ -417,6 +501,7 @@ public class MasterPromotion_Pages extends TestBase {
 	}
 
 	public MasterPromotion_Pages clickOnDownload_Filter(Hashtable<String, String> ht) throws InterruptedException {
+		test.pass("Test Case-Master-003 is loading");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 
@@ -436,6 +521,7 @@ public class MasterPromotion_Pages extends TestBase {
 	}
 
 	public MasterPromotion_Pages filterOperation(Hashtable<String, String> ht) throws InterruptedException {
+	test.pass("Test Case-Master-002 is loading");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 	
@@ -496,7 +582,7 @@ WebElement scroll = driver.findElement(By.xpath("//div[@class='container-fluid m
 	}
 
 	public MasterPromotion_Pages MasterPromo_filter_all_button(Hashtable<String, String> ht) {
-
+		test.pass("Test Case-Master-004 is loading");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 
@@ -533,7 +619,7 @@ WebElement scroll = driver.findElement(By.xpath("//div[@class='container-fluid m
 	}
 
 	public CombinationPoolPage create_Combination_Pool_Promotion(Hashtable<String, String> ht) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.clickonWebElement(Promotion_Create_Button, "create button");
 		return new CombinationPoolPage();
@@ -557,4 +643,15 @@ WebElement scroll = driver.findElement(By.xpath("//div[@class='container-fluid m
 		return new Simple_Total_Page();
 
 	}
+	
+	public Simple_Total_Reward_Page create_Simple_Total_Reward_Promotion(Hashtable<String, String> ht) {
+		test.pass("TC- is loading");
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
+		CommonMethod.clickonWebElement(Promotion_Create_Button, "create button");
+		return new Simple_Total_Reward_Page();
+
+	}
+	
+	
 }

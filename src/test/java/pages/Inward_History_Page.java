@@ -245,7 +245,7 @@ public class Inward_History_Page extends TestBase {
 			Assert.fail(errorMessage);
 		} else {
 			// Log all matched data
-			System.out.println("All Matches Found:");
+			test.pass("All Matches Found:");
 			for (int index = 0; index < matchedData.size(); index++) {
 				System.out.println(matchedData.get(index));
 				System.out.println(matchedRowData.get(index));

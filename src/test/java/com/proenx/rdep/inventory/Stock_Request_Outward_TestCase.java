@@ -15,13 +15,13 @@ import utility.RetryAnalyser;
 
 public class Stock_Request_Outward_TestCase extends TestBase {
  
-	@BeforeClass
+	@BeforeClass 
 	public void getTestCaseName() {
 		testCaseName = this.getClass().getSimpleName();
 		if (!run_mode.get(testCaseName).equalsIgnoreCase("Y")) {
 			throw new SkipException("Skipping Test  case as Run mode is set to no");// this is a user created exception
 		}
-	} 
+	}  
 
 	@Test(dataProvider = "data_Collection", enabled = true, priority = 1)
 	public void Inventory_List1(Hashtable<String, String> ht) throws InterruptedException, AWTException {
@@ -36,7 +36,7 @@ public class Stock_Request_Outward_TestCase extends TestBase {
 		
 	}
 	
-	@Test(dataProvider = "data_Collection", enabled = true, priority = 2,retryAnalyzer = RetryAnalyser.class)
+	@Test(dataProvider = "data_Collection", enabled = true, priority = 2)
 	public void Inventory_List2(Hashtable<String, String> ht) throws InterruptedException, AWTException {
 		SignInPage sp = new SignInPage();
 

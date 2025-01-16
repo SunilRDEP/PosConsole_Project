@@ -10,16 +10,15 @@
 		<classes>
 
 
-			
+			<class name="com.proenx.rdep.inventory.Inventory_TestCases" />
 			<class name="com.proenx.rdep.inventory.Stock_Request_Inward" />
 
-			
+
 			<class
 				name="com.proenx.rdep.inventory.Stock_Request_Outward_TestCase" />
-				
-				<class
-				name="com.proenx.rdep.inventory.Inventory_TestCases" />
-				
+
+
+
 
 		</classes>
 	</test> <!-- Test -->

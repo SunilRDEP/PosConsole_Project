@@ -132,14 +132,31 @@ public class CombinationPoolPage extends TestBase {
 	//==========================================================================================
 //Edit field Xpath
 	
-	@FindBy(xpath = "//tbody/tr[1]/td[13]/i[1]")
-	private static WebElement CombinationPool_Edit_All_Field;
+	@FindBy(xpath = "//a[@class='p-menuitem-link']//span[contains(text(),'Master Promotions')]")
+	private static WebElement CombinationPool_Masterpromotion_breadcrump;
 	
 	
 	
 	
 //=========================================================================================================================
-
+	public MasterPromotion_Pages masterpromotion_breadcrump(Hashtable<String, String> ht)
+			throws InterruptedException {
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", CombinationPool_Masterpromotion_breadcrump);
+		
+		test.pass("User clicked on Masterpromotion breadcrump to return to Masterpromotion Screen");
+		//CommonMethod.clickonWebElement(CombinationPool_Masterpromotion_breadcrump, "Masterpromotion breadcrump to return to Masterpromotion Screen");
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
+		
+		
+		
+		return new MasterPromotion_Pages();
+		
+	}
+	
+	
+	
 	public MasterPromotion_Pages create_CombinationPool_promo_systembased(Hashtable<String, String> ht)
 			throws InterruptedException {
 		test.pass("TC-031 is loading"); 
@@ -758,4 +775,6 @@ public class CombinationPoolPage extends TestBase {
 		
 		return new CombinationPoolPage();
 }
+	
+	
 }

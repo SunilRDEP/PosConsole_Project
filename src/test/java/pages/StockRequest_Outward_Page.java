@@ -142,7 +142,7 @@ public class StockRequest_Outward_Page extends TestBase {
 
 	public StockRequest_Outward_Page stock_request_Outward_Filter_Operation(Hashtable<String, String> ht) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
+	 	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.clickonWebElement(Inventory_Stock_Request_Inward_Filter, "filter Button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.entertextintoinputbox(Inventory_Stock_Request_Inward_Filter_Search_Box,
