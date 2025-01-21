@@ -8,7 +8,7 @@
     <classes>
       <class name="com.proenx.rdep.promotion.listner.Create_Simple_Total_Reward_System_Based">
         <methods>
-          <include name="create_promotion" invocation-numbers="0"/>
+          <include name="create_promotion"/>
           <include name="teardown"/>
           <include name="getTestCaseName"/>
           <include name="generateReport"/>
@@ -16,24 +16,64 @@
           <include name="loadPropfile"/>
         </methods>
       </class> <!-- com.proenx.rdep.promotion.listner.Create_Simple_Total_Reward_System_Based -->
+      <class name="com.proenx.rdep.promotion.listner.Create_Package_Quantity_System_Based">
+        <methods>
+          <include name="teardown"/>
+          <include name="getTestCaseName"/>
+          <include name="generateReport"/>
+          <include name="create_promotion"/>
+          <include name="launchBrowser"/>
+          <include name="loadPropfile"/>
+        </methods>
+      </class> <!-- com.proenx.rdep.promotion.listner.Create_Package_Quantity_System_Based -->
       <class name="com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_Coupon_Based">
         <methods>
           <include name="getTestCaseName"/>
           <include name="teardown"/>
-          <include name="create_promotion" invocation-numbers="0"/>
+          <include name="create_promotion"/>
+          <include name="generateReport"/>
+          <include name="loadPropfile"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_Coupon_Based -->
+      <class name="com.proenx.rdep.promotion.listner.Create_CombinationPool_System_Based">
+        <methods>
+          <include name="getTestCaseName"/>
+          <include name="create_promotion"/>
+          <include name="teardown"/>
           <include name="generateReport"/>
           <include name="launchBrowser"/>
           <include name="loadPropfile"/>
         </methods>
-      </class> <!-- com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_Coupon_Based -->
-      <class name="com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based">
+      </class> <!-- com.proenx.rdep.promotion.listner.Create_CombinationPool_System_Based -->
+      <class name="com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_System">
         <methods>
-          <include name="create_promotion" invocation-numbers="0"/>
+          <include name="create_promotion"/>
           <include name="teardown"/>
           <include name="getTestCaseName"/>
           <include name="generateReport"/>
           <include name="launchBrowser"/>
           <include name="loadPropfile"/>
+        </methods>
+      </class> <!-- com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_System -->
+      <class name="com.proenx.rdep.promotion.listner.Create_Package_Quantity_Coupon_Based">
+        <methods>
+          <include name="create_promotion"/>
+          <include name="teardown"/>
+          <include name="getTestCaseName"/>
+          <include name="generateReport"/>
+          <include name="launchBrowser"/>
+          <include name="loadPropfile"/>
+        </methods>
+      </class> <!-- com.proenx.rdep.promotion.listner.Create_Package_Quantity_Coupon_Based -->
+      <class name="com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based">
+        <methods>
+          <include name="create_promotion"/>
+          <include name="teardown"/>
+          <include name="getTestCaseName"/>
+          <include name="generateReport"/>
+          <include name="loadPropfile"/>
+          <include name="launchBrowser"/>
         </methods>
       </class> <!-- com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based -->
     </classes>

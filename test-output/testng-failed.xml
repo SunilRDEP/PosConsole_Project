@@ -5,9 +5,9 @@
     <classes>
       <class name="com.proenx.rdep.inventory.Inventory_TestCases">
         <methods>
+          <include name="Inventory_List1" invocation-numbers="0"/>
           <include name="teardown"/>
           <include name="generateReport"/>
-          <include name="Inventory_List3"/>
           <include name="launchBrowser"/>
           <include name="loadPropfile"/>
           <include name="getTestCaseName"/>

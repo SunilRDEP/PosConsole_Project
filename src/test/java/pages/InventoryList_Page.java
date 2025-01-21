@@ -16,6 +16,7 @@ import org.testng.Assert;
 import com.proenx.rdep.myproject.TestBase;
 
 import utility.CommonMethod;
+import utility.DatabaseUtils;
 
 public class InventoryList_Page extends TestBase {
  	public InventoryList_Page() {
@@ -322,10 +323,45 @@ public class InventoryList_Page extends TestBase {
 
 		test.pass("Entered SKU for import through update is " + SKU1
 				+ "  and Available on Hand quantity for this SKU after update is " + Available_On_Hand1);
+		
+		
+		
 		test.pass("PLEASE CHECK WHETHER AVAILABLE ON HAND QUANTITY IN DBEAVER IS " + Available_On_Hand1 + " OR NOT ");
+		
+		
+		String query = "SELECT * FROM inventory i WHERE sku = '" + SKU1 + "'";
+		boolean isValid = DatabaseUtils.validateTestCaseData(query, SKU1, Available_On_Hand1);
+		  
+		  Assert.assertTrue(isValid,"Test case data NOT found in the database.");
+		
+		  if (isValid) {
+	            System.out.println("Test case data found in the database.");
+	        } else {
+	            System.out.println("Test case data NOT found in the database.");
+	        }		
+		  
 
 		return this;
 	}
+	
+	
+	public InventoryList_Page testValidateDatabaseData() {
+		String expectedSku = "80002500";
+		String query = "SELECT * FROM inventory i WHERE sku = '" + expectedSku + "'";
+		String expectedOnhand = "59";
+
+		boolean isValid = DatabaseUtils.validateTestCaseData(query, expectedSku, expectedOnhand);
+		  if (isValid) {
+	            System.out.println("Test case data found in the database.");
+	        } else {
+	            System.out.println("Test case data NOT found in the database.");
+	        }
+
+        return this;
+    }
+	
+	
+	
 //======================================================================================================================
 	// UPDATE TEST CASE-2
 

@@ -72,6 +72,7 @@ public class Customers_Page extends TestBase {
 		Thread.sleep(3000);
 		CommonMethod.bootstrapdropdownselection(customer_Import_Select_Store, "customer_Import_Select_Store",
 				ht.get("Select Store for adding new customer"));
+		
 		driver.findElement(By.xpath("//input[@id='file']"))
 				.sendKeys("C:\\Users\\sunil\\Test File Format\\customer.csv");
 		CommonMethod.clickonWebElement(customer_Import_File_Format_Link, "file format link to download file format");

@@ -1,0 +1,2534 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary"></span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Jan 17, 2025 11:09:21 am</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">MasterPromotion_TestCases</p>
+            <p class="text-sm">
+              <span>11:09:23 am</span> / <span>00:00:31:352</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">MasterPromotion_TestCases</h5>
+<span class='badge badge-success'>01.17.2025 11:09:23 am</span>
+<span class='badge badge-danger'>01.17.2025 11:09:54 am</span>
+<span class='badge badge-default'>00:00:31:352</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:09:27 am</td>
+        <td>
+          Chrome Driver is launched
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:09:29 am</td>
+        <td>
+          User navigate to required UAT url://px.uat.rdep.io
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:09:29 am</td>
+        <td>
+          User entered data and it's value is: USERNAME
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:09:30 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_09_29.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_09_29.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:09:30 am</td>
+        <td>
+          User entered data and it's value is: PASSWORD
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:09:30 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_09_30.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_09_30.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:09:30 am</td>
+        <td>
+          User clicked on login button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:09:30 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_09_30.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_09_30.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:09:33 am</td>
+        <td>
+          User clicked on Promotion Menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:09:34 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_09_33.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_09_33.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:09:34 am</td>
+        <td>
+          User clicked on MasterPromotion Sub Menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:09:34 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_09_34.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_09_34.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:09:34 am</td>
+        <td>
+          Master-005 test case is loading 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:09:49 am</td>
+        <td>
+          Active status selected successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:09:53 am</td>
+        <td>
+          The selected Item is Metawear Limited Kolkata - 1001
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:09:53 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_09_53.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_09_53.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:09:53 am</td>
+        <td>
+          User clicked on Add Custom Product CheckBox
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:09:53 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_09_53.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_09_53.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:09:53 am</td>
+        <td>
+          User clicked on Import button to upload a new file
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:09:54 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_09_53.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_09_53.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:09:54 am</td>
+        <td>
+          User clicked on import buuton
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:09:54 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_09_54.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_09_54.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:09:54 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_09_54.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_09_54.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:09:54 am</td>
+        <td>
+          This test case should fail due to invalid file Upload
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:09:54 am</td>
+        <td>
+          Admin UI Automation Test Script has passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">MasterPromotion_TestCases</p>
+            <p class="text-sm">
+              <span>11:10:00 am</span> / <span>00:01:48:649</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterPromotion_TestCases</h5>
+<span class='badge badge-success'>01.17.2025 11:10:00 am</span>
+<span class='badge badge-danger'>01.17.2025 11:11:48 am</span>
+<span class='badge badge-default'>00:01:48:649</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:10:01 am</td>
+        <td>
+          Chrome Driver is launched
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:03 am</td>
+        <td>
+          User navigate to required UAT url://px.uat.rdep.io
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:03 am</td>
+        <td>
+          User entered data and it's value is: USERNAME
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:04 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_03.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_03.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:04 am</td>
+        <td>
+          User entered data and it's value is: PASSWORD
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:04 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_04.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_04.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:04 am</td>
+        <td>
+          User clicked on login button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:04 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_04.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_04.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:08 am</td>
+        <td>
+          User clicked on Promotion Menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:08 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_08.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_08.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:08 am</td>
+        <td>
+          User clicked on MasterPromotion Sub Menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:08 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_08.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_08.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:08 am</td>
+        <td>
+          Master-001 test case is loading 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:23 am</td>
+        <td>
+          Active status selected successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:26 am</td>
+        <td>
+          The selected Item is Metawear Limited Kolkata - 1001
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:27 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_26.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_26.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:27 am</td>
+        <td>
+          User clicked on Add Custom Product CheckBox
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:27 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_27.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_27.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:27 am</td>
+        <td>
+          User clicked on Import button to upload a new file
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:28 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_27.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_27.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:28 am</td>
+        <td>
+          User clicked on import buuton
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:28 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_28.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_28.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:28 am</td>
+        <td>
+          SKU1 which is uploading through edit for cord set1 is 123456
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:28 am</td>
+        <td>
+          SKU2 which is uploading through edit for cord set1 is 70002400
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:28 am</td>
+        <td>
+          User clicked on Close Button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:29 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_28.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_28.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:29 am</td>
+        <td>
+          User clicked on import buuton
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:29 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_29.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_29.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:29 am</td>
+        <td>
+          User clicked on Ok Button to import sales file set
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:29 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_29.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_29.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:29 am</td>
+        <td>
+          User clicked on Update Button to update all the changes information
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:30 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_29.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_29.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:30 am</td>
+        <td>
+          User clicked on Yes button to one final time submission of all the changes 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:30 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_30.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_30.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:30 am</td>
+        <td>
+          Test Case Is Passed and all the feature are working fine
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:30 am</td>
+        <td>
+          Test Case Is Passed and all the feature are working fine
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:30 am</td>
+        <td>
+          Test Case-Master-002 is loading
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:45 am</td>
+        <td>
+          User clicked on reset button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:45 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_45.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_45.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:48 am</td>
+        <td>
+          User clicked on clicked on outside
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:48 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_48.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_48.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:50 am</td>
+        <td>
+          User clicked on clicked on outside
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:50 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_50.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_50.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:53 am</td>
+        <td>
+          The selected Item is true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:54 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_53.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_53.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:57 am</td>
+        <td>
+          The selected Item is false
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:57 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_57.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_57.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:57 am</td>
+        <td>
+          User clicked on clicked on outside
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:57 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_57.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_57.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:58 am</td>
+        <td>
+          User clicked on Apply Button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:58 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_58.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_10_58.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:01 am</td>
+        <td>
+          The pages count is 23
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:01 am</td>
+        <td>
+          Total Item present in the table is 227and the latest promotion is  Percentage Promo 2024-10-05 16:51:00 2024-10-07 16:51:00 Simple Line Percentage 10 0 F10% true T20WC T20WC
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:01 am</td>
+        <td>
+          Test Case-Master-003 is loading
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:14 am</td>
+        <td>
+          Download button is working fine and csv file has downloaded successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:14 am</td>
+        <td>
+          Test Case-Master-004 is loading
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:25 am</td>
+        <td>
+          User clicked on filter button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:25 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_11_25.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_11_25.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:27 am</td>
+        <td>
+          User clicked on clicked on outside
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:27 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_11_27.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_11_27.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:29 am</td>
+        <td>
+          User clicked on clicked on outside
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:30 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_11_29.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_11_29.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:33 am</td>
+        <td>
+          The selected Item is true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:33 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_11_33.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_11_33.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:36 am</td>
+        <td>
+          The selected Item is false
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:37 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_11_36.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_11_36.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:37 am</td>
+        <td>
+          User clicked on clicked on outside
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:37 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_11_37.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_11_37.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:37 am</td>
+        <td>
+          User clicked on Apply Button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:37 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_11_37.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_11_37.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:48 am</td>
+        <td>
+          User clicked on filter button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:48 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_11_48.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_11_48.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:48 am</td>
+        <td>
+          User clicked on reset button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:48 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_11_48.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_11_48.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:48 am</td>
+        <td>
+          User clicked on Close button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:48 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_11_48.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_11_48.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:48 am</td>
+        <td>
+          Admin UI Automation Test Script has passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Create_Simple_Total_System_Based</p>
+            <p class="text-sm">
+              <span>11:11:54 am</span> / <span>00:00:59:696</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Create_Simple_Total_System_Based</h5>
+<span class='badge badge-success'>01.17.2025 11:11:54 am</span>
+<span class='badge badge-danger'>01.17.2025 11:12:54 am</span>
+<span class='badge badge-default'>00:00:59:696</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:11:55 am</td>
+        <td>
+          Chrome Driver is launched
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:58 am</td>
+        <td>
+          User navigate to required UAT url://px.uat.rdep.io
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:58 am</td>
+        <td>
+          User entered data and it's value is: USERNAME
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:58 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_11_58.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_11_58.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:58 am</td>
+        <td>
+          User entered data and it's value is: PASSWORD
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:59 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_11_58.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_11_58.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:59 am</td>
+        <td>
+          User clicked on login button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:59 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_11_59.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_11_59.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:02 am</td>
+        <td>
+          User clicked on Promotion Menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:02 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_02.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_02.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:03 am</td>
+        <td>
+          User clicked on MasterPromotion Sub Menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:03 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_03.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_03.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:03 am</td>
+        <td>
+          TC- is loading
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:14 am</td>
+        <td>
+          User clicked on create button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:14 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_14.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_14.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:14 am</td>
+        <td>
+          TC- is loading
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:12:14 am</td>
+        <td>
+          This t TC will create a Simple total promotion with system based and it will also cross check the promotion from the master promotion table and the promotion details are here in the end of the report to cross check with Mpos and Dbeaver
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:28 am</td>
+        <td>
+          User entered +data and it's value is: Simple Total Promo
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:29 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_28.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_28.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:29 am</td>
+        <td>
+          User entered +data and it's value is: REGRESS_TEST
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:29 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_29.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_29.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:29 am</td>
+        <td>
+          User entered +data and it's value is: Simple Total Promotion
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:30 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_29.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_29.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:30 am</td>
+        <td>
+          User entered +data and it's value is: 10
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:30 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_30.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_30.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:30 am</td>
+        <td>
+          User entered +data and it's value is: 500
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:30 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_30.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_30.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:30 am</td>
+        <td>
+          User entered +data and it's value is: 1000
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:31 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_30.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_30.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:34 am</td>
+        <td>
+          User clicked on Create Button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:34 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_34.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_34.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:36 am</td>
+        <td>
+          The Pop-UP successful messge is verified and the Pup-UP Message   is: Promotion configured successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:36 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_36.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_36.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:39 am</td>
+        <td>
+          The Latest Created Promotion details are Simple Total Promo 2024-12-22 16:51:00 2025-01-06 16:51:00 Simple Total Percentage 10 1000 REGRESS_TEST true SYSTEM SYSTEM
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:39 am</td>
+        <td>
+          User clicked on filter of Products Screen
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:39 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_39.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_39.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:43 am</td>
+        <td>
+          User entered +data and it's value is: REGRESS_TEST
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:43 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_43.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_43.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:45 am</td>
+        <td>
+          User clicked on outside to Overlapping
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:45 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_45.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_45.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:47 am</td>
+        <td>
+          User clicked on  Products Filter Apply Button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:47 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_47.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_47.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:47 am</td>
+        <td>
+          User clicked on  Products Filter Apply Button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:47 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_47.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_12_47.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:50 am</td>
+        <td>
+          @@@@@PLEASE CROSS CHECH BELOW DATA WITH MPOS AND DEBEAVER @@@@
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:51 am</td>
+        <td>
+          PLEASE CHECK WHETHER My latest created Promotion Name in DBeaver and Mpos is -->> Simple Total Promo <<-- OR NOT 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:51 am</td>
+        <td>
+          PLEASE CHECK WHETHER My latest created Promotion Start Date in DBeaver and Mpos is  -->> 2024-12-22 16:51:00 <<--  OR NOT 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:51 am</td>
+        <td>
+          PLEASE CHECK WHETHER My latest created Promotion Type in DBeaver and Mpos is  -->> Simple Total <<--  OR NOT 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:51 am</td>
+        <td>
+          PLEASE CHECK WHETHER My latest created Promotion code in DBeaver and Mpos is  -->>REGRESS_TEST <<--  OR NOT 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:54 am</td>
+        <td>
+          Admin UI Automation Test Script has passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Create_Simple_Total_Coupon_Based</p>
+            <p class="text-sm">
+              <span>11:12:59 am</span> / <span>00:02:06:951</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Create_Simple_Total_Coupon_Based</h5>
+<span class='badge badge-success'>01.17.2025 11:12:59 am</span>
+<span class='badge badge-danger'>01.17.2025 11:15:06 am</span>
+<span class='badge badge-default'>00:02:06:951</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:13:01 am</td>
+        <td>
+          Chrome Driver is launched
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:04 am</td>
+        <td>
+          User navigate to required UAT url://px.uat.rdep.io
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:04 am</td>
+        <td>
+          User entered data and it's value is: USERNAME
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:04 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_04.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_04.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:05 am</td>
+        <td>
+          User entered data and it's value is: PASSWORD
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:05 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_05.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_05.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:05 am</td>
+        <td>
+          User clicked on login button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:05 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_05.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_05.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:08 am</td>
+        <td>
+          User clicked on Promotion Menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:08 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_08.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_08.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:08 am</td>
+        <td>
+          User clicked on MasterPromotion Sub Menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:09 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_08.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_08.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:09 am</td>
+        <td>
+          TC- is loading
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:19 am</td>
+        <td>
+          User clicked on create button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:20 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_19.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_19.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:20 am</td>
+        <td>
+          TC- is loading
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:13:20 am</td>
+        <td>
+          This t TC will create a Simple total promotion with system based and it will also cross check the promotion from the master promotion table and the promotion details are here in the end of the report to cross check with Mpos and Dbeaver
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:24 am</td>
+        <td>
+          User entered +data and it's value is: Simple Total Promo
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:24 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_24.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_24.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:24 am</td>
+        <td>
+          User entered +data and it's value is: REGRESS_COUPON
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:25 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_24.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_24.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:25 am</td>
+        <td>
+          User entered +data and it's value is: Simple Total Promotion
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:25 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_25.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_25.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:25 am</td>
+        <td>
+          User entered +data and it's value is: 10
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:25 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_25.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_25.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:26 am</td>
+        <td>
+          User entered +data and it's value is: 500
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:26 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_26.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_26.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:26 am</td>
+        <td>
+          User entered +data and it's value is: 1000
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:26 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_26.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_26.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:30 am</td>
+        <td>
+          User entered +data and it's value is: JaiHO
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:30 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_30.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_30.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:33 am</td>
+        <td>
+          User clicked on Create Button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:33 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_33.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_33.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:35 am</td>
+        <td>
+          The Pop-UP successful messge is verified and the Pup-UP Message   is: Promotion configured successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:35 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_35.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_35.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:38 am</td>
+        <td>
+          TThe Latest Created Promotion details are Simple Total Promo 2024-12-22 16:51:00 2025-01-06 16:51:00 Simple Total Percentage 10 1000 REGRESS_COUPON true JaiHO JaiHO
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:38 am</td>
+        <td>
+          User clicked on filter of Products Screen
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:38 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_38.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_38.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:42 am</td>
+        <td>
+          User entered +data and it's value is: REGRESS_COUPON
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:42 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_42.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_42.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:44 am</td>
+        <td>
+          User clicked on outside to Overlapping
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:44 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_44.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_44.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:46 am</td>
+        <td>
+          User clicked on  Masterpromotion  Filter Apply Button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:46 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_46.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_46.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:46 am</td>
+        <td>
+          User clicked on  Products Filter Apply Button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:47 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_46.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_13_46.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:50 am</td>
+        <td>
+          @@@@@PLEASE CROSS CHECH BELOW DATA WITH MPOS AND DEBEAVER @@@@
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:50 am</td>
+        <td>
+          PLEASE CHECK WHETHER My latest created Promotion Name in DBeaver and Mpos is -->> Simple Total Promo <<-- OR NOT 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:50 am</td>
+        <td>
+          PLEASE CHECK WHETHER My latest created Promotion Start Date in DBeaver and Mpos is  -->> 2024-12-22 16:51:00 <<--  OR NOT 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:50 am</td>
+        <td>
+          PLEASE CHECK WHETHER My latest created Promotion Type in DBeaver and Mpos is  -->> Simple Total <<--  OR NOT 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:50 am</td>
+        <td>
+          PLEASE CHECK WHETHER My latest created Promotion code in DBeaver and Mpos is  -->>REGRESS_COUPON <<--  OR NOT 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:53 am</td>
+        <td>
+          TC- is loading
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:03 am</td>
+        <td>
+          User clicked on create button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:03 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_03.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_03.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:03 am</td>
+        <td>
+          TC- is loading
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:14:03 am</td>
+        <td>
+          
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:17 am</td>
+        <td>
+          User entered +data and it's value is: Simple Total Promo
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:18 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_17.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_17.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:18 am</td>
+        <td>
+          User entered +data and it's value is: Custom Store+AllProduct1
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:18 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_18.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_18.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:18 am</td>
+        <td>
+          User entered +data and it's value is: Simple Total Promotion
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:18 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_18.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_18.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:19 am</td>
+        <td>
+          User entered +data and it's value is: 10
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:19 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_19.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_19.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:19 am</td>
+        <td>
+          User entered +data and it's value is: 500
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:19 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_19.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_19.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:19 am</td>
+        <td>
+          User entered +data and it's value is: 1000
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:20 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_19.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_19.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:23 am</td>
+        <td>
+          User entered +data and it's value is: JaiHO
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:23 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_23.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_23.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:26 am</td>
+        <td>
+          User clicked on Custom Stores Check Box
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:27 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_26.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_26.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:31 am</td>
+        <td>
+          The selected Item is Rdep Meta Limited Pune - 1765
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:31 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_31.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_31.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:31 am</td>
+        <td>
+          User clicked on clicked on outside
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:31 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_31.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_31.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:35 am</td>
+        <td>
+          The selected Item is Test82 - 0292
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:35 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_35.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_35.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:36 am</td>
+        <td>
+          User clicked on clicked on outside
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:36 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_36.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_36.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:36 am</td>
+        <td>
+          User clicked on Create Button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:36 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_36.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_36.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:38 am</td>
+        <td>
+          The Pop-UP successful messge is verified and the Pup-UP Message   is: Promotion configured successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:38 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_38.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_38.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:41 am</td>
+        <td>
+          The Latest Created Promotion details are Simple Total Promo 2024-12-22 16:51:00 2025-01-06 16:51:00 Simple Total Percentage 10 1000 Custom Store+AllProduct1 true JaiHO JaiHO
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:41 am</td>
+        <td>
+          User clicked on filter of Products Screen
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:41 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_41.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_41.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:45 am</td>
+        <td>
+          User entered +data and it's value is: Custom Store+AllProduct1
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:45 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_45.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_45.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:47 am</td>
+        <td>
+          User clicked on outside to Overlapping
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:47 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_47.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_47.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:49 am</td>
+        <td>
+          User clicked on  Masterpromotion  Filter Apply Button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:49 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_49.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_49.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:49 am</td>
+        <td>
+          User clicked on  Products Filter Apply Button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:49 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_49.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_14_49.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:52 am</td>
+        <td>
+          @@@@@PLEASE CROSS CHECH BELOW DATA WITH MPOS AND DEBEAVER @@@@
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:52 am</td>
+        <td>
+          PLEASE CHECK WHETHER My latest created Promotion Name in DBeaver and Mpos is -->> Simple Total Promo <<-- OR NOT 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:52 am</td>
+        <td>
+          PLEASE CHECK WHETHER My latest created Promotion Start Date in DBeaver and Mpos is  -->> 2024-12-22 16:51:00 <<--  OR NOT 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:52 am</td>
+        <td>
+          PLEASE CHECK WHETHER My latest created Promotion Type in DBeaver and Mpos is  -->> Simple Total <<--  OR NOT 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:52 am</td>
+        <td>
+          PLEASE CHECK WHETHER My latest created Promotion Code in DBeaver and Mpos is  -->>Custom Store+AllProduct1 <<--  OR NOT 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:55 am</td>
+        <td>
+          TC- is loading
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:15:06 am</td>
+        <td>
+          User clicked on create button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:15:06 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_15_06.png' src="C:\Users\sunil\eclipse-workspace\Regression_Pos_project\src\test\resources\ScreenShots\loginPage_2025_01_17_11_15_06.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:15:06 am</td>
+        <td>
+          Admin UI Automation Test Script has passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Jan 17, 2025 11:09:21 am</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Jan 17, 2025 11:15:47 am</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>3</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>1</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='75%'>
+<b>3</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='25%'><b>1</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='96%'><b>248</b> events passed</small></div>
+<div>
+<small data-tooltip='0%'><b>1</b> events failed,
+<b data-tooltip='%'>7</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"MasterPromotion_TestCases":31.352,"MasterPromotion_TestCases":108.649,"Create_Simple_Total_System_Based":59.696,"Create_Simple_Total_Coupon_Based":126.951
+};
+</script>
+<div class="row">
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 3,
+failParent: 1,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 248,
+failEvents: 1,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 7
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
