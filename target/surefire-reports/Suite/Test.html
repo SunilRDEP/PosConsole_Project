@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/16</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Nov 16 09:35:38 IST 2024</td>
+<td>Started on:</td><td>Sun Feb 02 07:24:14 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>49 seconds (49722 ms)</td>
+<tr><td>Total time:</td><td>80 seconds (80500 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,10 +76,1234 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.proenx.rdep.myproject.pos.Single_Product_TestCases.single_Product3()'><b>single_Product3</b><br>Test class: com.proenx.rdep.myproject.pos.Single_Product_TestCases<br>Parameters: {Stock for adding new Product=5, Select Store for adding new Product=Rdep Meta Limited Pune - 1765, Error Message for  Product Catagory  Mandatory Field=Please Select Category., Error Message for  Product SKU Mandatory Field=Please Enter Product SKU., Product Sku=212222, Error Message for   Entering Category Name  Mandatory Field=Please Enter Category Name, Attribute Type1=Color, Product Description=Pure Crystal Glass Boltle withEnv Friendlt Material, Error Message for  Product HSN Code  Mandatory Field=Please Enter HSN Code., Error Message for  Product Name Mandatory Field=Please Enter Product Name, Error Message for  Select Store Mandatory Field=Please Select Store., Single Product Name Field Maximum Character Testing =Paste here maximum  character to check the name field capacity, Least Price for adding new Product=399, Select Category for adding new Product=Accessories, Catagory Description inside Add Catagory Screen=Pure Cotton with HandMade Craft, Unit Price for adding new Product=399, Adding Single Product Successful Message=Inventory imported successfully., Catagory Name inside Add Catagory Screen=Cotton Section1, no data for this cell=no data for this cell, Select Store for adding new Catagory=Rdep Meta Limited Pune - 1765, Error Message for   Entering Description  Mandatory Field=Please Enter Category Description, Attribute Value1=blue, Product Name=202325_Glass_Bottle, Product HSN Code=1991Test}</td>
+<td title='com.proenx.rdep.promotion.listner.MasterPromotion_TestCases.getTestCaseName()'><b>getTestCaseName</b><br>Test class: com.proenx.rdep.promotion.listner.MasterPromotion_TestCases</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.MasterPromotion_TestCases.getTestCaseName(MasterPromotion_TestCases.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1811880447", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1811880447'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.MasterPromotion_TestCases.getTestCaseName(MasterPromotion_TestCases.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.MasterPromotion_TestCases@70ed52de</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.Create_Simple_Total_Coupon_Based.getTestCaseName()'><b>getTestCaseName</b><br>Test class: com.proenx.rdep.promotion.listner.Create_Simple_Total_Coupon_Based</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_Simple_Total_Coupon_Based.getTestCaseName(Create_Simple_Total_Coupon_Based.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace118881143", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace118881143'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_Simple_Total_Coupon_Based.getTestCaseName(Create_Simple_Total_Coupon_Based.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.Create_Simple_Total_Coupon_Based@1033576a</td></tr>
+<tr>
+<td title='com.proenx.rdep.inventory.Stock_Request_Inward.getTestCaseName()'><b>getTestCaseName</b><br>Test class: com.proenx.rdep.inventory.Stock_Request_Inward</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.inventory.Stock_Request_Inward.getTestCaseName(Stock_Request_Inward.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace456314134", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace456314134'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.inventory.Stock_Request_Inward.getTestCaseName(Stock_Request_Inward.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.proenx.rdep.inventory.Stock_Request_Inward@359df09a</td></tr>
+<tr>
+<td title='com.proenx.rdep.inventory.Stock_Request_Outward_TestCase.getTestCaseName()'><b>getTestCaseName</b><br>Test class: com.proenx.rdep.inventory.Stock_Request_Outward_TestCase</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.inventory.Stock_Request_Outward_TestCase.getTestCaseName(Stock_Request_Outward_TestCase.java:21)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1792473683", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1792473683'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.inventory.Stock_Request_Outward_TestCase.getTestCaseName(Stock_Request_Outward_TestCase.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.proenx.rdep.inventory.Stock_Request_Outward_TestCase@43df23d3</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.Create_Package_Quantity_Coupon_Based.getTestCaseName()'><b>getTestCaseName</b><br>Test class: com.proenx.rdep.promotion.listner.Create_Package_Quantity_Coupon_Based</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_Package_Quantity_Coupon_Based.getTestCaseName(Create_Package_Quantity_Coupon_Based.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace518692141", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace518692141'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_Package_Quantity_Coupon_Based.getTestCaseName(Create_Package_Quantity_Coupon_Based.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.Create_Package_Quantity_Coupon_Based@303cf2ba</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.Create_CombinationPool_System_Based.getTestCaseName()'><b>getTestCaseName</b><br>Test class: com.proenx.rdep.promotion.listner.Create_CombinationPool_System_Based</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_CombinationPool_System_Based.getTestCaseName(Create_CombinationPool_System_Based.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace215614514", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace215614514'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_CombinationPool_System_Based.getTestCaseName(Create_CombinationPool_System_Based.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.Create_CombinationPool_System_Based@4082ba93</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.Create_Simple_Total_System_Based.getTestCaseName()'><b>getTestCaseName</b><br>Test class: com.proenx.rdep.promotion.listner.Create_Simple_Total_System_Based</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_Simple_Total_System_Based.getTestCaseName(Create_Simple_Total_System_Based.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1367594377", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1367594377'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_Simple_Total_System_Based.getTestCaseName(Create_Simple_Total_System_Based.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.Create_Simple_Total_System_Based@247310d0</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.Create_Package_Quantity_System_Based.getTestCaseName()'><b>getTestCaseName</b><br>Test class: com.proenx.rdep.promotion.listner.Create_Package_Quantity_System_Based</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_Package_Quantity_System_Based.getTestCaseName(Create_Package_Quantity_System_Based.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1800932232", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1800932232'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_Package_Quantity_System_Based.getTestCaseName(Create_Package_Quantity_System_Based.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.Create_Package_Quantity_System_Based@76494737</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_System.getTestCaseName()'><b>getTestCaseName</b><br>Test class: com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_System</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_System.getTestCaseName(Create_SimpleLine_Promo_System.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1060549703", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1060549703'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_System.getTestCaseName(Create_SimpleLine_Promo_System.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_System@609e8838</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based.getTestCaseName()'><b>getTestCaseName</b><br>Test class: com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based.getTestCaseName(Create_CombinationPool_Coupon_Based.java:21)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace442205321", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace442205321'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based.getTestCaseName(Create_CombinationPool_Coupon_Based.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based@4a003cbe</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.Create_Simple_Total_Reward_System_Based.getTestCaseName()'><b>getTestCaseName</b><br>Test class: com.proenx.rdep.promotion.listner.Create_Simple_Total_Reward_System_Based</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_Simple_Total_Reward_System_Based.getTestCaseName(Create_Simple_Total_Reward_System_Based.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace886004375", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace886004375'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_Simple_Total_Reward_System_Based.getTestCaseName(Create_Simple_Total_Reward_System_Based.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.Create_Simple_Total_Reward_System_Based@2b30a42c</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_Coupon_Based.getTestCaseName()'><b>getTestCaseName</b><br>Test class: com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_Coupon_Based</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_Coupon_Based.getTestCaseName(Create_SimpleLine_Promo_Coupon_Based.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace8136897", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace8136897'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_Coupon_Based.getTestCaseName(Create_SimpleLine_Promo_Coupon_Based.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_Coupon_Based@17fc391b</td></tr>
+<tr>
+<td title='com.proenx.rdep.inventory.Inventory_TestCases.getTestCaseName()'><b>getTestCaseName</b><br>Test class: com.proenx.rdep.inventory.Inventory_TestCases</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.inventory.Inventory_TestCases.getTestCaseName(Inventory_TestCases.java:19)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace497786326", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace497786326'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.inventory.Inventory_TestCases.getTestCaseName(Inventory_TestCases.java:19)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.proenx.rdep.inventory.Inventory_TestCases@6d60fe40</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.proenx.rdep.inventory.Stock_Request_Inward.launchBrowser()'><b>launchBrowser</b><br>Test class: com.proenx.rdep.inventory.Stock_Request_Inward</td>
 <td></td>
-<td>38</td>
-<td>com.proenx.rdep.myproject.pos.Single_Product_TestCases@5b247367</td></tr>
+<td>0</td>
+<td>com.proenx.rdep.inventory.Stock_Request_Inward@359df09a</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.MasterPromotion_TestCases.launchBrowser()'><b>launchBrowser</b><br>Test class: com.proenx.rdep.promotion.listner.MasterPromotion_TestCases</td>
+<td></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.MasterPromotion_TestCases@70ed52de</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.Create_Simple_Total_Reward_System_Based.launchBrowser()'><b>launchBrowser</b><br>Test class: com.proenx.rdep.promotion.listner.Create_Simple_Total_Reward_System_Based</td>
+<td></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.Create_Simple_Total_Reward_System_Based@2b30a42c</td></tr>
+<tr>
+<td title='com.proenx.rdep.inventory.Stock_Request_Outward_TestCase.launchBrowser()'><b>launchBrowser</b><br>Test class: com.proenx.rdep.inventory.Stock_Request_Outward_TestCase</td>
+<td></td>
+<td>0</td>
+<td>com.proenx.rdep.inventory.Stock_Request_Outward_TestCase@43df23d3</td></tr>
+<tr>
+<td title='com.proenx.rdep.inventory.Inventory_TestCases.launchBrowser()'><b>launchBrowser</b><br>Test class: com.proenx.rdep.inventory.Inventory_TestCases</td>
+<td></td>
+<td>0</td>
+<td>com.proenx.rdep.inventory.Inventory_TestCases@6d60fe40</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.Create_Package_Quantity_System_Based.launchBrowser()'><b>launchBrowser</b><br>Test class: com.proenx.rdep.promotion.listner.Create_Package_Quantity_System_Based</td>
+<td></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.Create_Package_Quantity_System_Based@76494737</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.Create_Simple_Total_System_Based.launchBrowser()'><b>launchBrowser</b><br>Test class: com.proenx.rdep.promotion.listner.Create_Simple_Total_System_Based</td>
+<td></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.Create_Simple_Total_System_Based@247310d0</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based.launchBrowser()'><b>launchBrowser</b><br>Test class: com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based</td>
+<td></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based@4a003cbe</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_System.launchBrowser()'><b>launchBrowser</b><br>Test class: com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_System</td>
+<td></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_System@609e8838</td></tr>
+<tr>
+<td title='com.proenx.rdep.inventory.Stock_Request_Outward_TestCase.launchBrowser()'><b>launchBrowser</b><br>Test class: com.proenx.rdep.inventory.Stock_Request_Outward_TestCase</td>
+<td></td>
+<td>0</td>
+<td>com.proenx.rdep.inventory.Stock_Request_Outward_TestCase@43df23d3</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.Create_Simple_Total_Coupon_Based.launchBrowser()'><b>launchBrowser</b><br>Test class: com.proenx.rdep.promotion.listner.Create_Simple_Total_Coupon_Based</td>
+<td></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.Create_Simple_Total_Coupon_Based@1033576a</td></tr>
+<tr>
+<td title='com.proenx.rdep.inventory.Stock_Request_Inward.launchBrowser()'><b>launchBrowser</b><br>Test class: com.proenx.rdep.inventory.Stock_Request_Inward</td>
+<td></td>
+<td>0</td>
+<td>com.proenx.rdep.inventory.Stock_Request_Inward@359df09a</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.Create_Package_Quantity_Coupon_Based.launchBrowser()'><b>launchBrowser</b><br>Test class: com.proenx.rdep.promotion.listner.Create_Package_Quantity_Coupon_Based</td>
+<td></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.Create_Package_Quantity_Coupon_Based@303cf2ba</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_Coupon_Based.launchBrowser()'><b>launchBrowser</b><br>Test class: com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_Coupon_Based</td>
+<td></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_Coupon_Based@17fc391b</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.MasterPromotion_TestCases.launchBrowser()'><b>launchBrowser</b><br>Test class: com.proenx.rdep.promotion.listner.MasterPromotion_TestCases</td>
+<td></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.MasterPromotion_TestCases@70ed52de</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.Create_CombinationPool_System_Based.launchBrowser()'><b>launchBrowser</b><br>Test class: com.proenx.rdep.promotion.listner.Create_CombinationPool_System_Based</td>
+<td></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.Create_CombinationPool_System_Based@4082ba93</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.Create_Package_Quantity_Coupon_Based.create_promotion()'><b>create_promotion</b><br>Test class: com.proenx.rdep.promotion.listner.Create_Package_Quantity_Coupon_Based<br>Parameters: {Package Quatity Trigger Quantiy=2, Package Quantity StoreName2=Test82 - 0292, Package Quantity StoreName1=Rdep Meta Limited Pune - 1765, Package Quantity Pool Coupon Field=T20WC, Package Quantity Start Date Format=2024-11-14 04:51 pm, Package Quantity Type1=Package Quantity, Package Quantity Discount Value=12, Package Quantity Promotion Details Error PopUp=Please Select Promotion Type, Package Quantity End Date Format=2024-12-20 04:51 pm, Package Quantity Promotion Name=Pakage Coupon  TEST, Package Quantity Promotion Code=PACKAGE12%, Package Quantity  Promotion successful Message=Promotion configured successfully, Package Quantity Promotion Sub type1=Percentage, Package Quantity Description=Package Qauantity Pool Promotion}</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_Package_Quantity_Coupon_Based.getTestCaseName(Create_Package_Quantity_Coupon_Based.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1296654536", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1296654536'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_Package_Quantity_Coupon_Based.getTestCaseName(Create_Package_Quantity_Coupon_Based.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.Create_Package_Quantity_Coupon_Based@303cf2ba</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.Create_CombinationPool_System_Based.create_promotion()'><b>create_promotion</b><br>Test class: com.proenx.rdep.promotion.listner.Create_CombinationPool_System_Based<br>Parameters: {Combination Pool Promotion Sub type1=Percentage, CombinationPool Start Date Format=2024-11-14 04:51 pm, Combination Pool Description=Combination Pool Promotion, Combination Pool Coupon Field=T20WC, Combination Pool Qualified Quantiy=2, Combination Pool Promotion successful Message=Promotion configured successfully, Combination Pool Discount Value=15, Combination Pool Promotion Details Error PopUp=Please Select Promotion Type, combination Pool Type1=Combination Pool, Combination Pool StoreName2=Test82 - 0292, Combination Pool StoreName1=Rdep Meta Limited Pune - 1765, CombinationPool End Date Format=2024-12-20 04:51 pm, Combination Pool Promotion Name=Percentage Combination, Combination Pool Promotion Code=COM15%}</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_CombinationPool_System_Based.getTestCaseName(Create_CombinationPool_System_Based.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace763677574", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace763677574'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_CombinationPool_System_Based.getTestCaseName(Create_CombinationPool_System_Based.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.Create_CombinationPool_System_Based@4082ba93</td></tr>
+<tr>
+<td title='com.proenx.rdep.inventory.Stock_Request_Inward.Inventory_List1()'><b>Inventory_List1</b><br>Test class: com.proenx.rdep.inventory.Stock_Request_Inward<br>Parameters: {Inventory inward Filter Select Store1=Rdep Meta Limited Pune - 1765, SKU2 to enter manually to inward=8904389900628, Quantity2 to enter manually to inward=1, Error Message for Inventory Inward  Delivery To Store=Request cannot be submitted without items, Inward Delivery Date=05-12-2024, Product Sku1 for Inward with file upload=8904389900567, SKU1 to enter manually to inward=8904389900543, Quantity1 to enter manually to inward=1, Select Store in product filter for file upload=Rdep Meta Limited Pune - 1765, Inventory inward Search Data Through Status=RECEIVED, Inventory Inward  Delivery To Store=Metawear Limited Banglore - 1765, Inventory inward Search Data Through RequestID=1733145561987, Inward Request Date=01-12-2024, Product Sku2 for Inward with file upload=8904389900550, Error Message for approval without adding items=SKU cannot be empty}</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.inventory.Stock_Request_Inward.getTestCaseName(Stock_Request_Inward.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace731610911", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace731610911'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.inventory.Stock_Request_Inward.getTestCaseName(Stock_Request_Inward.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.proenx.rdep.inventory.Stock_Request_Inward@359df09a</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.MasterPromotion_TestCases.create_promotion()'><b>create_promotion</b><br>Test class: com.proenx.rdep.promotion.listner.MasterPromotion_TestCases<br>Parameters: {Master Promotion End Date Format=2024-10-07 04:51 pm, Master Promotion Start Date Format=2024-10-05 04:51 pm, Active Status2=false, Active Status1=true, Store Selection for Edit store=Metawear Limited Kolkata - 1001, Toast message for Uploading invalid file=No data found to load promotion products., Active status through Edit Promotion=true, Override status through Edit Promotion=true, Store Selection for Edit store all type of promotion apart from combination pool=Metawear Limited Kolkata - 1001}</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.MasterPromotion_TestCases.getTestCaseName(MasterPromotion_TestCases.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace397309480", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace397309480'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.MasterPromotion_TestCases.getTestCaseName(MasterPromotion_TestCases.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.MasterPromotion_TestCases@70ed52de</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based.create_promotion()'><b>create_promotion</b><br>Test class: com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based<br>Parameters: {Error Message for Select Promotion Sub Type Mandatory Field=Please Select Promotion Sub Type, Combination Pool Discount Value=15, Error Message for Select Promotion Discount Value Mandatory Field=Discount value should be greater than 0, CombinationPool Start Date Format=2024-11-14 04:51 pm, Error Message for Select Promotion Promocode Mandatory Field=Please Select Promotion Promocode, Promotion Type2=Combination Pool, Combination Pool Coupon Field=T20WC, Combination Pool StoreName2=Test82 - 0292, Combination Pool StoreName1=Rdep Meta Limited Pune - 1765, Error Message for creating promo without Product File Set =Combination Promotion cannot be created without promosets, Error Message for creating promo without promocode=Please Enter Qualifier Code, Promotion successful Message=Promotion configured successfully, Combination Pool Qualified Quantiy=2, Combination Pool Promotion Name=Percentage Combination Coupon, Combination Pool Promotion Code=COM15%, Error Message for Select Promotion Name Mandatory Field=Please Provide Promotion Name, Combination Pool Promotion successful Message=Promotion configured successfully, Promotion Name=Flat 10% OFF, Combination Pool Promotion Sub type1=Percentage, CombinationPool End Date Format=2024-12-20 04:51 pm, Combination Pool Promotion Details Error PopUp=Please Select Promotion Type, combination Pool Type1=Combination Pool, Promotion Sub type1=Percentage, Error Message for Select Promotion Type Mandatory Field=Please Select Promotion Type, Combination Pool Description=Combination Pool Promotion}</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based.getTestCaseName(Create_CombinationPool_Coupon_Based.java:21)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1921012072", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1921012072'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based.getTestCaseName(Create_CombinationPool_Coupon_Based.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based@4a003cbe</td></tr>
+<tr>
+<td title='com.proenx.rdep.inventory.Stock_Request_Outward_TestCase.Inventory_List1()'><b>Inventory_List1</b><br>Test class: com.proenx.rdep.inventory.Stock_Request_Outward_TestCase<br>Parameters: {Inventory Outward Search Data Through RequestID=1727781505194, Inventory Outward  Transfer To Store=Metawear Limited Pune - 1003, Product Sku2 for outward with file upload=60002300, Quantity1 to enter manually to Outward=1, Product Sku2 for outward with Manual Entry=50002200, Outward Request Date=01-12-2024, Inventory Outward  Transfer From Store=Metawear Limited Banglore - 1765, Select Store in product filter for Manual Entry=Rdep Meta Limited Pune - 1765, Product Sku1 for outward with Manual Entry=12342789100, Select Store in product filter for file upload=Rdep Meta Limited Pune - 1765, Inventory Outward Search Data Through Status=RECEIVED, Product Sku1 for outward with file upload=70002400, Quantity2 to enter manually to Outward=2, required data in the table=40002100}</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.inventory.Stock_Request_Outward_TestCase.getTestCaseName(Stock_Request_Outward_TestCase.java:21)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace391827378", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace391827378'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.inventory.Stock_Request_Outward_TestCase.getTestCaseName(Stock_Request_Outward_TestCase.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.proenx.rdep.inventory.Stock_Request_Outward_TestCase@43df23d3</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.Create_Simple_Total_System_Based.create_promotion()'><b>create_promotion</b><br>Test class: com.proenx.rdep.promotion.listner.Create_Simple_Total_System_Based<br>Parameters: {Promo code  for custom store and custom product type to Search  in Master Promotion Filter=Custom Store+Product, end date in filter=2025-01-07 04:51 pm, Promotion Type1=Simple Total, Master Promotion End Date Format=2025-01-06 04:51 pm, Discount Value=10, Master Promotion Start Date Format=2024-12-22 04:51 pm, Promo Code for custom store and Custom product=Custom Store+Product, Promo Code for custom store and all product=Custom Store, Promotion successful Message=Promotion configured successfully, Promo code  for all store and all product type to Search  in Master Promotion Filter=REGRESS_TEST, Simple Total Discount Value  Error Message=Discount value should be greater than 0, start date in filter=2024-12-05 04:51 pm, Simple_Total_Maximum_Discount_Value=500, Simple Total Promotion Type Error Message=Please Select Promotion Type, Promotion Name=Simple Total Promo, Promotion Code=ErrorMessage, Simple Total Promotion Sub Type Error Message=Please Select Promotion Sub Type, StoreName2=Test82 - 0292, Test Case Description=This t TC will create a Simple total promotion with system based and it will also cross check the promotion from the master promotion table and the promotion details are here in the end of the report to cross check with Mpos and Dbeaver, Simple Total Promotion Name Error Message=Please Provide Promotion Name, Promo Code for all store and all product=REGRESS_TEST, StoreName1=Rdep Meta Limited Pune - 1765, Gap=NA, Promo code  for custom store and all product type to Search  in Master Promotion Filter=Custom Store, Promotion Sub type1=Percentage, Description=Simple Total Promotion, Simple Total Promotion Code Type Error Message=Please Provide Promotion Promocode, Simple_Total_Trigger_Amount=1000}</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_Simple_Total_System_Based.getTestCaseName(Create_Simple_Total_System_Based.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1534655921", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1534655921'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_Simple_Total_System_Based.getTestCaseName(Create_Simple_Total_System_Based.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.Create_Simple_Total_System_Based@247310d0</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.Create_Simple_Total_Reward_System_Based.create_promotion()'><b>create_promotion</b><br>Test class: com.proenx.rdep.promotion.listner.Create_Simple_Total_Reward_System_Based<br>Parameters: {Promo code  for custom store and custom product type to Search  in Master Promotion Filter=Custom Store+Product, end date in filter=2025-02-07 04:51 pm, Promotion Type1=Simple Total Reward, Master Promotion End Date Format=2025-01-25 04:51 pm, Discount Value=10, Master Promotion Start Date Format=2024-12-25 04:51 pm, Promo Code for custom store and Custom product=Custom Store+Product, Promo Code for custom store and all product=Custom Store, Promotion successful Message=Promotion configured successfully, Promo code  for all store and all product type to Search  in Master Promotion Filter=F10%, Start Date Format inside Filter=2024-12-05 04:51 am, Simple Total Discount Value  Error Message=Discount value should be greater than 0, start date in filter=2024-12-05 04:51 pm, Simple Total Promotion Type Error Message=Please Select Promotion Type, Promotion Name=Simple Total Reward Promo, Promotion Code=ErrorMessage, Simple Total Promotion Sub Type Error Message=Please Select Promotion Sub Type, StoreName2=Test82 - 0292, Test Case Description=This  TC will create a Simple total promotion with system based and it will also cross check the promotion from the master promotion table and the promotion details are here in the end of the report to cross check with Mpos and Dbeaver, Simple Total Promotion Name Error Message=Please Provide Promotion Name, Promo Code for all store and all product=F10%, StoreName1=Rdep Meta Limited Pune - 1765, Simple_Total_Reward_Discount_Quantity=1, Gap=NA, Promo code  for custom store and all product type to Search  in Master Promotion Filter=Custom Store, Promotion Sub type1=Percentage, Description=Simple Total Reward Promotion, Simple Total Promotion Code Type Error Message=Please Provide Promotion Promocode, Simple_Total_Trigger_Amount=2000}</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_Simple_Total_Reward_System_Based.getTestCaseName(Create_Simple_Total_Reward_System_Based.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace663716901", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace663716901'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_Simple_Total_Reward_System_Based.getTestCaseName(Create_Simple_Total_Reward_System_Based.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.Create_Simple_Total_Reward_System_Based@2b30a42c</td></tr>
+<tr>
+<td title='com.proenx.rdep.inventory.Stock_Request_Outward_TestCase.Inventory_List2()'><b>Inventory_List2</b><br>Test class: com.proenx.rdep.inventory.Stock_Request_Outward_TestCase<br>Parameters: {Inventory Outward Search Data Through RequestID=1727781505194, Inventory Outward  Transfer To Store=Metawear Limited Pune - 1003, Product Sku2 for outward with file upload=60002300, Quantity1 to enter manually to Outward=1, Product Sku2 for outward with Manual Entry=50002200, Outward Request Date=01-12-2024, Inventory Outward  Transfer From Store=Metawear Limited Banglore - 1765, Select Store in product filter for Manual Entry=Rdep Meta Limited Pune - 1765, Product Sku1 for outward with Manual Entry=12342789100, Select Store in product filter for file upload=Rdep Meta Limited Pune - 1765, Inventory Outward Search Data Through Status=RECEIVED, Product Sku1 for outward with file upload=70002400, Quantity2 to enter manually to Outward=2, required data in the table=40002100}</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.inventory.Stock_Request_Outward_TestCase.getTestCaseName(Stock_Request_Outward_TestCase.java:21)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1908999587", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1908999587'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.inventory.Stock_Request_Outward_TestCase.getTestCaseName(Stock_Request_Outward_TestCase.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.proenx.rdep.inventory.Stock_Request_Outward_TestCase@43df23d3</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.MasterPromotion_TestCases.create_promotion2()'><b>create_promotion2</b><br>Test class: com.proenx.rdep.promotion.listner.MasterPromotion_TestCases<br>Parameters: {Master Promotion End Date Format=2024-10-07 04:51 pm, Master Promotion Start Date Format=2024-10-05 04:51 pm, Active Status2=false, Active Status1=true, Store Selection for Edit store=Metawear Limited Kolkata - 1001, Toast message for Uploading invalid file=No data found to load promotion products., Active status through Edit Promotion=true, Override status through Edit Promotion=true, Store Selection for Edit store all type of promotion apart from combination pool=Metawear Limited Kolkata - 1001}</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.MasterPromotion_TestCases.getTestCaseName(MasterPromotion_TestCases.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1472036907", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1472036907'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.MasterPromotion_TestCases.getTestCaseName(MasterPromotion_TestCases.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.MasterPromotion_TestCases@70ed52de</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.Create_Package_Quantity_System_Based.create_promotion()'><b>create_promotion</b><br>Test class: com.proenx.rdep.promotion.listner.Create_Package_Quantity_System_Based<br>Parameters: {Package Quatity Trigger Quantiy=2, Package Quantity StoreName2=Test82 - 0292, Package Quantity StoreName1=Rdep Meta Limited Pune - 1765, Package Quantity Pool Coupon Field=T20WC, Package Quantity Start Date Format=2024-10-05 04:51 pm, Package Quantity Type1=Package Quantity, Package Quantity Discount Value=12, Package Quantity Promotion Details Error PopUp=Please Select Promotion Type, Package Quantity End Date Format=2024-10-07 04:51 pm, Package Quantity Promotion Name=Pakage System TEST, Package Quantity Promotion Code=PACKAGE12%, Package Quantity  Promotion successful Message=Promotion configured successfully, Package Quantity Promotion Sub type1=Percentage, Package Quantity Description=Package Qauantity Pool Promotion}</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_Package_Quantity_System_Based.getTestCaseName(Create_Package_Quantity_System_Based.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1204178174", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1204178174'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_Package_Quantity_System_Based.getTestCaseName(Create_Package_Quantity_System_Based.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.Create_Package_Quantity_System_Based@76494737</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.Create_Simple_Total_Coupon_Based.create_promotion()'><b>create_promotion</b><br>Test class: com.proenx.rdep.promotion.listner.Create_Simple_Total_Coupon_Based<br>Parameters: {Promo code  for custom store and custom product type to Search  in Master Promotion Filter=Custom Store+Product, Test Case Description for Coupon based Simple Total Promotion=This t TC will create a Simple total promotion with system based and it will also cross check the promotion from the master promotion table and the promotion details are here in the end of the report to cross check with Mpos and Dbeaver, end date in filter=2025-01-07 04:51 pm, Promotion Type1=Simple Total, Master Promotion End Date Format=2025-01-06 04:51 pm, Discount Value=10, Master Promotion Start Date Format=2024-12-22 04:51 pm, Promo Code for custom store and Custom product=Custom Store+Product, Coupon Field for Custom store and all product=JaiHO, Promo Code for custom store and all product=Custom Store+AllProduct1, Promotion successful Message=Promotion configured successfully, Promo code  for all store and all product type to Search  in Master Promotion Filter=REGRESS_COUPON, Simple Total Discount Value  Error Message=Discount value should be greater than 0, Coupon Field for all store and all product=JaiHO, start date in filter=2024-12-05 04:51 pm, Simple_Total_Maximum_Discount_Value=500, Simple Total Promotion Type Error Message=Please Select Promotion Type, Promotion Name=Simple Total Promo, Promotion Code=ErrorMessage, Simple Total Promotion Sub Type Error Message=Please Select Promotion Sub Type, StoreName2=Test82 - 0292, Simple Total Promotion Name Error Message=Please Provide Promotion Name, Promo Code for all store and all product=REGRESS_COUPON, StoreName1=Rdep Meta Limited Pune - 1765, Gap=NA, Promo code  for custom store and all product type to Search  in Master Promotion Filter=Custom Store+AllProduct1, Promotion Sub type1=Percentage, Description=Simple Total Promotion, Simple Total Promotion Code Type Error Message=Please Provide Promotion Promocode, Simple_Total_Trigger_Amount=1000}</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_Simple_Total_Coupon_Based.getTestCaseName(Create_Simple_Total_Coupon_Based.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1050149826", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1050149826'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_Simple_Total_Coupon_Based.getTestCaseName(Create_Simple_Total_Coupon_Based.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.Create_Simple_Total_Coupon_Based@1033576a</td></tr>
+<tr>
+<td title='com.proenx.rdep.inventory.Stock_Request_Inward.Inventory_List2()'><b>Inventory_List2</b><br>Test class: com.proenx.rdep.inventory.Stock_Request_Inward<br>Parameters: {Inventory inward Filter Select Store1=Rdep Meta Limited Pune - 1765, SKU2 to enter manually to inward=8904389900628, Quantity2 to enter manually to inward=1, Error Message for Inventory Inward  Delivery To Store=Request cannot be submitted without items, Inward Delivery Date=05-12-2024, Product Sku1 for Inward with file upload=8904389900567, SKU1 to enter manually to inward=8904389900543, Quantity1 to enter manually to inward=1, Select Store in product filter for file upload=Rdep Meta Limited Pune - 1765, Inventory inward Search Data Through Status=RECEIVED, Inventory Inward  Delivery To Store=Metawear Limited Banglore - 1765, Inventory inward Search Data Through RequestID=1733145561987, Inward Request Date=01-12-2024, Product Sku2 for Inward with file upload=8904389900550, Error Message for approval without adding items=SKU cannot be empty}</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.inventory.Stock_Request_Inward.getTestCaseName(Stock_Request_Inward.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1774897456", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1774897456'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.inventory.Stock_Request_Inward.getTestCaseName(Stock_Request_Inward.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.proenx.rdep.inventory.Stock_Request_Inward@359df09a</td></tr>
+<tr>
+<td title='com.proenx.rdep.inventory.Inventory_TestCases.Inventory_List1()'><b>Inventory_List1</b><br>Test class: com.proenx.rdep.inventory.Inventory_TestCases<br>Parameters: {Inventory List Store Name3=NA, Inventory List Filter Select Store1=RDEP HSR - 0265, Inventory List Store Name2=NA, Inventory List Store Name1=RDEP HSR - 0265, Inventory List Search Data for Update1=1616204001002, Inventory Import Successful Message=Inventory imported successfully., Inventory Import Error Message for not selecting Store=Please Select Store, Edit Inventory Successful Message =Inventory updated., Inventory List Search Data for File Reset with Single SKU file=50002202, Inventory Import Store=RDEP HSR - 0265, Inventory Adjustment Successful Message=Inventory adjusted successfully., Inventory Adjustment Error Message for not selecting Store=Please Select Store, Edit Inventory Reorder Threshold Value=5, Inventory List Search Data for File Reset for three sku3=50002202, Inventory List Search Data for File Reset for three sku2=50002202, Inventory List Search Data for Update for three sku3=80002500, Inventory List Search Data for File Reset for three sku1=50002202, Inventory List Search Data for Update for three sku2=50002200, Edit Inventory Inventory Update Reason=Testing Purpose, Inventory List Search Data for Update for three sku1=8904389909669, Inventory Adjustment Unsuccessful Message=Error updating inventory., Inventory List Search SKU for Edit Inventory=50002201, Inventory Import Unsuccessful Message=Required data not found. Please upload the correct file., Inventory Adjustment Error Message for not selecting file=Please Select File, Inventory Import Error Message for not selecting file=Please Select File, Inventory List Search Data forUpdate with Single SKU file=40002100}</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.inventory.Inventory_TestCases.getTestCaseName(Inventory_TestCases.java:19)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace184244257", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace184244257'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.inventory.Inventory_TestCases.getTestCaseName(Inventory_TestCases.java:19)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.proenx.rdep.inventory.Inventory_TestCases@6d60fe40</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_System.create_promotion()'><b>create_promotion</b><br>Test class: com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_System<br>Parameters: {Description=Simple Line Promotion, Promotion Type1=Simple Line, start date in filter=2024-12-05 04:51 pm, Discount Value=10, Promotion Data for Master Promotion FilterSearch=SimpleLine1, Master Promotion End Date Format=2025-01-07 04:51 pm, Promotion Details Error PopUp=Please Select Promotion Type, Master Promotion Start Date Format=2024-12-22 04:51 pm, Promotion Name=SimpleLine1, Promotion Code=SimpleLine1, Promotion successful Message=Promotion configured successfully, StoreName2=Test82 - 0292, StoreName1=Rdep Meta Limited Pune - 1765, end date in filter=2025-01-07 04:51 pm, Coupon Field=T20WC, Promotion Sub type1=Percentage}</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_System.getTestCaseName(Create_SimpleLine_Promo_System.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1073878937", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1073878937'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_System.getTestCaseName(Create_SimpleLine_Promo_System.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_System@609e8838</td></tr>
+<tr>
+<td title='com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_Coupon_Based.create_promotion()'><b>create_promotion</b><br>Test class: com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_Coupon_Based<br>Parameters: {Description=Simple Line Promotion, Promotion Type1=Simple Line, start date in filter=2024-12-05 04:51 pm, Discount Value=10, Promotion Data for Master Promotion FilterSearch=Coupon Based, Master Promotion End Date Format=2025-01-15 04:51 pm, Promotion Details Error PopUp=Please Select Promotion Type, Master Promotion Start Date Format=2024-12-05 04:51 pm, Promotion Name=Percentage Promo, Promotion Code=Coupon Based, Promotion successful Message=Promotion configured successfully, StoreName2=Test82 - 0292, StoreName1=Rdep Meta Limited Pune - 1765, end date in filter=2025-02-07 04:51 pm, Coupon Field=T20WC, Promotion Sub type1=Percentage}</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_Coupon_Based.getTestCaseName(Create_SimpleLine_Promo_Coupon_Based.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace635001030", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace635001030'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Hashtable.get(Object)&quot; is null
+	at com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_Coupon_Based.getTestCaseName(Create_SimpleLine_Promo_Coupon_Based.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_Coupon_Based@17fc391b</td></tr>
 </table><p>
 </body>
 </html>

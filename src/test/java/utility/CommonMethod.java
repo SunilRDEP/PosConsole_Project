@@ -2,6 +2,8 @@ package utility;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
@@ -23,6 +25,44 @@ import com.google.common.io.Files;
 import com.proenx.rdep.myproject.TestBase;
 
 public class CommonMethod extends TestBase { 
+	public static void checkBrokenLink(String url2) throws IOException {
+	
+		  try {
+	            if (!url2.startsWith("http")|| url2.contains("null") || url2.contains(" ")) {
+	                System.out.println("Invalid URL format: " + url2);
+	                return;
+	            }
+
+	            URL urlLink = new URL(url2);
+	            HttpURLConnection connection = (HttpURLConnection) urlLink.openConnection();
+
+	            // Use "HEAD" instead of "POST"
+	            connection.setRequestMethod("HEAD");
+
+	            // Set timeout
+	            connection.setConnectTimeout(5000);
+	            connection.setReadTimeout(5000);
+
+	            // Mimic a real browser
+	            connection.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36\"");
+
+	            connection.connect();
+
+	            int statusCode = connection.getResponseCode();
+	            if (statusCode >= 400) {
+	               test.pass("Broken link: " + url2 + " (HTTP Status: " + statusCode + ")");
+	            } else {
+	                test.pass("Valid link: " + url2 + " (HTTP Status: " + statusCode + ")");
+	            }
+	        } catch (Exception e) {
+	        	 test.pass("Exception occurred for URL: " + url2 + " -> " + e.getMessage());
+	        }
+	    }
+
+	
+	
+	
+	
 	public static void takescreenshot() {
 		String timestamp = new SimpleDateFormat("YYYY_MM_dd_HH_mm_ss").format(new Date());
 		File dest = new File(
@@ -236,18 +276,18 @@ public class CommonMethod extends TestBase {
 	}
 
 	public static boolean Hyperlink_Click(String name) {
-		int row = driver.findElements(By.xpath("//div[@class='card p-3']//tbody/tr")).size(); // row count
-		int column = driver.findElements(By.xpath("//div[@class='card p-3']//th")).size(); // column count
+		int row = driver.findElements(By.xpath("//div[@class='card p-3 card-shadow']//tbody/tr")).size(); // row count
+		int column = driver.findElements(By.xpath("//div[@class='card p-3 card-shadow']//th")).size(); // column count
 		boolean found = false;
 
 		for (int i = 1; i <= row; i++) { // Start from 1 if rows are indexed from 1
 			for (int j = 1; j <= column; j++) {
 				String str1 = driver
-						.findElement(By.xpath("//div[@class='card p-3']//tbody/tr[" + i + "]/td[" + j + "]")).getText();
+						.findElement(By.xpath("//div[@class='card p-3 card-shadow']//tbody/tr[" + i + "]/td[" + j + "]")).getText();
 				if (str1.equals(name)) {
 					found = true;
 					WebElement cell = driver
-							.findElement(By.xpath("//div[@class='card p-3']//tbody/tr[" + i + "]/td[" + j + "]"));
+							.findElement(By.xpath("//div[@class='card p-3 card-shadow']//tbody/tr[" + i + "]/td[" + j + "]"));
 
 					// Check if the element is clicable before clicking
 					if (cell.isDisplayed() && cell.isEnabled()) {

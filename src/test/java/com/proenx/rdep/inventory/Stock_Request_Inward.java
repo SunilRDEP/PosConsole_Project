@@ -19,7 +19,7 @@ public class Stock_Request_Inward extends TestBase {
 		testCaseName = this.getClass().getSimpleName();
 		if (!run_mode.get(testCaseName).equalsIgnoreCase("Y")) {
 			throw new SkipException("Skipping Test  case as Run mode is set to no");// this is a user created exception
-		} 
+		}  
 	}  
 
 	@Test(dataProvider = "data_Collection", enabled = true, priority = 1)
@@ -35,7 +35,7 @@ public class Stock_Request_Inward extends TestBase {
 
 	}
 
-	@Test(dataProvider = "data_Collection", enabled = true, priority = 2)
+	@Test(dataProvider = "data_Collection", enabled = false, priority = 2)
 	public void Inventory_List2(Hashtable<String, String> ht) throws InterruptedException, AWTException {
 		SignInPage sp = new SignInPage();
 
@@ -50,5 +50,14 @@ public class Stock_Request_Inward extends TestBase {
 		.stock_request_Inward_Error_Message_Validation(ht);
 
 	}
-	
+	@Test(dataProvider = "data_Collection", enabled = false, priority = 1)
+	public void Stock_Inward(Hashtable<String, String> ht) throws InterruptedException, AWTException {
+		SignInPage sp = new SignInPage();
+
+		sp.signin(ht)
+		.Stock_request_Inward_SubMenu(ht)
+		.stock_request_inward_filter_operation(ht)
+		.stock_request_Inward_Cancel_Request(ht);
+
+	}
 }

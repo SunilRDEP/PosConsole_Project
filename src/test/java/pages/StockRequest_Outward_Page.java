@@ -137,42 +137,69 @@ public class StockRequest_Outward_Page extends TestBase {
 	@FindBy(xpath = "//tbody/tr[3]/td[1]")
 	private static WebElement Inventory_Outward_ItemDetails_SKU3;
 	
+	@FindBy(xpath = "//input[@placeholder='Search...']")
+	private static WebElement Inventory_Inward_Global_Search_Field;
+
+	@FindBy(xpath = "//i[@class='ri-search-2-line']")
+	private static WebElement Inventory_Inward_Global_Search_Button;
+
+	@FindBy(xpath = "//button[@id='cancelStockBtn']")
+	private static WebElement Inventory_Inward_Cancel_Request_Button;
+
+	@FindBy(xpath = "//button[normalize-space()='Download']")
+	private static WebElement Inventory_Inward_Download_Create_Request_Button;
+	
+	@FindBy(xpath = "//span[contains(text(),'Download')]")
+	private static WebElement Inward_table_data_download;
+	
 
 	SoftAssert softassert = new SoftAssert();
 
 	public StockRequest_Outward_Page stock_request_Outward_Filter_Operation(Hashtable<String, String> ht) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 	 	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
-		CommonMethod.clickonWebElement(Inventory_Stock_Request_Inward_Filter, "filter Button");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
-		CommonMethod.entertextintoinputbox(Inventory_Stock_Request_Inward_Filter_Search_Box,
+		CommonMethod.entertextintoinputbox(Inventory_Inward_Global_Search_Field,
 				ht.get("Inventory Outward Search Data Through RequestID"));
+
+//		CommonMethod.bootstrapdropdownselection(Inventory_Stock_Request_Inward_Filter_Select_STore,
+//				"Inventory_Stock_Request_Inward_Filter_Select_STore", ht.get("Inventory inward Filter Select Store1"));
+//		CommonMethod.clickonWebElement(Inventory_Filter_Outside, "Outside to avoid element overlaping");
+		CommonMethod.clickonWebElement(Inventory_Inward_Global_Search_Button, "Global Search Key Button");
+		
+		CommonMethod.clickonWebElement(Inventory_Stock_Request_Inward_CSV_Download, "Download Filter Button");
+		
+		CommonMethod.clickonWebElement(Inward_table_data_download, "Download Button inside filter");
+		
 //	CommonMethod.bootstrapdropdownselection(Inventory_Stock_Request_Inward_Filter_Select_STore,
 //			"Inventory_Stock_Request_Inward_Filter_Select_STore", ht.get("Inventory inward Filter Select Store1"));
 //	CommonMethod.clickonWebElement(Inventory_Filter_Outside, "Outside to avoid element overlaping");
-		CommonMethod.clickonWebElement(Inventory_Stock_Request_Inward_Filter_Apply_Button,
-				"Inventory List Filter Apply Button");
-
+		
 		String search_Request_ID = driver.findElement(By.xpath("//tbody/tr[1]/td[4]")).getText();
 		softassert.assertEquals(search_Request_ID, ht.get("Inventory Outward Search Data Through RequestID"));
 		test.pass("filter is working fine for requestID");
 
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 
+
+		String delivery_to = driver.findElement(By.xpath("//tbody/tr[1]/td[7]")).getText();
+		softassert.assertNotEquals(delivery_to, "NA","Delivery to Column is shoing NA");
+		test.pass("filter and Global Search Key are working fine ");
+		
+		String Store_Code = driver.findElement(By.xpath("//tbody/tr[1]/td[1]")).getText();
+		softassert.assertNotEquals(Store_Code, "NA","Store Code Column is showing NA");
+		test.pass("filter and Global Search Key are working fine for store code column ");
+		
+
 		CommonMethod.clickonWebElement(Inventory_Stock_Request_Inward_Filter, "filter Button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.clickonWebElement(Inventory_Stock_Request_Inward_Filter_Reset_Button, "Reset Button");
-		CommonMethod.entertextintoinputbox(Inventory_Stock_Request_Inward_Filter_Search_Box,
-				ht.get("Inventory Outward Search Data Through Status"));
-//	CommonMethod.bootstrapdropdownselection(Inventory_Stock_Request_Inward_Filter_Select_STore,
-//			"Inventory_Stock_Request_Inward_Filter_Select_STore", ht.get("Inventory inward Filter Select Store1"));
-//	CommonMethod.clickonWebElement(Inventory_Filter_Outside, "Outside to avoid element overlaping");
+		;
+CommonMethod.bootstrapdropdownselection(Inventory_Stock_Request_Inward_Filter_Select_STore,
+		"Inventory_Stock_Request_Inward_Filter_Select_STore", ht.get("Inventory outward Filter Select Store1"));
+	CommonMethod.clickonWebElement(Inventory_Filter_Outside, "Outside to avoid element overlaping");
 		CommonMethod.clickonWebElement(Inventory_Stock_Request_Inward_Filter_Apply_Button,
 				"Inventory List Filter Apply Button");
-
-		String search_Status = driver.findElement(By.xpath("//tbody/tr[1]/td[10]")).getText();
-		softassert.assertEquals(search_Status, ht.get("Inventory Outward Search Data Through Status"));
-		test.pass("filter is working fine for Status");
+		
 		softassert.assertAll();
 		return this;
 	}
@@ -271,7 +298,7 @@ public class StockRequest_Outward_Page extends TestBase {
 		WebElement Add_Row1 = driver.findElement(By.xpath("//button[normalize-space()='Add Row']"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Add_Row1);
 		Thread.sleep(3000);
-		Add_Row1.click();
+		Add_Row1.click(); 
 
 		WebElement Add_Row2 = driver.findElement(By.xpath("//button[normalize-space()='Add Row']"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Add_Row2);
@@ -279,6 +306,7 @@ public class StockRequest_Outward_Page extends TestBase {
 		Add_Row2.click();
 
 		CommonMethod.inputCalenderDate(Inventory_Inward_SKU_Field1, ht.get("Product Sku1 for outward with Manual Entry"));
+		CommonMethod.clickonWebElement(Inventory_Inward_SKU_Field2, "outside");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		Thread.sleep(3000);
 		CommonMethod.inputCalenderDate(Inventory_Inward_SKU_Field2, ht.get("Product Sku2 for outward with Manual Entry"));

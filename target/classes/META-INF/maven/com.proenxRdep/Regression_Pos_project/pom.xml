@@ -37,7 +37,7 @@
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>4.23.1</version>
+			<version>4.27.0</version>
 
 		</dependency>
 		<!--  https://mvnrepository.com/artifact/org.testng/testng  -->
@@ -53,6 +53,13 @@
 			<artifactId>lombok</artifactId>
 			<version>1.18.30</version>
 			<scope>provided</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+		<dependency>
+			<groupId>io.appium</groupId>
+			<artifactId>java-client</artifactId>
+			<version>9.4.0</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
@@ -110,6 +117,17 @@
 			<version>42.7.5</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-nop</artifactId>
+			<version>1.7.36</version>
+		</dependency>
 
+
+		<dependency>
+			<groupId>Appium_AutoMation</groupId>
+			<artifactId>Appium_AutoMation</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 </project>

@@ -1,5 +1,6 @@
 package pages;
 
+import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Hashtable;
@@ -21,17 +22,31 @@ import org.testng.Assert;
 import com.proenx.rdep.myproject.TestBase;
 
 import utility.CommonMethod;
+import utility.DatabaseCustomerTable;
+import utility.DatabaseUtils;
 
 public class Customers_Page extends TestBase {
 	public Customers_Page() {
 		PageFactory.initElements(driver, this);
 	}
 
+	@FindBy(xpath = "//span[normalize-space()='Customers']")
+	private static WebElement customer_Menu;
+
+	@FindBy(xpath = "//span[normalize-space()='All Customers List']")
+	private static WebElement All_customer_List_Sub_Menu;
+
 	@FindBy(xpath = "//span[@class='p-button-icon ri-upload-2-fill ri-xl']")
 	private static WebElement customer_Import;
 
-	@FindBy(xpath = "//div[@class='d-flex justify-content-between align-items-center gap-1']//span[2]//button[1]")
-	private static WebElement customer_Import_csv_Download;
+	@FindBy(xpath = "//span[@class='p-button-icon ri-download-2-fill ri-xl']")
+	private static WebElement customer_filter_for_Download;
+
+	@FindBy(xpath = "//span[contains(text(),'Download')]")
+	private static WebElement customer_Download_Button;
+
+	@FindBy(xpath = "//span[contains(text(),'Download')]")
+	private static WebElement customer_Import_csv_Download_button;
 
 	@FindBy(xpath = "//span[contains(text(),'Filter')]")
 	private static WebElement customer_Filter;
@@ -60,6 +75,30 @@ public class Customers_Page extends TestBase {
 	@FindBy(xpath = "//span[@class='bh-mr-2']")
 	private static WebElement Scroll_Down;
 
+	@FindBy(xpath = "//input[@placeholder='Search...']")
+	private static WebElement customer_Global_Search_field;
+
+	@FindBy(xpath = "//button[@type='submit']")
+	private static WebElement customer_Global_Search_Submit_button;
+
+	@FindBy(xpath = "//span[@class='multiselect__single']")
+	private static WebElement customer_filter_Select_Store;
+
+	@FindBy(xpath = "//span[@class='multiselect__single']")
+	private static WebElement customer_filter_Apply_button;
+
+	@FindBy(xpath = "//span[@class='bh-mr-2']")
+	private static WebElement customer_table_pagination_Message;
+
+	@FindBy(xpath = "//span[normalize-space()='Manage']")
+	private static WebElement Manage_Menu;
+
+	@FindBy(xpath = "//span[normalize-space()='Data Jobs']")
+	private static WebElement DataJobs_SubMenu;
+
+	@FindBy(xpath = "//span[normalize-space()='Data Jobs']")
+	private static WebElement Global_Search_Key_Remove_Button;
+
 	public Customers_Page import_Customer_File(Hashtable<String, String> ht)
 			throws InterruptedException, TimeoutException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
@@ -72,7 +111,7 @@ public class Customers_Page extends TestBase {
 		Thread.sleep(3000);
 		CommonMethod.bootstrapdropdownselection(customer_Import_Select_Store, "customer_Import_Select_Store",
 				ht.get("Select Store for adding new customer"));
-		
+
 		driver.findElement(By.xpath("//input[@id='file']"))
 				.sendKeys("C:\\Users\\sunil\\Test File Format\\customer.csv");
 		CommonMethod.clickonWebElement(customer_Import_File_Format_Link, "file format link to download file format");
@@ -127,6 +166,17 @@ public class Customers_Page extends TestBase {
 							CommonMethod.takescreenshot();
 							test.pass("Match found at Row " + i + ", Column " + j + ". Data: " + cellText
 									+ ". Row Data: " + rowData);
+
+							String query = "select * from customer c  where first_name = '" + cellText + "'";
+							boolean isValid = DatabaseCustomerTable.validateTestCaseData(query, cellText);
+
+							Assert.assertTrue(isValid, "Test case data NOT found in the database.");
+
+							if (isValid) {
+								test.pass("Test case data found in the database.");
+							} else {
+								test.pass("Test case data NOT found in the database.");
+							}
 
 							break outerLoop; // Exit loops if match is found
 						}
@@ -189,6 +239,149 @@ public class Customers_Page extends TestBase {
 			}
 			test.pass("All matches verified. Total matches: " + matchedData.size());
 			CommonMethod.takescreenshot();
+		}
+
+		return this;
+	}
+
+	public Customers_Page validation_of_global_search_key(Hashtable<String, String> ht) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		CommonMethod.entertextintoinputbox(customer_Global_Search_field, ht.get("Global Search Key Unique Data"));
+		CommonMethod.clickonWebElement(customer_Global_Search_Submit_button,
+				"global search key button to search any particular data ");
+		WebElement cellElement = wait
+				.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[1]/td[3]")));
+
+		String cellText = cellElement.getText();
+		Assert.assertEquals(cellText, ht.get("Global Search Key Unique Data"));
+		test.pass(" Data Searching through Global Search key for Customer List table  present in the table");
+		test.pass("Data which is present in the table is " + cellText);
+
+		return this;
+	}
+
+	public Customers_Page Global_SerchKey_with_filter_download(Hashtable<String, String> ht)
+			throws InterruptedException {
+
+		CommonMethod.entertextintoinputbox(customer_Global_Search_field, ht.get("Global Search Key Unique Data"));
+		CommonMethod.clickonWebElement(customer_Global_Search_Submit_button,
+				"global search key button to search any particular data ");
+
+		CommonMethod.clickonWebElement(customer_filter_for_Download, "filter  Button to download any csv files");
+		CommonMethod.clickonWebElement(customer_Download_Button,
+				"Download button to download data search through Global Search Key");
+
+		CommonMethod.clickonWebElement(Manage_Menu, "Manage Menu");
+		Thread.sleep(3000);
+		CommonMethod.clickonWebElement(DataJobs_SubMenu, "Data Jobs SubMenu");
+
+		int maxAttempts = 5; // Set maximum retry attempts
+		int attempt = 0;
+		boolean isDownloadSuccessful = false;
+
+		while (attempt < maxAttempts) {
+			// Step 1: Get pagination data
+			String pagination = customer_table_pagination_Message.getText();
+			int pages = Integer
+					.parseInt(pagination.substring(pagination.indexOf("of") + 3, pagination.indexOf("items")).trim());
+
+			String pagesStr = String.valueOf(pages);
+			test.pass("Attempt: " + (attempt + 1) + ", Expected Items to be downloaded is : " + pagesStr);
+
+			CommonMethod.clickonWebElement(Manage_Menu, "Manage Menu");
+			CommonMethod.clickonWebElement(DataJobs_SubMenu, "Data Jobs SubMenu");
+
+			String dataJobsStatus = driver.findElement(By.xpath("//tbody/tr[1]/td[10]")).getText().trim();
+			String dataJobsRecord = driver.findElement(By.xpath("//tbody/tr[1]/td[6]")).getText().trim();
+
+			// Step 4: Check if download is successful
+			if (dataJobsStatus.equals("COMPLETED") && dataJobsRecord.equals(pagesStr)) {
+				test.pass("Global Search Key has downloaded data successfully");
+				isDownloadSuccessful = true;
+				break; // Exit loop if successful
+			} else {
+				test.pass("Download not completed, retrying...");
+
+				// Step 5: Retry Download Process
+				CommonMethod.clickonWebElement(customer_Menu, "Customer Menu");
+				CommonMethod.clickonWebElement(All_customer_List_Sub_Menu, "Customer List Sub Menu");
+				CommonMethod.entertextintoinputbox(customer_Global_Search_field,
+						ht.get("Global Search Key Unique Data"));
+				CommonMethod.clickonWebElement(customer_Global_Search_Submit_button, "Global Search Key Submit Button");
+
+				CommonMethod.clickonWebElement(customer_filter_for_Download, "Filter Button to Download CSV");
+				CommonMethod.clickonWebElement(customer_Download_Button, "Download Button for Global Search Key Data");
+			}
+
+			attempt++;
+			Thread.sleep(5000); // Wait for 5 seconds before retrying
+		}
+
+		// If download was unsuccessful after all attempts, mark as fail
+		if (!isDownloadSuccessful) {
+			test.fail("File is not downloading through data jobs after " + maxAttempts + " attempts.");
+		}
+
+		CommonMethod.clickonWebElement(customer_Menu, "Customer Menu");
+		CommonMethod.clickonWebElement(All_customer_List_Sub_Menu, "Customer List Sub Menu");
+
+		return this;
+	}
+
+	public Customers_Page Global_SerchKey_Operation(Hashtable<String, String> ht) throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		// valid data validation
+		CommonMethod.entertextintoinputbox(customer_Global_Search_field, ht.get("Global Search Key Unique Data"));
+		CommonMethod.clickonWebElement(customer_Global_Search_Submit_button,
+				"global search key button to search any particular data ");
+
+		String pagination = customer_table_pagination_Message.getText();
+		int pages = Integer
+				.parseInt(pagination.substring(pagination.indexOf("of") + 3, pagination.indexOf("items")).trim());
+
+		String pagesStr = String.valueOf(pages);
+		test.pass("The total item present in the table for above keyward is " + pagesStr);
+
+		// invalid data validation
+		customer_Global_Search_field.clear();
+		CommonMethod.entertextintoinputbox(customer_Global_Search_field, ht.get("Global Search Key Invalid Data"));
+		CommonMethod.clickonWebElement(customer_Global_Search_Submit_button,
+				"global search key button to search any particular data ");
+		String no_data = driver.findElement(By.xpath("//td[normalize-space()='No data available']")).getText();
+
+		WebElement toastMessage = wait
+				.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//p[@class='v-toast__text']")));
+
+		if (toastMessage.isDisplayed()) {
+			String Actual_Pagetitle = toastMessage.getText();
+			String Error_Messag = "No data found for selected search key " + ht.get("Global Search Key Invalid Data")
+					+ ".";
+			Assert.assertEquals(Actual_Pagetitle, Error_Messag);
+			test.pass("");
+		}
+
+		Assert.assertEquals(no_data, "No data available");
+		test.pass("No data Availble in the Customer Table for this invalid Data searchrd by Globa Search Key ");
+
+		driver.navigate().refresh();
+
+		// invalid column data validation
+
+		return this;
+
+	}
+
+	public Customers_Page pos_consolle_all_api_response_check(Hashtable<String, String> ht)
+			throws InterruptedException, IOException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		List<WebElement> alist = driver.findElements(By.tagName("a"));
+		test.pass("Total APIs present on POS ConSole: " + alist.size());
+		for (WebElement aElement : alist) {
+			String url = aElement.getDomAttribute("href");
+			String url2 = "https://px.uat.rdep.io" + url;
+			test.pass(aElement.getDomAttribute("href"));
+			CommonMethod.checkBrokenLink(url2);
+
 		}
 
 		return this;

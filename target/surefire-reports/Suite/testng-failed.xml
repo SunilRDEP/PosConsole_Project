@@ -6,16 +6,139 @@
   </listeners>
   <test thread-count="5" name="Test(failed)" verbose="0">
     <classes>
-      <class name="com.proenx.rdep.myproject.pos.Single_Product_TestCases">
+      <class name="com.proenx.rdep.promotion.listner.Create_Simple_Total_System_Based">
         <methods>
+          <include name="getTestCaseName"/>
           <include name="teardown"/>
-          <include name="single_Product3" invocation-numbers="0"/>
+          <include name="create_promotion"/>
+          <include name="generateReport"/>
+          <include name="loadPropfile"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- com.proenx.rdep.promotion.listner.Create_Simple_Total_System_Based -->
+      <class name="com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_Coupon_Based">
+        <methods>
+          <include name="getTestCaseName"/>
+          <include name="teardown"/>
+          <include name="create_promotion"/>
+          <include name="generateReport"/>
+          <include name="loadPropfile"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_Coupon_Based -->
+      <class name="com.proenx.rdep.promotion.listner.Create_Simple_Total_Reward_System_Based">
+        <methods>
+          <include name="create_promotion"/>
+          <include name="teardown"/>
+          <include name="getTestCaseName"/>
+          <include name="generateReport"/>
+          <include name="loadPropfile"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- com.proenx.rdep.promotion.listner.Create_Simple_Total_Reward_System_Based -->
+      <class name="com.proenx.rdep.promotion.listner.MasterPromotion_TestCases">
+        <methods>
+          <include name="create_promotion2"/>
+          <include name="teardown"/>
+          <include name="getTestCaseName"/>
+          <include name="generateReport"/>
+          <include name="launchBrowser"/>
+          <include name="loadPropfile"/>
+          <include name="create_promotion"/>
+        </methods>
+      </class> <!-- com.proenx.rdep.promotion.listner.MasterPromotion_TestCases -->
+      <class name="com.proenx.rdep.promotion.listner.Create_Package_Quantity_Coupon_Based">
+        <methods>
+          <include name="create_promotion"/>
+          <include name="teardown"/>
+          <include name="getTestCaseName"/>
+          <include name="generateReport"/>
+          <include name="loadPropfile"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- com.proenx.rdep.promotion.listner.Create_Package_Quantity_Coupon_Based -->
+      <class name="com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_System">
+        <methods>
+          <include name="create_promotion"/>
+          <include name="teardown"/>
+          <include name="getTestCaseName"/>
+          <include name="generateReport"/>
+          <include name="loadPropfile"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- com.proenx.rdep.promotion.listner.Create_SimpleLine_Promo_System -->
+      <class name="com.proenx.rdep.inventory.Stock_Request_Inward">
+        <methods>
+          <include name="Inventory_List1"/>
+          <include name="teardown"/>
+          <include name="Inventory_List2"/>
           <include name="getTestCaseName"/>
           <include name="generateReport"/>
           <include name="launchBrowser"/>
           <include name="loadPropfile"/>
         </methods>
-      </class> <!-- com.proenx.rdep.myproject.pos.Single_Product_TestCases -->
+      </class> <!-- com.proenx.rdep.inventory.Stock_Request_Inward -->
+      <class name="com.proenx.rdep.promotion.listner.Create_CombinationPool_System_Based">
+        <methods>
+          <include name="getTestCaseName"/>
+          <include name="create_promotion"/>
+          <include name="teardown"/>
+          <include name="generateReport"/>
+          <include name="loadPropfile"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- com.proenx.rdep.promotion.listner.Create_CombinationPool_System_Based -->
+      <class name="com.proenx.rdep.promotion.listner.Create_Simple_Total_Coupon_Based">
+        <methods>
+          <include name="getTestCaseName"/>
+          <include name="create_promotion"/>
+          <include name="teardown"/>
+          <include name="generateReport"/>
+          <include name="loadPropfile"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- com.proenx.rdep.promotion.listner.Create_Simple_Total_Coupon_Based -->
+      <class name="com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based">
+        <methods>
+          <include name="create_promotion"/>
+          <include name="teardown"/>
+          <include name="getTestCaseName"/>
+          <include name="generateReport"/>
+          <include name="launchBrowser"/>
+          <include name="loadPropfile"/>
+        </methods>
+      </class> <!-- com.proenx.rdep.promotion.listner.Create_CombinationPool_Coupon_Based -->
+      <class name="com.proenx.rdep.inventory.Stock_Request_Outward_TestCase">
+        <methods>
+          <include name="Inventory_List1"/>
+          <include name="teardown"/>
+          <include name="Inventory_List2"/>
+          <include name="getTestCaseName"/>
+          <include name="generateReport"/>
+          <include name="launchBrowser"/>
+          <include name="loadPropfile"/>
+        </methods>
+      </class> <!-- com.proenx.rdep.inventory.Stock_Request_Outward_TestCase -->
+      <class name="com.proenx.rdep.inventory.Inventory_TestCases">
+        <methods>
+          <include name="Inventory_List1"/>
+          <include name="teardown"/>
+          <include name="generateReport"/>
+          <include name="getTestCaseName"/>
+          <include name="loadPropfile"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- com.proenx.rdep.inventory.Inventory_TestCases -->
+      <class name="com.proenx.rdep.promotion.listner.Create_Package_Quantity_System_Based">
+        <methods>
+          <include name="teardown"/>
+          <include name="getTestCaseName"/>
+          <include name="generateReport"/>
+          <include name="create_promotion"/>
+          <include name="launchBrowser"/>
+          <include name="loadPropfile"/>
+        </methods>
+      </class> <!-- com.proenx.rdep.promotion.listner.Create_Package_Quantity_System_Based -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

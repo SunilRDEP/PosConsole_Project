@@ -1,5 +1,6 @@
 package pages;
 
+import java.io.IOException;
 import java.time.Duration;
 import java.util.Hashtable;
 import java.util.List;
@@ -83,6 +84,29 @@ public class InventoryList_Page extends TestBase {
 
 	@FindBy(xpath = "//button[@aria-label='Yes']")
 	private static WebElement Inventory_List_Import_OK_Button;
+	
+	
+	@FindBy(xpath = "//span[contains(text(),'Filter')]")
+	private static WebElement Inventory_List_Filter;
+
+	@FindBy(xpath = "//input[@placeholder='Search']")
+	private static WebElement Inventory_List_Filter_Search_Box;
+
+	@FindBy(xpath = "//span[contains(text(),'Select Store')]")
+	private static WebElement Inventory_List_Filter_Select_STore;
+
+	@FindBy(xpath = "//span[contains(text(),'Apply')]")
+	private static WebElement Inventory_List_Filter_Apply;
+
+	@FindBy(xpath = "//button[@aria-label='Reset']")
+	private static WebElement Inventory_List_Filter_Reset;
+
+	@FindBy(xpath = "//h4[@id='offcanvasRightLabel']")
+	private static WebElement Inventory_List_Filter_Outside;
+
+	@FindBy(xpath = "//span[contains(text(),'Close')]")
+	private static WebElement Inventory_List_Filter_Close;
+	
 //=======================================================================================================================
 	
 	public InventoryList_Page inventoryList_Adjustment_with_Valid_Inputs(Hashtable<String, String> ht)
@@ -331,14 +355,14 @@ public class InventoryList_Page extends TestBase {
 		
 		String query = "SELECT * FROM inventory i WHERE sku = '" + SKU1 + "'";
 		boolean isValid = DatabaseUtils.validateTestCaseData(query, SKU1, Available_On_Hand1);
-		  
-		  Assert.assertTrue(isValid,"Test case data NOT found in the database.");
-		
-		  if (isValid) {
-	            System.out.println("Test case data found in the database.");
-	        } else {
-	            System.out.println("Test case data NOT found in the database.");
-	        }		
+
+		Assert.assertTrue(isValid, "Test case data NOT found in the database.");
+
+		if (isValid) {
+			test.pass("Test case data found in the database.");
+		} else {
+			test.pass("Test case data NOT found in the database.");
+		}		
 		  
 
 		return this;
@@ -527,6 +551,9 @@ public class InventoryList_Page extends TestBase {
 
 		Thread.sleep(3000);
 		CommonMethod.clickonWebElement(Inventory_List_Filter, "inventory List Filter");
+		Thread.sleep(3000);
+		CommonMethod.clickonWebElement(Inventory_List_Filter_Reset, "Reset Button to reset all the old data");
+		Thread.sleep(3000);
 		CommonMethod.entertextintoinputbox(Inventory_List_Filter_Search_Box,
 				ht.get("Inventory List Search Data for Update for three sku1"));
 		CommonMethod.bootstrapdropdownselection(Inventory_List_Filter_Select_STore,
@@ -548,8 +575,18 @@ public class InventoryList_Page extends TestBase {
 		
 		test.pass("Entered SKU for import through update is " + SKU1
 				+ "  and Available on Hand quantity for this SKU after update is " + Available_On_Hand1);
-		test.pass("PLEASE CHECK WHETHER AVAILABLE ON HAND QUANTITY IN DBEAVER IS " + Available_On_Hand1 + " OR NOT ");
-		Thread.sleep(3000);
+		
+		String query = "SELECT * FROM inventory i WHERE sku = '" + SKU1 + "'";
+		boolean isValid = DatabaseUtils.validateTestCaseData(query, SKU1, Available_On_Hand1);
+		  
+		  Assert.assertTrue(isValid,"Test case data NOT found in the database.");
+		
+		  if (isValid) {
+			  test.pass("Test case data found in the database.");
+	        } else {
+	        	test.pass("Test case data NOT found in the database.");
+	        }
+	Thread.sleep(3000);
 		CommonMethod.clickonWebElement(Inventory_List_Filter, "inventory List Filter");
 		Thread.sleep(3000);
 		CommonMethod.clickonWebElement(Inventory_List_Filter_Reset, "reset button");
@@ -572,7 +609,19 @@ public class InventoryList_Page extends TestBase {
 
 		test.pass("Entered SKU for import through update is " + SKU2
 				+ "  and Available on Hand quantity for this SKU after update is " + Available_On_Hand2);
-		test.pass("PLEASE CHECK WHETHER AVAILABLE ON HAND QUANTITY IN DBEAVER IS " + Available_On_Hand2 + " OR NOT ");
+		
+		
+		String query2 = "SELECT * FROM inventory i WHERE sku = '" + SKU2 + "'";
+		boolean isValid2 = DatabaseUtils.validateTestCaseData(query2, SKU1, Available_On_Hand2);
+		  
+		  Assert.assertTrue(isValid,"Test case data NOT found in the database.");
+		
+		  if (isValid2) {
+			  test.pass("Test case data found in the database.");
+	        } else {
+	        	test.pass("Test case data NOT found in the database.");
+	        }
+		
 		Thread.sleep(3000);
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.clickonWebElement(Inventory_List_Filter, "inventory List Filter");
@@ -597,6 +646,19 @@ public class InventoryList_Page extends TestBase {
 
 		test.pass("Entered SKU for import through update is " + SKU3
 				+ "  and Available on Hand quantity for this SKU after update is " + Available_On_Hand3);
+		
+		
+		String query3 = "SELECT * FROM inventory i WHERE sku = '" + SKU3 + "'";
+		boolean isValid3 = DatabaseUtils.validateTestCaseData(query3, SKU3, Available_On_Hand3);
+		  
+		  Assert.assertTrue(isValid,"Test case data NOT found in the database.");
+		
+		  if (isValid3) {
+	            System.out.println("Test case data found in the database.");
+	        } else {
+	            System.out.println("Test case data NOT found in the database.");
+	        }
+		
 		test.pass("PLEASE CHECK WHETHER AVAILABLE ON HAND QUANTITY IN DBEAVER IS " + Available_On_Hand3 + " OR NOT ");
 		Thread.sleep(3000);
 
@@ -606,26 +668,7 @@ public class InventoryList_Page extends TestBase {
 //======================================================================================================================
 // Filter Related Xpath
 
-	@FindBy(xpath = "//span[contains(text(),'Filter')]")
-	private static WebElement Inventory_List_Filter;
-
-	@FindBy(xpath = "//input[@placeholder='Search']")
-	private static WebElement Inventory_List_Filter_Search_Box;
-
-	@FindBy(xpath = "//span[contains(text(),'Select Store')]")
-	private static WebElement Inventory_List_Filter_Select_STore;
-
-	@FindBy(xpath = "//span[contains(text(),'Apply')]")
-	private static WebElement Inventory_List_Filter_Apply;
-
-	@FindBy(xpath = "//span[@class='p-button-icon p-button-icon-left ri-restart-line ri-xl me-1']")
-	private static WebElement Inventory_List_Filter_Reset;
-
-	@FindBy(xpath = "//h4[@id='offcanvasRightLabel']")
-	private static WebElement Inventory_List_Filter_Outside;
-
-	@FindBy(xpath = "//span[contains(text(),'Close')]")
-	private static WebElement Inventory_List_Filter_Close;
+	
 	
 //======================================================================================================================
 // FILE RESET TEST CASE-1
@@ -1035,6 +1078,23 @@ Thread.sleep(3000);
 		}
 
 		return this;
+	}
+	
+	
+	
+	public InventoryList_Page pos_consolle_all_api_response_check(Hashtable<String, String> ht) throws InterruptedException, IOException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		List<WebElement> alist=driver.findElements(By.tagName("a"));
+		 test.pass("Total APIs present on POS ConSole: "+ alist.size());
+		 for(WebElement aElement:alist) {
+			 String url= aElement.getDomAttribute("href");
+			 String url2="https://px.uat.rdep.io"+url;
+			
+			 CommonMethod.checkBrokenLink(url2);
+			
+			 
+		 }
+		 return this;	 
 	}
 //=======================================================================================================================
 //

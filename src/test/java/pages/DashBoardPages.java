@@ -1,12 +1,16 @@
 package pages;
 
+import java.io.IOException;
+import java.time.Duration;
 import java.util.Hashtable;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.proenx.rdep.myproject.TestBase;
 
@@ -25,6 +29,9 @@ public class DashBoardPages extends TestBase {
 
 	@FindBy(xpath = "//div[@class='submenu__container show-submenu']//li[2]")
 	public static WebElement clickonsalesreport;
+	
+	@FindBy(xpath = "//span[normalize-space()='Article Report']")
+	public static WebElement clickon_Article_Report;
 
 	@FindBy(xpath = "//span[normalize-space()='Returns']")
 	public static WebElement clickonReturnrs;
@@ -88,6 +95,9 @@ public class DashBoardPages extends TestBase {
 	@FindBy(xpath = "//span[normalize-space()='All Customers List']")
 	private static WebElement Customer_SubMenu;
 	
+	@FindBy(xpath = "//span[normalize-space()='Delivery Report']")
+	private static WebElement Delivery_Report_SubMenu;
+	
 
 	public DashBoardPages clickOnAllMenunDashBoard() {
 		CommonMethod.clickonWebElement(clickonorderxpath, "Orders Menu");
@@ -103,6 +113,23 @@ public class DashBoardPages extends TestBase {
 
 	}
 
+	
+	public DashBoardPages pos_consolle_all_api_response_check(Hashtable<String, String> ht) throws InterruptedException, IOException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		List<WebElement> alist=driver.findElements(By.tagName("a"));
+		 test.pass("Total APIs present on POS ConSole: "+ alist.size());
+		 for(WebElement aElement:alist) {
+			 String url= aElement.getDomAttribute("href");
+			 String url2="https://px.uat.rdep.io"+url;
+			 test.pass(aElement.getDomAttribute("href"));
+			 CommonMethod.checkBrokenLink(url2);
+			
+			 
+		 }
+		 return this;	 
+	}
+	
+	
 	public DashBoardPages clickOnOrdersSubMenu(Hashtable<String, String> ht) throws InterruptedException {
 		Thread.sleep(3000);
 		CommonMethod.clickonWebElement(clickonorderxpath, "Orders Menu");
@@ -119,6 +146,16 @@ public class DashBoardPages extends TestBase {
 		CommonMethod.clickonWebElement(clickonsalesreport, "Sales Report Sub Menu");
 
 		return new SalesReportPage();
+
+	}
+	
+
+	public Article_Report clickOnArticleReportSubMenu(Hashtable<String, String> ht) throws InterruptedException {
+		Thread.sleep(3000);
+		CommonMethod.clickonWebElement(clickonorderxpath, "Orders Menu");
+		CommonMethod.clickonWebElement(clickon_Article_Report, "Article Report Sub Menu");
+
+		return new Article_Report();
 
 	}
 
@@ -213,5 +250,14 @@ public class DashBoardPages extends TestBase {
 
 		CommonMethod.clickonWebElement(Customer_SubMenu, "Customer Sub Menu  ");
 		return new Customers_Page();
+	}
+	
+	
+	
+	public Delivery_Report Delivery_Report_SubMenu(Hashtable<String, String> ht) throws InterruptedException {
+		Thread.sleep(3000);
+		CommonMethod.clickonWebElement(clickonorderxpath, "Orders Menu");
+		CommonMethod.clickonWebElement(Delivery_Report_SubMenu, "Delivery Report Sub Menu");
+		return new Delivery_Report();
 	}
 }

@@ -15,24 +15,20 @@ import utility.DataCollection;
 public class TestPractice2 extends TestBase {
 	@BeforeClass
 	public void getTestCaseName() {
-			testCaseName = this.getClass().getSimpleName();
-			if(!run_mode.get(testCaseName).equalsIgnoreCase("Y")) {
-				throw new SkipException("Skipping Test  case as Run mode is set to no");// this is a user created exception
-			}
-		} 
-	 
+		testCaseName = this.getClass().getSimpleName();
+		if (!run_mode.get(testCaseName).equalsIgnoreCase("Y")) {
+			throw new SkipException("Skipping Test  case as Run mode is set to no");// this is a user created exception
+		}
+	}
+
 	@Test(dataProvider = "data_Collection")
 	public void SalesReportvaliddata(Hashtable<String, String> ht) throws InterruptedException {
 		SignInPage sp = new SignInPage();
 
-	sp.signin(ht).clickOnSalesReportSubMenu(ht).Sales_Filter_with_validdata(ht).verify_total_numberof_items_in_sales_table(ht);
-	 
-	
-	}
-	
-	
-	
+		sp.signin(ht).clickOnArticleReportSubMenu(ht)
+		.Article_Filter_with_validdata(ht)
+		.Article_Report_Download_Conformation_Test(ht);
 
-	
 	}
 
+}

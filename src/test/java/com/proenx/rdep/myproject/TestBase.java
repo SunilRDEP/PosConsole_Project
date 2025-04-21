@@ -81,6 +81,7 @@ public class TestBase { // heart or engine of my framework
 		test = report.createTest(testCaseName);
 
 		if (configue.getProperty("Browser").equalsIgnoreCase("Chrome")) {
+			
 			driver = new ChromeDriver();
 			System.out.println("Chrome Driver is launched");
 			test.info("Chrome Driver is launched");
@@ -96,13 +97,13 @@ public class TestBase { // heart or engine of my framework
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		if (configue.getProperty("Environment").equalsIgnoreCase("QA")) {
-			driver.get(configue.getProperty("qaurl"));
+			driver.navigate().to(configue.getProperty("qaurl"));
 			test.pass("User navigate to required QA url:https://px.qa.rdep.io/login");
 		} else if (configue.getProperty("Environment").equalsIgnoreCase("uat")) {
-			driver.get(configue.getProperty("UATurl"));
+			driver.navigate().to(configue.getProperty("UATurl"));
 			test.pass("User navigate to required UAT url://px.uat.rdep.io");
 		} else {
-			driver.get(configue.getProperty("ProductionURL"));
+			driver.navigate().to(configue.getProperty("ProductionURL"));
 			test.pass("User navigate to required production url");
 		}
 
