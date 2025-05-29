@@ -29,6 +29,7 @@ import utility.ExcelReader;
 public class TestBase_Mobile {
 	 protected AndroidDriver driver;
 	 protected  ExtentTest test;
+	 
 	 public static Properties mobile_configue;
 		public static Properties mobile_Prop;
 	//=======================================================================================================================
@@ -37,7 +38,7 @@ public class TestBase_Mobile {
 		// hash table declaration
 		public static ExtentSparkReporter spark;
 		public static ExtentReports report;
-		
+		public static Properties configue;
 		public static ExcelReader excel;
 		public static String testCaseName;
 		public static Hashtable<String, String> run_mode = new Hashtable<>();
@@ -57,15 +58,21 @@ public class TestBase_Mobile {
 		public void loadPropfile() throws IOException {
 	//property file setup and it will be available for execution before every suite
 
-			System.out.println("Reading Configue file ");
 			FileInputStream fis = new FileInputStream("C:\\Users\\sunil\\eclipse-workspace\\Regression_Pos_project\\"
 					+ "src\\test\\resources\\Properties\\Configue.properties");
+			configue = new Properties();
+			configue.load(fis);
+			
+			
+			System.out.println("Reading Configue file ");
+			FileInputStream fis4 = new FileInputStream("C:\\Users\\sunil\\eclipse-workspace\\Regression_Pos_project\\"
+					+ "src\\test\\resources\\Properties\\mobile_configue.properties");
 			mobile_configue = new Properties();
 			mobile_configue.load(fis);
 			System.out.println("configue file is loaded ");
 			System.out.println("Reading PROP file ");
 			FileInputStream fis1 = new FileInputStream("C:\\Users\\sunil\\eclipse-workspace\\Regression_Pos_project\\"
-					+ "src\\test\\resources\\Properties\\PROP.properties");
+					+ "src\\test\\resources\\Properties\\mobile_Prop.properties");
 			mobile_Prop = new Properties();
 			mobile_Prop.load(fis1);
 			System.out.println("PROP file is loaded ");
@@ -99,27 +106,42 @@ public class TestBase_Mobile {
 		}
 	// this will read the the data from particular cell of particular row from the excel sheet 
 
-	
+
 		
 	 
-	 @BeforeClass
-	    public void setUp() throws MalformedURLException {
-	        UiAutomator2Options options = new UiAutomator2Options();
-	        options.setDeviceName("Pixel 7");
-	        options.setPlatformName("Android");
-	        options.setAutomationName("UiAutomator2");
-	        options.setApp("C:\\Users\\sunil\\Downloads\\mpos_app_release_4.56.119_QA.apk");
+		@BeforeClass
+		public void setUp() throws MalformedURLException {
+		    boolean installApp =  Boolean.parseBoolean(mobile_configue.getProperty("installApp")); // Set to true if you want to install the APK
 
-	        // Optional capabilities
-	       // options.setNoReset(false);
-	        options.setFullReset(false);
-	        options.setNewCommandTimeout(Duration.ofSeconds(300));
+		    UiAutomator2Options options = new UiAutomator2Options();
+		    options.setDeviceName(mobile_configue.getProperty("Device_Name"));
+		    options.setPlatformName("Android");
+		    options.setAutomationName("UiAutomator2");
+		    options.setNewCommandTimeout(Duration.ofSeconds(300));
 
-	        // Set the correct URL with /wd/hub
-	        URL appiumServerURL = URI.create("http://127.0.0.1:4723/wd/hub").toURL();
-	        driver = new AndroidDriver(appiumServerURL, options);
-	    }
-	 
+		    if (installApp) {
+		        configureForApkInstall(options);
+		    } else {
+		        configureForExistingApp(options);
+		    }
+
+		    URL appiumServerURL = new URL("http://127.0.0.1:4723/wd/hub");
+		    driver = new AndroidDriver(appiumServerURL, options);
+		}
+
+		private void configureForApkInstall(UiAutomator2Options options) {
+		    options.setApp(mobile_configue.getProperty("Apk_Path"));
+		    options.setFullReset(true);     // Optional: clean install
+		    options.setNoReset(false);
+		}
+
+		private void configureForExistingApp(UiAutomator2Options options) {
+		    options.setAppPackage("com.rdep.mpos");
+		    options.setAppActivity("com.rdep.mpos.MainActivity");
+		    options.setNoReset(true);       // Don’t clear app data
+		    options.setFullReset(false);    // Don’t reinstall the app
+		}
+
 	  @AfterClass
 	    public void tearDown() {
 	        if (driver != null) {

@@ -12,9 +12,9 @@ public class DatabaseOTP_Table {
 	 public static String  fetchOTPFromDatabase(String phoneNumber) throws SQLException {
 		  String otp = "";
 		try {
-        String dbUrl = "jdbc:postgresql://px-qa-db.cfksqimc28v1.ap-south-1.rds.amazonaws.com:5432/rdep_auth_dev";
+        String dbUrl = "jdbc:postgresql://px-qa-rds.cfksqimc28v1.ap-south-1.rds.amazonaws.com:5432/rdep_auth_dev";
         String username = "devserver";
-        String password = "z5liAKP8cqzNXVFn5jp";
+        String password = "Ljn38UcRyvLNq3A";
         Connection con = DriverManager.getConnection(dbUrl, username, password);
         Statement stmt = con.createStatement();
       

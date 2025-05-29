@@ -23,7 +23,7 @@ public class Article_Report extends TestBase {
 		PageFactory.initElements( driver,this);
 		
 	}
-	@FindBy(xpath = "//span[contains(text(),'Filter')]")
+	@FindBy(xpath = "//i[@class='ri-filter-2-fill ps-1 pe-1']")
 	private static WebElement ArticleReportFilterbutton;
 	
 	@FindBy(xpath = "//div[@class='px-1 py-2']//div[@class='col-12']//input[@placeholder='Select Date']")

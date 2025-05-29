@@ -1,5 +1,6 @@
 package pages;
 
+import java.sql.SQLException;
 import java.time.Duration;
 import java.util.Hashtable;
 import java.util.List;
@@ -11,6 +12,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -19,7 +21,10 @@ import org.testng.Assert;
 
 import com.proenx.rdep.myproject.TestBase;
 
+import MposPages.QA_Mpos_Signin_Page;
+import MposPages.QA_Mpos_Signin_Page_Existing_APK;
 import utility.CommonMethod;
+import utility.OrderTable_Mpos_Bill_ID;
 
 public class SalesReportPage extends TestBase {
 
@@ -33,7 +38,7 @@ public class SalesReportPage extends TestBase {
 	@FindBy(xpath = "//span[@class='p-button-icon ri-download-2-fill ri-xl']")
 	private static WebElement SalesReportdownloadbutton;
 
-	@FindBy(xpath = "//span[contains(text(),'Filter')]")
+	@FindBy(xpath = "//i[@class='ri-filter-2-fill ps-1 pe-1']")
 	private static WebElement SalesReportFilterbutton;
 
 	@FindBy(xpath = "//a[normalize-space()='10031110334']")
@@ -105,7 +110,7 @@ public class SalesReportPage extends TestBase {
 	@FindBy(xpath = "//span[normalize-space()='Close']")
 	private static WebElement closebutton;
 
-	@FindBy(xpath = "//i[@class='ri-restart-line ri-1x']")
+	@FindBy(xpath = "//button[@title='Reset']")
 	private static WebElement resetbutton;
 
 	@FindBy(xpath = "//button[@title='CSV']")
@@ -140,17 +145,19 @@ public class SalesReportPage extends TestBase {
 
 	@FindBy(xpath = "//button[normalize-space()='Create Delivery']")
 	private static WebElement Create_Delivery_Button;
-	
+
 	@FindBy(xpath = "//*[@id=\"SalesReportBillIdCanvas\"]/div[2]/div/div[1]/div/div/div/div[3]/div/div/div[2]/form/div[1]/div[9]/table/tbody/tr/td[1]/input")
 	private static WebElement Delivery_Items;
 
 	@FindBy(xpath = "//span[normalize-space()='Create']")
 	private static WebElement Delivery_Items_Create;
-	
+
 	@FindBy(xpath = "//label[normalize-space()='Store']")
 	private static WebElement outsideclick;
-	
-	
+
+	@FindBy(xpath = "//label[normalize-space()='Store']")
+	private static WebElement Global_Search_Key;
+
 	public SalesReportPage Sales_Filter_with_validdata(Hashtable<String, String> ht) throws InterruptedException {
 		// goto startdate-> enddate-> select store-> select source->select
 		// status->select delivery status->apply
@@ -266,8 +273,7 @@ public class SalesReportPage extends TestBase {
 		CommonMethod.clickonWebElement("outsideclick", "clicked on outside");
 		CommonMethod.clickonWebElement(resetbutton, "Reset button");
 		Thread.sleep(3000);
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
-				closebutton);
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", closebutton);
 		CommonMethod.clickonWebElement(closebutton, "close button");
 		CommonMethod.clickonWebElement(SalesReportFilterbutton, "filter button");
 		CommonMethod.inputCalenderDate(clickedonstartdatecalenderfield, ht.get("Sales Report Start Date Format"));
@@ -308,8 +314,10 @@ public class SalesReportPage extends TestBase {
 			String Actual_Pagetitle = toastMessage.getText();
 
 			Assert.assertEquals(Actual_Pagetitle, "No data found for selected filter.");
-			
-			test.pass("The POP-UP error message displayed after validation, in case no data is present in the Sales Report table, is:" + Actual_Pagetitle);
+
+			test.pass(
+					"The POP-UP error message displayed after validation, in case no data is present in the Sales Report table, is:"
+							+ Actual_Pagetitle);
 			CommonMethod.takescreenshot();
 		} else {
 			System.out.println("POP-UP Error Message is not Present on the UI screen ");
@@ -330,16 +338,17 @@ public class SalesReportPage extends TestBase {
 			String[] actualLines = Actual_Pagetitle2.split("\r?\n"); // Split by newline
 			String expectedMessage = "Request received to export.";
 
-			Assert.assertTrue(Actual_Pagetitle2.contains(expectedMessage), 
-				    "Expected message not found in the response. Actual: " + Actual_Pagetitle2);
-			
-			
-			test.pass("The POP-UP error message displayed after validation, in case no data is present in the Sales Report table, is:" + Actual_Pagetitle2);
+			Assert.assertTrue(Actual_Pagetitle2.contains(expectedMessage),
+					"Expected message not found in the response. Actual: " + Actual_Pagetitle2);
+
+			test.pass(
+					"The POP-UP error message displayed after validation, in case no data is present in the Sales Report table, is:"
+							+ Actual_Pagetitle2);
 			CommonMethod.takescreenshot();
 		} else {
 			System.out.println("POP-UP Error Message is not Present on the UI screen ");
 		}
-		
+
 //		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
 //		WebElement toastMessage = wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@class='v-toast__text']")));
 //		String actualMessage = toastMessage.getText();
@@ -401,33 +410,37 @@ public class SalesReportPage extends TestBase {
 		test.pass("Gross_Total is not having NA ");
 		boolean isClickable = false;
 		while (!isClickable) {
-		try {
-			 
-			CommonMethod.clickonWebElement(Create_Delivery_Button, "Clicked On Create Delivery button");
-			Thread.sleep(3000);
-			 try { Thread.sleep(3000); } catch (InterruptedException e) {}
+			try {
 
-		        // Locate all checkboxes inside the table
-		        List<WebElement> checkboxes = driver.findElements(By.xpath("//td[@class='tableData text-center py-2 px-0']//input[@type='checkbox']"));
+				CommonMethod.clickonWebElement(Create_Delivery_Button, "Clicked On Create Delivery button");
+				Thread.sleep(3000);
+				try {
+					Thread.sleep(3000);
+				} catch (InterruptedException e) {
+				}
 
-		        // Click each checkbox
-		        for (WebElement checkbox : checkboxes) {
-		            if (!checkbox.isSelected()) { // Avoid clicking if already checked
-		                checkbox.click();
-		            }
-		        }
+				// Locate all checkboxes inside the table
+				List<WebElement> checkboxes = driver.findElements(
+						By.xpath("//td[@class='tableData text-center py-2 px-0']//input[@type='checkbox']"));
 
-		        // Verify checkboxes are clicked (Optional)
-		        for (WebElement checkbox : checkboxes) {
-		            System.out.println("Checkbox selected: " + checkbox.isSelected());
-		        }
+				// Click each checkbox
+				for (WebElement checkbox : checkboxes) {
+					if (!checkbox.isSelected()) { // Avoid clicking if already checked
+						checkbox.click();
+					}
+				}
 
-			CommonMethod.clickonWebElement(Delivery_Items_Create, "Create Button for Every Single Items");
-			test.pass("Create Delivery option  found for this transaction and clicked on Create Delivery Button.");
-			isClickable = true; 
-		} catch (Exception e) {
-			test.pass("Create Delivery option  is not available for this transaction.");
-		}
+				// Verify checkboxes are clicked (Optional)
+				for (WebElement checkbox : checkboxes) {
+					System.out.println("Checkbox selected: " + checkbox.isSelected());
+				}
+
+				CommonMethod.clickonWebElement(Delivery_Items_Create, "Create Button for Every Single Items");
+				test.pass("Create Delivery option  found for this transaction and clicked on Create Delivery Button.");
+				isClickable = true;
+			} catch (Exception e) {
+				test.pass("Create Delivery option  is not available for this transaction.");
+			}
 		}
 		Thread.sleep(3000);
 		CommonMethod.clickonWebElement(BillID_Hyperlink_Close_Button, "Close Button to close Bill id Hyper Link page");
@@ -438,10 +451,13 @@ public class SalesReportPage extends TestBase {
 
 	public SalesReportPage verify_total_numberof_items_in_sales_table(Hashtable<String, String> ht)
 			throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
 		CommonMethod.clickonWebElement(SalesReportFilterbutton, "filter button");
+
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", resetbutton);
+
 		CommonMethod.clickonWebElement(resetbutton, "filter button");
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
 				clickedonstartdatecalenderfield);
@@ -454,14 +470,27 @@ public class SalesReportPage extends TestBase {
 
 		CommonMethod.clickonWebElement(SalesReportAPPLYButtoninfilter, "Apply Button");
 
+		wait.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath("//span[@class='bh-mr-2']"), "items"));
+		WebElement text = driver.findElement(By.xpath("//span[@class='bh-mr-2']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", text);
+
 		String s1 = driver.findElement(By.xpath("//span[@class='bh-mr-2']")).getText();
 		System.out.println(s1);
 		test.pass(s1);
-		int pages = Integer.parseInt(s1.substring(s1.indexOf("of") + 3, s1.indexOf("items")).trim());
-		System.out.println(pages);
+		int ofIndex = s1.indexOf("of") + 3;
+		int itemsIndex = s1.indexOf("items");
+		int pages = Integer.parseInt(s1.substring(ofIndex, itemsIndex).trim());
+		System.out.println("Items found: " + pages);
+		test.pass("The number of items present in the table is " + pages);
 
-		test.pass("The number of items present in the table are " + pages);
-		int total_pages = pages / 10 + 1;
+		// Determine total pages based on whether count is even or odd
+		int total_pages;
+		if (pages > 1 && pages % 2 != 0) {
+			total_pages = pages / 10 + 1;
+		} else {
+			total_pages = pages / 10;
+		}
+
 		test.pass("Total Pagepresent here in Sales Report Pagination is " + total_pages);
 		CommonMethod.takescreenshot();
 
@@ -475,8 +504,7 @@ public class SalesReportPage extends TestBase {
 				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", scroll);
 
 				// Find the pagination button again in each iteration
-				WebElement pagination = driver.findElement(By.xpath(
-						"//button[@class='bh-page-item next-page']"));
+				WebElement pagination = driver.findElement(By.xpath("//button[@class='bh-page-item next-page']"));
 
 				// Wait until pagination button is clickable (to avoid clicking too soon)
 
@@ -542,5 +570,42 @@ public class SalesReportPage extends TestBase {
 		Assert.assertNotEquals(Order_Status, "NA", "Order_Status is showing NA");
 
 		return this;
+	}
+
+	public SalesReportPage verify_Sales_Report_With_Mpos_Transaction(Hashtable<String, String> ht) throws SQLException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(35));
+		
+		
+		Actions actions = new Actions(driver);
+		
+		// Step 1: Hover over the magnifying glass icon
+		WebElement searchIcon = wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("//i[@class='xe ri-search-line btn btn-primary']")));
+		actions.moveToElement(searchIcon).perform();
+
+		// Step 2: Wait for the input box to appear
+		WebElement searchBox = wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("//input[@placeholder='Bill ID, Mobile Number']")));
+
+		String ExpectedBillId = OrderTable_Mpos_Bill_ID.expectedBillId(test);
+
+		System.out.println(ExpectedBillId);
+		// Step 3: Send keys before it disappears
+		searchBox.sendKeys(ExpectedBillId); // Enter your Bill ID or other search term
+
+		searchIcon.click();
+
+		WebElement UI_BillID = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//tbody//tr//td[4]")));
+
+		String billID = UI_BillID.getText();
+
+		Assert.assertEquals(billID, ExpectedBillId, "Bill ID does not match the expected value.");
+		test.pass("Bill ID matches the expected value: " + ExpectedBillId);
+
+		CommonMethod.takescreenshot();
+
+		return this;
+
 	}
 }

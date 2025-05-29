@@ -11,12 +11,12 @@ import org.testng.annotations.Test;
 import com.proenx.rdep.myproject.TestBase;
 import com.proenx.rdep.myproject.TestBase_Mobile;
 
-
 import MposPages.QA_Mpos_Signin_Page;
+import MposPages.QA_Mpos_Signin_Page_Existing_APK;
 import pages.SignInPage;
 import utility.DataCollection;
 
-public class Article_Report_TestCases extends TestBase_Mobile {
+public class Article_Report_TestCases extends TestBase {
 	@BeforeClass
 	public void getTestCaseName() {
 		testCaseName = this.getClass().getSimpleName();
@@ -27,11 +27,10 @@ public class Article_Report_TestCases extends TestBase_Mobile {
 
 	@Test(dataProvider = "data_Collection")
 	public void SalesReportvaliddata(Hashtable<String, String> ht) throws InterruptedException, SQLException {
-		  test = report.createTest("Login with Wrong Mobile Number");
-		
-		  QA_Mpos_Signin_Page sp = new QA_Mpos_Signin_Page(driver,test );
+		SignInPage sp = new SignInPage();
+		sp.signin(ht).clickOnArticleReportSubMenu(ht).Article_Filter_with_validdata(ht)
+				.Article_Report_Download_Conformation_Test(ht);
 
-		 sp.signinwithwrongdata(ht);
 	}
 
 }

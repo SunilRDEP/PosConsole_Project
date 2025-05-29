@@ -1,6 +1,8 @@
 package utility;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -25,7 +27,32 @@ import com.google.common.io.Files;
 import com.proenx.rdep.myproject.TestBase;
 
 public class CommonMethod extends TestBase { 
+	
+	public static void updateConfigProperty(String key, String value) {
+	    try {
+	        File file = new File("C:\\Users\\sunil\\eclipse-workspace\\Regression_Pos_project\\src\\test\\resources\\Properties\\Configue.properties");
+	        FileInputStream in = new FileInputStream(file);
+	        configue.load(in);
+	        in.close();
+
+	        configue.setProperty(key, value);
+
+	        FileOutputStream out = new FileOutputStream(file);
+	        configue.store(out, "Updated " + key);
+	        out.close();
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
+	}
+
+	
+	
 	public static void checkBrokenLink(String url2) throws IOException {
+		
+		
+		
+		
+		
 	
 		  try {
 	            if (!url2.startsWith("http")|| url2.contains("null") || url2.contains(" ")) {

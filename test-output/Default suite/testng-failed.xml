@@ -3,16 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.proenx.rdep.orderservice.Article_Report_TestCases">
+      <class name="com.proenx.rdep.orderservice.Sales_Report_TestCases">
         <methods>
+          <include name="getTestCaseName"/>
+          <include name="teardown"/>
           <include name="SalesReportvaliddata" invocation-numbers="0"/>
           <include name="generateReport"/>
+          <include name="launchBrowser"/>
           <include name="loadPropfile"/>
-          <include name="getTestCaseName"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.proenx.rdep.orderservice.Article_Report_TestCases -->
+      </class> <!-- com.proenx.rdep.orderservice.Sales_Report_TestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

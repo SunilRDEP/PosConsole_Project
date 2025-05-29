@@ -1,5 +1,6 @@
 package com.proenx.rdep.orderservice;
 
+import java.sql.SQLException;
 import java.util.Hashtable;
 
 import org.testng.SkipException;
@@ -22,14 +23,12 @@ public class Sales_Report_TestCases extends TestBase {
 	}
 
 	@Test(dataProvider = "data_Collection" ,enabled=true)
-	public void SalesReportvaliddata(Hashtable<String, String> ht) throws InterruptedException {
+	public void SalesReportvaliddata(Hashtable<String, String> ht) throws InterruptedException, SQLException {
 		SignInPage sp = new SignInPage();
 
 		sp.signin(ht).clickOnSalesReportSubMenu(ht)
 		
-		.Sales_Filter_with_validdata(ht)
-		.Sales_Report_Download_Conformation_Test(ht)
-		.Sales_Report_All_Button(ht);
+		.verify_Sales_Report_With_Mpos_Transaction(ht);
 		
 
 	}
@@ -42,7 +41,7 @@ public class Sales_Report_TestCases extends TestBase {
 		
 		.verify_total_numberof_items_in_sales_table(ht)
 		
-		.Sales_Report_BillID_Hyperlink(ht);
+		.Sales_Report_Toast_Message_Validation(ht);
 
 	}
 
