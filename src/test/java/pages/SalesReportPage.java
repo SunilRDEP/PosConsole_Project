@@ -177,6 +177,36 @@ public class SalesReportPage extends TestBase {
 
 		return this;
 	}
+	
+	public SalesReportPage Horizontal_Vertical_Toogle_Operation(Hashtable<String, String> ht) throws InterruptedException {
+		// goto startdate-> enddate-> select store-> select source->select
+		// status->select delivery status->apply
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("spinner-wrapper")));
+		// Locate the toggle icon/button
+		// Locate the element that shows the current layout mode
+		// Step 1: Get the current layout mode text
+		WebElement menuMode = driver.findElement(By.xpath("//span[contains(@class, 'fw-normal') and contains(text(),'Menu')]"));
+		String modeText = menuMode.getText().trim();
+		System.out.println("Current Menu Mode: " + modeText);
+
+		// Step 2: Click toggle icon if mode is "Vertical Menu"
+		if (modeText.equalsIgnoreCase("Vertical Menu")) {
+		    System.out.println("Switching to Horizontal Mode...");
+
+		    // Locate the toggle switch (next sibling icon)
+		    WebElement toggleIcon = driver.findElement(By.xpath("//span[contains(text(),'Menu')]/following-sibling::i[contains(@class,'ri-toggle-fill')]"));
+		    toggleIcon.click();
+
+		    // Optional: wait for layout update
+		    Thread.sleep(2000);
+		} else {
+		    System.out.println("Already in Horizontal Mode. No action needed.");
+		}
+
+		return this;
+	}
+
 
 	public SalesReportPage Sales_Report_Download_Conformation_Test(Hashtable<String, String> ht)
 			throws InterruptedException {
@@ -443,7 +473,7 @@ public class SalesReportPage extends TestBase {
 			}
 		}
 		Thread.sleep(3000);
-		CommonMethod.clickonWebElement(BillID_Hyperlink_Close_Button, "Close Button to close Bill id Hyper Link page");
+		CommonMethod.clickonWebElement(BillID_Hyperlink_Close_Button, "Close Button to close Bill id Hyper Link page");		//
 
 		return this;
 
@@ -600,7 +630,7 @@ public class SalesReportPage extends TestBase {
 
 		String billID = UI_BillID.getText();
 
-		Assert.assertEquals(billID, ExpectedBillId, "Bill ID does not match the expected value.");
+		Assert.assertEquals(billID,configue.getProperty("ExpectedBillId"), "Bill ID does not match the expected value.");
 		test.pass("Bill ID matches the expected value: " + ExpectedBillId);
 
 		CommonMethod.takescreenshot();

@@ -4,6 +4,8 @@ import java.sql.SQLException;
 import java.time.Duration;
 import java.util.Hashtable;
 import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.concurrent.TimeoutException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -111,10 +113,12 @@ public class QA_Mpos_Signin_Page extends TestBase_Mobile {
 		@FindBy(xpath = "//android.widget.Button[@content-desc=\"Go to Cart\"]")
 		private WebElement Go_TO_CART_CLOSE_POPUP;
 		
+		@FindBy(xpath = "//android.widget.Button[@content-desc=\"Done\"]")
+		private WebElement Payment_Done_Button;
 	  
 	  
 
-	public QA_Mpos_Signin_Page signin_with_APK(Hashtable<String, String> ht) throws InterruptedException, SQLException {
+	public QA_Mpos_Signin_Page signin_with_APK(Hashtable<String, String> ht) throws InterruptedException, SQLException, TimeoutException {
 		Thread.sleep(3000);
 		 test.info("Starting login process...");
 		
@@ -125,7 +129,11 @@ public class QA_Mpos_Signin_Page extends TestBase_Mobile {
 		Thread.sleep(3000);
 		
 		driver.hideKeyboard();
+		Mobile_Number_For_Login.clear();
+		// Enter the mobile number from the hashtable
+		Thread.sleep(3000);
 		mobile_number_field.sendKeys(ht.get("Mobile_Number_For_Login"));
+		Thread.sleep(3000);
 		Activate_Button.click();
 		test.pass("Mobile number has been Entered ");
 		
@@ -248,12 +256,43 @@ public class QA_Mpos_Signin_Page extends TestBase_Mobile {
 		WebElement phoneField = driver.findElement(			    AppiumBy.androidUIAutomator("new UiSelector().className(\"android.widget.EditText\").instance(0)")			);
 				phoneField.sendKeys(ht.get("Mobile Number for Customer Details"));
 
-			Customer_Details_Submit_Button.click();
-			Thread.sleep(3000);
-			Customer_Details_Submit_Button.click();
-			
-			Thread.sleep(3000);
-			CONFIRM_PAYMENT.click();
+				try {
+				    WebElement submitButton = wait.until(ExpectedConditions.elementToBeClickable(
+				        By.xpath("//android.widget.Button[@content-desc='Submit']")));
+				    submitButton.click();
+				    test.pass("Customer Details Submit Button clicked successfully.");
+				} catch (Exception e) {
+				    test.fail("Submit button not clickable or not found in time: " + e.getMessage());
+				    throw e;
+				}
+				
+				
+				try {
+				    WebElement submitButton = wait.until(ExpectedConditions.elementToBeClickable(
+				        By.xpath("//android.widget.Button[@content-desc='Submit']")));
+				    submitButton.click();
+				    test.pass("Customer Details Submit Button clicked successfully.");
+				} catch (Exception e) {
+				    test.fail("Submit button not clickable or not found in time: " + e.getMessage());
+				    throw e;
+				}
+				
+				Thread.sleep(3000);
+				CONFIRM_PAYMENT.click();
+				
+				Thread.sleep(3000);
+				// Handle the payment done button
+				try {
+					Payment_Done_Button.click();
+					test.pass("Payment Done button clicked successfully.");
+				} catch (NoSuchElementException e) {
+					test.fail("Payment Done button not found or could not be clicked: " + e.getMessage());
+					throw new TimeoutException("Payment Done button not found or could not be clicked.");
+				} catch (Exception e) {
+					test.fail("An error occurred while clicking the Payment Done button: " + e.getMessage());
+					throw new RuntimeException("An error occurred while clicking the Payment Done button.", e);
+				}
+				
 			
 			 String expectedBillId=OrderTable_Mpos_Bill_ID.expectedBillId(test);
 			 test.pass("Expected bill id for above transaction is " + expectedBillId);

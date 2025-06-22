@@ -2,6 +2,7 @@ package com.proenx.rdep.mpos;
 
 import java.sql.SQLException;
 import java.util.Hashtable;
+import java.util.concurrent.TimeoutException;
 
 import org.testng.SkipException;
 import org.testng.annotations.BeforeClass;
@@ -27,32 +28,42 @@ public void getTestCaseName() {
 	} 
 	} 
 	  
-	@Test(dataProvider = "data_Collection" ,enabled = false,retryAnalyzer = RetryAnalyser.class)
-	public void create_promotion(Hashtable<String, String> ht) throws InterruptedException, SQLException {
+	@Test(dataProvider = "data_Collection" ,enabled = false)
+	public void create_promotion(Hashtable<String, String> ht) throws InterruptedException, SQLException, TimeoutException {
 		
 
 		 test = report.createTest("Login with  Mobile Number");
 			
-		  QA_Mpos_Signin_Page sp = new QA_Mpos_Signin_Page(driver,test );
+		  QA_Mpos_Signin_Page_Existing_APK sp = new QA_Mpos_Signin_Page_Existing_APK(driver,test );
 
-		 sp.signin_with_APK(ht);
+		 sp.MposLogin_without_otp(ht).Exchange_With_Valid_Transaction_For_High_Price(ht);
 		 Thread.sleep(3000);
 	}
 	
 	  
-		@Test(dataProvider = "data_Collection" ,enabled = true,retryAnalyzer = RetryAnalyser.class)
-		public void Valid_Transaction(Hashtable<String, String> ht) throws InterruptedException, SQLException {
+		@Test(dataProvider = "data_Collection" ,enabled = true)
+		public void alid_Transaction(Hashtable<String, String> ht) throws InterruptedException, SQLException, TimeoutException {
 			
 
 			 test = report.createTest("Login with  Mobile Number");
 				
 			  QA_Mpos_Signin_Page_Existing_APK sp = new QA_Mpos_Signin_Page_Existing_APK(driver,test );
 
-			 sp.signin_with_Existing_APK(ht);
+			 sp.MposLogin_without_otp(ht).Transaction_with_Existing_APK(ht);
 			 Thread.sleep(3000);
 		}
 		
-	
+		@Test(dataProvider = "data_Collection" ,enabled = false)
+		public void Login_With_OTP(Hashtable<String, String> ht) throws InterruptedException, SQLException, TimeoutException {
+			
+
+			 test = report.createTest("Login with  Mobile Number");
+				
+			  QA_Mpos_Signin_Page sp = new QA_Mpos_Signin_Page(driver,test );
+
+			 sp.signin_with_APK(ht);
+			 Thread.sleep(3000);
+		}
 	
 
 	

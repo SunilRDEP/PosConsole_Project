@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="MobileAutomationSuite" parallel="false">
+<listeners>
+    <listener class-name="com.proenx.rdep.myproject.listner.CustomListners2_Mobile"/>
+</listeners>
 
-    <listeners>
-        <!-- Your custom listener to generate reports -->
-        <listener class-name="com.proenx.rdep.myproject.listner.CustomListeners"/>
-    </listeners>
 
     <test name="MobileTests">
         <classes>
-            <class name="ccom.proenx.rdep.mpos.MposLoginTest"/>
+           <class name="com.proenx.rdep.mpos.MposLoginTest"/>
+
             <!-- Add more test classes here if needed -->
         </classes>
     </test>

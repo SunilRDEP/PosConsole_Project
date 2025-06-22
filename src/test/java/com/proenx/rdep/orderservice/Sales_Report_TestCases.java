@@ -28,7 +28,7 @@ public class Sales_Report_TestCases extends TestBase {
 
 		sp.signin(ht).clickOnSalesReportSubMenu(ht)
 		
-		.verify_Sales_Report_With_Mpos_Transaction(ht);
+		.Horizontal_Vertical_Toogle_Operation(ht);	
 		
 
 	}

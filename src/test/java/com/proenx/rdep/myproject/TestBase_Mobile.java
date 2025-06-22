@@ -11,9 +11,12 @@ import java.util.Date;
 import java.util.Hashtable;
 import java.util.Properties;
 
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 
@@ -28,10 +31,12 @@ import utility.ExcelReader;
 
 public class TestBase_Mobile {
 	 protected AndroidDriver driver;
+	 
 	 protected  ExtentTest test;
 	 
 	 public static Properties mobile_configue;
 		public static Properties mobile_Prop;
+		
 	//=======================================================================================================================
 
 		// global variable declaration for extent report declaration, test case nma e,
@@ -53,6 +58,10 @@ public class TestBase_Mobile {
 		}
 
 		
+		
+		
+		
+		
 		@BeforeSuite
 
 		public void loadPropfile() throws IOException {
@@ -65,10 +74,10 @@ public class TestBase_Mobile {
 			
 			
 			System.out.println("Reading Configue file ");
-			FileInputStream fis4 = new FileInputStream("C:\\Users\\sunil\\eclipse-workspace\\Regression_Pos_project\\"
+			FileInputStream fis2 = new FileInputStream("C:\\Users\\sunil\\eclipse-workspace\\Regression_Pos_project\\"
 					+ "src\\test\\resources\\Properties\\mobile_configue.properties");
 			mobile_configue = new Properties();
-			mobile_configue.load(fis);
+			mobile_configue.load(fis2);
 			System.out.println("configue file is loaded ");
 			System.out.println("Reading PROP file ");
 			FileInputStream fis1 = new FileInputStream("C:\\Users\\sunil\\eclipse-workspace\\Regression_Pos_project\\"
@@ -148,6 +157,8 @@ public class TestBase_Mobile {
 	            driver.quit();
 	        }
 	    }
+	  
+	 
 	
 
 	   

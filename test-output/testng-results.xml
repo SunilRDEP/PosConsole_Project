@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-29T08:05:37 IST" name="Default suite" finished-at="2025-05-29T08:06:39 IST" duration-ms="61928">
+  <suite started-at="2025-06-22T09:03:46 IST" name="Default suite" finished-at="2025-06-22T09:04:22 IST" duration-ms="36109">
     <groups>
     </groups>
-    <test started-at="2025-05-29T08:05:37 IST" name="Default test" finished-at="2025-05-29T08:06:39 IST" duration-ms="61928">
+    <test started-at="2025-06-22T09:03:46 IST" name="Default test" finished-at="2025-06-22T09:04:22 IST" duration-ms="36109">
       <class name="com.proenx.rdep.orderservice.Sales_Report_TestCases">
-        <test-method is-config="true" signature="loadPropfile()[pri:0, instance:com.proenx.rdep.orderservice.Sales_Report_TestCases@26794848]" started-at="2025-05-29T08:05:35 IST" name="loadPropfile" finished-at="2025-05-29T08:05:37 IST" duration-ms="2214" status="PASS">
+        <test-method is-config="true" signature="loadPropfile()[pri:0, instance:com.proenx.rdep.orderservice.Sales_Report_TestCases@26794848]" started-at="2025-06-22T09:03:44 IST" name="loadPropfile" finished-at="2025-06-22T09:03:46 IST" duration-ms="1408" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadPropfile -->
-        <test-method is-config="true" signature="getTestCaseName()[pri:0, instance:com.proenx.rdep.orderservice.Sales_Report_TestCases@26794848]" started-at="2025-05-29T08:05:37 IST" name="getTestCaseName" finished-at="2025-05-29T08:05:37 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="getTestCaseName()[pri:0, instance:com.proenx.rdep.orderservice.Sales_Report_TestCases@26794848]" started-at="2025-06-22T09:03:46 IST" name="getTestCaseName" finished-at="2025-06-22T09:03:46 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getTestCaseName -->
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.proenx.rdep.orderservice.Sales_Report_TestCases@26794848]" started-at="2025-05-29T08:05:37 IST" name="launchBrowser" finished-at="2025-05-29T08:05:43 IST" duration-ms="5671" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.proenx.rdep.orderservice.Sales_Report_TestCases@26794848]" started-at="2025-06-22T09:03:46 IST" name="launchBrowser" finished-at="2025-06-22T09:03:58 IST" duration-ms="12493" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="SalesReportvaliddata(java.util.Hashtable)[pri:0, instance:com.proenx.rdep.orderservice.Sales_Report_TestCases@26794848]" started-at="2025-05-29T08:05:43 IST" name="SalesReportvaliddata" data-provider="data_Collection" finished-at="2025-05-29T08:06:34 IST" duration-ms="50702" status="FAIL">
+        <test-method signature="SalesReportvaliddata(java.util.Hashtable)[pri:0, instance:com.proenx.rdep.orderservice.Sales_Report_TestCases@26794848]" started-at="2025-06-22T09:03:58 IST" name="SalesReportvaliddata" data-provider="data_Collection" finished-at="2025-06-22T09:04:17 IST" duration-ms="18218" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,65 +27,14 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //tbody//tr//td[4] (tried for 35 second(s) with 500 milliseconds interval)
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.113 (76fa3c17824..., userDataDir: C:\Users\sunil\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61329}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61329/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3a63b8648855d3dd3af3a98be37d11af]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //tbody//tr//td[4] (tried for 35 second(s) with 500 milliseconds interval)
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.113 (76fa3c17824..., userDataDir: C:\Users\sunil\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61329}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61329/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3a63b8648855d3dd3af3a98be37d11af
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at pages.SalesReportPage.verify_Sales_Report_With_Mpos_Transaction(SalesReportPage.java:599)
-at com.proenx.rdep.orderservice.Sales_Report_TestCases.SalesReportvaliddata(Sales_Report_TestCases.java:31)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SalesReportvaliddata -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.proenx.rdep.orderservice.Sales_Report_TestCases@26794848]" started-at="2025-05-29T08:06:34 IST" name="teardown" finished-at="2025-05-29T08:06:39 IST" duration-ms="5363" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.proenx.rdep.orderservice.Sales_Report_TestCases@26794848]" started-at="2025-06-22T09:04:17 IST" name="teardown" finished-at="2025-06-22T09:04:22 IST" duration-ms="5246" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="generateReport()[pri:0, instance:com.proenx.rdep.orderservice.Sales_Report_TestCases@26794848]" started-at="2025-05-29T08:06:39 IST" name="generateReport" finished-at="2025-05-29T08:06:40 IST" duration-ms="496" status="PASS">
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:com.proenx.rdep.orderservice.Sales_Report_TestCases@26794848]" started-at="2025-06-22T09:04:22 IST" name="generateReport" finished-at="2025-06-22T09:04:22 IST" duration-ms="348" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateReport -->
